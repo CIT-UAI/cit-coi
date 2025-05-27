@@ -42,7 +42,7 @@ book:
         - jh_superior.qmd
         - hacina.qmd
         - monopar.qmd
-    - template_ind.qmd
+    # - template_ind.qmd
     - reuniones.qmd
     - references.qmd
 

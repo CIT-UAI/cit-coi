@@ -10,131 +10,6 @@
     ]
   },
   {
-    "objectID": "antecedentes.html",
-    "href": "antecedentes.html",
-    "title": "1  Marco Conceptual",
-    "section": "",
-    "text": "La oportunidad infantil como construcción territorial\nEl proyecto se fundamenta en la idea de que las oportunidades para niñas, niños y adolescentes no dependen únicamente de sus características individuales o familiares, sino que están profundamente condicionadas por los entornos territoriales en los que crecen. La calidad de los barrios, el acceso a recursos educativos, la salud ambiental, la infraestructura urbana y el capital social son dimensiones claves que configuran un paisaje de oportunidades con marcadas desigualdades espaciales.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Marco Conceptual</span>"
-    ]
-  },
-  {
-    "objectID": "educacion.html",
-    "href": "educacion.html",
-    "title": "Educación",
-    "section": "",
-    "text": "Definición",
-    "crumbs": [
-      "Educación"
-    ]
-  },
-  {
-    "objectID": "educacion.html#objetivos",
-    "href": "educacion.html#objetivos",
-    "title": "Educación",
-    "section": "Objetivos",
-    "text": "Objetivos",
-    "crumbs": [
-      "Educación"
-    ]
-  },
-  {
-    "objectID": "educacion.html#distribución",
-    "href": "educacion.html#distribución",
-    "title": "Educación",
-    "section": "Distribución",
-    "text": "Distribución",
-    "crumbs": [
-      "Educación"
-    ]
-  },
-  {
-    "objectID": "ee_calor.html",
-    "href": "ee_calor.html",
-    "title": "12  Exposición E. Calor",
-    "section": "",
-    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Expocisión Extrema al Calor\nSigla: EEC\n\nDimensión: Salud y Medio Ambiente\nDominio: Entorno Saludable\nFuente principal de datos: Producto satelital MOD11A1 V6.1 – MODIS Terra\n\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Diaria (agregado anual y multianual)\n\nCobertura temporal del análisis: 2014–2024\n\nResolución espacial del insumo: 1 km x 1 km\n\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n✅\n\n\nValidación de Resultados\n✅\n\n\nEntrega de Resultados\n🟡\n\n\nDocumentación\n✅\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nLa exposición extrema al calor se refiere a la cantidad promedio de días en que la temperatura máxima supera un umbral definido como peligroso para la salud humana. Este fenómeno está asociado a impactos significativos en la salud pública, particularmente en niños, niñas y adolescentes, y refleja condiciones territoriales que requieren medidas de adaptación al cambio climático.\n\n\n2.2 Conceptos relacionados\n\nExposición Extrema al Calor: Número de días en que la temperatura máxima diaria excede los 32.2°C, umbral considerado crítico para la salud, especialmente en poblaciones vulnerables.\nOla de Calor: Evento prolongado de temperaturas anómalamente altas, definidas por percentiles climatológicos (90º o 95º) durante 2 o más días consecutivos.\nPeríodo de Referencia: Promedio de 10 años para minimizar la influencia de eventos atípicos.\n\n\n\n2.3 Referente internacional (COI 3.0)\nEn la Documentación Técnica de COI 3.0, este indicador se calcula como el número promedio de días de verano donde la temperatura máxima supera los 90°F (32.2°C), usando datos del sistema NLDAS-2 (North American Land Data Assimilation System).\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nEste indicador corresponde al promedio multianual del número de días estivales en los que la temperatura superficial del suelo (Land Surface Temperature, LST) supera el umbral de 32.2 °C, considerando exclusivamente el período comprendido entre el 21 de diciembre y el 21 de marzo de cada año, correspondiente al verano climatológico en el hemisferio sur.\nEl valor final se expresa como la cantidad promedio de días de exposición extrema al calor, calculado por unidad mínima territorial (manzana censal), para el período comprendido entre los años 2014 y 2024. Este indicador permite identificar espacialmente aquellas zonas que enfrentan condiciones térmicas elevadas con recurrencia, contribuyendo al diagnóstico de vulnerabilidad climática en poblaciones infantiles.\n\n\n3.2 Insumos y fuentes\nSe utilizó el producto satelital MOD11A1 V6.1, que entrega datos diarios de temperatura superficial del suelo (Land Surface Temperature, LST) a una resolución espacial de 1 km. El sensor MODIS, a bordo del satélite Terra, permite observar la dinámica térmica del territorio de forma sistemática y precisa. La adquisición y procesamiento de esta información se realizó mediante la librería modisfast, optimizada para el manejo masivo de productos MODIS. Insumos levantados por John Treimun.\n\n\n\n\n4. Pasos de cálculo\n\nFiltrado temporal: Se seleccionaron las imágenes correspondientes a los meses de verano del hemisferio sur (diciembre a marzo) para cada año del periodo 2014–2024.\nClasificación binaria por umbral: A cada imagen diaria se le asigna un valor binario (1 si supera 32.2 °C, 0 si no).\nSuma anual: Para cada píxel, se sumaron los días con valor 1 a lo largo de cada año, generando un raster anual de exposición extrema.\nPromedio multianual: Se promediaron los 11 valores anuales (2014–2024) para obtener un raster con el valor promedio multianual de días de exposición extrema.\nIntersección espacial: Se aplicó zonal statistics para calcular la media por manzana censal, obteniendo así un valor territorializado del indicador.\n\n\n\n\n5. Resultados preliminares\n\n\n\nResultados de Indicador de Exposición Extrema al Calor (EEC)\n\n\nEl mapa presenta la distribución promedio de días de calor extremo a nivel de manzanas censales en el periodo analizado. Se observan concentraciones más altas en sectores urbanos densamente construidos y en la zona norte central de la región metropolinta.\n\n\n\n6. Interpretación y usos esperados\nUn mayor número de días con calor extremo implica una mayor exposición a riesgos sanitarios como golpes de calor, enfermedades respiratorias y estrés térmico, especialmente para niños, personas mayores y personas con condiciones preexistentes. Este indicador es útil para:\n\nPriorizar zonas que requieren estrategias de adaptación al cambio climático.\nInformar planes territoriales en salud pública, infraestructura verde y diseño urbano.\nIntegrar componentes de riesgo climático en intervenciones centradas en infancia.\n\n\n\n\n7. Validación, supuestos y limitaciones\n\nSupuestos: Se asume que la temperatura superficial del suelo es un proxy adecuado para la exposición humana al calor, aunque puede diferir de la temperatura del aire.\nLimitaciones: Las nubes, cuerpos de agua y zonas de sombra pueden afectar la calidad de las observaciones MODIS. Se descartaron días sin observación clara.\nVentajas: Resolución diaria y alta cobertura espacial permiten un análisis territorial fino, replicable y actualizado.\n\n\n\n\n8. Referencias\n\nNoelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). Child Opportunity Index 3.0 Technical Documentation.\nMODIS Land Science Team. (2023). MOD11A1 V6.1 Product User Guide. NASA LP DAAC.",
-    "crumbs": [
-      "Salud y M. Ambiente",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Exposición E. Calor</span>"
-    ]
-  },
-  {
-    "objectID": "ee_calor.html#definición-de-conceptos",
-    "href": "ee_calor.html#definición-de-conceptos",
-    "title": "9  Exposición E. Calor",
-    "section": "Definición de Conceptos",
-    "text": "Definición de Conceptos\nExposición Extrema al Calor: Hace referencia a la cantidad de días en los que la temperatura máxima supera un umbral considerado como peligroso para la salud humana. En el contexto del COI 3.0 (Child Opportunity Index), este umbral es de 90°F (aproximadamente 32.2°C).\nOla de Calor: Una ola de calor es un evento meteorológico en el que la temperatura diaria máxima (y a veces también la mínima) supera los percentiles altos (como el 90º o 95º) de la climatología local durante un periodo mínimo de 2 a 3 días consecutivos. La definición exacta puede variar entre países o instituciones, pero el concepto implica persistencia e intensidad anómala de calor.\nPeríodo de Referencia: En la Documentación Técnica de COI 3.0, el indicador de exposición extrema al calor se calcula como promedio de cinco años para evitar que eventos aislados influyan desproporcionadamente. Por ejemplo, el valor reportado para el año 2017 corresponde a un promedio para el período 2013-2017.",
-    "crumbs": [
-      "Salud y M. Ambiente",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exposición E. Calor</span>"
-    ]
-  },
-  {
-    "objectID": "ee_calor.html#indicador-de-exposición-extrema-al-calor-de-coi",
-    "href": "ee_calor.html#indicador-de-exposición-extrema-al-calor-de-coi",
-    "title": "9  Exposición E. Calor",
-    "section": "Indicador de Exposición Extrema al Calor de COI",
-    "text": "Indicador de Exposición Extrema al Calor de COI\nNombre: Extreme Heat Exposure (Noelke et al. 2024)\nDefinición Operacional: Número promedio de días de verano en los que la temperatura máxima diaria supera los 90°F (32,2°C). Se utiliza como indicador dentro del subdominio “entornos saludables” (Documentación Técnica de COI 3.0).\nCálculo: Datos base: Temperaturas horarias de superficie (1.25 x 1.25°) de la fuente NLDAS-2 (North American Land Data Assimilation System).\n\nPaso 1: Obtener la temperatura máxima diaria durante los meses de verano.\nPaso 2: Contar los días por año en que la temperatura máxima supera los 90°F.\nPaso 3: Promediar ese conteo para los cinco años del periodo de referencia.",
-    "crumbs": [
-      "Salud y M. Ambiente",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exposición E. Calor</span>"
-    ]
-  },
-  {
-    "objectID": "ee_calor.html#referencia-indicador-de-exposición-extrema-al-calor-de-coi",
-    "href": "ee_calor.html#referencia-indicador-de-exposición-extrema-al-calor-de-coi",
-    "title": "9  Exposición E. Calor",
-    "section": "Referencia: Indicador de Exposición Extrema al Calor de COI",
-    "text": "Referencia: Indicador de Exposición Extrema al Calor de COI\nNombre: Extreme Heat Exposure (Noelke et al. 2024)\nDefinición Operacional: Número promedio de días de verano en los que la temperatura máxima diaria supera los 90°F (32,2°C). Se utiliza como indicador dentro del subdominio “entornos saludables” (Documentación Técnica de COI 3.0).\nCálculo: Datos base: Temperaturas horarias de superficie (1.25 x 1.25°) de la fuente NLDAS-2 (North American Land Data Assimilation System).\n\nPaso 1: Obtener la temperatura máxima diaria durante los meses de verano.\nPaso 2: Contar los días por año en que la temperatura máxima supera los 90°F.\nPaso 3: Promediar ese conteo para los cinco años del periodo de referencia.",
-    "crumbs": [
-      "Salud y M. Ambiente",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exposición E. Calor</span>"
-    ]
-  },
-  {
-    "objectID": "ee_calor.html#indicador-de-exposión-extrema-al-calor-cit",
-    "href": "ee_calor.html#indicador-de-exposión-extrema-al-calor-cit",
-    "title": "9  Exposición E. Calor",
-    "section": "Indicador de Exposión Extrema al Calor CIT",
-    "text": "Indicador de Exposión Extrema al Calor CIT\nNombre: Expocisión Extrema al Calor (EEC)\nDefinición Operacional: Número promedio de días de verano en los que la temperatura máxima diaria supera los 32.2°C.\n\nInsumos\nTemperatura superficial del territorio diaria de MODIS, referencia: documentación\n\n\nCálculos\n\nFiltrado temporal: Seleccionar sólo las imágenes correspondientes a los meses de verano para cada año (e.g., diciembre-marzo para hemisferio sur).\nClasificación binaria por umbral: Para cada imagen diaria, asignar valor 1 si la temperatura supera 32.2°C; en caso contrario, 0.\nSuma anual de exposición extrema: Para cada año, sumar los días con valor 1 para cada pixel. El resultado es un raster anual con la cantidad de días de calor extremo.\nCálculo promedio multianual: Promediar los valores anuales para obtener un raster con el promedio de exposición extrema entre los años 2014 y 2024.\nIntersección espacial con unidades censales: Aplicar zonal statistics (media) utilizando los polígonos de manzanas censales sobre el raster promedio para obtener un valor por manzana.\n\n\n\nResultados\n\n\n\nResultados de Indicador de Exposición Extrama al Calor (EEC)\n\n\n\n\nInterpretación\nUn mayor número de días con calor extremo se asocia con mayores riesgos para la salud, especialmente en niños, personas mayores y otros grupos vulnerables. Este indicador permite identificar zonas que requieren medidas de adaptación al cambio climático.\n\n\n\n\nNoelke, C, N McArdle, B DeVoe, M Leonardos, Y Lu, RW Ressler, and D Acevedo-Garcia. 2024. “Child Opportunity Index 3.0 Technical Documentation. Diversitydatakids. Org, Brandeis University.” Retrieved from Diversitydatakids. Org/Research-Library/Coi-30-Technical-Documentation.",
-    "crumbs": [
-      "Salud y M. Ambiente",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exposición E. Calor</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Noelke, C, N McArdle, B DeVoe, M Leonardos, Y Lu, RW Ressler, and D\nAcevedo-Garcia. 2024. “Child Opportunity Index 3.0 Technical\nDocumentation. Diversitydatakids. Org, Brandeis University.”\nRetrieved from Diversitydatakids.\nOrg/Research-Library/Coi-30-Technical-Documentation.",
-    "crumbs": [
-      "References"
-    ]
-  },
-  {
-    "objectID": "antecedentes.html#factores-de-riesgo-y-factores-protectores",
-    "href": "antecedentes.html#factores-de-riesgo-y-factores-protectores",
-    "title": "1  Antecedentes",
-    "section": "",
-    "text": "1.1.1 Individuos y Pares\n\n\n\n\n\n\n\nFactores de Riesgo\nFactores Protectores\n\n\n\n\nI.1 Comportamiento antisocial temprano y persistente\nI.1 Competencias cognitivas\n\n\nI.2 Rebeldía\nI.2 Competencias emocionales\n\n\nI.3 Implicación en bandas o participación en pandillas\nI.3 Competencias sociales y de comportamiento\n\n\nI.4 Interacción con pares con comportamientos antisociales\nI.4 Autoeficacia\n\n\nI.5 Actitudes favorables al comportamiento antisocial\nI.5 Creencias en el futuro\n\n\nI.6 Iniciación temprana de problemas de comportamiento\nI.6 Autodeterminación\n\n\nI.7 Escasa percepción del riesgo asociado al comportamiento antisocial\nI.7 Religiosidad o espiritualidad\n\n\nI.8 Recompensas por el comportamiento antisocial\n\n\n\nI.9 Factores constitucionales\n\n\n\nI.9.1 Acceso a diagnóstico y/o tratamientos de salud mental\n\n\n\n\n\n\n1.1.2 Escuela\n\n\n\nFactores de Riesgo\nFactores Protectores\n\n\n\n\nE.1 Fracaso escolar\n\n\n\n\nE.2 Incapacidad o dificultad de escuelas/comunidades educativas para establecer vínculos\nE.3 Ausentismo crónico (Factor de riesgo específico: exclusión y/o deserción escolar) | C.4 Apego escolar a la escuela y a los profesores\nC.5 Compromiso escolar y motivación por los estudios |\n\n\n1.1.3 Familia\n\n\n\n\n\n\n\nFactores de Riesgo\nFactores Protectores\n\n\n\n\nF.1 Antecedentes familiares de conducta problemática\nF.1 Expectativas de los padres hacia las conductas de hijos e hijas\n\n\nF.2 Problemas de gestión familiar\nF.1.1 Actitudes y expectativas de los padres respecto de las trayectorias educativas\n\n\nF.3 Conflicto familiar y mala resolución del conflicto\nF.2 Fomento de una cultura del respeto y la tolerancia\n\n\nF.4 Actitudes favorables de la familia hacia la conducta antisocial y consumo de drogas\nF.3 Participación en actividades de ocio organizadas por adultos (Protección: adicciones)\n\n\nF.4.1 Actitudes y expectativas de los padres respecto de trayectorias educativas\nF.4 Incremento del tiempo con la familia (Protección: adicciones)\n\n\nF.5 Violencia familiar y abuso (Factor de riesgo específico: violencia intrafamiliar/maltrato)\nF.5 Estimulación temprana (Protección: desarrollo integral)\n\n\nF.6 Estrés tóxico (Factor de riesgo específico: desarrollo infantil)\nF.6 Redes de apoyo para cuidado infantil (Protección: desarrollo integral)\n\n\n\n\n\n1.1.4 Comunidad\n\n\n\n\n\n\n\nFactores de Riesgo\nFactores Protectores\n\n\n\n\nC.1 Transiciones y movilidad personal o comunitaria\nC.1 Oportunidades para la participación social positiva\n\n\nC.2 Desorganización comunitaria y escaso apego al vecindario\nC.2 Reconocimiento del comportamiento positivo\n\n\nC.3 Representaciones del comportamiento en medios de comunicación\nC.3 Vinculación con personas con comportamiento pro-social\n\n\nC.4 Leyes y normas favorables al consumo de drogas, armas y crimen\n\n\n\nC.5 Alta disponibilidad de drogas/armas y percepción de violencia\n\n\n\nC.6 Privación o necesidad económica, vulnerabilidad o desintegración social\n\n\n\nC.6.1 Trabajo infantil o juvenil\n\n\n\n\n\n\n\n\nNoelke, C, N McArdle, B DeVoe, M Leonardos, Y Lu, RW Ressler, and D Acevedo-Garcia. 2024. “Child Opportunity Index 3.0 Technical Documentation. Diversitydatakids. Org, Brandeis University.” Retrieved from Diversitydatakids. Org/Research-Library/Coi-30-Technical-Documentation.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Antecedentes</span>"
-    ]
-  },
-  {
-    "objectID": "antecedentes.html#comunidad",
-    "href": "antecedentes.html#comunidad",
-    "title": "1  Antecedentes",
-    "section": "1.2 Comunidad",
-    "text": "1.2 Comunidad\n\n\n\n\n\n\n\nFactores de Riesgo\nFactores Protectores\n\n\n\n\nC.1 Transiciones y movilidad personal o comunitaria\nC.1 Oportunidades para la participación social positiva\n\n\nC.2 Desorganización comunitaria y escaso apego al vecindario\nC.2 Reconocimiento del comportamiento positivo\n\n\nC.3 Representaciones del comportamiento en medios de comunicación\nC.3 Vinculación con personas con comportamiento pro-social\n\n\nC.4 Leyes y normas favorables al consumo de drogas, armas y crimen\n\n\n\nC.5 Alta disponibilidad de drogas/armas y percepción de violencia\n\n\n\nC.6 Privación o necesidad económica, vulnerabilidad o desintegración social\n\n\n\nC.6.1 Trabajo infantil o juvenil\n\n\n\n\n\n\n\n\nNoelke, C, N McArdle, B DeVoe, M Leonardos, Y Lu, RW Ressler, and D Acevedo-Garcia. 2024. “Child Opportunity Index 3.0 Technical Documentation. Diversitydatakids. Org, Brandeis University.” Retrieved from Diversitydatakids. Org/Research-Library/Coi-30-Technical-Documentation.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Antecedentes</span>"
-    ]
-  },
-  {
     "objectID": "index.html#presentación-del-libro",
     "href": "index.html#presentación-del-libro",
     "title": "Child Oportunity Index",
@@ -185,6 +60,16 @@
     ]
   },
   {
+    "objectID": "antecedentes.html",
+    "href": "antecedentes.html",
+    "title": "1  Marco Conceptual",
+    "section": "",
+    "text": "La oportunidad infantil como construcción territorial\nEl proyecto se fundamenta en la idea de que las oportunidades para niñas, niños y adolescentes no dependen únicamente de sus características individuales o familiares, sino que están profundamente condicionadas por los entornos territoriales en los que crecen. La calidad de los barrios, el acceso a recursos educativos, la salud ambiental, la infraestructura urbana y el capital social son dimensiones claves que configuran un paisaje de oportunidades con marcadas desigualdades espaciales.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Marco Conceptual</span>"
+    ]
+  },
+  {
     "objectID": "antecedentes.html#enfoque-multidimensional-de-las-oportunidades",
     "href": "antecedentes.html#enfoque-multidimensional-de-las-oportunidades",
     "title": "1  Marco Conceptual",
@@ -225,79 +110,6 @@
     ]
   },
   {
-    "objectID": "avances.html",
-    "href": "avances.html",
-    "title": "3  Avances",
-    "section": "",
-    "text": "3.1 Gantt General del Proyecto",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Avances</span>"
-    ]
-  },
-  {
-    "objectID": "avances.html#gantt-general-del-proyecto",
-    "href": "avances.html#gantt-general-del-proyecto",
-    "title": "3  Avances",
-    "section": "",
-    "text": "Carta Gantt general del proyecto, 2025. Link",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Avances</span>"
-    ]
-  },
-  {
-    "objectID": "ee_calor.html#indicador-de-exposión-extrema-al-calor-de-cit",
-    "href": "ee_calor.html#indicador-de-exposión-extrema-al-calor-de-cit",
-    "title": "9  Exposición E. Calor",
-    "section": "Indicador de Exposión Extrema al Calor de CIT",
-    "text": "Indicador de Exposión Extrema al Calor de CIT\nNombre: Expocisión Extrema al Calor (EEC)\nDefinición Operacional: Número promedio de días de verano en los que la temperatura máxima diaria supera los 32.2°C.\n\nInsumos\nPara la construcción del indicador de exposición extrema al calor, se utilizó como insumo principal la temperatura superficial del suelo (Land Surface Temperature, LST), obtenida desde el producto satelital MOD11A1 V6.1 del sensor MODIS (Moderate Resolution Imaging Spectroradiometer), alojado en los satélites Terra. Este producto entrega datos diarios de temperatura superficial con una resolución espacial de 1 km x 1 km, lo que permite capturar con alta granularidad la dinámica térmica del territorio a escala local.\nPara la descarga y procesamiento eficiente de esta información satelital se utilizó la librería especializada modisfast, diseñada para agilizar la adquisición masiva y sistemática de productos MODIS.\n\n\nCálculos\n\nFiltrado temporal: Seleccionar sólo las imágenes correspondientes a los meses de verano para cada año (e.g., diciembre-marzo para hemisferio sur).\nClasificación binaria por umbral: Para cada imagen diaria, asignar valor 1 si la temperatura supera 32.2°C; en caso contrario, 0.\nSuma anual de exposición extrema: Para cada año, sumar los días con valor 1 para cada pixel. El resultado es un raster anual con la cantidad de días de calor extremo.\nCálculo promedio multianual: Promediar los valores anuales para obtener un raster con el promedio de exposición extrema entre los años 2014 y 2024.\nIntersección espacial con unidades censales: Aplicar zonal statistics (media) utilizando los polígonos de manzanas censales sobre el raster promedio para obtener un valor por manzana.\n\n\n\nResultados\n\n\n\nResultados de Indicador de Exposición Extrama al Calor (EEC)\n\n\n\n\nInterpretación\nUn mayor número de días con calor extremo se asocia con mayores riesgos para la salud, especialmente en niños, personas mayores y otros grupos vulnerables. Este indicador permite identificar zonas que requieren medidas de adaptación al cambio climático.\n\n\n\n\nNoelke, C, N McArdle, B DeVoe, M Leonardos, Y Lu, RW Ressler, and D Acevedo-Garcia. 2024. “Child Opportunity Index 3.0 Technical Documentation. Diversitydatakids. Org, Brandeis University.” Retrieved from Diversitydatakids. Org/Research-Library/Coi-30-Technical-Documentation.",
-    "crumbs": [
-      "Salud y M. Ambiente",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exposición E. Calor</span>"
-    ]
-  },
-  {
-    "objectID": "template_ind.html",
-    "href": "template_ind.html",
-    "title": "10  Indicador en Blanco",
-    "section": "",
-    "text": "1. Información General\n\nFicha técnica\n\nNombre completo:\nSigla:\nDimensión:\nDominio:\nFuente principal de datos:\nUnidad espacial de análisis:\nFrecuencia temporal:\nCobertura temporal del análisis:\nResolución espacial del insumo:\nVersión actual:\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n✅\n\n\nValidación de Resultados\n✅\n\n\nEntrega de Resultados\n🟡\n\n\nDocumentación\n✅\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Indicador en Blanco</span>"
-    ]
-  },
-  {
-    "objectID": "template_ind.html#nombre-del-indicador",
-    "href": "template_ind.html#nombre-del-indicador",
-    "title": "10  Indicador en Blanco",
-    "section": "",
-    "text": "1. Ficha técnica\n\nNombre completo:\nSigla:\nDimensión:\nDominio:\nFuente principal de datos:\nUnidad espacial de análisis:\nFrecuencia temporal:\nCobertura temporal del análisis:\nResolución espacial del insumo:\nVersión actual:\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
-    "crumbs": [
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Indicador en Blanco</span>"
-    ]
-  },
-  {
-    "objectID": "ee_calor.html#avances",
-    "href": "ee_calor.html#avances",
-    "title": "9  Exposición E. Calor",
-    "section": "Avances",
-    "text": "Avances",
-    "crumbs": [
-      "Salud y M. Ambiente",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exposición E. Calor</span>"
-    ]
-  },
-  {
-    "objectID": "ee_calor.html#exposición-extrema-al-calor-eec",
-    "href": "ee_calor.html#exposición-extrema-al-calor-eec",
-    "title": "9  Exposición E. Calor",
-    "section": "",
-    "text": "1. Ficha técnica\n\nNombre completo: Exposición Extrema al Calor\n\nSigla: EEC\n\nDominio/Subdominio: Salud y Medio Ambiente / Entornos Saludables\n\nFuente principal de datos: Producto satelital MOD11A1 V6.1 – MODIS Terra\n\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Diaria (agregado anual y multianual)\n\nCobertura temporal del análisis: 2014–2024\n\nResolución espacial del insumo: 1 km x 1 km\n\nVersión actual: 1.0\n\n\n\n\n2. Conceptualización\n\n9.0.0.1 2.1 Definición del indicador\nLa exposición extrema al calor se refiere a la cantidad promedio de días en que la temperatura máxima supera un umbral definido como peligroso para la salud humana. Este fenómeno está asociado a impactos significativos en la salud pública, particularmente en niños, niñas y adolescentes, y refleja condiciones territoriales que requieren medidas de adaptación al cambio climático.\n\n\n9.0.0.2 2.2 Conceptos relacionados\n\nExposición Extrema al Calor: Número de días en que la temperatura máxima diaria excede los 32,2 °C, umbral considerado crítico para la salud, especialmente en poblaciones vulnerables.\nOla de Calor: Evento prolongado de temperaturas anómalamente altas, definidas por percentiles climatológicos (90º o 95º) durante 2 o más días consecutivos.\nPeríodo de Referencia: Promedio de 5 años para minimizar la influencia de eventos atípicos. Por ejemplo, el valor 2024 representa el promedio 2020–2024.\n\n\n\n9.0.0.3 2.3 Referente internacional (COI 3.0)\nEn el Child Opportunity Index 3.0, este indicador se calcula como el número promedio de días de verano donde la temperatura máxima supera los 90°F (32,2°C), usando datos del sistema NLDAS-2 (North American Land Data Assimilation System).\n\n\n\n\n3. Adaptación metodológica CIT\n\n9.0.0.4 3.1 Definición operacional adaptada\nNúmero promedio de días estivales en que la temperatura superficial del suelo excede los 32,2 °C, medida a escala de manzana censal, entre los años 2014 y 2024.\n\n\n9.0.0.5 3.2 Insumos y fuentes\nSe utilizó el producto satelital MOD11A1 V6.1, que entrega datos diarios de temperatura superficial del suelo (Land Surface Temperature, LST) a una resolución espacial de 1 km. El sensor MODIS, a bordo del satélite Terra, permite observar la dinámica térmica del territorio de forma sistemática y precisa. La adquisición y procesamiento de esta información se realizó mediante la librería modisfast, optimizada para el manejo masivo de productos MODIS.\n\n\n\n\n4. Pasos de cálculo\n\nFiltrado temporal: Se seleccionaron las imágenes correspondientes a los meses de verano del hemisferio sur (diciembre a marzo) para cada año del periodo 2014–2024.\nClasificación binaria por umbral: A cada imagen diaria se le asigna un valor binario (1 si supera 32,2 °C, 0 si no).\nSuma anual: Para cada píxel, se sumaron los días con valor 1 a lo largo de cada año, generando un raster anual de exposición extrema.\nPromedio multianual: Se promediaron los 11 valores anuales (2014–2024) para obtener un raster con el valor promedio multianual de días de exposición extrema.\nIntersección espacial: Se aplicó zonal statistics para calcular la media por manzana censal, obteniendo así un valor territorializado del indicador.\n\n\n\n\n5. Resultados preliminares\n\n\n\nResultados de Indicador de Exposición Extrema al Calor (EEC)\n\n\nEl mapa presenta la distribución promedio de días de calor extremo a nivel de manzanas censales en el periodo analizado. Se observan concentraciones más altas en sectores urbanos densamente construidos y zonas interiores del país.\n\n\n\n6. Interpretación y usos esperados\nUn mayor número de días con calor extremo implica una mayor exposición a riesgos sanitarios como golpes de calor, enfermedades respiratorias y estrés térmico, especialmente para niños, personas mayores y personas con condiciones preexistentes. Este indicador es útil para: - Priorizar zonas que requieren estrategias de adaptación al cambio climático. - Informar planes territoriales en salud pública, infraestructura verde y diseño urbano. - Integrar componentes de riesgo climático en intervenciones centradas en infancia.\n\n\n\n7. Validación, supuestos y limitaciones\n\nSupuestos: Se asume que la temperatura superficial del suelo es un proxy adecuado para la exposición humana al calor, aunque puede diferir de la temperatura del aire.\nLimitaciones: Las nubes, cuerpos de agua y zonas de sombra pueden afectar la calidad de las observaciones MODIS. Se descartaron días sin observación clara.\nVentajas: Resolución diaria y alta cobertura espacial permiten un análisis territorial fino, replicable y actualizado.\n\n\n\n\n8. Referencias\n\nNoelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). Child Opportunity Index 3.0 Technical Documentation.\nMODIS Land Science Team. (2023). MOD11A1 V6.1 Product User Guide. NASA LP DAAC.\n\nCentro de Inteligencia Territorial, UAI (2025). Adaptación Metodológica del COI para Chile.",
-    "crumbs": [
-      "Salud y M. Ambiente",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Exposición E. Calor</span>"
-    ]
-  },
-  {
     "objectID": "diseno.html#selección-de-indicadores",
     "href": "diseno.html#selección-de-indicadores",
     "title": "2  Selección de Indicadores",
@@ -318,14 +130,137 @@
     ]
   },
   {
-    "objectID": "ozono.html",
-    "href": "ozono.html",
-    "title": "9  Concentración de Ozono",
+    "objectID": "avances.html",
+    "href": "avances.html",
+    "title": "3  Avances",
     "section": "",
-    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Concentración de Ozono\nSigla: COZ\n\nDimensión: Salud y Medio Ambiente\nDominio: Contaminación\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n🟡\n\n\nValidación de Resultados\n❌\n\n\nEntrega de Resultados\n❌\n\n\nDocumentación\n❌\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "text": "3.1 Gantt General del Proyecto",
     "crumbs": [
-      "Salud y M. Ambiente",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Concentración de Ozono</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Avances</span>"
+    ]
+  },
+  {
+    "objectID": "avances.html#gantt-general-del-proyecto",
+    "href": "avances.html#gantt-general-del-proyecto",
+    "title": "3  Avances",
+    "section": "",
+    "text": "Carta Gantt general del proyecto, 2025. Link",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Avances</span>"
+    ]
+  },
+  {
+    "objectID": "avances.html#avance-general-de-los-insdicadores-coi-propuesto",
+    "href": "avances.html#avance-general-de-los-insdicadores-coi-propuesto",
+    "title": "3  Avances",
+    "section": "3.2 Avance General de los Insdicadores COI Propuesto",
+    "text": "3.2 Avance General de los Insdicadores COI Propuesto\n\n\nEstado de avance general de Indicadores propuestos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNº\nSigla\nNombre del Indicador\nDimensión\nDominio\nDiseño\nInsumos\nCálculo\nValidación\nResultados\nDocumentación\n\n\n\n\n1\nIPUPK\nInscripción Pública a Pre-Kinder\nEducación\nEducación Primaria\n✅\n🟡\n❌\n❌\n❌\n❌\n\n\n2\nIPRPK\nInscripción Privada a Pre-Kinder\nEducación\nEducación Primaria\n✅\n🟡\n❌\n❌\n❌\n❌\n\n\n3\nPPLM\nPuntajes en pruebas de Lectura y Matemática\nEducación\nEducación Básica\n✅\n🟡\n❌\n❌\n❌\n❌\n\n\n4\nCPLM\nCrecimiento en pruebas de Lectura y Matemáticas\nEducación\nEducación Básica\n✅\n🟡\n❌\n❌\n❌\n❌\n\n\n5\nEEC\nExpocisión Extrema al Calor\nSalud y Medio Ambiente\nEntorno Saludable\n✅\n✅\n✅\n✅\n🟡\n✅\n\n\n6\nMPA\nMicroparticulas del Aire\nSalud y Medio Ambiente\nContaminación\n✅\n✅\n🟡\n❌\n❌\n❌\n\n\n7\nCOZ\nConcentración de Ozono\nSalud y Medio Ambiente\nContaminación\n✅\n✅\n🟡\n❌\n❌\n❌\n\n\n8\nCIAAS\nContaminantes Industriales en Aire, Agua y Suelo\nSalud y Medio Ambiente\nContaminación\n✅\n✅\n🟡\n❌\n❌\n❌\n\n\n9\nVRP\nVertederos de Residuos Peligrosos\nSalud y Medio Ambiente\nContaminación\n✅\n✅\n🟡\n❌\n❌\n❌\n\n\n10\nTDE\nTasa de Empleo\nSocial y Económico\nEmpleo\n✅\n✅\n✅\n✅\n✅\n❌\n\n\n11\nEJH\nEscolaridad de Jefe de Hogar\nSocial y Económico\nInequidad Socioeconómica Concentrada\n✅\n✅\n✅\n✅\n✅\n❌\n\n\n12\nJHESU\nJefe de Hogar con Educación Superior\nSocial y Económico\nInequidad Socioeconómica Concentrada\n✅\n✅\n✅\n❌\n❌\n❌\n\n\n13\nJHESE\nJefe de Hogar con Educación Secundaria\nSocial y Económico\nInequidad Socioeconómica Concentrada\n✅\n✅\n✅\n❌\n❌\n❌\n\n\n14\nJHEPR\nJefe de Hogar con Educación Primaria\nSocial y Económico\nInequidad Socioeconómica Concentrada\n✅\n✅\n✅\n❌\n❌\n❌\n\n\n15\nVCH\nViviendas con Hacinamiento\nSocial y Económico\nRecursos Habitacionales\n✅\n✅\n✅\n✅\n✅\n❌\n\n\n16\nHUP\nHogares Uniparentales\nSocial y Económico\nRecursos Sociales\n✅\n✅\n✅\n✅\n✅\n❌",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Avances</span>"
+    ]
+  },
+  {
+    "objectID": "educacion.html",
+    "href": "educacion.html",
+    "title": "Educación",
+    "section": "",
+    "text": "Definición",
+    "crumbs": [
+      "Educación"
+    ]
+  },
+  {
+    "objectID": "educacion.html#objetivos",
+    "href": "educacion.html#objetivos",
+    "title": "Educación",
+    "section": "Objetivos",
+    "text": "Objetivos",
+    "crumbs": [
+      "Educación"
+    ]
+  },
+  {
+    "objectID": "educacion.html#distribución",
+    "href": "educacion.html#distribución",
+    "title": "Educación",
+    "section": "Distribución",
+    "text": "Distribución",
+    "crumbs": [
+      "Educación"
+    ]
+  },
+  {
+    "objectID": "pub_prekinder.html",
+    "href": "pub_prekinder.html",
+    "title": "4  Pública a Pre-Kinder",
+    "section": "",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Inscripción Pública a Pre-Kinder\nSigla: IPUPK\n\nDimensión: Educación\nDominio: Educación Primaria\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n🟡\n\n\nCálculo de Indicador\n❌\n\n\nValidación de Resultados\n❌\n\n\nEntrega de Resultados\n❌\n\n\nDocumentación\n❌\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "crumbs": [
+      "Educación",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Pública a Pre-Kinder</span>"
+    ]
+  },
+  {
+    "objectID": "priv_prekinder.html",
+    "href": "priv_prekinder.html",
+    "title": "5  Privada a Pre-Kinder",
+    "section": "",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Inscripción Privada a Pre-Kinder\nSigla: IPRPK\n\nDimensión: Educación\nDominio: Educación Primaria\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n🟡\n\n\nCálculo de Indicador\n❌\n\n\nValidación de Resultados\n❌\n\n\nEntrega de Resultados\n❌\n\n\nDocumentación\n❌\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "crumbs": [
+      "Educación",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Privada a Pre-Kinder</span>"
+    ]
+  },
+  {
+    "objectID": "puntajes_lym.html",
+    "href": "puntajes_lym.html",
+    "title": "6  Puntaje Lec. y Mat.",
+    "section": "",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Puntajes en pruebas de Lectura y Matemática\nSigla: PPLM\n\nDimensión: Educación\nDominio: Educación Básica\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n🟡\n\n\nCálculo de Indicador\n❌\n\n\nValidación de Resultados\n❌\n\n\nEntrega de Resultados\n❌\n\n\nDocumentación\n❌\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "crumbs": [
+      "Educación",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Puntaje Lec. y Mat.</span>"
+    ]
+  },
+  {
+    "objectID": "crecimiento_lym.html",
+    "href": "crecimiento_lym.html",
+    "title": "7  Crecimiento en Lec. y Mat.",
+    "section": "",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Crecimiento en pruebas de Lectura y Matemáticas\nSigla: CPLM\n\nDimensión: Educación\nDominio: Educación Básica\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n🟡\n\n\nCálculo de Indicador\n❌\n\n\nValidación de Resultados\n❌\n\n\nEntrega de Resultados\n❌\n\n\nDocumentación\n❌\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "crumbs": [
+      "Educación",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Crecimiento en Lec. y Mat.</span>"
+    ]
+  },
+  {
+    "objectID": "s_y_ma.html",
+    "href": "s_y_ma.html",
+    "title": "Salud y M. Ambiente",
+    "section": "",
+    "text": "Definición",
+    "crumbs": [
+      "Salud y M. Ambiente"
+    ]
+  },
+  {
+    "objectID": "s_y_ma.html#objetivos",
+    "href": "s_y_ma.html#objetivos",
+    "title": "Salud y M. Ambiente",
+    "section": "Objetivos",
+    "text": "Objetivos",
+    "crumbs": [
+      "Salud y M. Ambiente"
+    ]
+  },
+  {
+    "objectID": "s_y_ma.html#distribución",
+    "href": "s_y_ma.html#distribución",
+    "title": "Salud y M. Ambiente",
+    "section": "Distribución",
+    "text": "Distribución",
+    "crumbs": [
+      "Salud y M. Ambiente"
     ]
   },
   {
@@ -337,6 +272,17 @@
     "crumbs": [
       "Salud y M. Ambiente",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Micropartículas del Aire</span>"
+    ]
+  },
+  {
+    "objectID": "ozono.html",
+    "href": "ozono.html",
+    "title": "9  Concentración de Ozono",
+    "section": "",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Concentración de Ozono\nSigla: COZ\n\nDimensión: Salud y Medio Ambiente\nDominio: Contaminación\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n🟡\n\n\nValidación de Resultados\n❌\n\n\nEntrega de Resultados\n❌\n\n\nDocumentación\n❌\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "crumbs": [
+      "Salud y M. Ambiente",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Concentración de Ozono</span>"
     ]
   },
   {
@@ -359,6 +305,17 @@
     "crumbs": [
       "Salud y M. Ambiente",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Residuos Peligrosos</span>"
+    ]
+  },
+  {
+    "objectID": "ee_calor.html",
+    "href": "ee_calor.html",
+    "title": "12  Exposición E. Calor",
+    "section": "",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Expocisión Extrema al Calor\nSigla: EEC\n\nDimensión: Salud y Medio Ambiente\nDominio: Entorno Saludable\nFuente principal de datos: Producto satelital MOD11A1 V6.1 – MODIS Terra\n\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Diaria (agregado anual y multianual)\n\nCobertura temporal del análisis: 2014–2024\n\nResolución espacial del insumo: 1 km x 1 km\n\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n✅\n\n\nValidación de Resultados\n✅\n\n\nEntrega de Resultados\n🟡\n\n\nDocumentación\n✅\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nLa exposición extrema al calor se refiere a la cantidad promedio de días en que la temperatura máxima supera un umbral definido como peligroso para la salud humana. Este fenómeno está asociado a impactos significativos en la salud pública, particularmente en niños, niñas y adolescentes, y refleja condiciones territoriales que requieren medidas de adaptación al cambio climático.\n\n\n2.2 Conceptos relacionados\n\nExposición Extrema al Calor: Número de días en que la temperatura máxima diaria excede los 32.2°C, umbral considerado crítico para la salud, especialmente en poblaciones vulnerables.\nOla de Calor: Evento prolongado de temperaturas anómalamente altas, definidas por percentiles climatológicos (90º o 95º) durante 2 o más días consecutivos.\nPeríodo de Referencia: Promedio de 10 años para minimizar la influencia de eventos atípicos.\n\n\n\n2.3 Referente internacional (COI 3.0)\nEn la Documentación Técnica de COI 3.0, este indicador se calcula como el número promedio de días de verano donde la temperatura máxima supera los 90°F (32.2°C), usando datos del sistema NLDAS-2 (North American Land Data Assimilation System).\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nEste indicador corresponde al promedio multianual del número de días estivales en los que la temperatura superficial del suelo (Land Surface Temperature, LST) supera el umbral de 32.2 °C, considerando exclusivamente el período comprendido entre el 21 de diciembre y el 21 de marzo de cada año, correspondiente al verano climatológico en el hemisferio sur.\nEl valor final se expresa como la cantidad promedio de días de exposición extrema al calor, calculado por unidad mínima territorial (manzana censal), para el período comprendido entre los años 2014 y 2024. Este indicador permite identificar espacialmente aquellas zonas que enfrentan condiciones térmicas elevadas con recurrencia, contribuyendo al diagnóstico de vulnerabilidad climática en poblaciones infantiles.\n\n\n3.2 Insumos y fuentes\nSe utilizó el producto satelital MOD11A1 V6.1, que entrega datos diarios de temperatura superficial del suelo (Land Surface Temperature, LST) a una resolución espacial de 1 km. El sensor MODIS, a bordo del satélite Terra, permite observar la dinámica térmica del territorio de forma sistemática y precisa. La adquisición y procesamiento de esta información se realizó mediante la librería modisfast, optimizada para el manejo masivo de productos MODIS. Insumos levantados por John Treimun.\n\n\n\n\n4. Pasos de cálculo\n\nFiltrado temporal: Se seleccionaron las imágenes correspondientes a los meses de verano del hemisferio sur (diciembre a marzo) para cada año del periodo 2014–2024.\nClasificación binaria por umbral: A cada imagen diaria se le asigna un valor binario (1 si supera 32.2 °C, 0 si no).\nSuma anual: Para cada píxel, se sumaron los días con valor 1 a lo largo de cada año, generando un raster anual de exposición extrema.\nPromedio multianual: Se promediaron los 11 valores anuales (2014–2024) para obtener un raster con el valor promedio multianual de días de exposición extrema.\nIntersección espacial: Se aplicó zonal statistics para calcular la media por manzana censal, obteniendo así un valor territorializado del indicador.\n\n\n\n\n5. Resultados preliminares\n\n\n\nResultados de Indicador de Exposición Extrema al Calor (EEC)\n\n\nEl mapa presenta la distribución promedio de días de calor extremo a nivel de manzanas censales en el periodo analizado. Se observan concentraciones más altas en sectores urbanos densamente construidos y en la zona norte central de la región metropolinta.\n\n\n\n6. Interpretación y usos esperados\nUn mayor número de días con calor extremo implica una mayor exposición a riesgos sanitarios como golpes de calor, enfermedades respiratorias y estrés térmico, especialmente para niños, personas mayores y personas con condiciones preexistentes. Este indicador es útil para:\n\nPriorizar zonas que requieren estrategias de adaptación al cambio climático.\nInformar planes territoriales en salud pública, infraestructura verde y diseño urbano.\nIntegrar componentes de riesgo climático en intervenciones centradas en infancia.\n\n\n\n\n7. Validación, supuestos y limitaciones\n\nSupuestos: Se asume que la temperatura superficial del suelo es un proxy adecuado para la exposición humana al calor, aunque puede diferir de la temperatura del aire.\nLimitaciones: Las nubes, cuerpos de agua y zonas de sombra pueden afectar la calidad de las observaciones MODIS. Se descartaron días sin observación clara.\nVentajas: Resolución diaria y alta cobertura espacial permiten un análisis territorial fino, replicable y actualizado.\n\n\n\n\n8. Referencias\n\nNoelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). Child Opportunity Index 3.0 Technical Documentation.\nMODIS Land Science Team. (2023). MOD11A1 V6.1 Product User Guide. NASA LP DAAC.",
+    "crumbs": [
+      "Salud y M. Ambiente",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Exposición E. Calor</span>"
     ]
   },
   {
@@ -414,28 +371,6 @@
     ]
   },
   {
-    "objectID": "jh_superior.html",
-    "href": "jh_superior.html",
-    "title": "17  Ed. Superior J.H",
-    "section": "",
-    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Jefe de Hogar con Educación Superior\nSigla: JHESU\n\nDimensión: Social y Económico\nDominio: Inequidad Socioeconómica Concentrada\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n✅\n\n\nValidación de Resultados\n❌\n\n\nEntrega de Resultados\n❌\n\n\nDocumentación\n❌\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
-    "crumbs": [
-      "Social y Económico",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Ed. Superior J.H</span>"
-    ]
-  },
-  {
-    "objectID": "jh_secundaria.html",
-    "href": "jh_secundaria.html",
-    "title": "16  Ed. Secundaria J.H.",
-    "section": "",
-    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Jefe de Hogar con Educación Secundaria\nSigla: JHESE\n\nDimensión: Social y Económico\nDominio: Inequidad Socioeconómica Concentrada\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n✅\n\n\nValidación de Resultados\n❌\n\n\nEntrega de Resultados\n✅\n\n\nDocumentación\n❌\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
-    "crumbs": [
-      "Social y Económico",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Ed. Secundaria J.H.</span>"
-    ]
-  },
-  {
     "objectID": "jh_primaria.html",
     "href": "jh_primaria.html",
     "title": "15  Ed. Primaria J.H.",
@@ -444,6 +379,28 @@
     "crumbs": [
       "Social y Económico",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Ed. Primaria J.H.</span>"
+    ]
+  },
+  {
+    "objectID": "jh_secundaria.html",
+    "href": "jh_secundaria.html",
+    "title": "16  Ed. Secundaria J.H.",
+    "section": "",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Jefe de Hogar con Educación Secundaria\nSigla: JHESE\n\nDimensión: Social y Económico\nDominio: Inequidad Socioeconómica Concentrada\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n✅\n\n\nValidación de Resultados\n❌\n\n\nEntrega de Resultados\n❌\n\n\nDocumentación\n❌\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "crumbs": [
+      "Social y Económico",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Ed. Secundaria J.H.</span>"
+    ]
+  },
+  {
+    "objectID": "jh_superior.html",
+    "href": "jh_superior.html",
+    "title": "17  Ed. Superior J.H",
+    "section": "",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Jefe de Hogar con Educación Superior\nSigla: JHESU\n\nDimensión: Social y Económico\nDominio: Inequidad Socioeconómica Concentrada\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n✅\n\n\nValidación de Resultados\n❌\n\n\nEntrega de Resultados\n❌\n\n\nDocumentación\n❌\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "crumbs": [
+      "Social y Económico",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Ed. Superior J.H</span>"
     ]
   },
   {
@@ -458,36 +415,6 @@
     ]
   },
   {
-    "objectID": "s_y_ma.html",
-    "href": "s_y_ma.html",
-    "title": "Salud y M. Ambiente",
-    "section": "",
-    "text": "Definición",
-    "crumbs": [
-      "Salud y M. Ambiente"
-    ]
-  },
-  {
-    "objectID": "s_y_ma.html#objetivos",
-    "href": "s_y_ma.html#objetivos",
-    "title": "Salud y M. Ambiente",
-    "section": "Objetivos",
-    "text": "Objetivos",
-    "crumbs": [
-      "Salud y M. Ambiente"
-    ]
-  },
-  {
-    "objectID": "s_y_ma.html#distribución",
-    "href": "s_y_ma.html#distribución",
-    "title": "Salud y M. Ambiente",
-    "section": "Distribución",
-    "text": "Distribución",
-    "crumbs": [
-      "Salud y M. Ambiente"
-    ]
-  },
-  {
     "objectID": "monopar.html",
     "href": "monopar.html",
     "title": "19  Hogares Monoparentales",
@@ -496,6 +423,16 @@
     "crumbs": [
       "Social y Económico",
       "<span class='chapter-number'>19</span>  <span class='chapter-title'>Hogares Monoparentales</span>"
+    ]
+  },
+  {
+    "objectID": "template_ind.html",
+    "href": "template_ind.html",
+    "title": "20  Indicador en Blanco",
+    "section": "",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo:\nSigla:\nDimensión:\nDominio:\nFuente principal de datos:\nUnidad espacial de análisis:\nFrecuencia temporal:\nCobertura temporal del análisis:\nResolución espacial del insumo:\nVersión actual:\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n✅\n\n\nValidación de Resultados\n✅\n\n\nEntrega de Resultados\n🟡\n\n\nDocumentación\n✅\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "crumbs": [
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Indicador en Blanco</span>"
     ]
   },
   {
@@ -509,57 +446,13 @@
     ]
   },
   {
-    "objectID": "pub_prekinder.html",
-    "href": "pub_prekinder.html",
-    "title": "4  Pública a Pre-Kinder",
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
     "section": "",
-    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Inscripción Pública a Pre-Kinder\nSigla: IPUPK\n\nDimensión: Educación\nDominio: Educación Primaria\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n🟡\n\n\nCálculo de Indicador\n❌\n\n\nValidación de Resultados\n❌\n\n\nEntrega de Resultados\n❌\n\n\nDocumentación\n❌\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "text": "Noelke, C, N McArdle, B DeVoe, M Leonardos, Y Lu, RW Ressler, and D\nAcevedo-Garcia. 2024. “Child Opportunity Index 3.0 Technical\nDocumentation. Diversitydatakids. Org, Brandeis University.”\nRetrieved from Diversitydatakids.\nOrg/Research-Library/Coi-30-Technical-Documentation.",
     "crumbs": [
-      "Educación",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Pública a Pre-Kinder</span>"
-    ]
-  },
-  {
-    "objectID": "priv_prekinder.html",
-    "href": "priv_prekinder.html",
-    "title": "5  Privada a Pre-Kinder",
-    "section": "",
-    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Inscripción Privada a Pre-Kinder\nSigla: IPRPK\n\nDimensión: Educación\nDominio: Educación Primaria\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n🟡\n\n\nCálculo de Indicador\n❌\n\n\nValidación de Resultados\n❌\n\n\nEntrega de Resultados\n❌\n\n\nDocumentación\n❌\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
-    "crumbs": [
-      "Educación",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Privada a Pre-Kinder</span>"
-    ]
-  },
-  {
-    "objectID": "puntajes_lym.html",
-    "href": "puntajes_lym.html",
-    "title": "6  Puntaje Lec. y Mat.",
-    "section": "",
-    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Puntajes en pruebas de Lectura y Matemática\nSigla: PPLM\n\nDimensión: Educación\nDominio: Educación Básica\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n🟡\n\n\nCálculo de Indicador\n❌\n\n\nValidación de Resultados\n❌\n\n\nEntrega de Resultados\n❌\n\n\nDocumentación\n❌\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
-    "crumbs": [
-      "Educación",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Puntaje Lec. y Mat.</span>"
-    ]
-  },
-  {
-    "objectID": "crecimiento_lym.html",
-    "href": "crecimiento_lym.html",
-    "title": "7  Crecimiento en Lec. y Mat.",
-    "section": "",
-    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Crecimiento en pruebas de Lectura y Matemáticas\nSigla: CPLM\n\nDimensión: Educación\nDominio: Educación Básica\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n🟡\n\n\nCálculo de Indicador\n❌\n\n\nValidación de Resultados\n❌\n\n\nEntrega de Resultados\n❌\n\n\nDocumentación\n❌\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
-    "crumbs": [
-      "Educación",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Crecimiento en Lec. y Mat.</span>"
-    ]
-  },
-  {
-    "objectID": "avances.html#avance-general-de-los-insdicadores-coi-propuesto",
-    "href": "avances.html#avance-general-de-los-insdicadores-coi-propuesto",
-    "title": "3  Avances",
-    "section": "3.2 Avance General de los Insdicadores COI Propuesto",
-    "text": "3.2 Avance General de los Insdicadores COI Propuesto\n\n\nEstado de avance general de Indicadores propuestos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNº\nSigla\nNombre del Indicador\nDimensión\nDominio\nDiseño\nInsumos\nCálculo\nValidación\nResultados\nDocumentación\n\n\n\n\n1\nIPUPK\nInscripción Pública a Pre-Kinder\nEducación\nEducación Primaria\n✅\n🟡\n❌\n❌\n❌\n❌\n\n\n2\nIPRPK\nInscripción Privada a Pre-Kinder\nEducación\nEducación Primaria\n✅\n🟡\n❌\n❌\n❌\n❌\n\n\n3\nPPLM\nPuntajes en pruebas de Lectura y Matemática\nEducación\nEducación Básica\n✅\n🟡\n❌\n❌\n❌\n❌\n\n\n4\nCPLM\nCrecimiento en pruebas de Lectura y Matemáticas\nEducación\nEducación Básica\n✅\n🟡\n❌\n❌\n❌\n❌\n\n\n5\nEEC\nExpocisión Extrema al Calor\nSalud y Medio Ambiente\nEntorno Saludable\n✅\n✅\n✅\n✅\n🟡\n✅\n\n\n6\nMPA\nMicroparticulas del Aire\nSalud y Medio Ambiente\nContaminación\n✅\n✅\n🟡\n❌\n❌\n❌\n\n\n7\nCOZ\nConcentración de Ozono\nSalud y Medio Ambiente\nContaminación\n✅\n✅\n🟡\n❌\n❌\n❌\n\n\n8\nCIAAS\nContaminantes Industriales en Aire, Agua y Suelo\nSalud y Medio Ambiente\nContaminación\n✅\n✅\n🟡\n❌\n❌\n❌\n\n\n9\nVRP\nVertederos de Residuos Peligrosos\nSalud y Medio Ambiente\nContaminación\n✅\n✅\n🟡\n❌\n❌\n❌\n\n\n10\nTDE\nTasa de Empleo\nSocial y Económico\nEmpleo\n✅\n✅\n✅\n✅\n✅\n❌\n\n\n11\nEJH\nEscolaridad de Jefe de Hogar\nSocial y Económico\nInequidad Socioeconómica Concentrada\n✅\n✅\n✅\n✅\n✅\n❌\n\n\n12\nJHESU\nJefe de Hogar con Educación Superior\nSocial y Económico\nInequidad Socioeconómica Concentrada\n✅\n✅\n✅\n❌\n❌\n❌\n\n\n13\nJHESE\nJefe de Hogar con Educación Secundaria\nSocial y Económico\nInequidad Socioeconómica Concentrada\n✅\n✅\n✅\n❌\n❌\n❌\n\n\n14\nJHEPR\nJefe de Hogar con Educación Primaria\nSocial y Económico\nInequidad Socioeconómica Concentrada\n✅\n✅\n✅\n❌\n❌\n❌\n\n\n15\nVCH\nViviendas con Hacinamiento\nSocial y Económico\nRecursos Habitacionales\n✅\n✅\n✅\n✅\n✅\n❌\n\n\n16\nHUP\nHogares Uniparentales\nSocial y Económico\nRecursos Sociales\n✅\n✅\n✅\n✅\n✅\n❌",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Avances</span>"
+      "References"
     ]
   }
 ]
