@@ -1,0 +1,31 @@
+---
+title: "Selección de Indicadores"
+subtitle: "Evaluación y Selección Indicadores"
+author: ["{{< var jtreimun.name >}}", "{{< var dberroeta.name >}}", "{{< var szuniga.name >}}"]
+---
+
+##. Introducción 
+
+La construcción de un índice de oportunidad infantil para el contexto chileno exigió un proceso riguroso de análisis, selección y adaptación de indicadores territoriales. Como punto de partida, el equipo de investigación del Centro de Inteligencia Territorial revisó detalladamente la propuesta metodológica de {{< var coi.doc >}}, desarrollado por el diversityDataKids.org y el Institute for Child, Youth and Family Policy de la Universidad de Brandeis  [@noelke2024child]. Este índice fue escogido como modelo de referencia por su solidez conceptual, su validación empírica en distintos contextos urbanos de Estados Unidos y, especialmente, por su enfoque multidimensional de las oportunidades para el desarrollo infantil.
+
+
+## Evaluacuón de Indecadores
+
+En una primera fase, el equipo realizó una serie de reuniones técnicas donde se revisaron uno a uno los indicadores propuestos por el COI, evaluando su pertinencia conceptual para el caso chileno, su posibilidad de adaptación y, crucialmente, la disponibilidad de datos territoriales a escala manzana censal. Se tuvo especial cuidado en identificar aquellas variables que, además de estar conceptualmente alineadas con el modelo, fueran factibles de ser construidas con fuentes de datos nacionales actualizadas, confiables y con cobertura geográfica adecuada.
+
+## Selección de Indicadores
+
+Este proceso de selección se registró sistemáticamente en una tabla de análisis comparativo, donde se evaluó cada indicador en función de su relevancia conceptual, su correspondencia con objetivos del proyecto y su viabilidad de implementación en Chile. Esta tabla está disponible para consulta en el siguiente documento: [hipervínculo al Excel](https://alumnosuaicl.sharepoint.com/:x:/r/sites/Investigacin_equipo-Investigacin-COI/_layouts/15/Doc2.aspx?action=edit&sourcedoc=%7Bd05d3658-0213-4de9-93c6-8b98a8cebc1d%7D&wdOrigin=TEAMS-MAGLEV.teams_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1745942213755&web=1).
+
+
+## Propuesta Final Indicadores
+
+Como resultado de esta revisión crítica, se definió un subconjunto de indicadores que cumplen con los criterios de disponibilidad, calidad y representatividad territorial en el contexto chileno. Estos indicadores fueron organizados en tres grandes dimensiones, siguiendo la estructura del COI: 
+
+(i) Educación
+(ii) Salud y Medio Ambiente
+(iii) Condiciones Sociales y Económicas
+
+![Elaboración propia Centro de Inteligencia Territorial UAI, 2025](images/CIT_Child Oportunity Index (COI).png){#fig-esquema}
+
+Como se observa en la @fig-esquema en el ámbito de Educación, se incluyeron indicadores como la inscripción a pre-kínder en establecimientos públicos y privados, los puntajes estandarizados en pruebas de lectura y matemáticas, y la evolución en dichos resultados. Para el la dimensión de Salud y Medio Ambiente, se seleccionaron métricas relacionadas con contaminación ambiental (material particulado, ozono, contaminantes industriales, vertederos) y factores de salud pública como la exposición al calor extremo. Finalmente, en el componente Social y Económico, se incorporaron indicadores como la tasa de empleo, el nivel educacional del jefe de hogar, la concentración de desventajas socioeconómicas, el hacinamiento habitacional y la presencia de hogares uniparentales.

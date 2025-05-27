@@ -1,0 +1,38 @@
+---
+title: "Avances"
+---
+
+
+## Gantt General del Proyecto 
+
+![Carta Gantt general del proyecto, 2025. [Link](https://alumnosuaicl.sharepoint.com/:x:/r/sites/CentrodeInteligenciaTerritorial/_layouts/15/doc2.aspx?sourcedoc=%7BCD14CBA8-51D2-4ED3-89AA-96F7D86EAA8E%7D&file=Plan%20de%20Trabajo.xlsx&action=default&mobileredirect=true)](images/gantt.png)
+
+
+## Avance General de los Insdicadores COI Propuesto
+
+
+::: {.tabla-avance}
+
+
+| Nº | Sigla | Nombre del Indicador                             | Dimensión             | Dominio                             | Diseño | Insumos | Cálculo | Validación | Resultados | Documentación |
+|----|:-----:|---------------------------------------------------|------------------------|--------------------------------------|:------:|:-------:|:--------:|:----------:|:-----------:|:--------------:|
+ 1  | {{< var pub_prekinder.sigla >}}  | {{< var pub_prekinder.name >}}          | {{< var pub_prekinder.dimension >}}  | {{< var pub_prekinder.dominio >}}  | {{< var pub_prekinder.diseno >}} | {{< var pub_prekinder.insumos >}} | {{< var pub_prekinder.calculo >}} | {{< var pub_prekinder.validacion >}} | {{< var pub_prekinder.resultados >}} | {{< var pub_prekinder.documentacion >}} |
+| 2  | {{< var priv_prekinder.sigla >}} | {{< var priv_prekinder.name >}}         | {{< var priv_prekinder.dimension >}} | {{< var priv_prekinder.dominio >}} | {{< var priv_prekinder.diseno >}} | {{< var priv_prekinder.insumos >}} | {{< var priv_prekinder.calculo >}} | {{< var priv_prekinder.validacion >}} | {{< var priv_prekinder.resultados >}} | {{< var priv_prekinder.documentacion >}} |
+| 3  | {{< var puntaje_plm.sigla >}}    | {{< var puntaje_plm.name >}}            | {{< var puntaje_plm.dimension >}}    | {{< var puntaje_plm.dominio >}}    | {{< var puntaje_plm.diseno >}} | {{< var puntaje_plm.insumos >}} | {{< var puntaje_plm.calculo >}} | {{< var puntaje_plm.validacion >}} | {{< var puntaje_plm.resultados >}} | {{< var puntaje_plm.documentacion >}} |
+| 4  | {{< var crecimiento_plm.sigla >}}| {{< var crecimiento_plm.name >}}        | {{< var crecimiento_plm.dimension >}}| {{< var crecimiento_plm.dominio >}}| {{< var crecimiento_plm.diseno >}} | {{< var crecimiento_plm.insumos >}} | {{< var crecimiento_plm.calculo >}} | {{< var crecimiento_plm.validacion >}} | {{< var crecimiento_plm.resultados >}} | {{< var crecimiento_plm.documentacion >}} |
+| 5  | {{< var icalor.sigla >}}         | {{< var icalor.name >}}                 | {{< var icalor.dimension >}}         | {{< var icalor.dominio >}}         | {{< var icalor.diseno >}} | {{< var icalor.insumos >}} | {{< var icalor.calculo >}} | {{< var icalor.validacion >}} | {{< var icalor.resultados >}} | {{< var icalor.documentacion >}} |
+| 6  | {{< var particulas.sigla >}}     | {{< var particulas.name >}}             | {{< var particulas.dimension >}}     | {{< var particulas.dominio >}}     | {{< var particulas.diseno >}} | {{< var particulas.insumos >}} | {{< var particulas.calculo >}} | {{< var particulas.validacion >}} | {{< var particulas.resultados >}} | {{< var particulas.documentacion >}} |
+| 7  | {{< var ozono.sigla >}}          | {{< var ozono.name >}}                  | {{< var ozono.dimension >}}          | {{< var ozono.dominio >}}          | {{< var ozono.diseno >}} | {{< var ozono.insumos >}} | {{< var ozono.calculo >}} | {{< var ozono.validacion >}} | {{< var ozono.resultados >}} | {{< var ozono.documentacion >}} |
+| 8  | {{< var industriales.sigla >}}   | {{< var industriales.name >}}           | {{< var industriales.dimension >}}   | {{< var industriales.dominio >}}   | {{< var industriales.diseno >}} | {{< var industriales.insumos >}} | {{< var industriales.calculo >}} | {{< var industriales.validacion >}} | {{< var industriales.resultados >}} | {{< var industriales.documentacion >}} |
+| 9  | {{< var residuos.sigla >}}       | {{< var residuos.name >}}               | {{< var residuos.dimension >}}       | {{< var residuos.dominio >}}       | {{< var residuos.diseno >}} | {{< var residuos.insumos >}} | {{< var residuos.calculo >}} | {{< var residuos.validacion >}} | {{< var residuos.resultados >}} | {{< var residuos.documentacion >}} |
+| 10 | {{< var empleo.sigla >}}         | {{< var empleo.name >}}                 | {{< var empleo.dimension >}}         | {{< var empleo.dominio >}}         | {{< var empleo.diseno >}} | {{< var empleo.insumos >}} | {{< var empleo.calculo >}} | {{< var empleo.validacion >}} | {{< var empleo.resultados >}} | {{< var empleo.documentacion >}} |
+| 11 | {{< var escolaridad_jh.sigla >}} | {{< var escolaridad_jh.name >}}         | {{< var escolaridad_jh.dimension >}} | {{< var escolaridad_jh.dominio >}} | {{< var escolaridad_jh.diseno >}} | {{< var escolaridad_jh.insumos >}} | {{< var escolaridad_jh.calculo >}} | {{< var escolaridad_jh.validacion >}} | {{< var escolaridad_jh.resultados >}} | {{< var escolaridad_jh.documentacion >}} |
+| 12 | {{< var jh_superior.sigla >}}    | {{< var jh_superior.name >}}            | {{< var jh_superior.dimension >}}    | {{< var jh_superior.dominio >}}    | {{< var jh_superior.diseno >}} | {{< var jh_superior.insumos >}} | {{< var jh_superior.calculo >}} | {{< var jh_superior.validacion >}} | {{< var jh_superior.resultados >}} | {{< var jh_superior.documentacion >}} |
+| 13 | {{< var jh_secundaria.sigla >}}  | {{< var jh_secundaria.name >}}         | {{< var jh_secundaria.dimension >}}  | {{< var jh_secundaria.dominio >}}  | {{< var jh_secundaria.diseno >}} | {{< var jh_secundaria.insumos >}} | {{< var jh_secundaria.calculo >}} | {{< var jh_secundaria.validacion >}} | {{< var jh_secundaria.resultados >}} | {{< var jh_secundaria.documentacion >}} |
+| 14 | {{< var jh_primaria.sigla >}}    | {{< var jh_primaria.name >}}           | {{< var jh_primaria.dimension >}}    | {{< var jh_primaria.dominio >}}    | {{< var jh_primaria.diseno >}} | {{< var jh_primaria.insumos >}} | {{< var jh_primaria.calculo >}} | {{< var jh_primaria.validacion >}} | {{< var jh_primaria.resultados >}} | {{< var jh_primaria.documentacion >}} |
+| 15 | {{< var hacina.sigla >}}         | {{< var hacina.name >}}                | {{< var hacina.dimension >}}         | {{< var hacina.dominio >}}         | {{< var hacina.diseno >}} | {{< var hacina.insumos >}} | {{< var hacina.calculo >}} | {{< var hacina.validacion >}} | {{< var hacina.resultados >}} | {{< var hacina.documentacion >}} |
+| 16 | {{< var monopar.sigla >}}        | {{< var monopar.name >}}               | {{< var monopar.dimension >}}        | {{< var monopar.dominio >}}        | {{< var monopar.diseno >}} | {{< var monopar.insumos >}} | {{< var monopar.calculo >}} | {{< var monopar.validacion >}} | {{< var monopar.resultados >}} | {{< var monopar.documentacion >}} |
+
+: Estado de avance general de Indicadores propuestos
+:::
+

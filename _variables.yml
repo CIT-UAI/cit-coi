@@ -1,0 +1,280 @@
+# Setup -------------------------------------------------------------------
+version: 1
+
+email:
+  author: <denis.berroeta@uai.cl>
+  
+  
+# Personas ----------------------------------------------------------------
+
+coordinador:
+  name: "[Denis Berroeta](https://cit.uai.cl/denis-berroeta/)"
+  cargo: "Coordinador de Investigación, Centro de Inteligencia Territorial - UAI"
+  email: <denis.berroeta@uai.cl>
+  
+# {{< var coordinador.name >}}
+
+dberroeta:
+  name: "[Denis Berroeta](https://cit.uai.cl/denis-berroeta/)"
+  cargo: "Coordinador de Investigación, Centro de Inteligencia Territorial - UAI"
+  email: <denis.berroeta@uai.cl>
+  
+jtreimun:
+  name: "[John Treimun](https://cit.uai.cl/john-treimun-rios/)"
+  cargo: "Jefe de Investigación, Centro de Inteligencia Territorial - UAI"
+  email: <john.treimun.r@uai.cl>  
+  
+szuniga:
+  name: "[Sofía Zúñiga](https://cit.uai.cl/sofia-zuniga/)"
+  cargo: "Coordinador de Investigación, Centro de Inteligencia Territorial - UAI"
+  email: <sofia.zuniga.q@uai.cl>
+  
+
+# Documentos --------------------------------------------------------------
+
+coi:
+  name: "[Child Oportunity Index](https://www.diversitydatakids.org/child-opportunity-index)"
+  doc: "[Documentación Técnica de COI 3.0](https://www.diversitydatakids.org/sites/default/files/file/COI30_TechDoc_20241004.pdf)"
+
+
+# Indicadores -------------------------------------------------------------
+
+pub_prekinder:
+  name: "Inscripción Pública a Pre-Kinder"
+  sigla: "IPUPK"
+  dimension: "Educación"
+  dominio: "Educación Primaria"
+  diseno: "✅"
+  insumos: "🟡"
+  calculo: "❌"
+  validacion: "❌"
+  resultados: "❌"
+  documentacion: "❌"
+  error: "❌"
+  iniciado: "🟡"
+  
+priv_prekinder:
+  name: "Inscripción Privada a Pre-Kinder"
+  sigla: "IPRPK"
+  dimension: "Educación"
+  dominio: "Educación Primaria"
+  diseno: "✅"
+  insumos: "🟡"
+  calculo: "❌"
+  validacion: "❌"
+  resultados: "❌"
+  documentacion: "❌"
+  error: "❌"
+  iniciado: "🟡"
+
+puntaje_plm:
+  name: "Puntajes en pruebas de Lectura y Matemática"
+  sigla: "PPLM"
+  dimension: "Educación"
+  dominio: "Educación Básica"
+  diseno: "✅"
+  insumos: "🟡"
+  calculo: "❌"
+  validacion: "❌"
+  resultados: "❌"
+  documentacion: "❌"
+  error: "❌"
+  iniciado: "🟡"
+  
+crecimiento_plm:
+  name: "Crecimiento en pruebas de Lectura y Matemáticas"
+  sigla: "CPLM"
+  dimension: "Educación"
+  dominio: "Educación Básica"
+  diseno: "✅"
+  insumos: "🟡"
+  calculo: "❌"
+  validacion: "❌"
+  resultados: "❌"
+  documentacion: "❌"
+  error: "❌"
+  iniciado: "🟡"
+
+
+icalor:
+  name: "Expocisión Extrema al Calor"
+  sigla: "EEC"
+  dimension: "Salud y Medio Ambiente"
+  dominio: "Entorno Saludable"
+  diseno: "✅"
+  insumos: "✅"
+  calculo: "✅"
+  validacion: "✅"
+  resultados: "🟡"
+  documentacion: "✅"
+  error: "❌"
+  iniciado: "🟡"
+  
+particulas:
+  name: "Microparticulas del Aire"
+  sigla: "MPA"
+  dimension: "Salud y Medio Ambiente"
+  dominio: "Contaminación"
+  diseno: "✅"
+  insumos: "✅"
+  calculo: "🟡"
+  validacion: "❌"
+  resultados: "❌"
+  documentacion: "❌"
+  error: "❌"
+  iniciado: "🟡"
+
+ozono:
+  name: "Concentración de Ozono"
+  sigla: "COZ"
+  dimension: "Salud y Medio Ambiente"
+  dominio: "Contaminación"
+  diseno: "✅"
+  insumos: "✅"
+  calculo: "🟡"
+  validacion: "❌"
+  resultados: "❌"
+  documentacion: "❌"
+  error: "❌"
+  iniciado: "🟡"
+
+industriales:
+  name: "Contaminantes Industriales en Aire, Agua y Suelo"
+  sigla: "CIAAS"
+  dimension: "Salud y Medio Ambiente"
+  dominio: "Contaminación"
+  diseno: "✅"
+  insumos: "✅"
+  calculo: "🟡"
+  validacion: "❌"
+  resultados: "❌"
+  documentacion: "❌"
+  error: "❌"
+  iniciado: "🟡"
+
+residuos:
+  name: "Vertederos de Residuos Peligrosos"
+  sigla: "VRP"
+  dimension: "Salud y Medio Ambiente"
+  dominio: "Contaminación"
+  diseno: "✅"
+  insumos: "✅"
+  calculo: "🟡"
+  validacion: "❌"
+  resultados: "❌"
+  documentacion: "❌"
+  error: "❌"
+  iniciado: "🟡"
+
+empleo:
+  name: "Tasa de Empleo"
+  sigla: "TDE"
+  dimension: "Social y Económico"
+  dominio: "Empleo"
+  diseno: "✅"
+  insumos: "✅"
+  calculo: "✅"
+  validacion: "✅"
+  resultados: "✅"
+  documentacion: "❌"
+  error: "❌"
+  iniciado: "🟡"
+
+escolaridad_jh:
+  name: "Escolaridad de Jefe de Hogar"
+  sigla: "EJH"
+  dimension: "Social y Económico"
+  dominio: "Inequidad Socioeconómica Concentrada"
+  diseno: "✅"
+  insumos: "✅"
+  calculo: "✅"
+  validacion: "✅"
+  resultados: "✅"
+  documentacion: "❌"
+  error: "❌"
+  iniciado: "🟡"
+
+jh_superior:
+  name: "Jefe de Hogar con Educación Superior"
+  sigla: "JHESU"
+  dimension: "Social y Económico"
+  dominio: "Inequidad Socioeconómica Concentrada"
+  diseno: "✅"
+  insumos: "✅"
+  calculo: "✅"
+  validacion: "❌"
+  resultados: "❌"
+  documentacion: "❌"
+  error: "❌"
+  iniciado: "🟡"
+  
+jh_secundaria:
+  name: "Jefe de Hogar con Educación Secundaria"
+  sigla: "JHESE"
+  dimension: "Social y Económico"
+  dominio: "Inequidad Socioeconómica Concentrada"
+  diseno: "✅"
+  insumos: "✅"
+  calculo: "✅"
+  validacion: "❌"
+  resultados: "❌"
+  documentacion: "❌"
+  error: "❌"
+  iniciado: "🟡"
+  
+jh_primaria:
+  name: "Jefe de Hogar con Educación Primaria"
+  sigla: "JHEPR"
+  dimension: "Social y Económico"
+  dominio: "Inequidad Socioeconómica Concentrada"
+  diseno: "✅"
+  insumos: "✅"
+  calculo: "✅"
+  validacion: "❌"
+  resultados: "❌"
+  documentacion: "❌"
+  error: "❌"
+  iniciado: "🟡"
+  
+  
+hacina:
+  name: "Viviendas con Hacinamiento"
+  sigla: "VCH"
+  dimension: "Social y Económico"
+  dominio: "Recursos Habitacionales"
+  diseno: "✅"
+  insumos: "✅"
+  calculo: "✅"
+  resultados: "✅"
+  validacion: "✅"
+  documentacion: "❌"
+  error: "❌"
+  iniciado: "🟡"
+  
+monopar:
+  name: "Hogares Uniparentales"
+  sigla: "HUP"
+  dimension: "Social y Económico"
+  dominio: "Recursos Sociales"
+  diseno: "✅"
+  insumos: "✅"
+  calculo: "✅"
+  validacion: "✅"
+  resultados: "✅"
+  documentacion: "❌"
+  error: "❌"
+  iniciado: "🟡"
+
+
+# Desarrollo --------------------------------------------------------------
+
+engine:
+  jupyter: "[Jupyter](https://jupyter.org)"
+  knitr: "[Knitr](<https://yihui.name/knitr>)"
+  R: "[R Project](https://www.r-project.org)"
+  python: "[Python](https://docs.python.org/es/3/tutorial/)"
+  
+  
+organization:
+  github: "[Github](https://github.com/)"
+  

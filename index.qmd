@@ -1,0 +1,27 @@
+# Preface {.unnumbered}
+
+<br>
+
+<center>[![](images/LOGO_CIT_UAI.png){fig-align="center" width="280"}](https://cit.uai.cl) [![](images/Logo_FSC.png){fig-align="center" width="200"}](https://www.fsancarlos.cl/)</center>
+
+## 1. Presentación del libro
+
+Este libro digital constituye una bitácora de trabajo elaborada por el [Centro de Inteligencia Territorial](https://cit.uai.cl) (CIT) de la Universidad Adolfo Ibáñez, con el propósito de documentar, analizar y compartir los avances metodológicos y técnicos en el diseño de **indicadores territoriales de oportunidad infantil**. Su elaboración se enmarca en el desarrollo del proyecto **"Observatorio de Factores de Riesgo y Protección"**, una iniciativa solicitada por la [Fundación San Carlos de Maipo](https://www.fsancarlos.cl/) que busca visibilizar y monitorear las condiciones estructurales del entorno que favorecen o limitan el desarrollo integral de niños, niñas y adolescentes (NNA) en Chile.
+
+## 2. Justificación del enfoque
+
+Los entornos en los que crecen niños, niñas y adolescentes influyen de manera significativa en sus trayectorias de vida. El acceso desigual a educación de calidad, condiciones ambientales saludables, vivienda adecuada y redes de apoyo social configura paisajes de oportunidad territorial profundamente desiguales. En este contexto, se hace indispensable generar herramientas que permitan **caracterizar territorialmente las oportunidades y condiciones de vida de la niñez**, a fin de guiar políticas públicas más justas, focalizadas y efectivas. El proyecto toma como base conceptual el *Child Opportunity Index*, adaptando sus dimensiones clave al contexto chileno y fortaleciendo la mirada desde el territorio como unidad de análisis y acción.
+
+## 3. Marco institucional
+
+El Centro de Inteligencia Territorial es una unidad académica de excelencia dedicada a la investigación aplicada desde una mirada interdisciplinaria. Su misión es generar soluciones basadas en datos y evidencia que contribuyan a comprender y transformar las realidades territoriales. En esta línea, el presente trabajo representa una nueva contribución del CIT al desarrollo de herramientas analíticas que vinculen la investigación aplicada con las necesidades concretas de las políticas públicas en Chile, con énfasis en la equidad territorial y el bienestar infantil.
+
+## 4. Objetivos del proyecto
+
+El proyecto busca redefinir y reinterpretar la Matriz de Bienestar Humano Territorial (MBHT) para que incorpore los niveles de oportunidad que ofrece el entorno a niños, niñas y adolescentes, utilizando como base indicadores territoriales vinculados a la educación, el ambiente, la vivienda y la estructura social. Esto implica realizar una curaduría y adaptación metodológica de indicadores (@fig-ejes), ajustar la población objetivo a la realidad de NNA por unidad mínima de análisis (manzana o entidad censal).
+
+![Ejes centrales de análisis de condiciones estructurales del entorno de las niñas, niños y adolecentes de Chile.](images/ejes-coi.png){width="500" #fig-ejes}
+
+## 5. Estructura del libro
+
+El libro está organizado en capítulos que siguen la secuencia lógica del proyecto: comienza con el marco conceptual y los fundamentos teóricos, luego presenta la estrategia metodológica para la construcción de los indicadores, continúa con el desarrollo y documentación individual de cada indicador, y finaliza con un conjunto de anexos técnicos y visualizaciones experimentales. Cada sección está concebida como un módulo independiente pero articulado, con la finalidad de ser útil tanto para investigadores como para los equipos gestores del estudio.

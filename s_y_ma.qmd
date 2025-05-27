@@ -1,0 +1,11 @@
+---
+title: "Salud y M. Ambiente"
+author: ["{{< var dberroeta.name >}}", "{{< var jtreimun.name >}}"]
+---
+
+## Definición
+
+## Objetivos
+
+## Distribución
+

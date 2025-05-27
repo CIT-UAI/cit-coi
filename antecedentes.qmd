@@ -1,0 +1,30 @@
+---
+title: "Marco Conceptual"
+subtitle: "Marco conceptual y los fundamentos teóricos"
+---
+
+
+## La oportunidad infantil como construcción territorial  {.unnumbered}
+
+
+El proyecto se fundamenta en la idea de que las oportunidades para niñas, niños y adolescentes no dependen únicamente de sus características individuales o familiares, sino que están profundamente condicionadas por los entornos territoriales en los que crecen. La calidad de los barrios, el acceso a recursos educativos, la salud ambiental, la infraestructura urbana y el capital social son dimensiones claves que configuran un paisaje de oportunidades con marcadas desigualdades espaciales.
+
+## Enfoque multidimensional de las oportunidades  {.unnumbered}
+
+Inspirado en la {{< var coi.doc >}} , este proyecto adopta una visión multidimensional para capturar las condiciones que favorecen el desarrollo infantil. Se organizan en tres grandes dominios:
+
+- **Educación**: acceso y calidad desde la primera infancia hasta la educación secundaria y superior.
+- **Salud y mdeio ambiente**: entornos físicos y ecológicos que influyen en la salud física y mental.
+- **Condiciones sociales y económicas**: empleo, ingresos, capital social, vivienda y conectividad digital.
+
+Cada dominio se descompone en subdimensiones que permiten una medición precisa y territorializada de las condiciones que promueven (o limitan) las trayectorias de vida positivas.
+
+## Oportunidad como acumulación territorial de ventajas  {.unnumbered}
+
+Las investigaciones muestran que los barrios de alta oportunidad no solo cuentan con mejores escuelas o mayor seguridad ambiental, sino que acumulan múltiples ventajas —como redes sociales densas, empleo calificado y servicios de salud accesibles— que se refuerzan mutuamente. En contraposición, las zonas de baja oportunidad concentran desventajas estructurales, resultado de procesos históricos de exclusión y políticas públicas regresivas. El índice de oportunidad infantil permite captar esta acumulación de condiciones de forma sistemática y comparable  [@noelke2024child].
+
+
+## Enfoque territorial aplicado a la equidad en infancia  {.unnumbered}
+
+Este enfoque no busca solo describir brechas espaciales, sino proveer herramientas para la justicia territorial en políticas públicas, ofreciendo métricas que guíen la priorización de intervenciones y programas. Al identificar zonas con menor oportunidad, se facilita el diseño de acciones focalizadas en aquellos territorios donde las condiciones estructurales limitan el desarrollo pleno de niños, niñas y adolescentes.
+

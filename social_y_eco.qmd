@@ -1,0 +1,11 @@
+---
+title: "Social y Económico"
+author: ["{{< var dberroeta.name >}}"]
+---
+
+## Definición
+
+## Objetivos
+
+## Distribución
+

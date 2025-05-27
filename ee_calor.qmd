@@ -1,0 +1,113 @@
+---
+title: "Exposición E. Calor"
+subtitle: "{{< var icalor.dominio >}}: {{< var icalor.name >}} ({{< var icalor.sigla >}})"
+author: ["{{< var dberroeta.name >}}"]
+---
+
+
+### 1. Información General  {.unnumbered}
+
+#### Ficha técnica {.unnumbered}
+
+-   **Nombre completo:** {{< var icalor.name >}}
+-   **Sigla:** {{< var icalor.sigla >}}\
+-   **Dimensión:** {{< var icalor.dimension >}}
+-   **Dominio:** {{< var icalor.dominio >}}
+-   **Fuente principal de datos:** Producto satelital MOD11A1 V6.1 – MODIS Terra\
+-   **Unidad espacial de análisis:** Manzana censal\
+-   **Frecuencia temporal:** Diaria (agregado anual y multianual)\
+-   **Cobertura temporal del análisis:** 2014–2024\
+-   **Resolución espacial del insumo:** 1 km x 1 km\
+-   **Versión actual:** 1.0
+
+#### Avances {.unnumbered}
+
+::: {.tabla-indicador}
+| Etapa                    | Estado                           |
+|--------------------------|:----------------------------------:|
+| Diseño del Indicador     | {{< var icalor.diseno >}}        |
+| Consolidación de Insumos | {{< var icalor.insumos >}}       |
+| Cálculo de Indicador     | {{< var icalor.calculo >}}       |
+| Validación de Resultados | {{< var icalor.validacion >}}    |
+| Entrega de Resultados    | {{< var icalor.resultados >}}    |
+| Documentación            | {{< var icalor.documentacion >}} |
+: Estado de Avances
+:::
+
+
+### 2. Conceptualización {.unnumbered}
+
+#### 2.1 Definición del indicador {.unnumbered}
+
+La exposición extrema al calor se refiere a la cantidad promedio de días en que la temperatura máxima supera un umbral definido como peligroso para la salud humana. Este fenómeno está asociado a impactos significativos en la salud pública, particularmente en niños, niñas y adolescentes, y refleja condiciones territoriales que requieren medidas de adaptación al cambio climático.
+
+#### 2.2 Conceptos relacionados {.unnumbered}
+
+-   **Exposición Extrema al Calor:** Número de días en que la temperatura máxima diaria excede los 32.2°C, umbral considerado crítico para la salud, especialmente en poblaciones vulnerables.
+-   **Ola de Calor:** Evento prolongado de temperaturas anómalamente altas, definidas por percentiles climatológicos (90º o 95º) durante 2 o más días consecutivos.
+-   **Período de Referencia:** Promedio de 10 años para minimizar la influencia de eventos atípicos.
+
+#### 2.3 Referente internacional (COI 3.0) {.unnumbered}
+
+En la {{< var coi.doc >}}, este indicador se calcula como el número promedio de días de verano donde la temperatura máxima supera los 90°F (32.2°C), usando datos del sistema [NLDAS-2](https://ldas.gsfc.nasa.gov/nldas) (North American Land Data Assimilation System).
+
+------------------------------------------------------------------------
+
+### 3. Adaptación metodológica CIT {.unnumbered}
+
+#### 3.1 Definición operacional adaptada {.unnumbered}
+
+Este indicador corresponde al **promedio multianual del número de días estivales** en los que la **temperatura superficial del suelo** (Land Surface Temperature, LST) supera el umbral de **32.2 °C**, considerando exclusivamente el período comprendido entre el **21 de diciembre y el 21 de marzo** de cada año, correspondiente al verano climatológico en el hemisferio sur.
+
+El valor final se expresa como la cantidad promedio de días de exposición extrema al calor, **calculado por unidad mínima territorial (manzana censal)**, para el período comprendido entre los años **2014 y 2024**. Este indicador permite identificar espacialmente aquellas zonas que enfrentan condiciones térmicas elevadas con recurrencia, contribuyendo al diagnóstico de vulnerabilidad climática en poblaciones infantiles.
+
+#### 3.2 Insumos y fuentes {.unnumbered}
+
+Se utilizó el producto satelital [MOD11A1 V6.1](https://lpdaac.usgs.gov/products/mod11a1v061/), que entrega datos diarios de temperatura superficial del suelo (Land Surface Temperature, LST) a una resolución espacial de 1 km. El sensor MODIS, a bordo del satélite Terra, permite observar la dinámica térmica del territorio de forma sistemática y precisa. La adquisición y procesamiento de esta información se realizó mediante la librería [modisfast](https://ptaconet.github.io/modisfast/), optimizada para el manejo masivo de productos MODIS. Insumos levantados por {{< var jtreimun.name >}}.
+
+------------------------------------------------------------------------
+
+### 4. Pasos de cálculo {.unnumbered}
+
+1.  **Filtrado temporal:** Se seleccionaron las imágenes correspondientes a los meses de verano del hemisferio sur (diciembre a marzo) para cada año del periodo 2014–2024.
+
+2.  **Clasificación binaria por umbral:** A cada imagen diaria se le asigna un valor binario (1 si supera 32.2 °C, 0 si no).
+
+3.  **Suma anual:** Para cada píxel, se sumaron los días con valor 1 a lo largo de cada año, generando un raster anual de exposición extrema.
+
+4.  **Promedio multianual:** Se promediaron los 11 valores anuales (2014–2024) para obtener un raster con el valor promedio multianual de días de exposición extrema.
+
+5.  **Intersección espacial:** Se aplicó zonal statistics para calcular la media por manzana censal, obteniendo así un valor territorializado del indicador.
+
+------------------------------------------------------------------------
+
+### 5. Resultados preliminares {.unnumbered}
+
+![Resultados de Indicador de Exposición Extrema al Calor (EEC)](images/eec.png)
+
+El mapa presenta la distribución promedio de días de calor extremo a nivel de manzanas censales en el periodo analizado. Se observan concentraciones más altas en sectores urbanos densamente construidos y en la zona norte central de la región metropolinta.
+
+------------------------------------------------------------------------
+
+### 6. Interpretación y usos esperados {.unnumbered}
+
+Un mayor número de días con calor extremo implica una mayor exposición a riesgos sanitarios como golpes de calor, enfermedades respiratorias y estrés térmico, especialmente para niños, personas mayores y personas con condiciones preexistentes. Este indicador es útil para: 
+
+* Priorizar zonas que requieren estrategias de adaptación al cambio climático.
+* Informar planes territoriales en salud pública, infraestructura verde y diseño urbano. 
+* Integrar componentes de riesgo climático en intervenciones centradas en infancia.
+
+------------------------------------------------------------------------
+
+### 7. Validación, supuestos y limitaciones {.unnumbered}
+
+-   **Supuestos:** Se asume que la temperatura superficial del suelo es un proxy adecuado para la exposición humana al calor, aunque puede diferir de la temperatura del aire.
+-   **Limitaciones:** Las nubes, cuerpos de agua y zonas de sombra pueden afectar la calidad de las observaciones MODIS. Se descartaron días sin observación clara.
+-   **Ventajas:** Resolución diaria y alta cobertura espacial permiten un análisis territorial fino, replicable y actualizado.
+
+------------------------------------------------------------------------
+
+### 8. Referencias {.unnumbered}
+
+-   Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). [*Child Opportunity Index 3.0 Technical Documentation*](https://www.diversitydatakids.org/child-opportunity-index).
+-   MODIS Land Science Team. (2023). *MOD11A1 V6.1 Product User Guide*. NASA LP DAAC.

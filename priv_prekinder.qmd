@@ -1,0 +1,86 @@
+---
+title: "Privada a Pre-Kinder"
+subtitle: "{{< var priv_prekinder.dominio >}}: {{< var priv_prekinder.name >}} ({{< var priv_prekinder.sigla >}})"
+author: ["{{< var szuniga.name >}}"]
+---
+
+
+### 1. Información General  {.unnumbered}
+
+#### Ficha técnica {.unnumbered}
+-   **Nombre completo:** {{< var priv_prekinder.name >}}
+-   **Sigla:** {{< var priv_prekinder.sigla >}}\
+-   **Dimensión:** {{< var priv_prekinder.dimension >}}
+-   **Dominio:** {{< var priv_prekinder.dominio >}}
+-   **Fuente principal de datos:** 
+-   **Unidad espacial de análisis:** Manzana censal\
+-   **Frecuencia temporal:** Anual
+-   **Cobertura temporal del análisis:**
+-   **Resolución espacial del insumo:** Puntos
+-   **Versión actual:** 1.0
+
+
+#### Avances {.unnumbered}
+
+::: {.tabla-indicador}
+| Etapa                    | Estado                           |
+|--------------------------|:----------------------------------:|
+| Diseño del Indicador     | {{< var priv_prekinder.diseno >}}        |
+| Consolidación de Insumos | {{< var priv_prekinder.insumos >}}       |
+| Cálculo de Indicador     | {{< var priv_prekinder.calculo >}}       |
+| Validación de Resultados | {{< var priv_prekinder.validacion >}}    |
+| Entrega de Resultados    | {{< var priv_prekinder.resultados >}}    |
+| Documentación            | {{< var priv_prekinder.documentacion >}} |
+: Estado de Avances
+:::
+
+
+
+### 2. Conceptualización {.unnumbered}
+
+#### 2.1 Definición del indicador {.unnumbered}
+Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).
+
+#### 2.2 Conceptos relacionados {.unnumbered}
+Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).
+
+#### 2.3 Referente internacional (COI 3.0) {.unnumbered}
+Breve descripción del indicador original y cómo es usado en el índice de referencia.
+
+---
+
+### 3. Adaptación metodológica CIT {.unnumbered}
+
+#### 3.1 Definición operacional adaptada {.unnumbered}
+Definición clara del indicador tal como será construido para el caso chileno.
+
+#### 3.2 Insumos y fuentes {.unnumbered}
+Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.
+
+#### 3.3 Pasos de cálculo {.unnumbered}
+Listar paso a paso el procedimiento con lógica replicable.
+
+---
+
+### 4. Resultados preliminares {.unnumbered}
+- Imagen o mapa ilustrativo del indicador.
+- Tabla resumen si aplica.
+
+---
+
+### 5. Interpretación y usos esperados {.unnumbered}
+- ¿Qué significa un valor alto o bajo?
+- ¿Cómo puede ser usado este indicador por tomadores de decisiones?
+
+---
+
+### 6. Validación, supuestos y limitaciones {.unnumbered}
+- Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.
+
+---
+
+### 7. Referencias {.unnumbered}
+Bibliografía científica, manuales técnicos, artículos base.
+
+
+
