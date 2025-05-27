@@ -9,7 +9,7 @@ author: ["{{< var jtreimun.name >}}", "{{< var dberroeta.name >}}", "{{< var szu
 La construcción de un índice de oportunidad infantil para el contexto chileno exigió un proceso riguroso de análisis, selección y adaptación de indicadores territoriales. Como punto de partida, el equipo de investigación del Centro de Inteligencia Territorial revisó detalladamente la propuesta metodológica de {{< var coi.doc >}}, desarrollado por el diversityDataKids.org y el Institute for Child, Youth and Family Policy de la Universidad de Brandeis  [@noelke2024child]. Este índice fue escogido como modelo de referencia por su solidez conceptual, su validación empírica en distintos contextos urbanos de Estados Unidos y, especialmente, por su enfoque multidimensional de las oportunidades para el desarrollo infantil.
 
 
-## Evaluacuón de Indecadores
+## Evaluación de Indicadores
 
 En una primera fase, el equipo realizó una serie de reuniones técnicas donde se revisaron uno a uno los indicadores propuestos por el COI, evaluando su pertinencia conceptual para el caso chileno, su posibilidad de adaptación y, crucialmente, la disponibilidad de datos territoriales a escala manzana censal. Se tuvo especial cuidado en identificar aquellas variables que, además de estar conceptualmente alineadas con el modelo, fueran factibles de ser construidas con fuentes de datos nacionales actualizadas, confiables y con cobertura geográfica adecuada.
 

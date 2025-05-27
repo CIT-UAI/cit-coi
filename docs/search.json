@@ -4,9 +4,9 @@
     "href": "index.html",
     "title": "Child Oportunity Index",
     "section": "",
-    "text": "Preface",
+    "text": "Prefacio",
     "crumbs": [
-      "Preface"
+      "Prefacio"
     ]
   },
   {
@@ -16,7 +16,7 @@
     "section": "1. Presentación del libro",
     "text": "1. Presentación del libro\nEste libro digital constituye una bitácora de trabajo elaborada por el Centro de Inteligencia Territorial (CIT) de la Universidad Adolfo Ibáñez, con el propósito de documentar, analizar y compartir los avances metodológicos y técnicos en el diseño de indicadores territoriales de oportunidad infantil. Su elaboración se enmarca en el desarrollo del proyecto “Observatorio de Factores de Riesgo y Protección”, una iniciativa solicitada por la Fundación San Carlos de Maipo que busca visibilizar y monitorear las condiciones estructurales del entorno que favorecen o limitan el desarrollo integral de niños, niñas y adolescentes (NNA) en Chile.",
     "crumbs": [
-      "Preface"
+      "Prefacio"
     ]
   },
   {
@@ -26,7 +26,7 @@
     "section": "2. Justificación del enfoque",
     "text": "2. Justificación del enfoque\nLos entornos en los que crecen niños, niñas y adolescentes influyen de manera significativa en sus trayectorias de vida. El acceso desigual a educación de calidad, condiciones ambientales saludables, vivienda adecuada y redes de apoyo social configura paisajes de oportunidad territorial profundamente desiguales. En este contexto, se hace indispensable generar herramientas que permitan caracterizar territorialmente las oportunidades y condiciones de vida de la niñez, a fin de guiar políticas públicas más justas, focalizadas y efectivas. El proyecto toma como base conceptual el Child Opportunity Index, adaptando sus dimensiones clave al contexto chileno y fortaleciendo la mirada desde el territorio como unidad de análisis y acción.",
     "crumbs": [
-      "Preface"
+      "Prefacio"
     ]
   },
   {
@@ -36,7 +36,7 @@
     "section": "3. Marco institucional",
     "text": "3. Marco institucional\nEl Centro de Inteligencia Territorial es una unidad académica de excelencia dedicada a la investigación aplicada desde una mirada interdisciplinaria. Su misión es generar soluciones basadas en datos y evidencia que contribuyan a comprender y transformar las realidades territoriales. En esta línea, el presente trabajo representa una nueva contribución del CIT al desarrollo de herramientas analíticas que vinculen la investigación aplicada con las necesidades concretas de las políticas públicas en Chile, con énfasis en la equidad territorial y el bienestar infantil.",
     "crumbs": [
-      "Preface"
+      "Prefacio"
     ]
   },
   {
@@ -46,7 +46,7 @@
     "section": "4. Objetivos del proyecto",
     "text": "4. Objetivos del proyecto\nEl proyecto busca redefinir y reinterpretar la Matriz de Bienestar Humano Territorial (MBHT) para que incorpore los niveles de oportunidad que ofrece el entorno a niños, niñas y adolescentes, utilizando como base indicadores territoriales vinculados a la educación, el ambiente, la vivienda y la estructura social. Esto implica realizar una curaduría y adaptación metodológica de indicadores (Figure 1), ajustar la población objetivo a la realidad de NNA por unidad mínima de análisis (manzana o entidad censal).\n\n\n\n\n\n\nFigure 1: Ejes centrales de análisis de condiciones estructurales del entorno de las niñas, niños y adolecentes de Chile.",
     "crumbs": [
-      "Preface"
+      "Prefacio"
     ]
   },
   {
@@ -56,7 +56,7 @@
     "section": "5. Estructura del libro",
     "text": "5. Estructura del libro\nEl libro está organizado en capítulos que siguen la secuencia lógica del proyecto: comienza con el marco conceptual y los fundamentos teóricos, luego presenta la estrategia metodológica para la construcción de los indicadores, continúa con el desarrollo y documentación individual de cada indicador, y finaliza con un conjunto de anexos técnicos y visualizaciones experimentales. Cada sección está concebida como un módulo independiente pero articulado, con la finalidad de ser útil tanto para investigadores como para los equipos gestores del estudio.",
     "crumbs": [
-      "Preface"
+      "Prefacio"
     ]
   },
   {
@@ -104,7 +104,17 @@
     "href": "diseno.html",
     "title": "2  Selección de Indicadores",
     "section": "",
-    "text": "2.1 Evaluacuón de Indecadores\n##. Introducción\nLa construcción de un índice de oportunidad infantil para el contexto chileno exigió un proceso riguroso de análisis, selección y adaptación de indicadores territoriales. Como punto de partida, el equipo de investigación del Centro de Inteligencia Territorial revisó detalladamente la propuesta metodológica de Documentación Técnica de COI 3.0, desarrollado por el diversityDataKids.org y el Institute for Child, Youth and Family Policy de la Universidad de Brandeis (Noelke et al. 2024). Este índice fue escogido como modelo de referencia por su solidez conceptual, su validación empírica en distintos contextos urbanos de Estados Unidos y, especialmente, por su enfoque multidimensional de las oportunidades para el desarrollo infantil.\nEn una primera fase, el equipo realizó una serie de reuniones técnicas donde se revisaron uno a uno los indicadores propuestos por el COI, evaluando su pertinencia conceptual para el caso chileno, su posibilidad de adaptación y, crucialmente, la disponibilidad de datos territoriales a escala manzana censal. Se tuvo especial cuidado en identificar aquellas variables que, además de estar conceptualmente alineadas con el modelo, fueran factibles de ser construidas con fuentes de datos nacionales actualizadas, confiables y con cobertura geográfica adecuada.",
+    "text": "2.1 Introducción\nLa construcción de un índice de oportunidad infantil para el contexto chileno exigió un proceso riguroso de análisis, selección y adaptación de indicadores territoriales. Como punto de partida, el equipo de investigación del Centro de Inteligencia Territorial revisó detalladamente la propuesta metodológica de Documentación Técnica de COI 3.0, desarrollado por el diversityDataKids.org y el Institute for Child, Youth and Family Policy de la Universidad de Brandeis (Noelke et al. 2024). Este índice fue escogido como modelo de referencia por su solidez conceptual, su validación empírica en distintos contextos urbanos de Estados Unidos y, especialmente, por su enfoque multidimensional de las oportunidades para el desarrollo infantil.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Selección de Indicadores</span>"
+    ]
+  },
+  {
+    "objectID": "diseno.html#evaluacuón-de-indecadores",
+    "href": "diseno.html#evaluacuón-de-indecadores",
+    "title": "2  Selección de Indicadores",
+    "section": "2.2 Evaluacuón de Indecadores",
+    "text": "2.2 Evaluacuón de Indecadores\nEn una primera fase, el equipo realizó una serie de reuniones técnicas donde se revisaron uno a uno los indicadores propuestos por el COI, evaluando su pertinencia conceptual para el caso chileno, su posibilidad de adaptación y, crucialmente, la disponibilidad de datos territoriales a escala manzana censal. Se tuvo especial cuidado en identificar aquellas variables que, además de estar conceptualmente alineadas con el modelo, fueran factibles de ser construidas con fuentes de datos nacionales actualizadas, confiables y con cobertura geográfica adecuada.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Selección de Indicadores</span>"
     ]
@@ -113,8 +123,8 @@
     "objectID": "diseno.html#selección-de-indicadores",
     "href": "diseno.html#selección-de-indicadores",
     "title": "2  Selección de Indicadores",
-    "section": "2.2 Selección de Indicadores",
-    "text": "2.2 Selección de Indicadores\nEste proceso de selección se registró sistemáticamente en una tabla de análisis comparativo, donde se evaluó cada indicador en función de su relevancia conceptual, su correspondencia con objetivos del proyecto y su viabilidad de implementación en Chile. Esta tabla está disponible para consulta en el siguiente documento: hipervínculo al Excel.",
+    "section": "2.3 Selección de Indicadores",
+    "text": "2.3 Selección de Indicadores\nEste proceso de selección se registró sistemáticamente en una tabla de análisis comparativo, donde se evaluó cada indicador en función de su relevancia conceptual, su correspondencia con objetivos del proyecto y su viabilidad de implementación en Chile. Esta tabla está disponible para consulta en el siguiente documento: hipervínculo al Excel.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Selección de Indicadores</span>"
     ]
@@ -123,8 +133,8 @@
     "objectID": "diseno.html#propuesta-final-indicadores",
     "href": "diseno.html#propuesta-final-indicadores",
     "title": "2  Selección de Indicadores",
-    "section": "2.3 Propuesta Final Indicadores",
-    "text": "2.3 Propuesta Final Indicadores\nComo resultado de esta revisión crítica, se definió un subconjunto de indicadores que cumplen con los criterios de disponibilidad, calidad y representatividad territorial en el contexto chileno. Estos indicadores fueron organizados en tres grandes dimensiones, siguiendo la estructura del COI:\n\nEducación\nSalud y Medio Ambiente\nCondiciones Sociales y Económicas\n\n\n\n\n\n\n\nFigure 2.1: Elaboración propia Centro de Inteligencia Territorial UAI, 2025\n\n\n\nComo se observa en la Figure 2.1 en el ámbito de Educación, se incluyeron indicadores como la inscripción a pre-kínder en establecimientos públicos y privados, los puntajes estandarizados en pruebas de lectura y matemáticas, y la evolución en dichos resultados. Para el la dimensión de Salud y Medio Ambiente, se seleccionaron métricas relacionadas con contaminación ambiental (material particulado, ozono, contaminantes industriales, vertederos) y factores de salud pública como la exposición al calor extremo. Finalmente, en el componente Social y Económico, se incorporaron indicadores como la tasa de empleo, el nivel educacional del jefe de hogar, la concentración de desventajas socioeconómicas, el hacinamiento habitacional y la presencia de hogares uniparentales.\n\n\n\n\nNoelke, C, N McArdle, B DeVoe, M Leonardos, Y Lu, RW Ressler, and D Acevedo-Garcia. 2024. “Child Opportunity Index 3.0 Technical Documentation. Diversitydatakids. Org, Brandeis University.” Retrieved from Diversitydatakids. Org/Research-Library/Coi-30-Technical-Documentation.",
+    "section": "2.4 Propuesta Final Indicadores",
+    "text": "2.4 Propuesta Final Indicadores\nComo resultado de esta revisión crítica, se definió un subconjunto de indicadores que cumplen con los criterios de disponibilidad, calidad y representatividad territorial en el contexto chileno. Estos indicadores fueron organizados en tres grandes dimensiones, siguiendo la estructura del COI:\n\nEducación\nSalud y Medio Ambiente\nCondiciones Sociales y Económicas\n\n\n\n\n\n\n\nFigure 2.1: Elaboración propia Centro de Inteligencia Territorial UAI, 2025\n\n\n\nComo se observa en la Figure 2.1 en el ámbito de Educación, se incluyeron indicadores como la inscripción a pre-kínder en establecimientos públicos y privados, los puntajes estandarizados en pruebas de lectura y matemáticas, y la evolución en dichos resultados. Para el la dimensión de Salud y Medio Ambiente, se seleccionaron métricas relacionadas con contaminación ambiental (material particulado, ozono, contaminantes industriales, vertederos) y factores de salud pública como la exposición al calor extremo. Finalmente, en el componente Social y Económico, se incorporaron indicadores como la tasa de empleo, el nivel educacional del jefe de hogar, la concentración de desventajas socioeconómicas, el hacinamiento habitacional y la presencia de hogares uniparentales.\n\n\n\n\nNoelke, C, N McArdle, B DeVoe, M Leonardos, Y Lu, RW Ressler, and D Acevedo-Garcia. 2024. “Child Opportunity Index 3.0 Technical Documentation. Diversitydatakids. Org, Brandeis University.” Retrieved from Diversitydatakids. Org/Research-Library/Coi-30-Technical-Documentation.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Selección de Indicadores</span>"
     ]
@@ -426,23 +436,13 @@
     ]
   },
   {
-    "objectID": "template_ind.html",
-    "href": "template_ind.html",
-    "title": "20  Indicador en Blanco",
-    "section": "",
-    "text": "1. Información General\n\nFicha técnica\n\nNombre completo:\nSigla:\nDimensión:\nDominio:\nFuente principal de datos:\nUnidad espacial de análisis:\nFrecuencia temporal:\nCobertura temporal del análisis:\nResolución espacial del insumo:\nVersión actual:\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n✅\n\n\nValidación de Resultados\n✅\n\n\nEntrega de Resultados\n🟡\n\n\nDocumentación\n✅\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
-    "crumbs": [
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Indicador en Blanco</span>"
-    ]
-  },
-  {
     "objectID": "reuniones.html",
     "href": "reuniones.html",
-    "title": "21  Reuniones",
+    "title": "20  Reuniones",
     "section": "",
     "text": "Registro de Reuniones\n\n\nCategoría\nFecha\nTema\n\n\n\n\nReuniones Investigación\n21-04-2025\nrevisión de Child Oportunity Index\n\n\nReuniones Estudios\n24-04-2025\nReunión Inicial\n\n\nReuniones Investigación\n29-04-2025\nAnálisis de Factibilidad\n\n\nReuniones Estudios\n30-04-2025\nGantt y Factibilidad\n\n\nReuniones Investigación\n15-05-2025\nContrastar indicador propuesto con Child Oportunity Index\n\n\nReuniones Investigación\n20-05-2025\nConsolidar insumos",
     "crumbs": [
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Reuniones</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Reuniones</span>"
     ]
   },
   {
