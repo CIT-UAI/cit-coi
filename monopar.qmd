@@ -78,8 +78,9 @@ Datos obtenidos a nivel de manzanas del {{< var ine.name >}} levantados en el {{
 
 ### 4. Resultados preliminares {.unnumbered}
 
--   Imagen o mapa ilustrativo del indicador.
--   Tabla resumen si aplica.
+![Resultados de Indicador {{< var monopar.name >}} ({{< var monopar.sigla >}})](images/hup.png){#fig-hmp}
+
+En @fig-hmp se observan los resultados de {{< var monopar.name >}} ({{< var monopar.sigla >}}) donde no se observan concentraciones espaciales marcadas.
 
 ------------------------------------------------------------------------
 
