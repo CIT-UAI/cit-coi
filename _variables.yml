@@ -105,7 +105,7 @@ icalor:
   insumos: "✅"
   calculo: "✅"
   validacion: "✅"
-  resultados: "🟡"
+  resultados: "✅"
   documentacion: "✅"
   error: "❌"
   iniciado: "🟡"

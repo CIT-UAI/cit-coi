@@ -14,7 +14,7 @@ title: "Avances"
 ::: {.tabla-avance}
 
 
-| Nº | Sigla | Nombre del Indicador                             | Dimensión             | Dominio                             | Diseño | Insumos | Cálculo | Validación | Resultados | Documentación |
+| Nº | Sigla | Nombre    | Dimensión             | Dominio                             | Diseño | Insumos | Cálculo | Validación | Resultados | Documentación |
 |----|:-----:|---------------------------------------------------|------------------------|--------------------------------------|:------:|:-------:|:--------:|:----------:|:-----------:|:--------------:|
  1  | {{< var pub_prekinder.sigla >}}  | {{< var pub_prekinder.name >}}          | {{< var pub_prekinder.dimension >}}  | {{< var pub_prekinder.dominio >}}  | {{< var pub_prekinder.diseno >}} | {{< var pub_prekinder.insumos >}} | {{< var pub_prekinder.calculo >}} | {{< var pub_prekinder.validacion >}} | {{< var pub_prekinder.resultados >}} | {{< var pub_prekinder.documentacion >}} |
 | 2  | {{< var priv_prekinder.sigla >}} | {{< var priv_prekinder.name >}}         | {{< var priv_prekinder.dimension >}} | {{< var priv_prekinder.dominio >}} | {{< var priv_prekinder.diseno >}} | {{< var priv_prekinder.insumos >}} | {{< var priv_prekinder.calculo >}} | {{< var priv_prekinder.validacion >}} | {{< var priv_prekinder.resultados >}} | {{< var priv_prekinder.documentacion >}} |

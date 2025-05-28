@@ -79,9 +79,37 @@ Se utilizó el producto satelital [MOD11A1 V6.1](https://lpdaac.usgs.gov/product
 
 5.  **Intersección espacial:** Se aplicó zonal statistics para calcular la media por manzana censal, obteniendo así un valor territorializado del indicador.
 
+---
+
+### 5. Ecuación de s{{< var icalor.sigla >}} {.unnumbered}
+
+Esta fórmula ([-@eq-eec]) representa matemáticamente en indicador {{< var icalor.name >}} que representa  el **promedio del número de días de calor extremo por año**, en cada ubicación geográfica $(x, y)$. Primero, se cuenta cuántos días de verano por año superan el umbral de temperatura, y luego se promedia ese conteo anual sobre $N$ años. El resultado es un **mapa de intensidad promedio de exposición térmica extrema**, útil para análisis de vulnerabilidad climática territorial.
+
+
+$$
+\overline{E}(x, y) = \frac{1}{N} \sum_{t=1}^{N} \sum_{d \in S_t} \mathbb{I}\left( T_{d}^{(x, y)} \geq \theta \right)
+$${#eq-eec}
+
+- $\overline{E}(x, y))$: es el **promedio multianual de exposición extrema al calor** en el píxel ubicado en la posición espacial $(x, y)$.  
+- $N$: es el **número de años** considerados en el periodo de análisis (por ejemplo, $N = 10$).  
+- $S_t$: es el **conjunto de días de verano** del año $t$, definido según el criterio estacional (e.g., del 21 de diciembre al 20 de marzo del año siguiente).  
+- $T_{d}^{(x, y)}$: es la **temperatura máxima diaria** registrada en el píxel $(x, y)$ en el día $d$.  
+- $\theta$: es el **umbral de temperatura** para definir un evento de calor extremo (en este caso, $\theta = 32{.}2\,^\circ\text{C}$).  
+- $\mathbb{I}(\cdot)$: es la **función indicadora** , que toma valor $1$ si la condición se cumple y $0$ si no ([-@eq-eec]):
+
+$$
+\mathbb{I}\left( T_{d}^{(x, y)} \geq \theta \right) =
+\begin{cases}
+1 & \text{si } T_{d}^{(x, y)} \geq \theta \\\\
+0 & \text{en caso contrario}
+\end{cases}
+$${#eq-eec_condicion}
+
+
+
 ------------------------------------------------------------------------
 
-### 5. Resultados preliminares {.unnumbered}
+### 6. Resultados preliminares {.unnumbered}
 
 ![Resultados de Indicador de Exposición Extrema al Calor (EEC)](images/eec.png)
 
@@ -89,7 +117,7 @@ El mapa presenta la distribución promedio de días de calor extremo a nivel de 
 
 ------------------------------------------------------------------------
 
-### 6. Interpretación y usos esperados {.unnumbered}
+### 7. Interpretación y usos esperados {.unnumbered}
 
 Un mayor número de días con calor extremo implica una mayor exposición a riesgos sanitarios como golpes de calor, enfermedades respiratorias y estrés térmico, especialmente para niños, personas mayores y personas con condiciones preexistentes. Este indicador es útil para: 
 
@@ -99,7 +127,7 @@ Un mayor número de días con calor extremo implica una mayor exposición a ries
 
 ------------------------------------------------------------------------
 
-### 7. Validación, supuestos y limitaciones {.unnumbered}
+### 8. Validación, supuestos y limitaciones {.unnumbered}
 
 -   **Supuestos:** Se asume que la temperatura superficial del suelo es un proxy adecuado para la exposición humana al calor, aunque puede diferir de la temperatura del aire.
 -   **Limitaciones:** Las nubes, cuerpos de agua y zonas de sombra pueden afectar la calidad de las observaciones MODIS. Se descartaron días sin observación clara.
@@ -107,7 +135,7 @@ Un mayor número de días con calor extremo implica una mayor exposición a ries
 
 ------------------------------------------------------------------------
 
-### 8. Referencias {.unnumbered}
+### 9. Referencias {.unnumbered}
 
 -   Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). [*Child Opportunity Index 3.0 Technical Documentation*](https://www.diversitydatakids.org/child-opportunity-index).
 -   MODIS Land Science Team. (2023). *MOD11A1 V6.1 Product User Guide*. NASA LP DAAC.
