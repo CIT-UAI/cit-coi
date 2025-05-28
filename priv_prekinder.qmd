@@ -74,7 +74,7 @@ Listar paso a paso el procedimiento con lógica replicable.
 
 ---
 
-### 6. Validación, supuestos y limitaciones {.unnumbered}
+### 6. Consideraciones, supuestos y limitaciones {.unnumbered}
 - Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.
 
 ---

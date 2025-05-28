@@ -29,11 +29,19 @@ szuniga:
   cargo: "Coordinador de Investigación, Centro de Inteligencia Territorial - UAI"
   email: <sofia.zuniga.q@uai.cl>
   
+# Insituciones ------------------------------------------------------------
+ine:
+  name: "[Instituto Nacional de Estadísticas (INE)](https://www.ine.gob.cl/)"
+  sname: "[INE](https://www.ine.gob.cl/)"
+  censo_2017: "[Censo de Población y Vivienda 2017](http://resultados.censo2017.cl/)"
+  censo_2024: "[Censo de Población y Vivienda 2024](https://censo2024.ine.gob.cl/)"
+
 
 # Documentos --------------------------------------------------------------
 
 coi:
   name: "[Child Oportunity Index](https://www.diversitydatakids.org/child-opportunity-index)"
+  sname: "[COI 3.0](https://www.diversitydatakids.org/child-opportunity-index)"
   doc: "[Documentación Técnica de COI 3.0](https://www.diversitydatakids.org/sites/default/files/file/COI30_TechDoc_20241004.pdf)"
 
 
@@ -261,7 +269,7 @@ monopar:
   calculo: "✅"
   validacion: "✅"
   resultados: "✅"
-  documentacion: "❌"
+  documentacion: "✅"
   error: "❌"
   iniciado: "🟡"
 

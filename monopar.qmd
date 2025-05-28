@@ -4,84 +4,108 @@ subtitle: "{{< var monopar.dominio >}}: {{< var monopar.name >}} ({{< var monopa
 author: ["{{< var dberroeta.name >}}"]
 ---
 
-### 1. Información General  {.unnumbered}
+### 1. Información General {.unnumbered}
 
 #### Ficha técnica {.unnumbered}
+
 -   **Nombre completo:** {{< var monopar.name >}}
 -   **Sigla:** {{< var monopar.sigla >}}\
 -   **Dimensión:** {{< var monopar.dimension >}}
 -   **Dominio:** {{< var monopar.dominio >}}
--   **Fuente principal de datos:** 
+-   **Fuente principal de datos:**
 -   **Unidad espacial de análisis:** Manzana censal\
 -   **Frecuencia temporal:** Anual
 -   **Cobertura temporal del análisis:**
 -   **Resolución espacial del insumo:** Puntos
 -   **Versión actual:** 1.0
 
-
 #### Avances {.unnumbered}
 
-::: {.tabla-indicador}
-| Etapa                    | Estado                           |
-|--------------------------|:----------------------------------:|
-| Diseño del Indicador     | {{< var monopar.diseno >}}        |
-| Consolidación de Insumos | {{< var monopar.insumos >}}       |
-| Cálculo de Indicador     | {{< var monopar.calculo >}}       |
-| Validación de Resultados | {{< var monopar.validacion >}}    |
-| Entrega de Resultados    | {{< var monopar.resultados >}}    |
+::: tabla-indicador
+| Etapa                    |              Estado               |
+|--------------------------|:---------------------------------:|
+| Diseño del Indicador     |    {{< var monopar.diseno >}}     |
+| Consolidación de Insumos |    {{< var monopar.insumos >}}    |
+| Cálculo de Indicador     |    {{< var monopar.calculo >}}    |
+| Validación de Resultados |  {{< var monopar.validacion >}}   |
+| Entrega de Resultados    |  {{< var monopar.resultados >}}   |
 | Documentación            | {{< var monopar.documentacion >}} |
+
 : Estado de Avances
 :::
-
-
 
 ### 2. Conceptualización {.unnumbered}
 
 #### 2.1 Definición del indicador {.unnumbered}
-Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).
+
+El indicador de {{< var monopar.name >}} ({{< var monopar.sigla >}}) busca capturar la proporción de hogares en los que niños, niñas o adolescentes conviven con un solo progenitor. Esta condición se ha asociado internacionalmente con mayores niveles de vulnerabilidad, incluyendo efectos negativos en la salud mental y física de los menores, así como riesgos en su trayectoria educativa y social [@amato2017single]. El objetivo del indicador es reflejar una dimensión estructural de riesgo social, considerando que la ausencia de uno de los cuidadores conlleva una menor capacidad de protección y contención en el entorno familiar.
 
 #### 2.2 Conceptos relacionados {.unnumbered}
-Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).
+
+-   **Hogar monoparental**: Hogar donde un adulto convive con al menos un hijo o hija y no hay otro adulto que cumpla funciones parentales.
+-   **Resiliencia de Hogares**: Capacidad del hogar para sobreponerse a condiciones adversas, manteniendo estabilidad emocional, económica y social.
+-   **Vulnerabilidad social**: Condición de mayor exposición a riesgos debido a carencias estructurales como ingresos, apoyo familiar, salud, entre otros.
 
 #### 2.3 Referente internacional (COI 3.0) {.unnumbered}
-Breve descripción del indicador original y cómo es usado en el índice de referencia.
+
+En el {{< var coi.name >}} el indicador _“Percent of children living with a single parent”_ forma parte del dominio de _Recursos Sociales_ dentro de la dimensión _Social y Económica_ [@noelke2024child]. Se utiliza como una medida clave del entorno familiar, asumiendo que la presencia de un solo progenitor limita el acceso a tiempo, recursos económicos y apoyo emocional, lo que puede afectar el desarrollo integral del niño.
+
 
 ---
 
 ### 3. Adaptación metodológica CIT {.unnumbered}
 
 #### 3.1 Definición operacional adaptada {.unnumbered}
-Definición clara del indicador tal como será construido para el caso chileno.
+
+El indicador de {{< var monopar.name >}} ({{< var monopar.sigla >}}) corresponde al inverso aditivo de la proporción de hogares monoparentales dentro de una manzana. Los hogares monoparentales son aquellos con hijos que viven con un solo progenitor.
+
+$$I_{i}=1-\frac{hmp_{i}}{nh_{i}}$$
+$I_{i}$: {{< var monopar.name >}} ({{< var monopar.sigla >}}) por manzana $i$.  
+$hmp_{i}$: Hogares monoparentales por mananza $i$.  
+$nh_{i}$: Total de hogares por manzana $i$.
 
 #### 3.2 Insumos y fuentes {.unnumbered}
-Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.
+
+Datos obtenidos a nivel de manzanas del {{< var ine.name >}} levantados en el {{< var ine.censo_2017 >}}.
 
 #### 3.3 Pasos de cálculo {.unnumbered}
-Listar paso a paso el procedimiento con lógica replicable.
 
----
+1.	Filtrar hogares con hijos menores de edad.
+2.	Identificar si hay solo un adulto responsable (padre o madre) en el hogar.
+3.	Contar hogares monoparentales (`MONOPAR`) y total de hogares (`HOG_N`) por manzana.
+
+------------------------------------------------------------------------
 
 ### 4. Resultados preliminares {.unnumbered}
-- Imagen o mapa ilustrativo del indicador.
-- Tabla resumen si aplica.
 
----
+-   Imagen o mapa ilustrativo del indicador.
+-   Tabla resumen si aplica.
+
+------------------------------------------------------------------------
 
 ### 5. Interpretación y usos esperados {.unnumbered}
-- ¿Qué significa un valor alto o bajo?
-- ¿Cómo puede ser usado este indicador por tomadores de decisiones?
 
----
+* **Valor alto del {{< var monopar.sigla >}}**: Mayor proporción de hogares no monoparentales → mayor resiliencia estructural esperada.
+* **Valor bajo del {{< var monopar.sigla >}}**: Alta concentración de hogares monoparentales → mayor vulnerabilidad social.
+* **Aplicaciones**: Identificación de zonas prioritarias para intervención social, apoyo a la infancia, planificación de programas de apoyo familiar y diagnóstico territorial.
 
-### 6. Validación, supuestos y limitaciones {.unnumbered}
-- Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.
+------------------------------------------------------------------------
 
----
+### 6. Supuestos y limitaciones {.unnumbered}
+
+**Supuestos:**
+
+* Se asume que los hogares monoparentales son más vulnerables, sin considerar estrategias de resiliencia informal o redes extendidas.
+
+**Limitaciones:**
+
+* El Censo 2017 ofrece solo una fotografía de un año.
+*	No se distingue entre causas de monoparentalidad (viudez, separación, abandono).
+* Posibles subregistros o clasificaciones ambiguas en hogares no nucleares.
+
+------------------------------------------------------------------------
 
 ### 7. Referencias {.unnumbered}
-Bibliografía científica, manuales técnicos, artículos base.
 
-
-
-
-
+- Amato, P. R., & Patterson, S. (2017). Single-Parent Families and Child Development.
+- Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). [*Child Opportunity Index 3.0 Technical Documentation*](https://www.diversitydatakids.org/child-opportunity-index).
