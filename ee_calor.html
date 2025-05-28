@@ -70,6 +70,49 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -287,10 +330,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#conceptualización" id="toc-conceptualización" class="nav-link" data-scroll-target="#conceptualización">2. Conceptualización</a></li>
   <li><a href="#adaptación-metodológica-cit" id="toc-adaptación-metodológica-cit" class="nav-link" data-scroll-target="#adaptación-metodológica-cit">3. Adaptación metodológica CIT</a></li>
   <li><a href="#pasos-de-cálculo" id="toc-pasos-de-cálculo" class="nav-link" data-scroll-target="#pasos-de-cálculo">4. Pasos de cálculo</a></li>
-  <li><a href="#resultados-preliminares" id="toc-resultados-preliminares" class="nav-link" data-scroll-target="#resultados-preliminares">5. Resultados preliminares</a></li>
-  <li><a href="#interpretación-y-usos-esperados" id="toc-interpretación-y-usos-esperados" class="nav-link" data-scroll-target="#interpretación-y-usos-esperados">6. Interpretación y usos esperados</a></li>
-  <li><a href="#validación-supuestos-y-limitaciones" id="toc-validación-supuestos-y-limitaciones" class="nav-link" data-scroll-target="#validación-supuestos-y-limitaciones">7. Validación, supuestos y limitaciones</a></li>
-  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">8. Referencias</a></li>
+  <li><a href="#ecuación-de-s" id="toc-ecuación-de-s" class="nav-link" data-scroll-target="#ecuación-de-s">5. Ecuación de sEEC</a></li>
+  <li><a href="#resultados-preliminares" id="toc-resultados-preliminares" class="nav-link" data-scroll-target="#resultados-preliminares">6. Resultados preliminares</a></li>
+  <li><a href="#interpretación-y-usos-esperados" id="toc-interpretación-y-usos-esperados" class="nav-link" data-scroll-target="#interpretación-y-usos-esperados">7. Interpretación y usos esperados</a></li>
+  <li><a href="#validación-supuestos-y-limitaciones" id="toc-validación-supuestos-y-limitaciones" class="nav-link" data-scroll-target="#validación-supuestos-y-limitaciones">8. Validación, supuestos y limitaciones</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">9. Referencias</a></li>
   </ul>
 </nav>
     </div>
@@ -380,7 +424,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Entrega de Resultados</td>
-<td style="text-align: center;"><p>🟡</p></td>
+<td style="text-align: center;"><p>✅</p></td>
 </tr>
 <tr class="even">
 <td>Documentación</td>
@@ -435,8 +479,36 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <hr>
 </section>
+<section id="ecuación-de-s" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ecuación-de-s">5. Ecuación de sEEC</h3>
+<p>Esta fórmula (<a href="#eq-eec" class="quarto-xref"><span>12.1</span></a>) representa matemáticamente en indicador Expocisión Extrema al Calor que representa el <strong>promedio del número de días de calor extremo por año</strong>, en cada ubicación geográfica <span class="math inline">(x, y)</span>. Primero, se cuenta cuántos días de verano por año superan el umbral de temperatura, y luego se promedia ese conteo anual sobre <span class="math inline">N</span> años. El resultado es un <strong>mapa de intensidad promedio de exposición térmica extrema</strong>, útil para análisis de vulnerabilidad climática territorial.</p>
+<p><span id="eq-eec"><span class="math display">
+\overline{E}(x, y) = \frac{1}{N} \sum_{t=1}^{N} \sum_{d \in S_t} \mathbb{I}\left( T_{d}^{(x, y)} \geq \theta \right)
+\tag{12.1}</span></span></p>
+<ul>
+<li><span class="math inline">\overline{E}(x, y))</span>: es el <strong>promedio multianual de exposición extrema al calor</strong> en el píxel ubicado en la posición espacial <span class="math inline">(x, y)</span>.<br>
+</li>
+<li><span class="math inline">N</span>: es el <strong>número de años</strong> considerados en el periodo de análisis (por ejemplo, <span class="math inline">N = 10</span>).<br>
+</li>
+<li><span class="math inline">S_t</span>: es el <strong>conjunto de días de verano</strong> del año <span class="math inline">t</span>, definido según el criterio estacional (e.g., del 21 de diciembre al 20 de marzo del año siguiente).<br>
+</li>
+<li><span class="math inline">T_{d}^{(x, y)}</span>: es la <strong>temperatura máxima diaria</strong> registrada en el píxel <span class="math inline">(x, y)</span> en el día <span class="math inline">d</span>.<br>
+</li>
+<li><span class="math inline">\theta</span>: es el <strong>umbral de temperatura</strong> para definir un evento de calor extremo (en este caso, <span class="math inline">\theta = 32{.}2\,^\circ\text{C}</span>).<br>
+</li>
+<li><span class="math inline">\mathbb{I}(\cdot)</span>: es la <strong>función indicadora</strong> , que toma valor <span class="math inline">1</span> si la condición se cumple y <span class="math inline">0</span> si no (<a href="#eq-eec" class="quarto-xref"><span>12.1</span></a>):</li>
+</ul>
+<p><span id="eq-eec_condicion"><span class="math display">
+\mathbb{I}\left( T_{d}^{(x, y)} \geq \theta \right) =
+\begin{cases}
+1 &amp; \text{si } T_{d}^{(x, y)} \geq \theta \\\\
+0 &amp; \text{en caso contrario}
+\end{cases}
+\tag{12.2}</span></span></p>
+<hr>
+</section>
 <section id="resultados-preliminares" class="level3 unnumbered page-columns page-full">
-<h3 class="unnumbered anchored" data-anchor-id="resultados-preliminares">5. Resultados preliminares</h3>
+<h3 class="unnumbered anchored" data-anchor-id="resultados-preliminares">6. Resultados preliminares</h3>
 <div class="quarto-figure quarto-figure-center page-columns page-full">
 <figure class="figure page-columns page-full">
 <p><img src="images/eec.png" class="img-fluid figure-img"></p>
@@ -447,7 +519,7 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 <section id="interpretación-y-usos-esperados" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="interpretación-y-usos-esperados">6. Interpretación y usos esperados</h3>
+<h3 class="unnumbered anchored" data-anchor-id="interpretación-y-usos-esperados">7. Interpretación y usos esperados</h3>
 <p>Un mayor número de días con calor extremo implica una mayor exposición a riesgos sanitarios como golpes de calor, enfermedades respiratorias y estrés térmico, especialmente para niños, personas mayores y personas con condiciones preexistentes. Este indicador es útil para:</p>
 <ul>
 <li>Priorizar zonas que requieren estrategias de adaptación al cambio climático.</li>
@@ -457,7 +529,7 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 <section id="validación-supuestos-y-limitaciones" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="validación-supuestos-y-limitaciones">7. Validación, supuestos y limitaciones</h3>
+<h3 class="unnumbered anchored" data-anchor-id="validación-supuestos-y-limitaciones">8. Validación, supuestos y limitaciones</h3>
 <ul>
 <li><strong>Supuestos:</strong> Se asume que la temperatura superficial del suelo es un proxy adecuado para la exposición humana al calor, aunque puede diferir de la temperatura del aire.</li>
 <li><strong>Limitaciones:</strong> Las nubes, cuerpos de agua y zonas de sombra pueden afectar la calidad de las observaciones MODIS. Se descartaron días sin observación clara.</li>
@@ -466,7 +538,7 @@ ul.task-list li input[type="checkbox"] {
 <hr>
 </section>
 <section id="referencias" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="referencias">8. Referencias</h3>
+<h3 class="unnumbered anchored" data-anchor-id="referencias">9. Referencias</h3>
 <ul>
 <li>Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., &amp; Acevedo-Garcia, D. (2024). <a href="https://www.diversitydatakids.org/child-opportunity-index"><em>Child Opportunity Index 3.0 Technical Documentation</em></a>.</li>
 <li>MODIS Land Science Team. (2023). <em>MOD11A1 V6.1 Product User Guide</em>. NASA LP DAAC.</li>
