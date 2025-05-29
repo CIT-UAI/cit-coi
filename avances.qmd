@@ -5,13 +5,17 @@ title: "Avances"
 
 ## Gantt General del Proyecto 
 
-![Carta Gantt general del proyecto, 2025. [Link](https://alumnosuaicl.sharepoint.com/:x:/r/sites/CentrodeInteligenciaTerritorial/_layouts/15/doc2.aspx?sourcedoc=%7BCD14CBA8-51D2-4ED3-89AA-96F7D86EAA8E%7D&file=Plan%20de%20Trabajo.xlsx&action=default&mobileredirect=true)](images/gantt.png)
+Esta sección tiene por objetivo ofrecer una visión integrada del estado de avance del proyecto, permitiendo monitorear en tiempo real las distintas actividades, hitos y entregables asociados al desarrollo del Observatorio de Factores de Riesgo y Protección. El propósito de este espacio no es ejercer control sobre los actores involucrados, sino más bien disponer de una herramienta de apoyo a la gestión colaborativa, útil para identificar brechas, priorizar acciones y facilitar la toma de decisiones. La información se presenta de manera estructurada y visual, mediante una carta Gantt general del proyecto ([@fig-gantt]), que sintetiza las principales fases y tareas según su grado de avance.
+
+![Carta Gantt general del proyecto, 2025. [Link](https://alumnosuaicl.sharepoint.com/:x:/r/sites/CentrodeInteligenciaTerritorial/_layouts/15/doc2.aspx?sourcedoc=%7BCD14CBA8-51D2-4ED3-89AA-96F7D86EAA8E%7D&file=Plan%20de%20Trabajo.xlsx&action=default&mobileredirect=true)](images/gantt.png){#fig-gantt}
 
 
 ## Avance General de los Insdicadores COI Propuesto
 
+Complementariamente, se presenta mediante tabla ([-@tbl-avance]) un monitoreo del estado de avance de cada uno de los indicadores territoriales que componen la propuesta metodológica. Esta información se organiza en una tabla que cruza los indicadores con las etapas clave de su desarrollo (diseño, insumos, cálculo, validación, resultados y documentación), utilizando un código de colores para facilitar su interpretación: verde (✅) indica tareas finalizadas, amarillo (🟡) aquellas en progreso, y rojo (❌) tareas aún no iniciadas. Esta visualización busca apoyar el seguimiento técnico del proyecto, identificando oportunidades de mejora y asignación eficiente de esfuerzos en función del avance real.
 
-::: {.tabla-avance}
+
+::: {.tabla-avance #tbl-avance}
 
 
 | Nº | Sigla | Nombre    | Dimensión             | Dominio                             | Diseño | Insumos | Cálculo | Validación | Resultados | Documentación |
@@ -33,6 +37,6 @@ title: "Avances"
 | 15 | {{< var hacina.sigla >}}         | {{< var hacina.name >}}                | {{< var hacina.dimension >}}         | {{< var hacina.dominio >}}         | {{< var hacina.diseno >}} | {{< var hacina.insumos >}} | {{< var hacina.calculo >}} | {{< var hacina.validacion >}} | {{< var hacina.resultados >}} | {{< var hacina.documentacion >}} |
 | 16 | {{< var monopar.sigla >}}        | {{< var monopar.name >}}               | {{< var monopar.dimension >}}        | {{< var monopar.dominio >}}        | {{< var monopar.diseno >}} | {{< var monopar.insumos >}} | {{< var monopar.calculo >}} | {{< var monopar.validacion >}} | {{< var monopar.resultados >}} | {{< var monopar.documentacion >}} |
 
-: Estado de avance general de Indicadores propuestos
+: Estado de avance de indicadores territoriales
 :::
 

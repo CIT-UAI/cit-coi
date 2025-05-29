@@ -81,7 +81,7 @@ Se utilizó el producto satelital [MOD11A1 V6.1](https://lpdaac.usgs.gov/product
 
 ---
 
-### 5. Ecuación de s{{< var icalor.sigla >}} {.unnumbered}
+### 5. Ecuación de {{< var icalor.sigla >}} {.unnumbered}
 
 Esta fórmula ([-@eq-eec]) representa matemáticamente en indicador {{< var icalor.name >}} que representa  el **promedio del número de días de calor extremo por año**, en cada ubicación geográfica $(x, y)$. Primero, se cuenta cuántos días de verano por año superan el umbral de temperatura, y luego se promedia ese conteo anual sobre $N$ años. El resultado es un **mapa de intensidad promedio de exposición térmica extrema**, útil para análisis de vulnerabilidad climática territorial.
 
