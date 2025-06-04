@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -70,6 +90,49 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
@@ -347,8 +410,8 @@ ul.task-list li input[type="checkbox"] {
 <table class="caption-top table">
 <caption>Estado de Avances</caption>
 <colgroup>
-<col style="width: 41%">
-<col style="width: 58%">
+<col style="width: 43%">
+<col style="width: 56%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -390,15 +453,20 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="unnumbered anchored" data-anchor-id="conceptualización">2. Conceptualización</h3>
 <section id="definición-del-indicador" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="definición-del-indicador">2.1 Definición del indicador</h4>
-<p>Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).</p>
+<p>El indicador de <strong>Viviendas con Hacinamiento (VCH)</strong> busca representar el grado de suficiencia espacial en los hogares, considerando la relación entre número de personas y número de habitaciones. El hacinamiento habitacional es una manifestación de precariedad material que puede afectar negativamente al desarrollo físico, emocional y educativo de niños y niñas. Estudios internacionales demuestran su asociación con enfermedades respiratorias, estrés crónico, bajo rendimiento escolar y exposición a ambientes familiares tensos o inseguros.</p>
 </section>
 <section id="conceptos-relacionados" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="conceptos-relacionados">2.2 Conceptos relacionados</h4>
-<p>Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).</p>
+<ul>
+<li><strong>Hacinamiento</strong>: Condición en que hay al menos 2.5 personas por habitación en una vivienda.</li>
+<li><strong>Hacinamiento severo</strong>: Condición crítica donde hay más de 5 personas por habitación.</li>
+<li><strong>Suficiencia habitacional</strong>: Situación en que las condiciones de espacio en la vivienda permiten un desarrollo digno y saludable de sus integrantes.</li>
+<li><strong>Normalización aditiva inversa</strong>: Procedimiento matemático que transforma un indicador de modo que los valores más altos representen mejores condiciones (más deseables).</li>
+</ul>
 </section>
 <section id="referente-internacional-coi-3.0" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="referente-internacional-coi-3.0">2.3 Referente internacional (COI 3.0)</h4>
-<p>Breve descripción del indicador original y cómo es usado en el índice de referencia.</p>
+<p>En la <a href="https://www.diversitydatakids.org/sites/default/files/file/COI30_TechDoc_20241004.pdf">Documentación Técnica de COI 3.0</a>, el hacinamiento forma parte del dominio de Recursos Habitacionales dentro de la dimensión Social y Económica. En este índice, se incluye el indicador “percent of households with more than 1.5 persons per room” como señal de vivienda inadecuada <span class="citation" data-cites="noelke2024child">(<a href="references.html#ref-noelke2024child" role="doc-biblioref">Noelke et al. 2024</a>)</span>. Se asume que niveles altos de hacinamiento dificultan el desarrollo infantil y constituyen una barrera estructural a la movilidad social.</p>
 <hr>
 </section>
 </section>
@@ -406,15 +474,31 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="unnumbered anchored" data-anchor-id="adaptación-metodológica-cit">3. Adaptación metodológica CIT</h3>
 <section id="definición-operacional-adaptada" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="definición-operacional-adaptada">3.1 Definición operacional adaptada</h4>
-<p>Definición clara del indicador tal como será construido para el caso chileno.</p>
+<p>Para el caso chileno, el indicador VCH se construye a partir de la proporción de viviendas con hacinamiento y hacinamiento severo, penalizando más fuertemente a estas últimas. Se define un índice crudo de hacinamiento y posteriormente se transforma mediante un inverso aditivo para producir un índice de suficiencia habitacional, en el cual valores altos indican mejores condiciones. Su formulación es la siguiente:</p>
+<p><span id="eq-hacina"><span class="math display">I = 1- f(h + (2 \times hs)) \tag{18.1}</span></span></p>
+<ul>
+<li><span class="math inline">h</span>: 2.5 o más personas por habitación (Hacinamiento).</li>
+<li><span class="math inline">hs</span>: 5 o más personas por habitación (Hacinamiento Severo).</li>
+<li><span class="math inline">f</span>: función de Normalización <code>minmax()</code>.</li>
+</ul>
+<p>Función de normalización <code>minmax</code>:</p>
+<p><span id="eq-minmax"><span class="math display">x\prime = \frac{x - min(x)}{max(x)-min(x)} \tag{18.2}</span></span></p>
 </section>
 <section id="insumos-y-fuentes" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="insumos-y-fuentes">3.2 Insumos y fuentes</h4>
-<p>Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.</p>
+<p>Datos obtenidos a nivel de manzanas del <a href="https://www.ine.gob.cl/">Instituto Nacional de Estadísticas (INE)</a> levantados en el <a href="http://resultados.censo2017.cl/">Censo de Población y Vivienda 2017</a>.</p>
 </section>
 <section id="pasos-de-cálculo" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="pasos-de-cálculo">3.3 Pasos de cálculo</h4>
-<p>Listar paso a paso el procedimiento con lógica replicable.</p>
+<ol type="1">
+<li>Calcular el número de personas por habitación para cada vivienda censada.</li>
+<li>Clasificar cada vivienda como:
+<ul>
+<li>Hacinada: ≥ 2.5 personas por habitación (<span class="math inline">h</span>)</li>
+<li>Hacinada severamente: ≥ 5 personas por habitación (<span class="math inline">hs</span>)</li>
+</ul></li>
+<li>Calcular el índice de hacinamiento siguiendo la ecuación <a href="#eq-hacina" class="quarto-xref"><span>18.1</span></a>, que considera los pasos de normalización y el uso de inverso aditivo: <span class="math inline">1 - f(x)</span>.</li>
+</ol>
 <hr>
 </section>
 </section>
@@ -429,23 +513,43 @@ ul.task-list li input[type="checkbox"] {
 <section id="interpretación-y-usos-esperados" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="interpretación-y-usos-esperados">5. Interpretación y usos esperados</h3>
 <ul>
-<li>¿Qué significa un valor alto o bajo?</li>
-<li>¿Cómo puede ser usado este indicador por tomadores de decisiones?</li>
+<li>Valor alto de VCH (cercano a 1): Alta suficiencia habitacional → mejores condiciones de desarrollo infantil.</li>
+<li>Valor bajo de VCH (cercano a 0): Alto nivel de hacinamiento → necesidad urgente de intervención.</li>
+</ul>
+<p>Aplicaciones:</p>
+<ul>
+<li>Diagnóstico territorial en políticas de vivienda.</li>
+<li>Focalización de programas habitacionales.</li>
+<li>Identificación de entornos urbanos críticos para la infancia.</li>
 </ul>
 <hr>
 </section>
 <section id="consideraciones-supuestos-y-limitaciones" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="consideraciones-supuestos-y-limitaciones">6. Consideraciones, supuestos y limitaciones</h3>
+<p>Supuestos:</p>
 <ul>
-<li>Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.</li>
+<li>Se asume una penalización doble para el hacinamiento severo por sus mayores efectos negativos.</li>
+</ul>
+<p>Limitaciones:</p>
+<ul>
+<li>La definición de habitaciones puede variar culturalmente.</li>
+<li>No se captura información cualitativa (condiciones físicas, ventilación, etc.).</li>
+<li>El Censo representa una sola fotografía temporal.</li>
 </ul>
 <hr>
 </section>
 <section id="referencias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="referencias">7. Referencias</h3>
-<p>Bibliografía científica, manuales técnicos, artículos base.</p>
+<ul>
+<li>Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., &amp; Acevedo-Garcia, D. (2024). <a href="https://www.diversitydatakids.org/child-opportunity-index"><em>Child Opportunity Index 3.0 Technical Documentation</em></a>.</li>
+</ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-noelke2024child" class="csl-entry" role="listitem">
+Noelke, C, N McArdle, B DeVoe, M Leonardos, Y Lu, RW Ressler, and D Acevedo-Garcia. 2024. <span>“Child Opportunity Index 3.0 Technical Documentation. Diversitydatakids. Org, Brandeis University.”</span> <em>Retrieved from Diversitydatakids. Org/Research-Library/Coi-30-Technical-Documentation</em>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

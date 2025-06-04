@@ -4,84 +4,123 @@ subtitle: "{{< var hacina.dominio >}}: {{< var hacina.name >}} ({{< var hacina.s
 author: ["{{< var dberroeta.name >}}"]
 ---
 
-### 1. Información General  {.unnumbered}
+### 1. Información General {.unnumbered}
 
 #### Ficha técnica {.unnumbered}
+
 -   **Nombre completo:** {{< var hacina.name >}}
 -   **Sigla:** {{< var hacina.sigla >}}\
 -   **Dimensión:** {{< var hacina.dimension >}}
 -   **Dominio:** {{< var hacina.dominio >}}
--   **Fuente principal de datos:** 
+-   **Fuente principal de datos:**
 -   **Unidad espacial de análisis:** Manzana censal\
 -   **Frecuencia temporal:** Anual
 -   **Cobertura temporal del análisis:**
 -   **Resolución espacial del insumo:** Puntos
 -   **Versión actual:** 1.0
 
-
 #### Avances {.unnumbered}
 
-::: {.tabla-indicador}
-| Etapa                    | Estado                           |
-|--------------------------|:----------------------------------:|
-| Diseño del Indicador     | {{< var hacina.diseno >}}        |
-| Consolidación de Insumos | {{< var hacina.insumos >}}       |
-| Cálculo de Indicador     | {{< var hacina.calculo >}}       |
-| Validación de Resultados | {{< var hacina.validacion >}}    |
-| Entrega de Resultados    | {{< var hacina.resultados >}}    |
+::: tabla-indicador
+| Etapa                    |              Estado              |
+|--------------------------|:--------------------------------:|
+| Diseño del Indicador     |    {{< var hacina.diseno >}}     |
+| Consolidación de Insumos |    {{< var hacina.insumos >}}    |
+| Cálculo de Indicador     |    {{< var hacina.calculo >}}    |
+| Validación de Resultados |  {{< var hacina.validacion >}}   |
+| Entrega de Resultados    |  {{< var hacina.resultados >}}   |
 | Documentación            | {{< var hacina.documentacion >}} |
+
 : Estado de Avances
 :::
-
-
 
 ### 2. Conceptualización {.unnumbered}
 
 #### 2.1 Definición del indicador {.unnumbered}
-Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).
+
+El indicador de **{{< var hacina.name >}} ({{< var hacina.sigla >}})** busca representar el grado de suficiencia espacial en los hogares, considerando la relación entre número de personas y número de habitaciones. El hacinamiento habitacional es una manifestación de precariedad material que puede afectar negativamente al desarrollo físico, emocional y educativo de niños y niñas. Estudios internacionales demuestran su asociación con enfermedades respiratorias, estrés crónico, bajo rendimiento escolar y exposición a ambientes familiares tensos o inseguros.
 
 #### 2.2 Conceptos relacionados {.unnumbered}
-Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).
+
+-   **Hacinamiento**: Condición en que hay al menos 2.5 personas por habitación en una vivienda.
+-   **Hacinamiento severo**: Condición crítica donde hay más de 5 personas por habitación.
+-   **Suficiencia habitacional**: Situación en que las condiciones de espacio en la vivienda permiten un desarrollo digno y saludable de sus integrantes.
+-   **Normalización aditiva inversa**: Procedimiento matemático que transforma un indicador de modo que los valores más altos representen mejores condiciones (más deseables).
 
 #### 2.3 Referente internacional (COI 3.0) {.unnumbered}
-Breve descripción del indicador original y cómo es usado en el índice de referencia.
 
----
+En la {{< var coi.doc >}}, el hacinamiento forma parte del dominio de Recursos Habitacionales dentro de la dimensión Social y Económica. En este índice, se incluye el indicador “percent of households with more than 1.5 persons per room” como señal de vivienda inadecuada [@noelke2024child]. Se asume que niveles altos de hacinamiento dificultan el desarrollo infantil y constituyen una barrera estructural a la movilidad social.
+
+------------------------------------------------------------------------
 
 ### 3. Adaptación metodológica CIT {.unnumbered}
 
 #### 3.1 Definición operacional adaptada {.unnumbered}
-Definición clara del indicador tal como será construido para el caso chileno.
+
+Para el caso chileno, el indicador VCH se construye a partir de la proporción de viviendas con hacinamiento y hacinamiento severo, penalizando más fuertemente a estas últimas. Se define un índice crudo de hacinamiento y posteriormente se transforma mediante un inverso aditivo para producir un índice de suficiencia habitacional, en el cual valores altos indican mejores condiciones. Su formulación es la siguiente:
+
+$$I = 1- f(h + (2 \times hs))$${#eq-hacina}
+
+- $h$: 2.5 o más personas por habitación (Hacinamiento). 
+- $hs$: 5 o más personas por habitación (Hacinamiento Severo). 
+- $f$: función de Normalización `minmax()`. 
+
+Función de normalización `minmax`:
+
+$$x\prime = \frac{x - min(x)}{max(x)-min(x)}$${#eq-minmax}
+
+
 
 #### 3.2 Insumos y fuentes {.unnumbered}
-Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.
+
+Datos obtenidos a nivel de manzanas del {{< var ine.name >}} levantados en el {{< var ine.censo_2017 >}}.
+
 
 #### 3.3 Pasos de cálculo {.unnumbered}
-Listar paso a paso el procedimiento con lógica replicable.
 
----
+1.	Calcular el número de personas por habitación para cada vivienda censada.
+2.	Clasificar cada vivienda como:
+	*	Hacinada: ≥ 2.5 personas por habitación ($h$)
+	*	Hacinada severamente: ≥ 5 personas por habitación ($hs$)
+
+3.	Calcular el índice de hacinamiento siguiendo la ecuación [-@eq-hacina], que considera los pasos de normalización y el uso de inverso aditivo: $1 - f(x)$.
+
+------------------------------------------------------------------------
 
 ### 4. Resultados preliminares {.unnumbered}
-- Imagen o mapa ilustrativo del indicador.
-- Tabla resumen si aplica.
 
----
+-   Imagen o mapa ilustrativo del indicador.
+-   Tabla resumen si aplica.
+
+------------------------------------------------------------------------
 
 ### 5. Interpretación y usos esperados {.unnumbered}
-- ¿Qué significa un valor alto o bajo?
-- ¿Cómo puede ser usado este indicador por tomadores de decisiones?
 
----
+* Valor alto de {{< var hacina.sigla >}} (cercano a 1): Alta suficiencia habitacional → mejores condiciones de desarrollo infantil.
+* Valor bajo de {{< var hacina.sigla >}} (cercano a 0): Alto nivel de hacinamiento → necesidad urgente de intervención.
+
+Aplicaciones:
+
+  * Diagnóstico territorial en políticas de vivienda.
+  * Focalización de programas habitacionales.
+  * Identificación de entornos urbanos críticos para la infancia.
+
+------------------------------------------------------------------------
 
 ### 6. Consideraciones, supuestos y limitaciones {.unnumbered}
-- Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.
 
----
+Supuestos:
+
+  * Se asume una penalización doble para el hacinamiento severo por sus mayores efectos negativos.
+
+Limitaciones:
+
+  * La definición de habitaciones puede variar culturalmente.
+  * No se captura información cualitativa (condiciones físicas, ventilación, etc.).
+  * El Censo representa una sola fotografía temporal.
+
+------------------------------------------------------------------------
 
 ### 7. Referencias {.unnumbered}
-Bibliografía científica, manuales técnicos, artículos base.
 
-
-
-
-
+- Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). [*Child Opportunity Index 3.0 Technical Documentation*](https://www.diversitydatakids.org/child-opportunity-index).

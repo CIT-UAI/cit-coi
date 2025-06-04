@@ -127,7 +127,7 @@ Un mayor número de días con calor extremo implica una mayor exposición a ries
 
 ------------------------------------------------------------------------
 
-### 8. Validación, supuestos y limitaciones {.unnumbered}
+### 8. Consideraciones, supuestos o limitaciones {.unnumbered}
 
 -   **Supuestos:** Se asume que la temperatura superficial del suelo es un proxy adecuado para la exposición humana al calor, aunque puede diferir de la temperatura del aire.
 -   **Limitaciones:** Las nubes, cuerpos de agua y zonas de sombra pueden afectar la calidad de las observaciones MODIS. Se descartaron días sin observación clara.
