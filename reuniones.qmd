@@ -1,19 +1,21 @@
 ---
 title: "Reuniones"
-subtitle: "Registro de Reuniones"
+subtitle: "Registro de"
 author: ["{{< var dberroeta.name >}}"]
 ---
 
 
 ::: {.tabla-reuniones}
-| Categoría                   | Fecha       | Tema                                              |
+| Categoría                   | Fecha       | Tema                          |
 |----------------------------|-------------|--------------------------------|
-| Reuniones Investigación| 21-04-2025  | revisión de {{< var coi.name >}}   |
-| Reuniones Estudios     | 24-04-2025  | Reunión Inicial                    |
-| Reuniones Investigación| 29-04-2025  | Análisis de Factibilidad           |
-| Reuniones Estudios     | 30-04-2025  | Gantt y Factibilidad               |
-| Reuniones Investigación| 15-05-2025  | Contrastar indicador propuesto con {{< var coi.name >}} |
-| Reuniones Investigación| 20-05-2025  | Consolidar insumos                 |
+| Investigación| 21-04-2025  | revisión de {{< var coi.doc >}}   |
+| Estudios     | 24-04-2025  | Reunión Inicial                    |
+| Investigación| 29-04-2025  | Análisis de Factibilidad           |
+| Estudios     | 30-04-2025  | Gantt y Factibilidad               |
+| Investigación| 15-05-2025  | Contrastar indicador propuesto con {{< var coi.sname >}} |
+| Investigación| 20-05-2025  | Consolidar insumos                 |
+| Estudios     | 29-05-2025  | Estado administrativo y avances    |
+| Investigación| 04-06-2025  | Avances y deathline 12-06-2025     |
 
 : Registro de Reuniones
 :::
