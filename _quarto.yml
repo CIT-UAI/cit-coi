@@ -35,11 +35,11 @@ book:
         - ee_calor.qmd
     - part: social_y_eco.qmd
       chapters:
-        - empleo.qmd
         - escolaridad.qmd
         - jh_primaria.qmd
         - jh_secundaria.qmd
         - jh_superior.qmd
+        - empleo.qmd
         - hacina.qmd
         - monopar.qmd
     # - template_ind.qmd

@@ -4,82 +4,129 @@ subtitle: "{{< var empleo.dominio >}}: {{< var empleo.name >}} ({{< var empleo.s
 author: ["{{< var dberroeta.name >}}"]
 ---
 
-### 1. Información General  {.unnumbered}
+### 1. Información General {.unnumbered}
 
 #### Ficha técnica {.unnumbered}
+
 -   **Nombre completo:** {{< var empleo.name >}}
 -   **Sigla:** {{< var empleo.sigla >}}\
 -   **Dimensión:** {{< var empleo.dimension >}}
 -   **Dominio:** {{< var empleo.dominio >}}
--   **Fuente principal de datos:** 
+-   **Fuente principal de datos:** {{< var ine.censo_2017 >}}
 -   **Unidad espacial de análisis:** Manzana censal\
--   **Frecuencia temporal:** Anual
--   **Cobertura temporal del análisis:**
--   **Resolución espacial del insumo:** Puntos
+-   **Frecuencia temporal:** Única
+-   **Cobertura temporal del análisis:** 2017
+-   **Tipo de insumo:** Polígonos
 -   **Versión actual:** 1.0
-
 
 #### Avances {.unnumbered}
 
-::: {.tabla-indicador}
-| Etapa                    | Estado                           |
-|--------------------------|:----------------------------------:|
-| Diseño del Indicador     | {{< var empleo.diseno >}}        |
-| Consolidación de Insumos | {{< var empleo.insumos >}}       |
-| Cálculo de Indicador     | {{< var empleo.calculo >}}       |
-| Validación de Resultados | {{< var empleo.validacion >}}    |
-| Entrega de Resultados    | {{< var empleo.resultados >}}    |
+::: tabla-indicador
+| Etapa                    |              Estado              |
+|--------------------------|:--------------------------------:|
+| Diseño del Indicador     |    {{< var empleo.diseno >}}     |
+| Consolidación de Insumos |    {{< var empleo.insumos >}}    |
+| Cálculo de Indicador     |    {{< var empleo.calculo >}}    |
+| Validación de Resultados |  {{< var empleo.validacion >}}   |
+| Entrega de Resultados    |  {{< var empleo.resultados >}}   |
 | Documentación            | {{< var empleo.documentacion >}} |
+
 : Estado de Avances
 :::
-
-
 
 ### 2. Conceptualización {.unnumbered}
 
 #### 2.1 Definición del indicador {.unnumbered}
-Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).
+
+El indicador {{< var empleo.name >}} ({{< var empleo.sigla >}}) busca medir la proporción de personas activas que están efectivamente empleadas dentro de un territorio específico. La situación laboral de los adultos en una comunidad incide directamente en la estabilidad económica de los hogares, la salud mental de sus integrantes, y las oportunidades de desarrollo infantil. Las zonas con alta desocupación pueden estar expuestas a mayores niveles de pobreza, inseguridad alimentaria y riesgo social para la niñez.
+
+Este indicador, al aplicarse a escala de manzana censal, permite identificar patrones de desocupación en el espacio urbano con gran nivel de detalle territorial.
 
 #### 2.2 Conceptos relacionados {.unnumbered}
-Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).
+
+-   **Población activa**: Personas en edad de trabajar que están disponibles y buscan activamente empleo.
+-   **Desempleo**: Personas que no tienen empleo pero están buscando activamente uno.
+-   **Tasa de empleo**: Proporción de personas empleadas respecto a la población activa.
+-   **Inverso aditivo**: Transformación matemática usada para que valores altos sean más deseables (empleabilidad alta) y bajos más problemáticos (alto desempleo).
 
 #### 2.3 Referente internacional (COI 3.0) {.unnumbered}
-Breve descripción del indicador original y cómo es usado en el índice de referencia.
 
----
+En el Child Opportunity Index ({{< var coi.sname >}}), la tasa de empleo es parte del dominio de Empleo dentro de la dimensión Social y Económica. El indicador internacional usado es _“adult employment rate (percent of civilian labor force ages 25–64 that is employed)”_. En este marco, la estabilidad laboral de los adultos del vecindario se considera fundamental para el bienestar y oportunidades de los niños, dado su impacto en ingresos, seguridad y apoyo emocional [@noelke2024child].
+
+
+------------------------------------------------------------------------
 
 ### 3. Adaptación metodológica CIT {.unnumbered}
 
 #### 3.1 Definición operacional adaptada {.unnumbered}
-Definición clara del indicador tal como será construido para el caso chileno.
+
+Para el caso chileno, y considerando las variables disponibles en el {{< var ine.censo_2017 >}}, se adapta el indicador mediante la construcción de una tasa inversa de desempleo, calculando:
+
+$$I = 1- \left(\frac{pbe}{pa}\right)$$ {#eq-te}
+
+donde:
+
+* $I$: Indicador de {{< var empleo.name >}} ({{< var empleo.sigla >}})
+*	$pbe$: Personas que declararon estar buscando empleo (Pregunta 17 opción 4 en la pregunta sobre actividad laboral).
+*	$pa$: Total personas con Activas.
+
+Aunque el Censo no incluye directamente la categoría de población activa, se estimó esta base en función de edad, condición de actividad y respuestas de la encuesta, asumiendo como activas a personas que trabajaron o buscaron empleo.
 
 #### 3.2 Insumos y fuentes {.unnumbered}
-Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.
+
+
+Datos obtenidos a nivel de manzanas del {{< var ine.name >}} levantados en el {{< var ine.censo_2017 >}}.
 
 #### 3.3 Pasos de cálculo {.unnumbered}
-Listar paso a paso el procedimiento con lógica replicable.
 
----
+1.	Filtrar individuos en edad de trabajar (15 años y más).
+2.	Identificar quienes se encontraban buscando empleo ($pbe$).
+3.	Estimar población activa ($pa$) como suma de personas empleadas más personas buscando empleo.
+4.	Calcular la proporción de personas buscando empleo ($pbe$) respecto a ($pa$), para luego finalmente aplicar el inverso aditivo (-@eq-te)
+
+
+
+
+------------------------------------------------------------------------
 
 ### 4. Resultados preliminares {.unnumbered}
-- Imagen o mapa ilustrativo del indicador.
-- Tabla resumen si aplica.
 
----
+![Resultados de Indicador **{{< var empleo.name >}} ({{< var empleo.sigla >}})** ](images/tde_index.png){#fig-tde}
+
+En la figura [-@fig-tde] se observa que en general el indicador {{< var empleo.sigla >}} tiene niveles medios altos, concentrando los valores mas altos en la cono nororiente (Las Condes, Vitacura, Lo Barnechea) de la provincia de Santiago.
+
+------------------------------------------------------------------------
 
 ### 5. Interpretación y usos esperados {.unnumbered}
-- ¿Qué significa un valor alto o bajo?
-- ¿Cómo puede ser usado este indicador por tomadores de decisiones?
 
----
+Interpretación:
+
+* **Valor alto de {{< var empleo.sigla >}}** (cercano a 1): Mayor nivel de empleo → más estabilidad económica potencial.
+* **Valor bajo de {{< var empleo.sigla >}}** (cercano a 0): Mayor tasa de desempleo → mayor fragilidad social y económica.
+
+Aplicaciones:
+
+* Focalización territorial de políticas de empleo.
+* Planificación de programas de reconversión laboral o capacitación.
+* Priorización de zonas en instrumentos de planificación social o urbana.
+
+------------------------------------------------------------------------
 
 ### 6. Consideraciones, supuestos y limitaciones {.unnumbered}
-- Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.
 
----
+Supuestos:
+
+* Se asume una buena estimación de la población activa a partir de las variables censales.
+* Se considera como persona activa solo a quien reporta haber trabajado o buscado empleo recientemente.
+
+Limitaciones:
+
+* El Censo no incluye una variable explícita para desempleo ni tasa de actividad.
+* No considera informalidad laboral ni subempleo.
+* Puede haber subdeclaración de actividad económica femenina o en sectores rurales.
+
+------------------------------------------------------------------------
 
 ### 7. Referencias {.unnumbered}
-Bibliografía científica, manuales técnicos, artículos base.
 
-
-
+- Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). [*Child Opportunity Index 3.0 Technical Documentation*](https://www.diversitydatakids.org/child-opportunity-index).

@@ -184,7 +184,7 @@ empleo:
   calculo: "✅"
   validacion: "✅"
   resultados: "✅"
-  documentacion: "🟡"
+  documentacion: "✅"
   error: "❌"
   iniciado: "🟡"
 
@@ -198,7 +198,7 @@ escolaridad_jh:
   calculo: "✅"
   validacion: "✅"
   resultados: "✅"
-  documentacion: "❌"
+  documentacion: "✅"
   error: "❌"
   iniciado: "🟡"
 
@@ -255,7 +255,7 @@ hacina:
   calculo: "✅"
   resultados: "✅"
   validacion: "✅"
-  documentacion: "🟡"
+  documentacion: "✅"
   error: "❌"
   iniciado: "🟡"
   

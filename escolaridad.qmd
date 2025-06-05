@@ -4,82 +4,121 @@ subtitle: "{{< var escolaridad_jh.dominio >}}: {{< var escolaridad_jh.name >}} (
 author: ["{{< var dberroeta.name >}}"]
 ---
 
-### 1. Información General  {.unnumbered}
+### 1. Información General {.unnumbered}
 
 #### Ficha técnica {.unnumbered}
+
 -   **Nombre completo:** {{< var escolaridad_jh.name >}}
 -   **Sigla:** {{< var escolaridad_jh.sigla >}}\
 -   **Dimensión:** {{< var escolaridad_jh.dimension >}}
 -   **Dominio:** {{< var escolaridad_jh.dominio >}}
--   **Fuente principal de datos:** 
+-   **Fuente principal de datos:** {{< var ine.censo_2017 >}}
 -   **Unidad espacial de análisis:** Manzana censal\
--   **Frecuencia temporal:** Anual
--   **Cobertura temporal del análisis:**
--   **Resolución espacial del insumo:** Puntos
+-   **Frecuencia temporal:** Única
+-   **Cobertura temporal del análisis:** 2017
+-   **Tipo de insumo:** Polígonos
 -   **Versión actual:** 1.0
-
 
 #### Avances {.unnumbered}
 
-::: {.tabla-indicador}
-| Etapa                    | Estado                           |
-|--------------------------|:----------------------------------:|
-| Diseño del Indicador     | {{< var escolaridad_jh.diseno >}}        |
-| Consolidación de Insumos | {{< var escolaridad_jh.insumos >}}       |
-| Cálculo de Indicador     | {{< var escolaridad_jh.calculo >}}       |
-| Validación de Resultados | {{< var escolaridad_jh.validacion >}}    |
-| Entrega de Resultados    | {{< var escolaridad_jh.resultados >}}    |
+::: tabla-indicador
+| Etapa                    |                  Estado                  |
+|--------------------------|:----------------------------------------:|
+| Diseño del Indicador     |    {{< var escolaridad_jh.diseno >}}     |
+| Consolidación de Insumos |    {{< var escolaridad_jh.insumos >}}    |
+| Cálculo de Indicador     |    {{< var escolaridad_jh.calculo >}}    |
+| Validación de Resultados |  {{< var escolaridad_jh.validacion >}}   |
+| Entrega de Resultados    |  {{< var escolaridad_jh.resultados >}}   |
 | Documentación            | {{< var escolaridad_jh.documentacion >}} |
+
 : Estado de Avances
 :::
-
-
 
 ### 2. Conceptualización {.unnumbered}
 
 #### 2.1 Definición del indicador {.unnumbered}
-Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).
+
+El indicador {{< var escolaridad_jh.name >}} **(**{{< var escolaridad_jh.sigla >}}**)** busca capturar el nivel promedio de educación formal alcanzado por quienes están a cargo de los hogares. Esta variable es ampliamente reconocida como un proxy del capital cultural y nivel socioeconómico del hogar. Diversos estudios han evidenciado que la escolaridad parental, especialmente del jefe de hogar. Esta variable es representativa del capital cultural de cada hogar y está altamente correlacionada con el nivel de ingresos en Chile [@agostini2016].
 
 #### 2.2 Conceptos relacionados {.unnumbered}
-Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).
+
+-   **Escolaridad**: Años de estudio aprobados en el sistema formal de educación.
+-   **Capital cultural**: Conjunto de conocimientos, habilidades y educación que influye en la posición social.
+-   **Jefe/a de hogar**: Persona reconocida como principal responsable del hogar, según definición censal.
 
 #### 2.3 Referente internacional (COI 3.0) {.unnumbered}
-Breve descripción del indicador original y cómo es usado en el índice de referencia.
 
----
+En el {{< var coi.sname >}}, el indicador equivalente es _“percent of adults ages 25 and older with less than a high school degree”_, usado en el dominio de Inequidad Socioeconómica Concentrada. Representa un factor estructural de desventaja en comunidades con baja escolaridad adulta, lo que limita las oportunidades de desarrollo de la infancia por falta de acceso a información, apoyo educativo y capital simbólico [@noelke2024child].
+
+------------------------------------------------------------------------
 
 ### 3. Adaptación metodológica CIT {.unnumbered}
 
 #### 3.1 Definición operacional adaptada {.unnumbered}
-Definición clara del indicador tal como será construido para el caso chileno.
+
+En el caso chileno, se utiliza el promedio de años de escolaridad del jefe de hogar para cada manzana censal, según la variable censal continua que indica el número de años aprobados. 
+
+$$I_i = \frac{1}{n} \sum_{j= 1}^{n}Escolaridad_j$$
+
+Donde:
+
+* $I_i$: Promedio de Escolaridad de los jefes de hogar por manzana $i$.
+* $Escolaridad_j$: Años de estudio del jede hogar $j$ de esa manzana.
+
+
 
 #### 3.2 Insumos y fuentes {.unnumbered}
-Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.
+
+Datos obtenidos a nivel de manzanas del {{< var ine.name >}} levantados en el {{< var ine.censo_2017 >}}.
 
 #### 3.3 Pasos de cálculo {.unnumbered}
-Listar paso a paso el procedimiento con lógica replicable.
 
----
+1.	Filtrar personas identificadas como “jefes/as de hogar”.
+2.	Extraer el valor numérico de años de escolaridad registrados.
+3.	Agregar por manzana censal y calcular el promedio de escolaridad para los jefes de hogar residentes en esa unidad.
+
+
+------------------------------------------------------------------------
 
 ### 4. Resultados preliminares {.unnumbered}
-- Imagen o mapa ilustrativo del indicador.
-- Tabla resumen si aplica.
 
----
+![Resultados de Indicador **{{< var escolaridad_jh.name >}} ({{< var escolaridad_jh.sigla >}})** ](images/ejh_index.png){#fig-ejh}
+
+En la figura [-@fig-ejh] se observa que el indicador {{< var escolaridad_jh.sigla >}} mantiene concentraciones de los valores mas altos en la cono nororiente (Las Condes, Vitacura, Lo Barnechea) de la provincia de Santiago.
+
+------------------------------------------------------------------------
 
 ### 5. Interpretación y usos esperados {.unnumbered}
-- ¿Qué significa un valor alto o bajo?
-- ¿Cómo puede ser usado este indicador por tomadores de decisiones?
 
----
+Interpretación:
+
+* **Valor alto de {{< var escolaridad_jh.sigla >}}**: Mayor capital educativo del hogar → mayor probabilidad de condiciones favorables para la niñez (estímulo cognitivo, redes de apoyo, aspiraciones educativas).
+* **Valor bajo de {{< var escolaridad_jh.sigla >}}**: Presencia de brechas estructurales en capital cultural → mayor necesidad de políticas de apoyo educativo, tutorías y vinculación comunitaria.
+
+Aplicaciones:
+
+* Priorización de territorios en programas de acompañamiento escolar.
+* Segmentación territorial en políticas de inclusión social.
+* Monitoreo de desigualdades educativas estructurales.
+
+------------------------------------------------------------------------
 
 ### 6. Consideraciones, supuestos y limitaciones {.unnumbered}
-- Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.
 
----
+Supuestos:
+
+* La escolaridad del jefe de hogar representa adecuadamente el nivel educativo del hogar.
+
+Limitaciones:
+
+* Posible subdeclaración o no respuesta en la variable escolaridad.
+* No se considera escolaridad de otros adultos que también aportan al entorno educativo del hogar (por ejemplo, madres, abuelos).
+* El dato refleja stock educativo, no necesariamente habilidades funcionales.
+
+------------------------------------------------------------------------
 
 ### 7. Referencias {.unnumbered}
-Bibliografía científica, manuales técnicos, artículos base.
 
+- Agostini, Claudio A, Daniel Hojman, Alonso Román, and Luis Valenzuela. 2016. _“Segregación Residencial de Ingresos En El Gran Santiago, 1992-2002: Una Estimación Robusta.”_ Eure (Santiago) 42 (127): 159–84.
 
-
+- Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). [*Child Opportunity Index 3.0 Technical Documentation*](https://www.diversitydatakids.org/child-opportunity-index).

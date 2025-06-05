@@ -1,5 +1,5 @@
 ---
-title: "Hogares Monoparentales"
+title: "Hogares Uniparentales"
 subtitle: "{{< var monopar.dominio >}}: {{< var monopar.name >}} ({{< var monopar.sigla >}})"
 author: ["{{< var dberroeta.name >}}"]
 ---
@@ -12,11 +12,11 @@ author: ["{{< var dberroeta.name >}}"]
 -   **Sigla:** {{< var monopar.sigla >}}\
 -   **Dimensión:** {{< var monopar.dimension >}}
 -   **Dominio:** {{< var monopar.dominio >}}
--   **Fuente principal de datos:**
+-   **Fuente principal de datos:** {{< var ine.censo_2017 >}}
 -   **Unidad espacial de análisis:** Manzana censal\
--   **Frecuencia temporal:** Anual
--   **Cobertura temporal del análisis:**
--   **Resolución espacial del insumo:** Puntos
+-   **Frecuencia temporal:** Única
+-   **Cobertura temporal del análisis:** 2017
+-   **Tipo de insumo:** Polígonos
 -   **Versión actual:** 1.0
 
 #### Avances {.unnumbered}
@@ -42,9 +42,10 @@ El indicador de {{< var monopar.name >}} ({{< var monopar.sigla >}}) busca captu
 
 #### 2.2 Conceptos relacionados {.unnumbered}
 
--   **Hogar monoparental**: Hogar donde un adulto convive con al menos un hijo o hija y no hay otro adulto que cumpla funciones parentales.
+-   **Hogar uniparental**: Hogar donde un adulto convive con al menos un hijo o hija y no hay otro adulto que cumpla funciones parentales.
 -   **Resiliencia de Hogares**: Capacidad del hogar para sobreponerse a condiciones adversas, manteniendo estabilidad emocional, económica y social.
 -   **Vulnerabilidad social**: Condición de mayor exposición a riesgos debido a carencias estructurales como ingresos, apoyo familiar, salud, entre otros.
+-   **Normalización aditiva inversa**: Procedimiento matemático que transforma un indicador de modo que los valores más altos representen mejores condiciones (más deseables).
 
 #### 2.3 Referente internacional (COI 3.0) {.unnumbered}
 
@@ -57,12 +58,13 @@ En el {{< var coi.name >}} el indicador _“Percent of children living with a si
 
 #### 3.1 Definición operacional adaptada {.unnumbered}
 
-El indicador de {{< var monopar.name >}} ({{< var monopar.sigla >}}) corresponde al inverso aditivo de la proporción de hogares monoparentales dentro de una manzana. Los hogares monoparentales son aquellos con hijos que viven con un solo progenitor.
+El indicador de {{< var monopar.name >}} ({{< var monopar.sigla >}}) corresponde al inverso aditivo de la proporción de hogares uniparentales dentro de una manzana respecto al total de hogares de la manzana. Se explica según la siguiente ecuación:
 
-$$I_{i}=1-\frac{hmp_{i}}{nh_{i}}$$
-$I_{i}$: {{< var monopar.name >}} ({{< var monopar.sigla >}}) por manzana $i$.  
-$hmp_{i}$: Hogares monoparentales por mananza $i$.  
-$nh_{i}$: Total de hogares por manzana $i$.
+$$I=1-\frac{hup}{nh}$${#eq-monopar}
+
+$I$: {{< var monopar.name >}} ({{< var monopar.sigla >}}) por manzana.  
+$hup$: Hogares uniparentales por mananza.  
+$nh$: Total de hogares por manzana.
 
 #### 3.2 Insumos y fuentes {.unnumbered}
 
@@ -72,13 +74,13 @@ Datos obtenidos a nivel de manzanas del {{< var ine.name >}} levantados en el {{
 
 1.	Filtrar hogares con hijos menores de edad.
 2.	Identificar si hay solo un adulto responsable (padre o madre) en el hogar.
-3.	Contar hogares monoparentales (`MONOPAR`) y total de hogares (`HOG_N`) por manzana.
+3.	Contar hogares uniparentales (`MONOPAR`) y dividir por total de hogares (`HOG_N`) por manzana, luego se aplica el el inverso aditivo ($1-x$) según ecuación [-@eq-monopar].
 
 ------------------------------------------------------------------------
 
 ### 4. Resultados preliminares {.unnumbered}
 
-![Resultados de Indicador {{< var monopar.name >}} ({{< var monopar.sigla >}})](images/hup.png){#fig-hmp}
+![Resultados de Indicador {{< var monopar.name >}} ({{< var monopar.sigla >}})](images/hup_index.png){#fig-hmp}
 
 En @fig-hmp se observan los resultados de {{< var monopar.name >}} ({{< var monopar.sigla >}}) donde no se observan concentraciones espaciales marcadas.
 
@@ -86,8 +88,8 @@ En @fig-hmp se observan los resultados de {{< var monopar.name >}} ({{< var mono
 
 ### 5. Interpretación y usos esperados {.unnumbered}
 
-* **Valor alto del {{< var monopar.sigla >}}**: Mayor proporción de hogares no monoparentales → mayor resiliencia estructural esperada.
-* **Valor bajo del {{< var monopar.sigla >}}**: Alta concentración de hogares monoparentales → mayor vulnerabilidad social.
+* **Valor alto del {{< var monopar.sigla >}}**: Mayor proporción de hogares no uniparentales → mayor resiliencia estructural esperada.
+* **Valor bajo del {{< var monopar.sigla >}}**: Alta concentración de hogares uniparentales → mayor vulnerabilidad social.
 * **Aplicaciones**: Identificación de zonas prioritarias para intervención social, apoyo a la infancia, planificación de programas de apoyo familiar y diagnóstico territorial.
 
 ------------------------------------------------------------------------
@@ -96,12 +98,12 @@ En @fig-hmp se observan los resultados de {{< var monopar.name >}} ({{< var mono
 
 **Supuestos:**
 
-* Se asume que los hogares monoparentales son más vulnerables, sin considerar estrategias de resiliencia informal o redes extendidas.
+* Se asume que los hogares uniparentales son más vulnerables, sin considerar estrategias de resiliencia informal o redes extendidas.
 
 **Limitaciones:**
 
 * El Censo 2017 ofrece solo una fotografía de un año.
-*	No se distingue entre causas de monoparentalidad (viudez, separación, abandono).
+*	No se distingue entre causas de uniparentalidad (viudez, separación, abandono).
 * Posibles subregistros o clasificaciones ambiguas en hogares no nucleares.
 
 ------------------------------------------------------------------------

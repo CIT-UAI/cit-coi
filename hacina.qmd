@@ -12,11 +12,11 @@ author: ["{{< var dberroeta.name >}}"]
 -   **Sigla:** {{< var hacina.sigla >}}\
 -   **Dimensión:** {{< var hacina.dimension >}}
 -   **Dominio:** {{< var hacina.dominio >}}
--   **Fuente principal de datos:**
+-   **Fuente principal de datos:** {{< var ine.censo_2017 >}}
 -   **Unidad espacial de análisis:** Manzana censal\
--   **Frecuencia temporal:** Anual
--   **Cobertura temporal del análisis:**
--   **Resolución espacial del insumo:** Puntos
+-   **Frecuencia temporal:** Única
+-   **Cobertura temporal del análisis:** 2017
+-   **Tipo de insumo:** Polígonos
 -   **Versión actual:** 1.0
 
 #### Avances {.unnumbered}
@@ -45,7 +45,7 @@ El indicador de **{{< var hacina.name >}} ({{< var hacina.sigla >}})** busca rep
 -   **Hacinamiento**: Condición en que hay al menos 2.5 personas por habitación en una vivienda.
 -   **Hacinamiento severo**: Condición crítica donde hay más de 5 personas por habitación.
 -   **Suficiencia habitacional**: Situación en que las condiciones de espacio en la vivienda permiten un desarrollo digno y saludable de sus integrantes.
--   **Normalización aditiva inversa**: Procedimiento matemático que transforma un indicador de modo que los valores más altos representen mejores condiciones (más deseables).
+-   **Inversa aditivo**: Procedimiento matemático que transforma un indicador de modo que los valores más altos representen mejores condiciones (más deseables).
 
 #### 2.3 Referente internacional (COI 3.0) {.unnumbered}
 
@@ -57,7 +57,7 @@ En la {{< var coi.doc >}}, el hacinamiento forma parte del dominio de Recursos H
 
 #### 3.1 Definición operacional adaptada {.unnumbered}
 
-Para el caso chileno, el indicador VCH se construye a partir de la proporción de viviendas con hacinamiento y hacinamiento severo, penalizando más fuertemente a estas últimas. Se define un índice crudo de hacinamiento y posteriormente se transforma mediante un inverso aditivo para producir un índice de suficiencia habitacional, en el cual valores altos indican mejores condiciones. Su formulación es la siguiente:
+Para el caso chileno, el indicador **{{< var hacina.name >}} ({{< var hacina.sigla >}})**  se construye a partir de la proporción de viviendas con hacinamiento y hacinamiento severo, penalizando más fuertemente a estas últimas. Se define un índice crudo de hacinamiento y posteriormente se transforma mediante un inverso aditivo para producir un índice de suficiencia habitacional, en el cual valores altos indican mejores condiciones. Su formulación es la siguiente:
 
 $$I = 1- f(h + (2 \times hs))$${#eq-hacina}
 
@@ -89,8 +89,10 @@ Datos obtenidos a nivel de manzanas del {{< var ine.name >}} levantados en el {{
 
 ### 4. Resultados preliminares {.unnumbered}
 
--   Imagen o mapa ilustrativo del indicador.
--   Tabla resumen si aplica.
+
+![Resultados de Indicador **{{< var hacina.name >}} ({{< var hacina.sigla >}})** ](images/vch_index.png){#fig-vch}
+
+En @fig-vch se observan los resultados de **{{< var hacina.name >}} ({{< var hacina.sigla >}})**  donde no se observan concentraciones espaciales marcadas.
 
 ------------------------------------------------------------------------
 
