@@ -70,11 +70,54 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -219,32 +262,32 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./empleo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Tasa de Empleo</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./escolaridad.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Escolaridad J.H.</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Escolaridad J.H.</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./jh_primaria.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Ed. Primaria J.H.</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ed. Primaria J.H.</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./jh_secundaria.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ed. Secundaria J.H.</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Ed. Secundaria J.H.</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./jh_superior.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Ed. Superior J.H</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ed. Superior J.H</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./empleo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Tasa de Empleo</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -256,7 +299,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./monopar.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Hogares Monoparentales</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Hogares Uniparentales</span></span></a>
   </div>
 </li>
       </ul>
@@ -294,12 +337,12 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./s_y_ma.html">Salud y M. Ambiente</a></li><li class="breadcrumb-item"><a href="./residuos.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Residuos Peligrosos</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Residuos Peligrosos</span></h1>
-<p class="subtitle lead">Contaminación: Vertederos de Residuos Peligrosos (VRP)</p>
+<p class="subtitle lead">Contaminación: Índice de Proximidad a Sitios Superfunds (IPSS)</p>
 </div>
 
 
@@ -327,8 +370,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="ficha-técnica" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="ficha-técnica">Ficha técnica</h4>
 <ul>
-<li><strong>Nombre completo:</strong> Vertederos de Residuos Peligrosos</li>
-<li><strong>Sigla:</strong> VRP<br>
+<li><strong>Nombre completo:</strong> Índice de Proximidad a Sitios Superfunds</li>
+<li><strong>Sigla:</strong> IPSS<br>
 </li>
 <li><strong>Dimensión:</strong> Salud y Medio Ambiente</li>
 <li><strong>Dominio:</strong> Contaminación</li>
@@ -336,8 +379,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Unidad espacial de análisis:</strong> Manzana censal<br>
 </li>
 <li><strong>Frecuencia temporal:</strong> Anual</li>
-<li><strong>Cobertura temporal del análisis:</strong></li>
-<li><strong>Resolución espacial del insumo:</strong> Puntos</li>
+<li><strong>Cobertura espacial del análisis:</strong> Metropolitana de Santiago</li>
+<li><strong>Resolución espacial del insumo:</strong> Puntos (sitios contamidados)</li>
 <li><strong>Versión actual:</strong> 1.0</li>
 </ul>
 </section>
@@ -375,11 +418,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Entrega de Resultados</td>
-<td style="text-align: center;"><p>🟡</p></td>
+<td style="text-align: center;"><p>✅</p></td>
 </tr>
 <tr class="even">
 <td>Documentación</td>
-<td style="text-align: center;"><p>🟡</p></td>
+<td style="text-align: center;"><p>✅</p></td>
 </tr>
 </tbody>
 </table>
@@ -390,15 +433,21 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="unnumbered anchored" data-anchor-id="conceptualización">2. Conceptualización</h3>
 <section id="definición-del-indicador" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="definición-del-indicador">2.1 Definición del indicador</h4>
-<p>Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).</p>
+<p>El Índice de Proximidad a Sitios Superfunds (IPSS) busca representar la exposición potencial de la población infantil a sitios contaminados, como faenas mineras abandonadas y vertederos ilegales. Este indicador se basa en la premisa de que la cercanía física a estos sitios aumenta la probabilidad de exposición a contaminantes peligrosos, lo que puede afectar negativamente el desarrollo infantil.</p>
+<p>La exposición temprana a contaminantes ambientales se ha asociado con efectos adversos en la salud respiratoria, neurológica y del desarrollo cognitivo. Por ello, el IPS-Infancia se enmarca en un enfoque de justicia ambiental infantil, priorizando la identificación de zonas donde la población vulnerable podría estar en mayor riesgo debido a su proximidad a pasivos ambientales.</p>
 </section>
 <section id="conceptos-relacionados" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="conceptos-relacionados">2.2 Conceptos relacionados</h4>
-<p>Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).</p>
+<ul>
+<li><p><strong>Sitios Superfund</strong>: Sitios contaminados priorizados para limpieza por la EPA debido a riesgos significativos para la salud humana o el medio ambiente.</p></li>
+<li><p><strong>Pasivos ambientales</strong>: Instalaciones o terrenos abandonados que contienen residuos peligrosos sin tratamiento adecuado.</p></li>
+<li><p><strong>Proximidad espacial</strong>: Distancia euclidiana entre una unidad geográfica (manzana) y un sitio contaminado.</p></li>
+<li><p><strong>Oportunidad ambiental</strong>: Condición relativa de exposición baja a riesgos ambientales, interpretada como un entorno más saludable para el desarrollo infantil.</p></li>
+</ul>
 </section>
 <section id="referente-internacional-coi-3.0" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="referente-internacional-coi-3.0">2.3 Referente internacional (COI 3.0)</h4>
-<p>Breve descripción del indicador original y cómo es usado en el índice de referencia.</p>
+<p>El modelo RSEI (<em>Risk-Screening Environmental Indicators</em>) de la EPA integra datos de emisiones tóxicas, toxicidad y exposición potencial para estimar riesgos relativos a nivel geográfico 1. Aunque el RSEI no incluye directamente la distancia a sitios Superfund, su lógica de modelamiento de exposición espacial ha sido adaptada en el <a href="https://www.diversitydatakids.org/child-opportunity-index">COI 3.0</a> para construir indicadores ambientales.</p>
 <hr>
 </section>
 </section>
@@ -406,44 +455,74 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="unnumbered anchored" data-anchor-id="adaptación-metodológica-cit">3. Adaptación metodológica CIT</h3>
 <section id="definición-operacional-adaptada" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="definición-operacional-adaptada">3.1 Definición operacional adaptada</h4>
-<p>Definición clara del indicador tal como será construido para el caso chileno.</p>
+<p>El IPS se define como un índice continuo entre 0 y 100 que representa la oportunidad ambiental relativa de cada manzana, donde 100 indica máxima oportunidad (mayor distancia a sitios contaminados) y 0 indica mínima oportunidad (manzana sobre un sitio contaminado).</p>
 </section>
 <section id="insumos-y-fuentes" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="insumos-y-fuentes">3.2 Insumos y fuentes</h4>
-<p>Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.</p>
+<ul>
+<li><p><strong>Faenas Abandonadas</strong>: Servicio Nacional de Geología y Minería (SERNAGEOMIN)</p></li>
+<li><p><strong>Vertederos Ilegales</strong>: Ministerio del Medio Ambiente (Geoportal)</p></li>
+<li><p><strong>Manzanas Censales</strong>: Instituto Nacional de Estadísticas (INE)</p></li>
+</ul>
 </section>
 <section id="pasos-de-cálculo" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="pasos-de-cálculo">3.3 Pasos de cálculo</h4>
-<p>Listar paso a paso el procedimiento con lógica replicable.</p>
+<ol type="1">
+<li><p>Cargar y filtrar los sitios contaminados (faenas y vertederos) en la Región Metropolitana.</p></li>
+<li><p>Unificar los puntos en una capa espacial común (superfund).</p></li>
+<li><p>Generar un raster de distancia desde cada celda a los sitios Superfund.</p></li>
+<li><p>Calcular la distancia promedio desde cada manzana al sitio más cercano (estadística zonal).</p></li>
+<li><p>Normalizar el índice en tres pasos:</p></li>
+</ol>
+<ul>
+<li><p>Manzanas sobre sitios Superfund: dist_norm = 0</p></li>
+<li><p>Manzanas con distancia válida: dist_norm = rescale(z-score(dist_promedio), 0, 100)</p></li>
+<li><p>Manzanas sin datos: dist_norm = 100</p></li>
+</ul>
+<p>Fórmulas matemáticas:</p>
+<p>Sea <span class="math inline">d_i</span> la distancia promedio desde la manzana i al sitio Superfund más cercano. Se define el índice normalizado como:</p>
+<p>Si <span class="math inline">d_i = 0</span> → <span class="math inline">dist\_norm_i = 0</span></p>
+<p>Si <span class="math inline">d_i &gt; 0</span> → <span class="math inline">dist\_norm_i = rescale(z_i, 0, 100)</span>, donde <span class="math inline">z_i = (d_i - μ) / σ</span></p>
+<p>Si <span class="math inline">d_i</span> es <span class="math inline">NA</span> → <span class="math inline">dist\_norm_i = 100</span></p>
 <hr>
 </section>
 </section>
-<section id="resultados-preliminares" class="level3 unnumbered">
+<section id="resultados-preliminares" class="level3 unnumbered page-columns page-full">
 <h3 class="unnumbered anchored" data-anchor-id="resultados-preliminares">4. Resultados preliminares</h3>
-<ul>
-<li>Imagen o mapa ilustrativo del indicador.</li>
-<li>Tabla resumen si aplica.</li>
-</ul>
+<div id="fig-ver" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-ver-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/vertedero.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-ver-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11.1: Resultados de Indicador <strong>Índice de Proximidad a Sitios Superfunds (IPSS)</strong>
+</figcaption>
+</figure>
+</div>
+<p>El índice fue calculado para todas las manzanas urbanas de la Región Metropolitana <a href="#fig-ver" class="quarto-xref"><span>11.1</span></a>. Las manzanas sobre sitios contaminados recibieron un valor de 0, mientras que aquellas más alejadas obtuvieron valores cercanos a 100. Se generó un mapa temático que clasifica las manzanas en tres categorías: sobre sitio Superfund, con datos normalizados, y sin datos (máxima oportunidad).</p>
 <hr>
 </section>
 <section id="interpretación-y-usos-esperados" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="interpretación-y-usos-esperados">5. Interpretación y usos esperados</h3>
-<ul>
-<li>¿Qué significa un valor alto o bajo?</li>
-<li>¿Cómo puede ser usado este indicador por tomadores de decisiones?</li>
-</ul>
+<p>Valores cercanos a 0 indican alta exposición a sitios contaminados, mientras que valores cercanos a 100 indican baja exposición. Este índice puede ser utilizado para priorizar intervenciones ambientales, identificar zonas de sacrificio, y complementar indicadores compuestos de bienestar infantil territorial.</p>
 <hr>
 </section>
 <section id="consideraciones-supuestos-y-limitaciones" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="consideraciones-supuestos-y-limitaciones">6. Consideraciones, supuestos y limitaciones</h3>
 <ul>
-<li>Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.</li>
+<li><p>Se asume que la distancia euclidiana es una buena aproximación de la exposición.</p></li>
+<li><p>No se consideran barreras físicas ni condiciones topográficas.</p></li>
+<li><p>La calidad del índice depende de la cobertura y precisión de los datos de sitios contaminados.</p></li>
+<li><p>Las manzanas sin datos se asumen con máxima oportunidad, lo que puede sobreestimar su condición real.</p></li>
 </ul>
 <hr>
 </section>
 <section id="referencias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="referencias">7. Referencias</h3>
-<p>Bibliografía científica, manuales técnicos, artículos base.</p>
+<ul>
+<li><p>EPA (2023). Risk-Screening Environmental Indicators (RSEI) Model. <a href="https://www.epa.gov/rsei">https://www.epa.gov/rsei</a></p></li>
+<li><p>EPA (2025). Superfund Technical Guidance for Regions: Model Site Conceptual Model for Risk Assessments. <a href="https://www.epa.gov/risk/superfund-technical-guidance-regions-model-site-conceptual-model-ri-fs-baseline-risk">https://www.epa.gov/risk/superfund-technical-guidance-regions-model-site-conceptual-model-ri-fs-baseline-risk</a></p></li>
+</ul>
 
 
 </section>

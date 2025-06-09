@@ -8,7 +8,7 @@
 
 <meta name="author" content="Denis Berroeta">
 
-<title>13&nbsp; Tasa de Empleo – Child Oportunity Index</title>
+<title>17&nbsp; Tasa de Empleo – Child Oportunity Index</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -31,8 +51,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./escolaridad.html" rel="next">
-<link href="./social_y_eco.html" rel="prev">
+<link href="./hacina.html" rel="next">
+<link href="./jh_superior.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,11 +90,54 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -83,7 +146,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./social_y_eco.html">Social y Económico</a></li><li class="breadcrumb-item"><a href="./empleo.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Tasa de Empleo</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./social_y_eco.html">Social y Económico</a></li><li class="breadcrumb-item"><a href="./empleo.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Tasa de Empleo</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -219,32 +282,32 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./empleo.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Tasa de Empleo</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./escolaridad.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Escolaridad J.H.</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Escolaridad J.H.</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./jh_primaria.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Ed. Primaria J.H.</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ed. Primaria J.H.</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./jh_secundaria.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ed. Secundaria J.H.</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Ed. Secundaria J.H.</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./jh_superior.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Ed. Superior J.H</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ed. Superior J.H</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./empleo.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Tasa de Empleo</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -256,7 +319,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./monopar.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Hogares Monoparentales</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Hogares Uniparentales</span></span></a>
   </div>
 </li>
       </ul>
@@ -294,11 +357,11 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./social_y_eco.html">Social y Económico</a></li><li class="breadcrumb-item"><a href="./empleo.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Tasa de Empleo</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./social_y_eco.html">Social y Económico</a></li><li class="breadcrumb-item"><a href="./empleo.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Tasa de Empleo</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Tasa de Empleo</span></h1>
+<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Tasa de Empleo</span></h1>
 <p class="subtitle lead">Empleo: Tasa de Empleo (TDE)</p>
 </div>
 
@@ -332,12 +395,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li><strong>Dimensión:</strong> Social y Económico</li>
 <li><strong>Dominio:</strong> Empleo</li>
-<li><strong>Fuente principal de datos:</strong></li>
+<li><strong>Fuente principal de datos:</strong> <a href="http://resultados.censo2017.cl/">Censo de Población y Vivienda 2017</a></li>
 <li><strong>Unidad espacial de análisis:</strong> Manzana censal<br>
 </li>
-<li><strong>Frecuencia temporal:</strong> Anual</li>
-<li><strong>Cobertura temporal del análisis:</strong></li>
-<li><strong>Resolución espacial del insumo:</strong> Puntos</li>
+<li><strong>Frecuencia temporal:</strong> Única</li>
+<li><strong>Cobertura temporal del análisis:</strong> 2017</li>
+<li><strong>Tipo de insumo:</strong> Polígonos</li>
 <li><strong>Versión actual:</strong> 1.0</li>
 </ul>
 </section>
@@ -347,8 +410,8 @@ ul.task-list li input[type="checkbox"] {
 <table class="caption-top table">
 <caption>Estado de Avances</caption>
 <colgroup>
-<col style="width: 41%">
-<col style="width: 58%">
+<col style="width: 43%">
+<col style="width: 56%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -379,7 +442,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Documentación</td>
-<td style="text-align: center;"><p>🟡</p></td>
+<td style="text-align: center;"><p>✅</p></td>
 </tr>
 </tbody>
 </table>
@@ -390,15 +453,21 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="unnumbered anchored" data-anchor-id="conceptualización">2. Conceptualización</h3>
 <section id="definición-del-indicador" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="definición-del-indicador">2.1 Definición del indicador</h4>
-<p>Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).</p>
+<p>El indicador Tasa de Empleo (TDE) busca medir la proporción de personas activas que están efectivamente empleadas dentro de un territorio específico. La situación laboral de los adultos en una comunidad incide directamente en la estabilidad económica de los hogares, la salud mental de sus integrantes, y las oportunidades de desarrollo infantil. Las zonas con alta desocupación pueden estar expuestas a mayores niveles de pobreza, inseguridad alimentaria y riesgo social para la niñez.</p>
+<p>Este indicador, al aplicarse a escala de manzana censal, permite identificar patrones de desocupación en el espacio urbano con gran nivel de detalle territorial.</p>
 </section>
 <section id="conceptos-relacionados" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="conceptos-relacionados">2.2 Conceptos relacionados</h4>
-<p>Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).</p>
+<ul>
+<li><strong>Población activa</strong>: Personas en edad de trabajar que están disponibles y buscan activamente empleo.</li>
+<li><strong>Desempleo</strong>: Personas que no tienen empleo pero están buscando activamente uno.</li>
+<li><strong>Tasa de empleo</strong>: Proporción de personas empleadas respecto a la población activa.</li>
+<li><strong>Inverso aditivo</strong>: Transformación matemática usada para que valores altos sean más deseables (empleabilidad alta) y bajos más problemáticos (alto desempleo).</li>
+</ul>
 </section>
 <section id="referente-internacional-coi-3.0" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="referente-internacional-coi-3.0">2.3 Referente internacional (COI 3.0)</h4>
-<p>Breve descripción del indicador original y cómo es usado en el índice de referencia.</p>
+<p>En el Child Opportunity Index (<a href="https://www.diversitydatakids.org/child-opportunity-index">COI 3.0</a>), la tasa de empleo es parte del dominio de Empleo dentro de la dimensión Social y Económica. El indicador internacional usado es <em>“adult employment rate (percent of civilian labor force ages 25–64 that is employed)”</em>. En este marco, la estabilidad laboral de los adultos del vecindario se considera fundamental para el bienestar y oportunidades de los niños, dado su impacto en ingresos, seguridad y apoyo emocional <span class="citation" data-cites="noelke2024child">(<a href="references.html#ref-noelke2024child" role="doc-biblioref">Noelke et al. 2024</a>)</span>.</p>
 <hr>
 </section>
 </section>
@@ -406,46 +475,88 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="unnumbered anchored" data-anchor-id="adaptación-metodológica-cit">3. Adaptación metodológica CIT</h3>
 <section id="definición-operacional-adaptada" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="definición-operacional-adaptada">3.1 Definición operacional adaptada</h4>
-<p>Definición clara del indicador tal como será construido para el caso chileno.</p>
+<p>Para el caso chileno, y considerando las variables disponibles en el <a href="http://resultados.censo2017.cl/">Censo de Población y Vivienda 2017</a>, se adapta el indicador mediante la construcción de una tasa inversa de desempleo, calculando:</p>
+<p><span id="eq-te"><span class="math display">I = 1- \left(\frac{pbe}{pa}\right) \tag{17.1}</span></span></p>
+<p>donde:</p>
+<ul>
+<li><span class="math inline">I</span>: Indicador de Tasa de Empleo (TDE)</li>
+<li><span class="math inline">pbe</span>: Personas que declararon estar buscando empleo (Pregunta 17 opción 4 en la pregunta sobre actividad laboral).</li>
+<li><span class="math inline">pa</span>: Total personas con Activas.</li>
+</ul>
+<p>Aunque el Censo no incluye directamente la categoría de población activa, se estimó esta base en función de edad, condición de actividad y respuestas de la encuesta, asumiendo como activas a personas que trabajaron o buscaron empleo.</p>
 </section>
 <section id="insumos-y-fuentes" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="insumos-y-fuentes">3.2 Insumos y fuentes</h4>
-<p>Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.</p>
+<p>Datos obtenidos a nivel de manzanas del <a href="https://www.ine.gob.cl/">Instituto Nacional de Estadísticas (INE)</a> levantados en el <a href="http://resultados.censo2017.cl/">Censo de Población y Vivienda 2017</a>.</p>
 </section>
 <section id="pasos-de-cálculo" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="pasos-de-cálculo">3.3 Pasos de cálculo</h4>
-<p>Listar paso a paso el procedimiento con lógica replicable.</p>
+<ol type="1">
+<li>Filtrar individuos en edad de trabajar (15 años y más).</li>
+<li>Identificar quienes se encontraban buscando empleo (<span class="math inline">pbe</span>).</li>
+<li>Estimar población activa (<span class="math inline">pa</span>) como suma de personas empleadas más personas buscando empleo.</li>
+<li>Calcular la proporción de personas buscando empleo (<span class="math inline">pbe</span>) respecto a (<span class="math inline">pa</span>), para luego finalmente aplicar el inverso aditivo (<a href="#eq-te" class="quarto-xref"><span>17.1</span></a>)</li>
+</ol>
 <hr>
 </section>
 </section>
-<section id="resultados-preliminares" class="level3 unnumbered">
+<section id="resultados-preliminares" class="level3 unnumbered page-columns page-full">
 <h3 class="unnumbered anchored" data-anchor-id="resultados-preliminares">4. Resultados preliminares</h3>
-<ul>
-<li>Imagen o mapa ilustrativo del indicador.</li>
-<li>Tabla resumen si aplica.</li>
-</ul>
+<div id="fig-tde" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-tde-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/tde_index.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-tde-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17.1: Resultados de Indicador <strong>Tasa de Empleo (TDE)</strong>
+</figcaption>
+</figure>
+</div>
+<p>En la figura <a href="#fig-tde" class="quarto-xref"><span>17.1</span></a> se observa que en general el indicador TDE tiene niveles medios altos, concentrando los valores mas altos en la cono nororiente (Las Condes, Vitacura, Lo Barnechea) de la provincia de Santiago.</p>
 <hr>
 </section>
 <section id="interpretación-y-usos-esperados" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="interpretación-y-usos-esperados">5. Interpretación y usos esperados</h3>
+<p>Interpretación:</p>
 <ul>
-<li>¿Qué significa un valor alto o bajo?</li>
-<li>¿Cómo puede ser usado este indicador por tomadores de decisiones?</li>
+<li><strong>Valor alto de TDE</strong> (cercano a 1): Mayor nivel de empleo → más estabilidad económica potencial.</li>
+<li><strong>Valor bajo de TDE</strong> (cercano a 0): Mayor tasa de desempleo → mayor fragilidad social y económica.</li>
+</ul>
+<p>Aplicaciones:</p>
+<ul>
+<li>Focalización territorial de políticas de empleo.</li>
+<li>Planificación de programas de reconversión laboral o capacitación.</li>
+<li>Priorización de zonas en instrumentos de planificación social o urbana.</li>
 </ul>
 <hr>
 </section>
 <section id="consideraciones-supuestos-y-limitaciones" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="consideraciones-supuestos-y-limitaciones">6. Consideraciones, supuestos y limitaciones</h3>
+<p>Supuestos:</p>
 <ul>
-<li>Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.</li>
+<li>Se asume una buena estimación de la población activa a partir de las variables censales.</li>
+<li>Se considera como persona activa solo a quien reporta haber trabajado o buscado empleo recientemente.</li>
+</ul>
+<p>Limitaciones:</p>
+<ul>
+<li>El Censo no incluye una variable explícita para desempleo ni tasa de actividad.</li>
+<li>No considera informalidad laboral ni subempleo.</li>
+<li>Puede haber subdeclaración de actividad económica femenina o en sectores rurales.</li>
 </ul>
 <hr>
 </section>
 <section id="referencias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="referencias">7. Referencias</h3>
-<p>Bibliografía científica, manuales técnicos, artículos base.</p>
+<ul>
+<li>Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., &amp; Acevedo-Garcia, D. (2024). <a href="https://www.diversitydatakids.org/child-opportunity-index"><em>Child Opportunity Index 3.0 Technical Documentation</em></a>.</li>
+</ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-noelke2024child" class="csl-entry" role="listitem">
+Noelke, C, N McArdle, B DeVoe, M Leonardos, Y Lu, RW Ressler, and D Acevedo-Garcia. 2024. <span>“Child Opportunity Index 3.0 Technical Documentation. Diversitydatakids. Org, Brandeis University.”</span> <em>Retrieved from Diversitydatakids. Org/Research-Library/Coi-30-Technical-Documentation</em>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -868,13 +979,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./social_y_eco.html" class="pagination-link" aria-label="Social y Económico">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Social y Económico</span>
+      <a href="./jh_superior.html" class="pagination-link" aria-label="Ed. Superior J.H">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Ed. Superior J.H</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./escolaridad.html" class="pagination-link" aria-label="Escolaridad J.H.">
-        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Escolaridad J.H.</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./hacina.html" class="pagination-link" aria-label="Viv. con Hacinamiento">
+        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Viv. con Hacinamiento</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
