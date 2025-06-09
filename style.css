@@ -6,8 +6,13 @@ p.caption {
   color: #777;
   margin-top: 10px;
 }
-p, dl {
-  font-size: 17px
+p{
+  font-size: 15px
+}
+
+
+dl {
+  font-size: 13px
 }
 p code {
   white-space: inherit;
@@ -94,3 +99,17 @@ figcaption.figure-caption{
   padding-left: 0;
   padding-right: 0;
 }
+
+
+
+
+/* Aplica a tablas con clase 'tabla-avance' */
+.tabla-avance td {
+  font-size: 13px;        /* Tamaño general del texto */
+}
+
+.tabla-avance thead th {
+  font-size: 14px;        /* Tamaño de letra del encabezado */
+  font-weight: bold;
+}
+
