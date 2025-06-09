@@ -161,16 +161,16 @@ industriales:
   iniciado: "🟡"
 
 residuos:
-  name: "Vertederos de Residuos Peligrosos"
-  sigla: "VRP"
+  name: "Índice de Proximidad a Sitios Superfunds"
+  sigla: "IPSS"
   dimension: "Salud y Medio Ambiente"
   dominio: "Contaminación"
   diseno: "✅"
   insumos: "✅"
   calculo: "✅"
   validacion: "✅"
-  resultados: "🟡"
-  documentacion: "🟡"
+  resultados: "✅" 
+  documentacion: "✅"
   error: "❌"
   iniciado: "🟡"
 

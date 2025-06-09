@@ -4,80 +4,140 @@ subtitle: "{{< var residuos.dominio >}}: {{< var residuos.name >}} ({{< var resi
 author: ["{{< var jtreimun.name >}}"]
 ---
 
-### 1. Información General  {.unnumbered}
+### 1. Información General {.unnumbered}
 
 #### Ficha técnica {.unnumbered}
+
 -   **Nombre completo:** {{< var residuos.name >}}
 -   **Sigla:** {{< var residuos.sigla >}}\
 -   **Dimensión:** {{< var residuos.dimension >}}
 -   **Dominio:** {{< var residuos.dominio >}}
--   **Fuente principal de datos:** 
+-   **Fuente principal de datos:**
 -   **Unidad espacial de análisis:** Manzana censal\
 -   **Frecuencia temporal:** Anual
--   **Cobertura temporal del análisis:**
--   **Resolución espacial del insumo:** Puntos
+-   **Cobertura espacial del análisis:** Metropolitana de Santiago
+-   **Resolución espacial del insumo:** Puntos (sitios contamidados)
 -   **Versión actual:** 1.0
-
 
 #### Avances {.unnumbered}
 
-::: {.tabla-indicador}
-| Etapa                    | Estado                           |
+::: tabla-indicador
+| Etapa                    |               Estado               |
 |--------------------------|:----------------------------------:|
-| Diseño del Indicador     | {{< var residuos.diseno >}}        |
-| Consolidación de Insumos | {{< var residuos.insumos >}}       |
-| Cálculo de Indicador     | {{< var residuos.calculo >}}       |
-| Validación de Resultados | {{< var residuos.validacion >}}    |
-| Entrega de Resultados    | {{< var residuos.resultados >}}    |
+| Diseño del Indicador     |    {{< var residuos.diseno >}}     |
+| Consolidación de Insumos |    {{< var residuos.insumos >}}    |
+| Cálculo de Indicador     |    {{< var residuos.calculo >}}    |
+| Validación de Resultados |  {{< var residuos.validacion >}}   |
+| Entrega de Resultados    |  {{< var residuos.resultados >}}   |
 | Documentación            | {{< var residuos.documentacion >}} |
+
 : Estado de Avances
 :::
-
-
 
 ### 2. Conceptualización {.unnumbered}
 
 #### 2.1 Definición del indicador {.unnumbered}
-Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).
+
+El {{< var residuos.name >}} ({{< var residuos.sigla >}}) busca representar la exposición potencial de la población infantil a sitios contaminados, como faenas mineras abandonadas y vertederos ilegales. Este indicador se basa en la premisa de que la cercanía física a estos sitios aumenta la probabilidad de exposición a contaminantes peligrosos, lo que puede afectar negativamente el desarrollo infantil.
+
+La exposición temprana a contaminantes ambientales se ha asociado con efectos adversos en la salud respiratoria, neurológica y del desarrollo cognitivo. Por ello, el IPS-Infancia se enmarca en un enfoque de justicia ambiental infantil, priorizando la identificación de zonas donde la población vulnerable podría estar en mayor riesgo debido a su proximidad a pasivos ambientales.
 
 #### 2.2 Conceptos relacionados {.unnumbered}
-Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).
+
+* **Sitios Superfund**: Sitios contaminados priorizados para limpieza por la EPA debido a riesgos significativos para la salud humana o el medio ambiente.
+
+* **Pasivos ambientales**: Instalaciones o terrenos abandonados que contienen residuos peligrosos sin tratamiento adecuado.
+
+* **Proximidad espacial**: Distancia euclidiana entre una unidad geográfica (manzana) y un sitio contaminado.
+
+* **Oportunidad ambiental**: Condición relativa de exposición baja a riesgos ambientales, interpretada como un entorno más saludable para el desarrollo infantil.
 
 #### 2.3 Referente internacional (COI 3.0) {.unnumbered}
-Breve descripción del indicador original y cómo es usado en el índice de referencia.
 
----
+El modelo RSEI (_Risk-Screening Environmental Indicators_) de la EPA integra datos de emisiones tóxicas, toxicidad y exposición potencial para estimar riesgos relativos a nivel geográfico 1. Aunque el RSEI no incluye directamente la distancia a sitios Superfund, su lógica de modelamiento de exposición espacial ha sido adaptada en el {{< var coi.sname >}} para construir indicadores ambientales. 
+
+------------------------------------------------------------------------
 
 ### 3. Adaptación metodológica CIT {.unnumbered}
 
 #### 3.1 Definición operacional adaptada {.unnumbered}
-Definición clara del indicador tal como será construido para el caso chileno.
+
+El IPS se define como un índice continuo entre 0 y 100 que representa la oportunidad ambiental relativa de cada manzana, donde 100 indica máxima oportunidad (mayor distancia a sitios contaminados) y 0 indica mínima oportunidad (manzana sobre un sitio contaminado). 
+
+
+
 
 #### 3.2 Insumos y fuentes {.unnumbered}
-Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.
+
+* **Faenas Abandonadas**: Servicio Nacional de Geología y Minería (SERNAGEOMIN) 
+
+* **Vertederos Ilegales**: Ministerio del Medio Ambiente (Geoportal) 
+
+* **Manzanas Censales**: Instituto Nacional de Estadísticas (INE) 
 
 #### 3.3 Pasos de cálculo {.unnumbered}
-Listar paso a paso el procedimiento con lógica replicable.
 
----
+1. Cargar y filtrar los sitios contaminados (faenas y vertederos) en la Región Metropolitana. 
+
+2. Unificar los puntos en una capa espacial común (superfund). 
+
+3. Generar un raster de distancia desde cada celda a los sitios Superfund. 
+
+4.  Calcular la distancia promedio desde cada manzana al sitio más cercano (estadística zonal). 
+
+5. Normalizar el índice en tres pasos: 
+
+  * Manzanas sobre sitios Superfund: dist_norm = 0 
+
+  * Manzanas con distancia válida: dist_norm = rescale(z-score(dist_promedio), 0, 100) 
+
+  * Manzanas sin datos: dist_norm = 100 
+
+Fórmulas matemáticas: 
+
+Sea $d_i$ la distancia promedio desde la manzana i al sitio Superfund más cercano. Se define el índice normalizado como: 
+
+Si $d_i = 0$ → $dist\_norm_i = 0$ 
+
+Si $d_i > 0$ → $dist\_norm_i = rescale(z_i, 0, 100)$, donde $z_i = (d_i - μ) / σ$ 
+
+Si $d_i$ es $NA$ → $dist\_norm_i = 100$
+
+------------------------------------------------------------------------
 
 ### 4. Resultados preliminares {.unnumbered}
-- Imagen o mapa ilustrativo del indicador.
-- Tabla resumen si aplica.
 
----
+![Resultados de Indicador **{{< var residuos.name >}} ({{< var residuos.sigla >}})** ](images/vertedero.png){#fig-ver}
+
+
+El índice fue calculado para todas las manzanas urbanas de la Región Metropolitana [-@fig-ver]. Las manzanas sobre sitios contaminados recibieron un valor de 0, mientras que aquellas más alejadas obtuvieron valores cercanos a 100. Se generó un mapa temático que clasifica las manzanas en tres categorías: sobre sitio Superfund, con datos normalizados, y sin datos (máxima oportunidad). 
+
+------------------------------------------------------------------------
 
 ### 5. Interpretación y usos esperados {.unnumbered}
-- ¿Qué significa un valor alto o bajo?
-- ¿Cómo puede ser usado este indicador por tomadores de decisiones?
 
----
+
+
+
+Valores cercanos a 0 indican alta exposición a sitios contaminados, mientras que valores cercanos a 100 indican baja exposición. Este índice puede ser utilizado para priorizar intervenciones ambientales, identificar zonas de sacrificio, y complementar indicadores compuestos de bienestar infantil territorial. 
+
+------------------------------------------------------------------------
 
 ### 6. Consideraciones, supuestos y limitaciones {.unnumbered}
-- Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.
 
----
+- Se asume que la distancia euclidiana es una buena aproximación de la exposición. 
+
+- No se consideran barreras físicas ni condiciones topográficas. 
+
+- La calidad del índice depende de la cobertura y precisión de los datos de sitios contaminados. 
+
+- Las manzanas sin datos se asumen con máxima oportunidad, lo que puede sobreestimar su condición real. 
+
+
+------------------------------------------------------------------------
 
 ### 7. Referencias {.unnumbered}
-Bibliografía científica, manuales técnicos, artículos base.
 
+- EPA (2023). Risk-Screening Environmental Indicators (RSEI) Model. [https://www.epa.gov/rsei](https://www.epa.gov/rsei) 
+
+- EPA (2025). Superfund Technical Guidance for Regions: Model Site Conceptual Model for Risk Assessments. [https://www.epa.gov/risk/superfund-technical-guidance-regions-model-site-conceptual-model-ri-fs-baseline-risk](https://www.epa.gov/risk/superfund-technical-guidance-regions-model-site-conceptual-model-ri-fs-baseline-risk) 
