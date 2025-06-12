@@ -44,6 +44,7 @@ book:
         - monopar.qmd
     # - template_ind.qmd
     - reuniones.qmd
+    - recursos.qmd
     - references.qmd
 
 bibliography: references.bib
