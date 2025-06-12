@@ -240,7 +240,7 @@ jh_primaria:
   calculo: "✅"
   validacion: "✅" 
   resultados: "✅"
-  documentacion: "❌"
+  documentacion: "✅"
   error: "❌"
   iniciado: "🟡"
   

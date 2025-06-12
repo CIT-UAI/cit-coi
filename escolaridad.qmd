@@ -38,7 +38,7 @@ author: ["{{< var dberroeta.name >}}"]
 
 #### 2.1 Definición del indicador {.unnumbered}
 
-El indicador {{< var escolaridad_jh.name >}} **(**{{< var escolaridad_jh.sigla >}}**)** busca capturar el nivel promedio de educación formal alcanzado por quienes están a cargo de los hogares. Esta variable es ampliamente reconocida como un proxy del capital cultural y nivel socioeconómico del hogar. Diversos estudios han evidenciado que la escolaridad parental, especialmente del jefe de hogar. Esta variable es representativa del capital cultural de cada hogar y está altamente correlacionada con el nivel de ingresos en Chile [@agostini2016].
+El indicador **{{< var escolaridad_jh.name >}}** ({{< var escolaridad_jh.sigla >}}) busca capturar el nivel promedio de educación formal alcanzado por quienes están a cargo de los hogares. Esta variable es ampliamente reconocida como un proxy del capital cultural y nivel socioeconómico del hogar. Diversos estudios han evidenciado que la escolaridad parental, especialmente del jefe de hogar. Esta variable es representativa del capital cultural de cada hogar y está altamente correlacionada con el nivel de ingresos en Chile [@agostini2016].
 
 #### 2.2 Conceptos relacionados {.unnumbered}
 

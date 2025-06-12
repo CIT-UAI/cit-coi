@@ -4,82 +4,125 @@ subtitle: "{{< var jh_primaria.dominio >}}: {{< var jh_primaria.name >}} ({{< va
 author: ["{{< var dberroeta.name >}}"]
 ---
 
-### 1. Información General  {.unnumbered}
+### 1. Información General {.unnumbered}
 
 #### Ficha técnica {.unnumbered}
+
 -   **Nombre completo:** {{< var jh_primaria.name >}}
 -   **Sigla:** {{< var jh_primaria.sigla >}}\
 -   **Dimensión:** {{< var jh_primaria.dimension >}}
 -   **Dominio:** {{< var jh_primaria.dominio >}}
--   **Fuente principal de datos:** 
+-   **Fuente principal de datos:**
 -   **Unidad espacial de análisis:** Manzana censal\
 -   **Frecuencia temporal:** Anual
 -   **Cobertura temporal del análisis:**
 -   **Resolución espacial del insumo:** Puntos
 -   **Versión actual:** 1.0
 
-
 #### Avances {.unnumbered}
 
-::: {.tabla-indicador}
-| Etapa                    | Estado                           |
-|--------------------------|:----------------------------------:|
-| Diseño del Indicador     | {{< var jh_primaria.diseno >}}        |
-| Consolidación de Insumos | {{< var jh_primaria.insumos >}}       |
-| Cálculo de Indicador     | {{< var jh_primaria.calculo >}}       |
-| Validación de Resultados | {{< var jh_primaria.validacion >}}    |
-| Entrega de Resultados    | {{< var jh_primaria.resultados >}}    |
+::: tabla-indicador
+| Etapa                    |                Estado                 |
+|--------------------------|:-------------------------------------:|
+| Diseño del Indicador     |    {{< var jh_primaria.diseno >}}     |
+| Consolidación de Insumos |    {{< var jh_primaria.insumos >}}    |
+| Cálculo de Indicador     |    {{< var jh_primaria.calculo >}}    |
+| Validación de Resultados |  {{< var jh_primaria.validacion >}}   |
+| Entrega de Resultados    |  {{< var jh_primaria.resultados >}}   |
 | Documentación            | {{< var jh_primaria.documentacion >}} |
+
 : Estado de Avances
 :::
-
-
 
 ### 2. Conceptualización {.unnumbered}
 
 #### 2.1 Definición del indicador {.unnumbered}
-Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).
+
+El indicador **{{< var jh_primaria.name >}}** ({{< var jh_primaria.sigla >}}) estima el porcentaje de jefes/as de hogar cuyo máximo nivel educativo corresponde solo a educación primaria. Este indicador permite identificar territorios donde la base educativa del liderazgo familiar es limitada, lo cual se asocia a restricciones estructurales en el acceso a oportunidades laborales, información y capital cultural.
+
+La baja escolaridad del jefe o jefa de hogar incide directamente en el entorno de desarrollo de niños y niñas, afectando tanto sus aspiraciones como su rendimiento escolar, acceso a redes de apoyo y condiciones de salud general. Por ello, este indicador constituye un marcador territorial de vulnerabilidad persistente y exclusión educativa acumulada.
 
 #### 2.2 Conceptos relacionados {.unnumbered}
-Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).
+
+-   **Educación primaria**: Primer ciclo formal del sistema educativo, que usualmente abarca entre 1° y 8° año básico (según sistema chileno).
+-   **Jefe/a de hogar**: Persona reconocida como principal responsable del hogar (variable censal).
+-   **Capital humano**: Conjunto de conocimientos y competencias adquiridas a través del sistema educativo y la experiencia laboral.
+-   **Desigualdad educativa**: Brecha en los niveles de logro educacional que se manifiesta territorial y socialmente.
 
 #### 2.3 Referente internacional (COI 3.0) {.unnumbered}
-Breve descripción del indicador original y cómo es usado en el índice de referencia.
 
----
+El {{< var coi.sname >}} incluye el indicador "_percent of adults without a high school diploma_" como parte del dominio de Inequidad Socioeconómica Concentrada, considerando la baja educación adulta como una limitante estructural para el desarrollo infantil. La proporción de adultos con baja escolaridad en el vecindario es un fuerte predictor de desventajas acumuladas intergeneracionales [@noelke2024child].
+
+------------------------------------------------------------------------
 
 ### 3. Adaptación metodológica CIT {.unnumbered}
 
 #### 3.1 Definición operacional adaptada {.unnumbered}
-Definición clara del indicador tal como será construido para el caso chileno.
+
+El indicador se calcula como la proporción de jefes/as de hogar con educación primaria (máximo 8 años de estudio) respecto al total de jefes/as de hogar en cada manzana censal:
+
+
+$$I_i = \frac{jh\_ep_i}{tjh_i} \times 100$$ {#eq-ep_jh}
+
+- $I_i$: Indicador **{{< var jh_primaria.name >}}** ({{< var jh_primaria.sigla >}})  de la manzana $i$
+- $jh\_ep_i$: Jefes de Hogar con Educación Primaria de la manzana $i$
+- $tjh_i$: Total de los Jefes de Hogar de la manzanan $i$
+
 
 #### 3.2 Insumos y fuentes {.unnumbered}
-Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.
+
+Datos obtenidos a nivel de manzanas del {{< var ine.name >}} levantados en el {{< var ine.censo_2017 >}}.
 
 #### 3.3 Pasos de cálculo {.unnumbered}
-Listar paso a paso el procedimiento con lógica replicable.
 
----
+1.	Filtrar todas las personas identificadas como jefes/as de hogar.
+2.	Identificar en ese grupo quienes registran máximo 8 años de escolaridad (educación primaria), variable calculada directamente por el {{< var ine.name >}}.
+3.	Para cada manzana censal, contar:
+	*	Total de jefes/as de hogar con educación primaria.
+	*	Total de jefes/as de hogar en general.
+4.	Calcular el porcentaje según la fórmula dada ([-@eq-ep_jh]).
+
+
+------------------------------------------------------------------------
 
 ### 4. Resultados preliminares {.unnumbered}
-- Imagen o mapa ilustrativo del indicador.
-- Tabla resumen si aplica.
 
----
+![Resultados de Indicador **{{< var jh_primaria.name >}} ({{< var jh_primaria.sigla >}})** ](images/jhepr_index.png){#fig-jhpr}
+
+En la figura [-@fig-jhpr] se observa que el indicador {{< var jh_primaria.name >}} ({{< var jh_primaria.sigla >}}) mantiene concentraciones de los valores bajos en la cono nororiente (Las Condes, Vitacura, Lo Barnechea) de la provincia de Santiago.
+
+------------------------------------------------------------------------
 
 ### 5. Interpretación y usos esperados {.unnumbered}
-- ¿Qué significa un valor alto o bajo?
-- ¿Cómo puede ser usado este indicador por tomadores de decisiones?
 
----
+* Valor alto de JHEPR: Alta concentración de jefes/as de hogar con solo educación primaria → menor capital educativo territorial.
+* Valor bajo de JHEPR: Mayor acceso histórico a educación secundaria o superior → mejores condiciones de base para el desarrollo de niñas y niños.
+
+**Aplicaciones:**
+
+* Priorización de programas de alfabetización de adultos y educación continua.
+* Segmentación de territorios para políticas sociales de largo plazo.
+* Análisis de vulnerabilidad estructural multidimensional.
+
+------------------------------------------------------------------------
 
 ### 6. Consideraciones, supuestos y limitaciones {.unnumbered}
-- Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.
 
----
+**Supuestos:**
+
+* La escolaridad del jefe de hogar es un buen proxy del nivel educativo del hogar completo.
+
+
+**Limitaciones:**
+
+* Posibles inconsistencias o vacíos en la variable ESCOLARIDAD.
+* No se consideran otros adultos que podrían aportar al entorno educativo del hogar.
+* La variable refleja un nivel educativo formal alcanzado, no necesariamente habilidades funcionales actuales.
+
+------------------------------------------------------------------------
 
 ### 7. Referencias {.unnumbered}
-Bibliografía científica, manuales técnicos, artículos base.
 
+- Agostini, Claudio A, Daniel Hojman, Alonso Román, and Luis Valenzuela. 2016. _“Segregación Residencial de Ingresos En El Gran Santiago, 1992-2002: Una Estimación Robusta.”_ Eure (Santiago) 42 (127): 159–84.
 
-
+- Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). [*Child Opportunity Index 3.0 Technical Documentation*](https://www.diversitydatakids.org/child-opportunity-index).
