@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -70,11 +90,54 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -269,6 +332,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./recursos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Recursos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -294,7 +363,7 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./social_y_eco.html">Social y Económico</a></li><li class="breadcrumb-item"><a href="./jh_primaria.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Ed. Primaria J.H.</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -347,8 +416,8 @@ ul.task-list li input[type="checkbox"] {
 <table class="caption-top table">
 <caption>Estado de Avances</caption>
 <colgroup>
-<col style="width: 41%">
-<col style="width: 58%">
+<col style="width: 40%">
+<col style="width: 60%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -379,7 +448,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Documentación</td>
-<td style="text-align: center;"><p>❌</p></td>
+<td style="text-align: center;"><p>✅</p></td>
 </tr>
 </tbody>
 </table>
@@ -390,15 +459,21 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="unnumbered anchored" data-anchor-id="conceptualización">2. Conceptualización</h3>
 <section id="definición-del-indicador" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="definición-del-indicador">2.1 Definición del indicador</h4>
-<p>Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).</p>
+<p>El indicador <strong>Jefe de Hogar con Educación Primaria</strong> (JHEPR) estima el porcentaje de jefes/as de hogar cuyo máximo nivel educativo corresponde solo a educación primaria. Este indicador permite identificar territorios donde la base educativa del liderazgo familiar es limitada, lo cual se asocia a restricciones estructurales en el acceso a oportunidades laborales, información y capital cultural.</p>
+<p>La baja escolaridad del jefe o jefa de hogar incide directamente en el entorno de desarrollo de niños y niñas, afectando tanto sus aspiraciones como su rendimiento escolar, acceso a redes de apoyo y condiciones de salud general. Por ello, este indicador constituye un marcador territorial de vulnerabilidad persistente y exclusión educativa acumulada.</p>
 </section>
 <section id="conceptos-relacionados" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="conceptos-relacionados">2.2 Conceptos relacionados</h4>
-<p>Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).</p>
+<ul>
+<li><strong>Educación primaria</strong>: Primer ciclo formal del sistema educativo, que usualmente abarca entre 1° y 8° año básico (según sistema chileno).</li>
+<li><strong>Jefe/a de hogar</strong>: Persona reconocida como principal responsable del hogar (variable censal).</li>
+<li><strong>Capital humano</strong>: Conjunto de conocimientos y competencias adquiridas a través del sistema educativo y la experiencia laboral.</li>
+<li><strong>Desigualdad educativa</strong>: Brecha en los niveles de logro educacional que se manifiesta territorial y socialmente.</li>
+</ul>
 </section>
 <section id="referente-internacional-coi-3.0" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="referente-internacional-coi-3.0">2.3 Referente internacional (COI 3.0)</h4>
-<p>Breve descripción del indicador original y cómo es usado en el índice de referencia.</p>
+<p>El <a href="https://www.diversitydatakids.org/child-opportunity-index">COI 3.0</a> incluye el indicador “<em>percent of adults without a high school diploma</em>” como parte del dominio de Inequidad Socioeconómica Concentrada, considerando la baja educación adulta como una limitante estructural para el desarrollo infantil. La proporción de adultos con baja escolaridad en el vecindario es un fuerte predictor de desventajas acumuladas intergeneracionales <span class="citation" data-cites="noelke2024child">(<a href="references.html#ref-noelke2024child" role="doc-biblioref">Noelke et al. 2024</a>)</span>.</p>
 <hr>
 </section>
 </section>
@@ -406,46 +481,89 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="unnumbered anchored" data-anchor-id="adaptación-metodológica-cit">3. Adaptación metodológica CIT</h3>
 <section id="definición-operacional-adaptada" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="definición-operacional-adaptada">3.1 Definición operacional adaptada</h4>
-<p>Definición clara del indicador tal como será construido para el caso chileno.</p>
+<p>El indicador se calcula como la proporción de jefes/as de hogar con educación primaria (máximo 8 años de estudio) respecto al total de jefes/as de hogar en cada manzana censal:</p>
+<p><span id="eq-ep_jh"><span class="math display">I_i = \frac{jh\_ep_i}{tjh_i} \times 100 \tag{14.1}</span></span></p>
+<ul>
+<li><span class="math inline">I_i</span>: Indicador <strong>Jefe de Hogar con Educación Primaria</strong> (JHEPR) de la manzana <span class="math inline">i</span></li>
+<li><span class="math inline">jh\_ep_i</span>: Jefes de Hogar con Educación Primaria de la manzana <span class="math inline">i</span></li>
+<li><span class="math inline">tjh_i</span>: Total de los Jefes de Hogar de la manzanan <span class="math inline">i</span></li>
+</ul>
 </section>
 <section id="insumos-y-fuentes" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="insumos-y-fuentes">3.2 Insumos y fuentes</h4>
-<p>Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.</p>
+<p>Datos obtenidos a nivel de manzanas del <a href="https://www.ine.gob.cl/">Instituto Nacional de Estadísticas (INE)</a> levantados en el <a href="http://resultados.censo2017.cl/">Censo de Población y Vivienda 2017</a>.</p>
 </section>
 <section id="pasos-de-cálculo" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="pasos-de-cálculo">3.3 Pasos de cálculo</h4>
-<p>Listar paso a paso el procedimiento con lógica replicable.</p>
+<ol type="1">
+<li>Filtrar todas las personas identificadas como jefes/as de hogar.</li>
+<li>Identificar en ese grupo quienes registran máximo 8 años de escolaridad (educación primaria), variable calculada directamente por el <a href="https://www.ine.gob.cl/">Instituto Nacional de Estadísticas (INE)</a>.</li>
+<li>Para cada manzana censal, contar:
+<ul>
+<li>Total de jefes/as de hogar con educación primaria.</li>
+<li>Total de jefes/as de hogar en general.</li>
+</ul></li>
+<li>Calcular el porcentaje según la fórmula dada (<a href="#eq-ep_jh" class="quarto-xref"><span>14.1</span></a>).</li>
+</ol>
 <hr>
 </section>
 </section>
-<section id="resultados-preliminares" class="level3 unnumbered">
+<section id="resultados-preliminares" class="level3 unnumbered page-columns page-full">
 <h3 class="unnumbered anchored" data-anchor-id="resultados-preliminares">4. Resultados preliminares</h3>
-<ul>
-<li>Imagen o mapa ilustrativo del indicador.</li>
-<li>Tabla resumen si aplica.</li>
-</ul>
+<div id="fig-jhpr" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-jhpr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/jhepr_index.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-jhpr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14.1: Resultados de Indicador <strong>Jefe de Hogar con Educación Primaria (JHEPR)</strong>
+</figcaption>
+</figure>
+</div>
+<p>En la figura <a href="#fig-jhpr" class="quarto-xref"><span>14.1</span></a> se observa que el indicador Jefe de Hogar con Educación Primaria (JHEPR) mantiene concentraciones de los valores bajos en la cono nororiente (Las Condes, Vitacura, Lo Barnechea) de la provincia de Santiago.</p>
 <hr>
 </section>
 <section id="interpretación-y-usos-esperados" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="interpretación-y-usos-esperados">5. Interpretación y usos esperados</h3>
 <ul>
-<li>¿Qué significa un valor alto o bajo?</li>
-<li>¿Cómo puede ser usado este indicador por tomadores de decisiones?</li>
+<li>Valor alto de JHEPR: Alta concentración de jefes/as de hogar con solo educación primaria → menor capital educativo territorial.</li>
+<li>Valor bajo de JHEPR: Mayor acceso histórico a educación secundaria o superior → mejores condiciones de base para el desarrollo de niñas y niños.</li>
+</ul>
+<p><strong>Aplicaciones:</strong></p>
+<ul>
+<li>Priorización de programas de alfabetización de adultos y educación continua.</li>
+<li>Segmentación de territorios para políticas sociales de largo plazo.</li>
+<li>Análisis de vulnerabilidad estructural multidimensional.</li>
 </ul>
 <hr>
 </section>
 <section id="consideraciones-supuestos-y-limitaciones" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="consideraciones-supuestos-y-limitaciones">6. Consideraciones, supuestos y limitaciones</h3>
+<p><strong>Supuestos:</strong></p>
 <ul>
-<li>Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.</li>
+<li>La escolaridad del jefe de hogar es un buen proxy del nivel educativo del hogar completo.</li>
+</ul>
+<p><strong>Limitaciones:</strong></p>
+<ul>
+<li>Posibles inconsistencias o vacíos en la variable ESCOLARIDAD.</li>
+<li>No se consideran otros adultos que podrían aportar al entorno educativo del hogar.</li>
+<li>La variable refleja un nivel educativo formal alcanzado, no necesariamente habilidades funcionales actuales.</li>
 </ul>
 <hr>
 </section>
 <section id="referencias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="referencias">7. Referencias</h3>
-<p>Bibliografía científica, manuales técnicos, artículos base.</p>
+<ul>
+<li><p>Agostini, Claudio A, Daniel Hojman, Alonso Román, and Luis Valenzuela. 2016. <em>“Segregación Residencial de Ingresos En El Gran Santiago, 1992-2002: Una Estimación Robusta.”</em> Eure (Santiago) 42 (127): 159–84.</p></li>
+<li><p>Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., &amp; Acevedo-Garcia, D. (2024). <a href="https://www.diversitydatakids.org/child-opportunity-index"><em>Child Opportunity Index 3.0 Technical Documentation</em></a>.</p></li>
+</ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-noelke2024child" class="csl-entry" role="listitem">
+Noelke, C, N McArdle, B DeVoe, M Leonardos, Y Lu, RW Ressler, and D Acevedo-Garcia. 2024. <span>“Child Opportunity Index 3.0 Technical Documentation. Diversitydatakids. Org, Brandeis University.”</span> <em>Retrieved from Diversitydatakids. Org/Research-Library/Coi-30-Technical-Documentation</em>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
