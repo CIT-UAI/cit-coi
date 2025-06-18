@@ -38,48 +38,99 @@ author: ["{{< var dberroeta.name >}}"]
 ### 2. Conceptualización {.unnumbered}
 
 #### 2.1 Definición del indicador {.unnumbered}
-Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).
+
+
+El indicador Jefe de Hogar con Educación Superior (JHESU) estima el porcentaje de jefes o jefas de hogar cuyo nivel educativo más alto corresponde a estudios superiores, ya sean técnicos o universitarios. Este indicador permite caracterizar el nivel de capital humano avanzado presente en un territorio y es uno de los predictores más sólidos de bienestar socioeconómico, movilidad intergeneracional y entorno favorable para el desarrollo infantil.
+
+La educación superior de los adultos responsables del hogar está fuertemente asociada a mayores ingresos, redes sociales más amplias, hábitos de lectura, mejor acceso a servicios y un ambiente familiar más estructurado para el aprendizaje.
 
 #### 2.2 Conceptos relacionados {.unnumbered}
-Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).
+
+* Educación superior: Nivel educativo posterior a la secundaria, que incluye formación técnica, profesional, universitaria y postgrado.
+* Capital humano avanzado: Conjunto de conocimientos y competencias adquiridas en niveles educativos superiores, que permiten desempeños complejos en el mundo laboral y social.
+* Aspiraciones educativas: Nivel educativo que los niños esperan alcanzar, influido por el entorno familiar.
+* Externalidades educativas positivas: Beneficios sociales asociados a la educación más allá del individuo, como menor criminalidad, mayor participación cívica, etc.
+	
 
 #### 2.3 Referente internacional (COI 3.0) {.unnumbered}
-Breve descripción del indicador original y cómo es usado en el índice de referencia.
+
+En el índice COI 3.0, si bien el énfasis está en la baja escolaridad, se reconoce explícitamente que la alta educación de adultos en un vecindario funciona como un amortiguador frente a la desigualdad y un facilitador de oportunidades para la infancia. Comunidades con alta proporción de adultos con educación superior tienden a ofrecer entornos con más recursos, apoyo institucional y cohesión social.
 
 ---
 
 ### 3. Adaptación metodológica CIT {.unnumbered}
 
 #### 3.1 Definición operacional adaptada {.unnumbered}
-Definición clara del indicador tal como será construido para el caso chileno.
+
+El indicador JHESU se construye como el porcentaje de jefes/as de hogar que reportan haber completado al menos un año de educación superior, respecto del total de jefes/as de hogar en cada manzana censal:
+
+
+$$I_i = \frac{jh\_es_i}{tjh_i} \times 100$$ {#eq-ep_jh}
+
+- $I_i$: Indicador **{{< var jh_superior.name >}}** ({{< var jh_superior.sigla >}})  de la manzana $i$
+- $jh\_es_i$: Jefes de Hogar con Educación Superior de la manzana $i$
+- $tjh_i$: Total de los Jefes de Hogar de la manzana $i$
+
+Se consideran como educación superior aquellos registros con más de 12 años de escolaridad.
+
+
 
 #### 3.2 Insumos y fuentes {.unnumbered}
-Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.
+
+Datos obtenidos a nivel de manzanas del {{< var ine.name >}} levantados en el {{< var ine.censo_2017 >}}.
 
 #### 3.3 Pasos de cálculo {.unnumbered}
-Listar paso a paso el procedimiento con lógica replicable.
+
+1. Filtrar todas las personas registradas como jefes/as de hogar.
+2. Seleccionar los registros con más de 12 años de escolaridad (educación superior).
+3. Para cada manzana censal:
+  * Contar jefes/as con educación superior. 
+  * Contar total de jefes/as de hogar.
+4. Calcular el porcentaje para cada unidad espacial.
+5. Asociar el resultado a la capa de manzanas censales para visualización y análisis.
 
 ---
 
 ### 4. Resultados preliminares {.unnumbered}
-- Imagen o mapa ilustrativo del indicador.
-- Tabla resumen si aplica.
+
+![Resultados de Indicador **{{< var jh_superior.name >}} ({{< var jh_superior.sigla >}})** ](images/jhesu_index.png){#fig-jhpr}
+
+En la figura [-@fig-jhpr] se observa que el indicador {{< var jh_superior.name >}} ({{< var jh_superior.sigla >}}) mantiene concentraciones de los valores altos en la cono nororiente (Las Condes, Vitacura, Lo Barnechea) de la provincia de Santiago.
 
 ---
 
 ### 5. Interpretación y usos esperados {.unnumbered}
-- ¿Qué significa un valor alto o bajo?
-- ¿Cómo puede ser usado este indicador por tomadores de decisiones?
+
+* Valor alto de JHESU: Mayor proporción de hogares con capital humano avanzado → entornos potencialmente más protectores, con mayor acceso a información, vínculos institucionales y aspiraciones educativas elevadas.
+* Valor bajo de JHESU: Escasa presencia de adultos con educación superior → posible concentración de barreras estructurales y pobreza educativa intergeneracional.
+
+**Aplicaciones:**
+
+* Priorización territorial de políticas de apoyo escolar e inserción universitaria.
+* Segmentación territorial en programas de becas, mentorías o liderazgo comunitario.
+* Análisis del potencial educativo y productivo de barrios o comunas.
+
 
 ---
 
 ### 6. Consideraciones, supuestos y limitaciones {.unnumbered}
-- Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.
+
+**Supuestos:**
+
+* La escolaridad declarada refleja efectivamente estudios superiores cursados.
+
+**Limitaciones:**
+
+* No distingue entre tipos de educación superior (técnica, profesional, postgrado).
+* No considera si los estudios fueron completados o truncos.
+* No mide la calidad ni la aplicabilidad de los conocimientos adquiridos.
 
 ---
 
 ### 7. Referencias {.unnumbered}
-Bibliografía científica, manuales técnicos, artículos base.
 
+- Agostini, Claudio A, Daniel Hojman, Alonso Román, and Luis Valenzuela. 2016. _“Segregación Residencial de Ingresos En El Gran Santiago, 1992-2002: Una Estimación Robusta.”_ Eure (Santiago) 42 (127): 159–84.
+
+- Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). [*Child Opportunity Index 3.0 Technical Documentation*](https://www.diversitydatakids.org/child-opportunity-index).
 
 

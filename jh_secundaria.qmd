@@ -4,82 +4,130 @@ subtitle: "{{< var jh_secundaria.dominio >}}: {{< var jh_secundaria.name >}} ({{
 author: ["{{< var dberroeta.name >}}"]
 ---
 
-### 1. Información General  {.unnumbered}
+### 1. Información General {.unnumbered}
 
 #### Ficha técnica {.unnumbered}
+
 -   **Nombre completo:** {{< var jh_secundaria.name >}}
 -   **Sigla:** {{< var jh_secundaria.sigla >}}\
 -   **Dimensión:** {{< var jh_secundaria.dimension >}}
 -   **Dominio:** {{< var jh_secundaria.dominio >}}
--   **Fuente principal de datos:** 
+-   **Fuente principal de datos:**
 -   **Unidad espacial de análisis:** Manzana censal\
 -   **Frecuencia temporal:** Anual
 -   **Cobertura temporal del análisis:**
 -   **Resolución espacial del insumo:** Puntos
 -   **Versión actual:** 1.0
 
-
 #### Avances {.unnumbered}
 
-::: {.tabla-indicador}
-| Etapa                    | Estado                           |
-|--------------------------|:----------------------------------:|
-| Diseño del Indicador     | {{< var jh_secundaria.diseno >}}        |
-| Consolidación de Insumos | {{< var jh_secundaria.insumos >}}       |
-| Cálculo de Indicador     | {{< var jh_secundaria.calculo >}}       |
-| Validación de Resultados | {{< var jh_secundaria.validacion >}}    |
-| Entrega de Resultados    | {{< var jh_secundaria.resultados >}}    |
+::: tabla-indicador
+| Etapa                    |                 Estado                  |
+|--------------------------|:---------------------------------------:|
+| Diseño del Indicador     |    {{< var jh_secundaria.diseno >}}     |
+| Consolidación de Insumos |    {{< var jh_secundaria.insumos >}}    |
+| Cálculo de Indicador     |    {{< var jh_secundaria.calculo >}}    |
+| Validación de Resultados |  {{< var jh_secundaria.validacion >}}   |
+| Entrega de Resultados    |  {{< var jh_secundaria.resultados >}}   |
 | Documentación            | {{< var jh_secundaria.documentacion >}} |
+
 : Estado de Avances
 :::
-
-
 
 ### 2. Conceptualización {.unnumbered}
 
 #### 2.1 Definición del indicador {.unnumbered}
-Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).
+
+El indicador {{< var jh_secundaria.name >}} **(**{{< var jh_secundaria.sigla >}}**)** estima la proporción de jefes o jefas de hogar que completaron la educación secundaria como máximo nivel educativo alcanzado. Este nivel educativo representa una base mínima esperada para la participación en el mercado laboral formal y para el ejercicio de ciudadanía activa. La educación secundaria es fundamental para la transmisión intergeneracional de expectativas, hábitos y capacidades que inciden en el desarrollo de niños y niñas, incluyendo el rendimiento escolar, la permanencia educativa y el acceso a redes sociales.
 
 #### 2.2 Conceptos relacionados {.unnumbered}
-Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).
+
+* **Educación secundaria**: Segundo ciclo del sistema formal, que generalmente comprende desde 1º a 4º medio en Chile. 
+
+* **Jefe/a de hogar**: Persona reconocida como principal responsable del hogar según el Censo.
+
+* **Capital educativo intermedio**: Nivel de formación que, sin alcanzar estudios superiores, entrega herramientas para inserción laboral y apoyo educativo básico.
+
+* **Movilidad intergeneracional**: Cambio en las condiciones socioeconómicas de una generación respecto a la anterior, muchas veces mediado por la escolaridad.
 
 #### 2.3 Referente internacional (COI 3.0) {.unnumbered}
-Breve descripción del indicador original y cómo es usado en el índice de referencia.
 
----
+En el {{< var coi.sname >}}, la baja escolaridad de adultos se operacionaliza como _"percent of adults ages 25 and older with less than a high school degree"_, donde se considera la culminación de la secundaria como un umbral crítico. En este contexto, los hogares en que el jefe/a posee solo escolaridad primaria o inferior representan una mayor desventaja, mientras que aquellos con secundaria completa marcan un punto intermedio en la escala de oportunidad infantil [@noelke2024child].
+
+------------------------------------------------------------------------
 
 ### 3. Adaptación metodológica CIT {.unnumbered}
 
 #### 3.1 Definición operacional adaptada {.unnumbered}
-Definición clara del indicador tal como será construido para el caso chileno.
+
+El indicador **{{< var jh_secundaria.sigla >}}** se calcula como la proporción de jefes de hogar cuyo nivel educativo máximo corresponde a la enseñanza secundaria, respecto al total de jefes de hogar presentes en cada manzana censal:
+
+
+$$I_i = \frac{jh\_es_i}{tjh_i} \times 100$$ {#eq-es_jh}
+
+- $I_i$: Indicador **{{< var jh_secundaria.name >}}** ({{< var jh_secundaria.sigla >}})  de la manzana $i$
+- $jh\_es_i$: Jefes de Hogar con Educación Secundaria de la manzana $i$
+- $tjh_i$: Total de los Jefes de Hogar de la manzana $i$
+
+> Se considera como “educación secundaria” a quienes reportan entre 9 y 12 años de escolaridad (inclusive), sin haber accedido a estudios superiores.
 
 #### 3.2 Insumos y fuentes {.unnumbered}
-Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.
+
+Datos obtenidos a nivel de manzanas del {{< var ine.name >}} levantados en el {{< var ine.censo_2017 >}}.
 
 #### 3.3 Pasos de cálculo {.unnumbered}
-Listar paso a paso el procedimiento con lógica replicable.
 
----
+1. Filtrar personas reconocidas como jefes/as de hogar en el Censo.
+2. Seleccionar aquellos cuya escolaridad se encuentra entre 9 y 12 años.
+3. Contar, por manzana:
+    * Total de jefes/as con educación secundaria.
+    * Total general de jefes/as de hogar.
+4. Calcular el porcentaje correspondiente de acuerdo a ecuación [-@eq-es_jh]
+5. Asociar los valores al polígono censal correspondiente para su representación territorial.
+
+------------------------------------------------------------------------
 
 ### 4. Resultados preliminares {.unnumbered}
-- Imagen o mapa ilustrativo del indicador.
-- Tabla resumen si aplica.
 
----
+![Resultados de Indicador **{{< var jh_secundaria.name >}} ({{< var jh_secundaria.sigla >}})**](images/jhese_index.png){#fig-jhsec}
+
+En la figura [-@fig-jhsec] se observa que el indicador {{< var jh_secundaria.name >}} ({{< var jh_primaria.sigla >}}) mantiene concentraciones de los valores bajos en la cono nororiente (Las Condes, Vitacura, Lo Barnechea) de la provincia de Santiago.
+
+
+------------------------------------------------------------------------
 
 ### 5. Interpretación y usos esperados {.unnumbered}
-- ¿Qué significa un valor alto o bajo?
-- ¿Cómo puede ser usado este indicador por tomadores de decisiones?
 
----
+**Valor alto**: Alta proporción de hogares con capital educativo intermedio. Puede representar territorios en transición o con base educativa suficiente para ciertos niveles de empleabilidad.
+
+**Valor bajo**: Poca presencia de escolaridad media en jefes/as de hogar, asociado a rezago educativo estructural o concentración de extremos (primaria o superior).
+
+
+**Aplicaciones:**
+
+* Identificación de zonas con riesgo de estancamiento educativo intergeneracional.
+* Priorización de políticas educativas de refuerzo y capacitación laboral.
+* Segmentación territorial de intervenciones sociales en barrios con baja escolaridad.
+
+------------------------------------------------------------------------
 
 ### 6. Consideraciones, supuestos y limitaciones {.unnumbered}
-- Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.
 
----
+**Supuestos:**
+
+* La escolaridad declarada refleja con precisión el nivel alcanzado.
+* La categoría de secundaria no incluye a quienes abandonaron antes de terminar 4º medio.
+
+**Limitaciones:**
+
+* No se distingue entre quienes completaron o no los años de secundaria.
+* No se mide la calidad ni la vigencia funcional del conocimiento adquirido.
+* No se incluyen otras personas del hogar con niveles educativos superiores.
+
+------------------------------------------------------------------------
 
 ### 7. Referencias {.unnumbered}
-Bibliografía científica, manuales técnicos, artículos base.
 
+- Agostini, Claudio A, Daniel Hojman, Alonso Román, and Luis Valenzuela. 2016. _“Segregación Residencial de Ingresos En El Gran Santiago, 1992-2002: Una Estimación Robusta.”_ Eure (Santiago) 42 (127): 159–84.
 
-
+- Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). [*Child Opportunity Index 3.0 Technical Documentation*](https://www.diversitydatakids.org/child-opportunity-index).

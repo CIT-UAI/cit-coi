@@ -66,7 +66,7 @@ $$I_i = \frac{jh\_ep_i}{tjh_i} \times 100$$ {#eq-ep_jh}
 
 - $I_i$: Indicador **{{< var jh_primaria.name >}}** ({{< var jh_primaria.sigla >}})  de la manzana $i$
 - $jh\_ep_i$: Jefes de Hogar con Educación Primaria de la manzana $i$
-- $tjh_i$: Total de los Jefes de Hogar de la manzanan $i$
+- $tjh_i$: Total de los Jefes de Hogar de la manzana $i$
 
 
 #### 3.2 Insumos y fuentes {.unnumbered}
