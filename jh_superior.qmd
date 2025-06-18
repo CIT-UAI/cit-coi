@@ -101,8 +101,8 @@ En la figura [-@fig-jhpr] se observa que el indicador {{< var jh_superior.name >
 
 ### 5. Interpretación y usos esperados {.unnumbered}
 
-* Valor alto de JHESU: Mayor proporción de hogares con capital humano avanzado → entornos potencialmente más protectores, con mayor acceso a información, vínculos institucionales y aspiraciones educativas elevadas.
-* Valor bajo de JHESU: Escasa presencia de adultos con educación superior → posible concentración de barreras estructurales y pobreza educativa intergeneracional.
+* **Valor alto de {{< var jh_superior.sigla >}}**: Mayor proporción de hogares con capital humano avanzado → entornos potencialmente más protectores, con mayor acceso a información, vínculos institucionales y aspiraciones educativas elevadas.
+* **Valor bajo de {{< var jh_superior.sigla >}}**: Escasa presencia de adultos con educación superior → posible concentración de barreras estructurales y pobreza educativa intergeneracional.
 
 **Aplicaciones:**
 
