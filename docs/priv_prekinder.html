@@ -71,11 +71,54 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -301,12 +344,12 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./educacion.html">Educación</a></li><li class="breadcrumb-item"><a href="./priv_prekinder.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Privada a Pre-Kinder</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Privada a Pre-Kinder</span></h1>
-<p class="subtitle lead">Educación Primaria: Inscripción Privada a Pre-Kinder (IPRPK)</p>
+<p class="subtitle lead">Educación Primaria: Inscripción Privada a Pre-Kinder (IPRIVPK)</p>
 </div>
 
 
@@ -335,15 +378,15 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="unnumbered anchored" data-anchor-id="ficha-técnica">Ficha técnica</h4>
 <ul>
 <li><strong>Nombre completo:</strong> Inscripción Privada a Pre-Kinder</li>
-<li><strong>Sigla:</strong> IPRPK<br>
+<li><strong>Sigla:</strong> IPRIVPK<br>
 </li>
 <li><strong>Dimensión:</strong> Educación</li>
 <li><strong>Dominio:</strong> Educación Primaria</li>
-<li><strong>Fuente principal de datos:</strong></li>
+<li><strong>Fuente principal de datos:</strong> Centro de Estudios Mineduc</li>
 <li><strong>Unidad espacial de análisis:</strong> Manzana censal<br>
 </li>
 <li><strong>Frecuencia temporal:</strong> Anual</li>
-<li><strong>Cobertura temporal del análisis:</strong></li>
+<li><strong>Cobertura temporal del análisis:</strong> 2024</li>
 <li><strong>Resolución espacial del insumo:</strong> Puntos</li>
 <li><strong>Versión actual:</strong> 1.0</li>
 </ul>
@@ -397,15 +440,13 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="unnumbered anchored" data-anchor-id="conceptualización">2. Conceptualización</h3>
 <section id="definición-del-indicador" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="definición-del-indicador">2.1 Definición del indicador</h4>
-<p>Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).</p>
-</section>
-<section id="conceptos-relacionados" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceptos-relacionados">2.2 Conceptos relacionados</h4>
-<p>Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).</p>
+<p>Oportunidad de acceso de la población objetivo (niños y niñas entre 3 y 4 años) a equipamientos privados de educación que cuenten con nivel medio mayor, contemplando el tiempo necesario para llegar al equipamiento. Las unidades censales sin población poseen valor nulo de indicador.</p>
 </section>
 <section id="referente-internacional-coi-3.0" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="referente-internacional-coi-3.0">2.3 Referente internacional (COI 3.0)</h4>
-<p>Breve descripción del indicador original y cómo es usado en el índice de referencia.</p>
+<h4 class="unnumbered anchored" data-anchor-id="referente-internacional-coi-3.0">2.2 Referente internacional (COI 3.0)</h4>
+<p>El <a href="https://www.diversitydatakids.org/child-opportunity-index">Child Oportunity Index</a>, considera tanto la matrícula en pre-K público como privado como medidas de la oportunidad de educación infantil temprana en un vecindario.</p>
+<p>El indicador original, <a href="https://www.diversitydatakids.org/child-opportunity-index">COI 3.0</a>, Matrícula en pre-K privado: se define como el porcentaje de niños de 3 y 4 años matriculados en escuelas privadas de párvulos, preescolar o kindergarden.</p>
+<p>Medir el acceso a este nivel educativo es fundamental, ya que la educación infantil temprana es ampliamente reconocida como un factor clave del entorno barrial que influye en el desarrollo infantil y en los resultados a largo plazo. Su incorporación en el <a href="https://www.diversitydatakids.org/child-opportunity-index">COI 3.0</a> permite evaluar y comparar la disponibilidad de esta oportunidad a escala local, identificar desigualdades existentes y orientar estrategias que promuevan una mayor equidad.</p>
 <hr>
 </section>
 </section>
@@ -413,44 +454,144 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="unnumbered anchored" data-anchor-id="adaptación-metodológica-cit">3. Adaptación metodológica CIT</h3>
 <section id="definición-operacional-adaptada" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="definición-operacional-adaptada">3.1 Definición operacional adaptada</h4>
-<p>Definición clara del indicador tal como será construido para el caso chileno.</p>
+<p>El indicador original, <a href="https://www.diversitydatakids.org/child-opportunity-index">Child Oportunity Index</a>, Matrícula en pre-K privado: se define como el porcentaje de niños de 3 y 4 años matriculados en escuelas privadas de párvulos, preescolar o kindergarten.</p>
+<p>Para el caso chileno, se filtró la base de datos, eligiendo en el campo: “dependencia” los valores 2 y 3, que corresponden a aquellos establecimientos que requieren de un pago, que son: particular subvencionado o particular pagado, tal como se indica en la Tabla N° <a href="#tbl-preKinderEst" class="quarto-xref"><span>5.1</span></a></p>
+<div>
+<div id="tbl-preKinderEst" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[15, 15, 40, 30]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-preKinderEst-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5.1: Selección de Establecimientos
+</figcaption>
+<div aria-describedby="tbl-preKinderEst-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 40%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nombre</th>
+<th>Tipo</th>
+<th style="text-align: left;">Descripción</th>
+<th style="text-align: left;">Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DEPENDENCIA</td>
+<td>Numérico</td>
+<td style="text-align: left;">Dependencia administrativa del establecimiento (1 – 3 y 6 corresponde a MINEDUC)</td>
+<td style="text-align: left;">1: Municipal<br><span style="color:red;">2: Particular Subvencionado</span><br><span style="color:red;"> 3: Particular Pagado</span><br>4: JUNJI<br>5: INTEGRA<br>6: Servicio Local de Educación</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+<p>Por otra parte, este indicador en el COI toma a los niños del rango etario de 3 a 4 años. Para realizar el paralelo con el caso chileno, se utilizó la información de los establecimientos que contaran con alumnos en nivel medio mayor, ya que es en ese curso donde van los niños entre de 3 a 4 años, clasificados en el nivel 1, tal como se muestra en la Tabla N° <a href="#tbl-preKinderNiv" class="quarto-xref"><span>5.2</span></a>.</p>
+<div>
+<div id="tbl-preKinderNiv" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[15, 15, 40, 30]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-preKinderNiv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5.2: Selección de Nivel
+</figcaption>
+<div aria-describedby="tbl-preKinderNiv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 40%">
+<col style="width: 30%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Nombre</th>
+<th>Tipo</th>
+<th style="text-align: left;">Descripción</th>
+<th style="text-align: left;">Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NIVEL1</td>
+<td>Numérico</td>
+<td style="text-align: left;">Clasificación de Alumnos en 6 Niveles</td>
+<td style="text-align: left;">1: Sala cuna menor<br>2: Sala cuna mayor<br>3: Medio menor<br><span style="color:red;"> 4: Medio mayor</span><br>5: Transición menor<br>6: Transición mayor</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+<p>Utilizando esta información como Insumo se calculó el indicador de accesibilidad de niños entre 3 y 4 años a establecimientos que imparten el curso de nivel medio mayor. Se utilizó esa forma de cálculo, debido a que no se contaba con las matrículas.</p>
 </section>
 <section id="insumos-y-fuentes" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="insumos-y-fuentes">3.2 Insumos y fuentes</h4>
-<p>Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.</p>
+<p>La base de datos, obtenida desde el centro de estudios del MINEDUC, 2024, traía información de todos los establecimientos de Chile. Como primer filtro se seleccionó sólo los pertenecientes a la Región Metropolitana, luego sólo los privados y subvencionado y luego que pertenecieran a la nivel 2, medio mayor.</p>
+<p>Una vez seleccionados los datos a utilizar, se procedió a la consolidación de insumos. Los cuales se pueden sintetizar en los siguientes pasos</p>
+<ol type="1">
+<li>Georeferenciación de base de datos: la base de datos contaba con información latitud y longitud, la que se pasó a utm para poder llevarla al mapa.</li>
+<li>Se eliminaron los establecimientos que se encontraban repetidos.</li>
+<li>En arcgis pro se georreferenciaron las coordenadas que venían en la tabla Excel.</li>
+<li>Se necesita como insumo las manzanas censales con la cantidad de niños entre 3 y 4 años.</li>
+</ol>
 </section>
 <section id="pasos-de-cálculo" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="pasos-de-cálculo">3.3 Pasos de cálculo</h4>
-<p>Listar paso a paso el procedimiento con lógica replicable.</p>
+<p>Se utilizó la fórmula de cálculo de accesibilidad correspondiendo de manera de forma resumida una oferta por una demanda, todo esto ponderado por un factor de accesibilidad dado por el costo de desplazamiento en función de la distancia, como se observa en la ecuación <a href="#eq-prekiderPriv" class="quarto-xref"><span>5.1</span></a>.</p>
+<p>La oferta que puede ser representada por la cantidad de metros cuadrados de equipamientos, se tuvo que fijar un valor general ya que no se cuenta con ese dato. Considerando las dimensiones requeridas para las salas de clases, el mobiliario necesario para este nivel escolar y la coherencia entre los establecimientos y la oferta educativa que podrían generar en el territorio, se definió una superficie de 500 m² como referencia para el área. Esta estimación busca un equilibrio, ya que 1.000 m² se consideró una sobreestimación poco representativa de la realidad urbana, mientras que 100 m² resultaría insuficiente para cumplir con las condiciones mínimas de</p>
+<p><span id="eq-prekiderPriv"><span class="math display">I_i = \frac{PPriv_j \times 500\ m^2}{pob_i}\ FA_{ij} \tag{5.1}</span></span></p>
+<!-- $$I_i = (PPriv_j \times 500) \times  FA_{ij}(pob_i)$$  -->
+<!-- $$I_{ij} = \frac{(PPriv_j \times  500) \times FA_{ij} (pob_i)}{\sum_{w = 1}^{n}  FA_{wj}(pob_i)} \ $$ -->
+<ul>
+<li><span class="math inline">I_i</span>: Indicador Inscripción Privada a Pre-Kinder (IPRIVPK) de la manzana corresponde a metros cuadrados por poiblación objetivo<span class="math inline">i</span></li>
+<li><span class="math inline">PPriv_j</span>: Establecimiento de Prekinder Privado con nivel medio mayor privado <span class="math inline">j</span></li>
+<li><span class="math inline">500\ m^2</span>: Oferta en metros cuadrados asumida por cada equipamiento.</li>
+<li><span class="math inline">pob_i</span>: Población de niños entre 3 y 4 años en la manzana <span class="math inline">i</span></li>
+<li><span class="math inline">FA</span>: Factor de Accesibilidad (costo de desplazamiento a pie) entre la manzana <span class="math inline">i</span> y el objetivo <span class="math inline">j</span></li>
+</ul>
 <hr>
 </section>
 </section>
-<section id="resultados-preliminares" class="level3 unnumbered">
+<section id="resultados-preliminares" class="level3 unnumbered page-columns page-full">
 <h3 class="unnumbered anchored" data-anchor-id="resultados-preliminares">4. Resultados preliminares</h3>
-<ul>
-<li>Imagen o mapa ilustrativo del indicador.</li>
-<li>Tabla resumen si aplica.</li>
-</ul>
+<div id="fig-privPrekinder" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-privPrekinder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/prek_priv_500.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-privPrekinder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5.1: Resultados de Indicador <strong>Inscripción Privada a Pre-Kinder (IPRIVPK)</strong>
+</figcaption>
+</figure>
+</div>
 <hr>
 </section>
 <section id="interpretación-y-usos-esperados" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="interpretación-y-usos-esperados">5. Interpretación y usos esperados</h3>
 <ul>
-<li>¿Qué significa un valor alto o bajo?</li>
-<li>¿Cómo puede ser usado este indicador por tomadores de decisiones?</li>
+<li><p><strong>Valores alto de IPRIVPK</strong>: : Representan una alta oportunidad de acceso a establecimientos de educación que cuenten con nivel medio mayor.</p></li>
+<li><p><strong>Valores alto de IPRIVPK</strong>: Indican una baja oportunidad de acceso a los mismos.</p></li>
 </ul>
+<p><strong>Aplicaciones:</strong></p>
+<p>Los tomadores de decisiones pueden utilizar este indicador para identificar sectores con baja cobertura de educación preescolar, lo que permite focalizar esfuerzos en aquellos territorios donde el acceso es limitado. A partir de esta información, es posible evaluar la necesidad de ampliar la oferta educativa en educación infantil temprana, ya sea mediante la creación de nuevos establecimientos, el fortalecimiento de la infraestructura existente o la implementación de políticas que promuevan la matrícula en estos niveles. De este modo, el indicador se convierte en una herramienta clave para reducir brechas territoriales y avanzar hacia una mayor equidad educativa.</p>
 <hr>
 </section>
 <section id="consideraciones-supuestos-y-limitaciones" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="consideraciones-supuestos-y-limitaciones">6. Consideraciones, supuestos y limitaciones</h3>
-<ul>
-<li>Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.</li>
-</ul>
+<p>Restricciones de este indicador tienen que ver principalmente que su cálculo no incluye las matrículas por establecimiento, por lo cual, su resultado no es altamente especifico, pero si entrega una buena referencia con respecto al acceso que existe a él.</p>
 <hr>
 </section>
 <section id="referencias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="referencias">7. Referencias</h3>
-<p>Bibliografía científica, manuales técnicos, artículos base.</p>
+<ul>
+<li>Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., &amp; Acevedo-Garcia, D. (2024). <a href="https://www.diversitydatakids.org/child-opportunity-index"><em>Child Opportunity Index 3.0 Technical Documentation</em></a>.</li>
+<li>Centro de Inteligencia Territorial de la Universidad Adolfo Ibáñez (CIT-UAI). (2025). Memoria Metodológica Matriz de Bienestar Humano Territorial, versión 2017b.</li>
+</ul>
 
 
 </section>

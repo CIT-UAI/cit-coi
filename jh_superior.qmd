@@ -54,7 +54,7 @@ La educación superior de los adultos responsables del hogar está fuertemente a
 
 #### 2.3 Referente internacional (COI 3.0) {.unnumbered}
 
-En el índice COI 3.0, si bien el énfasis está en la baja escolaridad, se reconoce explícitamente que la alta educación de adultos en un vecindario funciona como un amortiguador frente a la desigualdad y un facilitador de oportunidades para la infancia. Comunidades con alta proporción de adultos con educación superior tienden a ofrecer entornos con más recursos, apoyo institucional y cohesión social.
+En el índice {{< var coi.sname >}}, si bien el énfasis está en la baja escolaridad, se reconoce explícitamente que la alta educación de adultos en un vecindario funciona como un amortiguador frente a la desigualdad y un facilitador de oportunidades para la infancia. Comunidades con alta proporción de adultos con educación superior tienden a ofrecer entornos con más recursos, apoyo institucional y cohesión social.
 
 ---
 

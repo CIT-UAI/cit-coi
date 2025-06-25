@@ -63,7 +63,7 @@ pub_prekinder:
   
 priv_prekinder:
   name: "Inscripción Privada a Pre-Kinder"
-  sigla: "IPRPK"
+  sigla: "IPRIVPK"
   dimension: "Educación"
   dominio: "Educación Primaria"
   diseno: "✅"

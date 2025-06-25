@@ -12,10 +12,10 @@ author: ["{{< var szuniga.name >}}"]
 -   **Sigla:** {{< var priv_prekinder.sigla >}}\
 -   **Dimensión:** {{< var priv_prekinder.dimension >}}
 -   **Dominio:** {{< var priv_prekinder.dominio >}}
--   **Fuente principal de datos:** 
+-   **Fuente principal de datos:** Centro de Estudios Mineduc
 -   **Unidad espacial de análisis:** Manzana censal\
 -   **Frecuencia temporal:** Anual
--   **Cobertura temporal del análisis:**
+-   **Cobertura temporal del análisis:** 2024
 -   **Resolución espacial del insumo:** Puntos
 -   **Versión actual:** 1.0
 
@@ -39,48 +39,114 @@ author: ["{{< var szuniga.name >}}"]
 ### 2. Conceptualización {.unnumbered}
 
 #### 2.1 Definición del indicador {.unnumbered}
-Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).
 
-#### 2.2 Conceptos relacionados {.unnumbered}
-Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).
+Oportunidad de acceso de la población objetivo (niños y niñas entre 3 y 4 años) a equipamientos privados de educación que cuenten con nivel medio mayor, contemplando el tiempo necesario para llegar al equipamiento. Las unidades censales sin población poseen valor nulo de indicador. 
 
-#### 2.3 Referente internacional (COI 3.0) {.unnumbered}
-Breve descripción del indicador original y cómo es usado en el índice de referencia.
+
+#### 2.2 Referente internacional (COI 3.0) {.unnumbered}
+
+El {{< var coi.name >}}, considera tanto la matrícula en pre-K público como privado como medidas de la oportunidad de educación infantil temprana en un vecindario. 
+
+El indicador original, {{< var coi.sname >}}, Matrícula en pre-K privado: se define como el porcentaje de niños de 3 y 4 años matriculados en escuelas privadas de párvulos, preescolar o kindergarden. 
+
+Medir el acceso a este nivel educativo es fundamental, ya que la educación infantil temprana es ampliamente reconocida como un factor clave del entorno barrial que influye en el desarrollo infantil y en los resultados a largo plazo. Su incorporación en el {{< var coi.sname >}} permite evaluar y comparar la disponibilidad de esta oportunidad a escala local, identificar desigualdades existentes y orientar estrategias que promuevan una mayor equidad. 
+
 
 ---
 
 ### 3. Adaptación metodológica CIT {.unnumbered}
 
 #### 3.1 Definición operacional adaptada {.unnumbered}
-Definición clara del indicador tal como será construido para el caso chileno.
+
+El indicador original, {{< var coi.name >}}, Matrícula en pre-K privado: se define como el porcentaje de niños de 3 y 4 años matriculados en escuelas privadas de párvulos, preescolar o kindergarten. 
+
+Para el caso chileno, se filtró la base de datos, eligiendo en el campo: “dependencia” los valores 2 y 3, que corresponden a aquellos establecimientos que requieren de un pago, que son: particular subvencionado o particular pagado, tal como se indica en la Tabla N° [-@tbl-preKinderEst]
+
+::: {}
+| Nombre      | Tipo     | Descripción                                                                 | Valores                                                                                                                                      |
+|-------------|----------|:------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
+| DEPENDENCIA | Numérico | Dependencia administrativa del establecimiento (1 – 3 y 6 corresponde a MINEDUC) | 1: Municipal<br><span style="color:red;">2: Particular Subvencionado</span><br><span style="color:red;"> 3: Particular Pagado</span><br>4: JUNJI<br>5: INTEGRA<br>6: Servicio Local de Educación             |
+
+: Selección de Establecimientos {#tbl-preKinderEst  tbl-colwidths="[15, 15, 40, 30]"}
+:::
+
+Por otra parte, este indicador en el COI toma a los niños del rango etario de 3 a 4 años. Para realizar el paralelo con el caso chileno, se utilizó la información de los establecimientos que contaran con alumnos en nivel medio mayor, ya que es en ese curso donde van los niños entre de 3 a 4 años, clasificados en el nivel 1, tal como se muestra en la Tabla N° [-@tbl-preKinderNiv]. 
+
+
+::: {}
+| Nombre      | Tipo     | Descripción                                                                 | Valores                                                                                                                                      |
+|-------------|----------|:------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
+| NIVEL1 | Numérico | Clasificación de Alumnos en 6 Niveles | 1: Sala cuna menor<br>2: Sala cuna mayor<br>3: Medio menor<br><span style="color:red;"> 4: Medio mayor</span><br>5: Transición menor<br>6: Transición mayor             |
+
+: Selección de Nivel {#tbl-preKinderNiv  tbl-colwidths="[15, 15, 40, 30]"}
+:::
+
+Utilizando esta información como Insumo se calculó el indicador de accesibilidad de niños entre 3 y 4 años a establecimientos que imparten el curso de nivel medio mayor. Se utilizó esa forma de cálculo, debido a que no se contaba con las matrículas.  
 
 #### 3.2 Insumos y fuentes {.unnumbered}
-Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.
+
+La base de datos, obtenida desde el centro de estudios del MINEDUC, 2024, traía información de todos los establecimientos de Chile. Como primer filtro se seleccionó sólo los pertenecientes a la Región Metropolitana, luego sólo los privados y subvencionado y luego que pertenecieran a la nivel 2, medio mayor. 
+
+Una vez seleccionados los datos a utilizar, se procedió a la consolidación de insumos. Los cuales se pueden sintetizar en los siguientes pasos 
+
+1. Georeferenciación de base de datos: la base de datos contaba con información latitud y longitud, la que se pasó a utm para poder llevarla al mapa. 
+2. Se eliminaron los establecimientos que se encontraban repetidos. 
+3. En arcgis pro se georreferenciaron las coordenadas que venían en la tabla Excel. 
+4. Se necesita como insumo las manzanas censales con la cantidad de niños entre 3 y 4 años.
 
 #### 3.3 Pasos de cálculo {.unnumbered}
-Listar paso a paso el procedimiento con lógica replicable.
+
+Se utilizó la fórmula de cálculo de accesibilidad correspondiendo de manera de forma resumida una oferta por una demanda, todo esto ponderado por un factor de accesibilidad dado por el costo de desplazamiento en función de la distancia, como se observa en la ecuación [-@eq-prekiderPriv].
+
+La oferta que puede ser representada por la cantidad de metros cuadrados de equipamientos, se tuvo que fijar un valor general ya que no se cuenta con ese dato. 
+Considerando las dimensiones requeridas para las salas de clases, el mobiliario necesario para este nivel escolar y la coherencia entre los establecimientos y la oferta educativa que podrían generar en el territorio, se definió una superficie de 500 m² como referencia para el área. Esta estimación busca un equilibrio, ya que 1.000 m² se consideró una sobreestimación poco representativa de la realidad urbana, mientras que 100 m² resultaría insuficiente para cumplir con las condiciones mínimas de 
+
+ $$I_i = \frac{PPriv_j \times 500\ m^2}{pob_i}\ FA_{ij}$$ {#eq-prekiderPriv}
+ 
+<!-- $$I_i = (PPriv_j \times 500) \times  FA_{ij}(pob_i)$$  -->
+<!-- $$I_{ij} = \frac{(PPriv_j \times  500) \times FA_{ij} (pob_i)}{\sum_{w = 1}^{n}  FA_{wj}(pob_i)} \ $$ -->
+
+- $I_i$: Indicador {{< var priv_prekinder.name >}} ({{< var priv_prekinder.sigla >}})  de la manzana corresponde a metros cuadrados por poiblación objetivo$i$
+- $PPriv_j$: Establecimiento de Prekinder Privado con nivel medio mayor privado $j$
+- $500\ m^2$: Oferta en metros cuadrados asumida por cada equipamiento.
+- $pob_i$: Población de niños entre 3 y 4 años en la manzana $i$
+- $FA$: Factor de Accesibilidad (costo de desplazamiento a pie) entre la manzana $i$ y el objetivo $j$
+
 
 ---
 
 ### 4. Resultados preliminares {.unnumbered}
-- Imagen o mapa ilustrativo del indicador.
-- Tabla resumen si aplica.
+
+
+![Resultados de Indicador **{{< var priv_prekinder.name >}} ({{< var priv_prekinder.sigla >}})** ](images/prek_priv_500.jpg){#fig-privPrekinder}
+
+
 
 ---
 
 ### 5. Interpretación y usos esperados {.unnumbered}
-- ¿Qué significa un valor alto o bajo?
-- ¿Cómo puede ser usado este indicador por tomadores de decisiones?
+
+
+* **Valores alto de {{< var priv_prekinder.sigla >}}**: :  Representan una alta oportunidad de acceso a establecimientos de educación que cuenten con nivel medio mayor. 
+
+* **Valores alto de {{< var priv_prekinder.sigla >}}**:  Indican una baja oportunidad de acceso a los mismos. 
+
+**Aplicaciones:**
+
+Los tomadores de decisiones pueden utilizar este indicador para identificar sectores con baja cobertura de educación preescolar, lo que permite focalizar esfuerzos en aquellos territorios donde el acceso es limitado. A partir de esta información, es posible evaluar la necesidad de ampliar la oferta educativa en educación infantil temprana, ya sea mediante la creación de nuevos establecimientos, el fortalecimiento de la infraestructura existente o la implementación de políticas que promuevan la matrícula en estos niveles. De este modo, el indicador se convierte en una herramienta clave para reducir brechas territoriales y avanzar hacia una mayor equidad educativa. 
 
 ---
 
 ### 6. Consideraciones, supuestos y limitaciones {.unnumbered}
-- Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.
+
+Restricciones de este indicador tienen que ver principalmente que su cálculo no incluye las matrículas por establecimiento, por lo cual, su resultado no es altamente especifico, pero si entrega una buena referencia con respecto al acceso que existe a él.  
 
 ---
 
 ### 7. Referencias {.unnumbered}
-Bibliografía científica, manuales técnicos, artículos base.
+
+- Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). [*Child Opportunity Index 3.0 Technical Documentation*](https://www.diversitydatakids.org/child-opportunity-index).
+- Centro de Inteligencia Territorial de la Universidad Adolfo Ibáñez (CIT-UAI). (2025). Memoria Metodológica Matriz de Bienestar Humano Territorial, versión 2017b. 
 
 
 
