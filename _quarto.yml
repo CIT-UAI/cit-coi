@@ -62,5 +62,9 @@ format:
     tab-cap-location: "bottom"
     fig-align: "center"
     mailto: "denis.berroeta@uai.cl"
+    crossref:
+      fig-prefix: Figura   # (default is "Figure")
+      tbl-prefix: Tabla # (default is "Table")
+      eq-prefix: Ecuación 
 
 

@@ -1,11 +1,69 @@
 ---
 title: "Educación"
-author: ["{{< var szuniga.name >}}"]
+author: ["{{< var dberroeta.name >}}", "{{< var szuniga.name >}}"]
 ---
+
+
+## Resumen
+
+La dimensión de educación del COI busca capturar las oportunidades educativas disponibles para niños y adolescentes en sus territorios de residencia, desde la primera infancia hasta la adultez temprana. Reconociendo que la trayectoria educativa se ve fuertemente influenciada por factores familiares, escolares y comunitarios, esta dimensión agrupa múltiples indicadores organizados en subdimensiones específicas. Cada subdimensión permite una evaluación precisa y comparativa de la calidad y acceso educativo territorial.
+
 
 ## Definición
 
+La dimensión de educación se refiere a las condiciones estructurales del entorno residencial que favorecen el acceso temprano a experiencias educativas formales (preescolar) y la calidad del aprendizaje durante los años escolares básicos. Esta calidad se mide a través de indicadores de desempeño académico ajustados por composición socioeconómica del estudiantado, lo que permite aproximarse a una medición más justa del valor agregado educativo territorial.
+
 ## Objetivos
 
-## Distribución
+* Evaluar territorialmente el acceso a oportunidades educativas en la primera infancia.
+* Medir la calidad del entorno escolar mediante resultados académicos ajustados por nivel socioeconómico.
+* Identificar brechas territoriales tempranas en el acceso y calidad de la educación escolar básica.
 
+## Dominios e indicadores
+
+::: {}
+| Dominio            | Indicador                           |
+|--------------------------|:----------------------------------:|
+| {{< var pub_prekinder.dominio >}}      | {{< var pub_prekinder.name >}} <br>  {{< var priv_prekinder.name >}}     |
+| {{< var puntaje_plm.dominio >}}  | {{< var puntaje_plm.name >}} <br>  {{< var crecimiento_plm.name >}}       |
+
+
+
+: Dimensión de de Ecuación {#tbl-educacionDim  tbl-colwidths="[40, 60]"}
+:::
+
+## Enfoque metodológico
+
+Cada indicador es estandarizado y territorializado a escalas pequeñas (por ejemplo, manzana o sector censal), permitiendo comparaciones espaciales entre territorios. Se utilizan fuentes como registros escolares, censos y encuestas de hogares para estimar las condiciones en cada subdimensión. El enfoque multiescalar y multinivel permite capturar tanto los recursos disponibles como los resultados efectivos de los sistemas educativos locales [@noelke2024child].
+
+## Consideraciones conceptuales
+
+* **Multicausalidad**: Las oportunidades educativas se configuran a partir de factores familiares, escolares, económicos y comunitarios.
+* **Territorialización**: El análisis se realiza en función del lugar de residencia, no del lugar de estudio.
+
+
+
+## Adaptación al contexto nacional (Chile)
+
+Para la implementación del índice en el contexto chileno, se mantiene la estructura conceptual de la dimensión de educación del COI, pero se restringe el análisis a dos aspectos clave:
+
+*	Acceso a educación en la primera infancia, y
+*	Calidad del entorno educativo escolar básico, evaluada mediante resultados académicos ajustados por composición socioeconómica del alumnado.
+
+Esta restricción responde a la disponibilidad y calidad de datos en el país. En particular:
+
+*	No fue posible construir indicadores consistentes y comparables a nivel territorial para caracterizar la trayectoria educativa en la educación secundaria y postsecundaria (por ejemplo, matrícula en educación superior, tasa de titulación o rendición de pruebas avanzadas), por lo cual esta subdimensión fue excluida.
+
+* Asimismo, no se disponen de fuentes sistemáticas, anuales y georreferenciadas sobre la presencia territorial de organizaciones de enriquecimiento educativo infantil (como centros culturales, programas comunitarios o mentorías), por lo que tampoco se incorpora la subdimensión de recursos educativos del entorno vecinal.
+
+Por el contrario, para las subdimensiones que sí se incluyen:
+
+*	Los indicadores de matrícula en educación preescolar (pública y privada) fueron construidos a partir de los registros administrativos del Ministerio de Educación (MINEDUC).
+
+* La calidad del aprendizaje escolar fue evaluada mediante los resultados del SIMCE en Lectura y Matemática.
+
+
+<!-- Revisar por el nivel de vulnerabilidad escolar según el Índice de Vulnerabilidad Escolar (IVE-SINAE), aplicando una lógica equivalente a los puntajes ajustados por pobreza del COI. -->
+
+
+<!-- https://quarto.org/docs/books/book-crossrefs.html -->
