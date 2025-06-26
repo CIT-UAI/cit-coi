@@ -3,9 +3,58 @@ title: "Social y Económico"
 author: ["{{< var dberroeta.name >}}"]
 ---
 
-## Definición
+
+## Resumen
+
+La dimensión de condiciones sociales y económicas del {{< var coi.ssname >}} refleja las oportunidades y desventajas estructurales que enfrentan las familias y comunidades en términos de empleo, ingresos, acceso a servicios, redes sociales y calidad de vivienda. Dado su fuerte impacto en el bienestar infantil, esta dimensión proporciona un diagnóstico integral de las capacidades del entorno socioeconómico para sostener trayectorias de vida positivas desde la infancia.
+
+
+<!-- ## Definición -->
+
+<!-- Esta dimensión mide la disponibilidad de recursos económicos y sociales en el entorno vecinal que afectan directamente el bienestar y desarrollo de los niños. Incluye indicadores de empleo, ingresos, calidad de vivienda, estructura familiar, redes sociales, y formas de capital económico acumulado, como la propiedad de la vivienda o los ingresos por inversiones. -->
+
 
 ## Objetivos
 
-## Distribución
+* Evaluar las condiciones laborales y económicas del entorno familiar y vecinal.
+* Detectar inequidades en la distribución del ingreso, riqueza y escolaridad.
+* Medir el acceso a bienes esenciales como vivienda adecuada.
+* Estimar la capacidad del tejido social para ofrecer redes de apoyo, estabilidad y movilidad social.
 
+
+## Dominio y sus indicadores
+
+::: {}
+| Dominio            | Indicador                           |
+|--------------------------|:----------------------------------:|
+| {{< var empleo.dominio >}}      | {{< var empleo.name >}} <br>  | 
+| {{< var jh_superior.dominio >}}                                |{{< var escolaridad_jh.name >}}<br>  {{< var jh_superior.name >}} <br>  {{< var jh_secundaria.name >}} <br>  {{< var jh_primaria.name >}} |
+| {{< var hacina.dominio >}}  | {{< var hacina.name >}}    |
+| {{< var monopar.dominio >}}  | {{< var monopar.name >}}    |
+
+: Dimensión de Condiciones Sociales y Económicas {#tbl-Soc  tbl-colwidths="[40, 60]"}
+:::
+
+
+## Consideraciones metodológicas
+
+Esta dimensión incluye 7 indicadores agrupados en 4 dominios. Todos los indicadores se estandarizan por (`z-score` o `minmax`) cuando se integren y se ajustan para que altos valores siempre indiquen mayor oportunidad. Todos los indicadores se encuentran a nivel de manzana censal, lo que permite evaluaciones territoriales finas.
+
+
+## Consideraciones conceptuales
+
+* **Interdependencia**: Las condiciones económicas y sociales actúan conjuntamente para generar entornos seguros, estimulantes y estables para la infancia.
+*	**Multiescalaridad**: Las dinámicas del empleo, la riqueza y el tejido social se manifiestan tanto en lo local (barrio) como en lo estructural (políticas públicas y modelos de desarrollo).
+*	**Capital acumulado vs. fluido**: Se distinguen las formas de ingreso inmediato (empleo, transferencias) de aquellas que representan acumulación estructural (propiedad, capital financiero).
+
+
+## Adaptación al contexto nacional (Chile)
+
+Para la aplicación de la dimensión _“Condiciones Sociales y Económicas”_ del {{< var coi.ssname >}} en el contexto chileno, se ha optado por una estrategia de adaptación metodológica basada en el uso de fuentes censales nacionales ({{< var ine.censo_2017s >}}) y la dimensión Socioeconómica de la Matriz de Bienestar Humano Territorial ({{< var mbht.sigla >}}) del Centro de Inteligencia Territorial ({{< var cit.sigla >}}-{{< var uai.sigla >}})
+
+Debido a la estructura del Censo 2017, no fue posible incorporar directamente algunas subdimensiones del COI original, como:
+
+*	Redes de amistad con movilidad ascendente, ya que no existen datos de interacciones personales o redes sociales a nivel censal en Chile.
+*	Densidad de organizaciones sin fines de lucro, por falta de una base de datos georreferenciada actualizada de ONGs, juntas vecinales, fundaciones u otras formas de capital social organizado.
+
+Sin embargo, se mantiene la validez analítica de esta dimensión al conservar indicadores claves de desigualdad estructural, pobreza, empleo, educación y condiciones habitacionales, todos con fuerte impacto en la infancia y adolescencia.

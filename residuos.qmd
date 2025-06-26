@@ -69,11 +69,11 @@ El IPS se define como un índice continuo entre 0 y 100 que representa la oportu
 
 #### 3.2 Insumos y fuentes {.unnumbered}
 
-* **Faenas Abandonadas**: Servicio Nacional de Geología y Minería (SERNAGEOMIN) 
+* **Faenas Abandonadas**: Servicio Nacional de Geología y Minería ({{< var sernageomin.sigla >}}) 
 
 * **Vertederos Ilegales**: Ministerio del Medio Ambiente (Geoportal) 
 
-* **Manzanas Censales**: Instituto Nacional de Estadísticas (INE) 
+* **Manzanas Censales**: Instituto Nacional de Estadísticas ({{< var ine.sigla>}}) 
 
 #### 3.3 Pasos de cálculo {.unnumbered}
 

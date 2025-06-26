@@ -1,17 +1,17 @@
 ---
 title: "Educación"
-author: ["{{< var dberroeta.name >}}", "{{< var szuniga.name >}}"]
+author: ["{{< var dberroeta.name >}}"]
 ---
 
 
 ## Resumen
 
-La dimensión de educación del COI busca capturar las oportunidades educativas disponibles para niños y adolescentes en sus territorios de residencia, desde la primera infancia hasta la adultez temprana. Reconociendo que la trayectoria educativa se ve fuertemente influenciada por factores familiares, escolares y comunitarios, esta dimensión agrupa múltiples indicadores organizados en subdimensiones específicas. Cada subdimensión permite una evaluación precisa y comparativa de la calidad y acceso educativo territorial.
+La dimensión de educación del {{< var coi.ssname >}} busca capturar las oportunidades educativas disponibles para niños y adolescentes en sus territorios de residencia, desde la primera infancia hasta la adultez temprana. Reconociendo que la trayectoria educativa se ve fuertemente influenciada por factores familiares, escolares y comunitarios, esta dimensión agrupa múltiples indicadores organizados en subdimensiones específicas. Cada subdimensión permite una evaluación precisa y comparativa de la calidad y acceso educativo territorial.
 
 
-## Definición
+<!-- ## Definición -->
 
-La dimensión de educación se refiere a las condiciones estructurales del entorno residencial que favorecen el acceso temprano a experiencias educativas formales (preescolar) y la calidad del aprendizaje durante los años escolares básicos. Esta calidad se mide a través de indicadores de desempeño académico ajustados por composición socioeconómica del estudiantado, lo que permite aproximarse a una medición más justa del valor agregado educativo territorial.
+<!-- La dimensión de educación se refiere a las condiciones estructurales del entorno residencial que favorecen el acceso temprano a experiencias educativas formales (preescolar) y la calidad del aprendizaje durante los años escolares básicos. Esta calidad se mide a través de indicadores de desempeño académico ajustados por composición socioeconómica del estudiantado, lo que permite aproximarse a una medición más justa del valor agregado educativo territorial. -->
 
 ## Objetivos
 
@@ -19,7 +19,7 @@ La dimensión de educación se refiere a las condiciones estructurales del entor
 * Medir la calidad del entorno escolar mediante resultados académicos ajustados por nivel socioeconómico.
 * Identificar brechas territoriales tempranas en el acceso y calidad de la educación escolar básica.
 
-## Dominios e indicadores
+## Dominios y sus indicadores
 
 ::: {}
 | Dominio            | Indicador                           |
@@ -29,7 +29,7 @@ La dimensión de educación se refiere a las condiciones estructurales del entor
 
 
 
-: Dimensión de de Ecuación {#tbl-educacionDim  tbl-colwidths="[40, 60]"}
+: Dimensión de Educación {#tbl-educacionDim  tbl-colwidths="[40, 60]"}
 :::
 
 ## Enfoque metodológico
@@ -45,7 +45,7 @@ Cada indicador es estandarizado y territorializado a escalas pequeñas (por ejem
 
 ## Adaptación al contexto nacional (Chile)
 
-Para la implementación del índice en el contexto chileno, se mantiene la estructura conceptual de la dimensión de educación del COI, pero se restringe el análisis a dos aspectos clave:
+Para la implementación del índice en el contexto chileno, se mantiene la estructura conceptual de la dimensión de educación del {{< var coi.ssname >}}, pero se restringe el análisis a dos aspectos clave:
 
 *	Acceso a educación en la primera infancia, y
 *	Calidad del entorno educativo escolar básico, evaluada mediante resultados académicos ajustados por composición socioeconómica del alumnado.
@@ -58,9 +58,9 @@ Esta restricción responde a la disponibilidad y calidad de datos en el país. E
 
 Por el contrario, para las subdimensiones que sí se incluyen:
 
-*	Los indicadores de matrícula en educación preescolar (pública y privada) fueron construidos a partir de los registros administrativos del Ministerio de Educación (MINEDUC).
+*	Los indicadores de matrícula en educación preescolar (pública y privada) fueron construidos a partir de los registros administrativos del Ministerio de Educación ({{< var mineduc.sigla >}}).
 
-* La calidad del aprendizaje escolar fue evaluada mediante los resultados del SIMCE en Lectura y Matemática.
+* La calidad del aprendizaje escolar fue evaluada mediante los resultados del {{< var simce.sigla >}} en Lectura y Matemática.
 
 
 <!-- Revisar por el nivel de vulnerabilidad escolar según el Índice de Vulnerabilidad Escolar (IVE-SINAE), aplicando una lógica equivalente a los puntajes ajustados por pobreza del COI. -->
