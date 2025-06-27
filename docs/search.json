@@ -84,7 +84,7 @@
     "href": "antecedentes.html#enfoque-multidimensional-de-las-oportunidades",
     "title": "1  Marco Conceptual",
     "section": "Enfoque multidimensional de las oportunidades",
-    "text": "Enfoque multidimensional de las oportunidades\nInspirado en la Documentación Técnica de COI 3.0 , este proyecto adopta una visión multidimensional para capturar las condiciones que favorecen el desarrollo infantil. Se organizan en tres grandes dominios:\n\nEducación: acceso y calidad desde la primera infancia hasta la educación secundaria y superior.\nSalud y medio ambiente: entornos físicos y ecológicos que influyen en la salud física y mental.\nCondiciones sociales y económicas: empleo, ingresos, capital social, vivienda y conectividad digital.\n\nCada dominio se descompone en subdimensiones que permiten una medición precisa y territorializada de las condiciones que promueven (o limitan) las trayectorias de vida positivas.",
+    "text": "Enfoque multidimensional de las oportunidades\nInspirado en la Documentación Técnica de COI 3.0 , este proyecto adopta una visión multidimensional para capturar las condiciones que favorecen el desarrollo infantil. Se organizan en tres grandes dominios:\n\nEducación: acceso y calidad desde la primera infancia hasta la educación secundaria y superior.\nSalud y medio ambiente: entornos físicos y ecológicos que influyen en la salud física y mental.\nCondiciones sociales y económicas: empleo, ingresos, capital social, vivienda y conectividad digital.\n\n\n\n\nDominios propuestos por COI\n\n\nCada dimensión se descompone en dominios que permiten una medición precisa y territorializada de las condiciones que promueven (o limitan) las trayectorias de vida positivas.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Marco Conceptual</span>"
     ]
@@ -180,16 +180,6 @@
     ]
   },
   {
-    "objectID": "educacion.html#definición",
-    "href": "educacion.html#definición",
-    "title": "Educación",
-    "section": "Definición",
-    "text": "Definición\nLa dimensión de educación se refiere a las condiciones estructurales del entorno residencial que favorecen el acceso temprano a experiencias educativas formales (preescolar) y la calidad del aprendizaje durante los años escolares básicos. Esta calidad se mide a través de indicadores de desempeño académico ajustados por composición socioeconómica del estudiantado, lo que permite aproximarse a una medición más justa del valor agregado educativo territorial.",
-    "crumbs": [
-      "Educación"
-    ]
-  },
-  {
     "objectID": "educacion.html#objetivos",
     "href": "educacion.html#objetivos",
     "title": "Educación",
@@ -200,11 +190,11 @@
     ]
   },
   {
-    "objectID": "educacion.html#dominios-e-indicadores",
-    "href": "educacion.html#dominios-e-indicadores",
+    "objectID": "educacion.html#dominios-y-sus-indicadores",
+    "href": "educacion.html#dominios-y-sus-indicadores",
     "title": "Educación",
-    "section": "Dominios e indicadores",
-    "text": "Dominios e indicadores\n\n\n\n\nTable 1: Dimensión de de Educación\n\n\n\n\n\n\n\n\n\nDominio\nIndicador\n\n\n\n\nEducación Primaria\nInscripción Pública a Pre-Kinder  Inscripción Privada a Pre-Kinder\n\n\nEducación Básica\nPuntajes en pruebas de Lectura y Matemática  Crecimiento en pruebas de Lectura y Matemáticas",
+    "section": "Dominios y sus indicadores",
+    "text": "Dominios y sus indicadores\n\n\n\n\nTable 1: Dimensión de Educación\n\n\n\n\n\n\n\n\n\nDominio\nIndicador\n\n\n\n\nEducación Primaria\nInscripción Pública a Pre-Kinder  Inscripción Privada a Pre-Kinder\n\n\nEducación Básica\nPuntajes en pruebas de Lectura y Matemática  Crecimiento en pruebas de Lectura y Matemáticas",
     "crumbs": [
       "Educación"
     ]
@@ -266,7 +256,7 @@
     "href": "puntajes_lym.html",
     "title": "6  Puntaje Lec. y Mat.",
     "section": "",
-    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Puntajes en pruebas de Lectura y Matemática\nSigla: PPLM\n\nDimensión: Educación\nDominio: Educación Básica\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n🟡\n\n\nValidación de Resultados\n❌\n\n\nEntrega de Resultados\n❌\n\n\nDocumentación\n🟡\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Consideraciones, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Puntajes en pruebas de Lectura y Matemática\nSigla: PPLM\n\nDimensión: Educación\nDominio: Educación Básica\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n🟡\n\n\nValidación de Resultados\n🟡\n\n\nEntrega de Resultados\n🟡\n\n\nDocumentación\n🟡\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Consideraciones, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
     "crumbs": [
       "Educación",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Puntaje Lec. y Mat.</span>"
@@ -277,7 +267,7 @@
     "href": "crecimiento_lym.html",
     "title": "7  Crecimiento en Lec. y Mat.",
     "section": "",
-    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Crecimiento en pruebas de Lectura y Matemáticas\nSigla: CPLM\n\nDimensión: Educación\nDominio: Educación Básica\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n🟡\n\n\nValidación de Resultados\n❌\n\n\nEntrega de Resultados\n❌\n\n\nDocumentación\n🟡\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Crecimiento en pruebas de Lectura y Matemáticas\nSigla: CPLM\n\nDimensión: Educación\nDominio: Educación Básica\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n🟡\n\n\nValidación de Resultados\n🟡\n\n\nEntrega de Resultados\n🟡\n\n\nDocumentación\n🟡\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Validación, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
     "crumbs": [
       "Educación",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Crecimiento en Lec. y Mat.</span>"
@@ -304,11 +294,41 @@
     ]
   },
   {
-    "objectID": "s_y_ma.html#distribución",
-    "href": "s_y_ma.html#distribución",
+    "objectID": "s_y_ma.html#dominio-y-sus-indicadores",
+    "href": "s_y_ma.html#dominio-y-sus-indicadores",
     "title": "Salud y M. Ambiente",
-    "section": "Distribución",
-    "text": "Distribución",
+    "section": "Dominio y sus indicadores",
+    "text": "Dominio y sus indicadores\n\n\n\n\nTable 1: Dimensión de Salud y Medio Ambiente\n\n\n\n\n\n\n\n\n\nDominio\nIndicador\n\n\n\n\nEntorno Saludable\nExpocisión Extrema al Calor \n\n\nContaminación\nMicroparticulas del Aire Concentración de Ozono  Contaminantes Industriales en Aire, Agua y Suelo  Índice de Proximidad a Sitios Superfunds",
+    "crumbs": [
+      "Salud y M. Ambiente"
+    ]
+  },
+  {
+    "objectID": "s_y_ma.html#consideraciones-metodológicas",
+    "href": "s_y_ma.html#consideraciones-metodológicas",
+    "title": "Salud y M. Ambiente",
+    "section": "Consideraciones metodológicas",
+    "text": "Consideraciones metodológicas\nLa mayoría de los indicadores provienen de fuentes georreferenciadas de variada resolución espacial, incluyendo sensores remotos (PM2.5, temperatura), modelos ambientales (ozono, riesgo tóxico), y bases de datos públicas y censales. Los indicadores se estandarizan y normalizan para representar oportunidades (valores más altos) o riesgos (valores invertidos).",
+    "crumbs": [
+      "Salud y M. Ambiente"
+    ]
+  },
+  {
+    "objectID": "s_y_ma.html#consideraciones-conceptuales",
+    "href": "s_y_ma.html#consideraciones-conceptuales",
+    "title": "Salud y M. Ambiente",
+    "section": "Consideraciones conceptuales",
+    "text": "Consideraciones conceptuales\n\nCausalidad acumulativa: Las exposiciones ambientales adversas tienden a acumularse en comunidades vulnerables, amplificando impactos en salud infantil.\nEquidad ambiental: La distribución desigual de entornos saludables refleja patrones históricos de planificación urbana, marginación territorial y desinversión.\nInterdependencia: La salud infantil se ve influida por la combinación de factores ecológicos, sanitarios y comunitarios.",
+    "crumbs": [
+      "Salud y M. Ambiente"
+    ]
+  },
+  {
+    "objectID": "s_y_ma.html#adaptación-al-contexto-nacional-chile",
+    "href": "s_y_ma.html#adaptación-al-contexto-nacional-chile",
+    "title": "Salud y M. Ambiente",
+    "section": "Adaptación al contexto nacional (Chile)",
+    "text": "Adaptación al contexto nacional (Chile)\nEn el caso chileno, los indicadores de esta dimensión fueron construidos utilizando una combinación de:\nProductos satelitales de libre acceso\n\nMaterial particulado fino (PM2.5) mediante modelos de regresión geoestadística y validación cruzada.\nTemperaturas extremas y olas de calor. \n\nDatos abiertos del Ministerio del Medio Ambiente (MMA) y sus instituciones\n\nNiveles de ozono troposférico y estaciones de monitoreo de calidad del aire.\nLocalización de sitios contaminados (Sistema RETC).",
     "crumbs": [
       "Salud y M. Ambiente"
     ]
@@ -329,7 +349,7 @@
     "href": "ozono.html",
     "title": "9  Concentración de Ozono",
     "section": "",
-    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Concentración de Ozono\nSigla: COZ\n\nDimensión: Salud y Medio Ambiente\nDominio: Contaminación\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n✅\n\n\nValidación de Resultados\n✅\n\n\nEntrega de Resultados\n🟡\n\n\nDocumentación\n❌\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Consideraciones, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo: Concentración de Ozono\nSigla: COZ\n\nDimensión: Salud y Medio Ambiente\nDominio: Contaminación\nFuente principal de datos:\nUnidad espacial de análisis: Manzana censal\n\nFrecuencia temporal: Anual\nCobertura temporal del análisis:\nResolución espacial del insumo: Puntos\nVersión actual: 1.0\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n✅\n\n\nValidación de Resultados\n✅\n\n\nEntrega de Resultados\n🟡\n\n\nDocumentación\n🟡\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Consideraciones, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
     "crumbs": [
       "Salud y M. Ambiente",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Concentración de Ozono</span>"
@@ -389,11 +409,41 @@
     ]
   },
   {
-    "objectID": "social_y_eco.html#distribución",
-    "href": "social_y_eco.html#distribución",
+    "objectID": "social_y_eco.html#dominio-y-sus-indicadores",
+    "href": "social_y_eco.html#dominio-y-sus-indicadores",
     "title": "Social y Económico",
-    "section": "Distribución",
-    "text": "Distribución",
+    "section": "Dominio y sus indicadores",
+    "text": "Dominio y sus indicadores\n\n\n\n\nTable 1: Dimensión de Condiciones Sociales y Económicas\n\n\n\n\n\n\n\n\n\nDominio\nIndicador\n\n\n\n\nEmpleo\nTasa de Empleo \n\n\nInequidad Socioeconómica Concentrada\nEscolaridad de Jefe de Hogar Jefe de Hogar con Educación Superior  Jefe de Hogar con Educación Secundaria  Jefe de Hogar con Educación Primaria\n\n\nRecursos Habitacionales\nViviendas con Hacinamiento\n\n\nRecursos Sociales\nHogares Uniparentales",
+    "crumbs": [
+      "Social y Económico"
+    ]
+  },
+  {
+    "objectID": "social_y_eco.html#consideraciones-metodológicas",
+    "href": "social_y_eco.html#consideraciones-metodológicas",
+    "title": "Social y Económico",
+    "section": "Consideraciones metodológicas",
+    "text": "Consideraciones metodológicas\nEsta dimensión incluye 7 indicadores agrupados en 4 dominios. Todos los indicadores se estandarizan por (z-score o minmax) cuando se integren y se ajustan para que altos valores siempre indiquen mayor oportunidad. Todos los indicadores se encuentran a nivel de manzana censal, lo que permite evaluaciones territoriales finas.",
+    "crumbs": [
+      "Social y Económico"
+    ]
+  },
+  {
+    "objectID": "social_y_eco.html#consideraciones-conceptuales",
+    "href": "social_y_eco.html#consideraciones-conceptuales",
+    "title": "Social y Económico",
+    "section": "Consideraciones conceptuales",
+    "text": "Consideraciones conceptuales\n\nInterdependencia: Las condiciones económicas y sociales actúan conjuntamente para generar entornos seguros, estimulantes y estables para la infancia.\nMultiescalaridad: Las dinámicas del empleo, la riqueza y el tejido social se manifiestan tanto en lo local (barrio) como en lo estructural (políticas públicas y modelos de desarrollo).\nCapital acumulado vs. fluido: Se distinguen las formas de ingreso inmediato (empleo, transferencias) de aquellas que representan acumulación estructural (propiedad, capital financiero).",
+    "crumbs": [
+      "Social y Económico"
+    ]
+  },
+  {
+    "objectID": "social_y_eco.html#adaptación-al-contexto-nacional-chile",
+    "href": "social_y_eco.html#adaptación-al-contexto-nacional-chile",
+    "title": "Social y Económico",
+    "section": "Adaptación al contexto nacional (Chile)",
+    "text": "Adaptación al contexto nacional (Chile)\nPara la aplicación de la dimensión “Condiciones Sociales y Económicas” del COI en el contexto chileno, se ha optado por una estrategia de adaptación metodológica basada en el uso de fuentes censales nacionales (Censo 2017) y la dimensión Socioeconómica de la Matriz de Bienestar Humano Territorial (MBHT) del Centro de Inteligencia Territorial (CIT-UAI)\nDebido a la estructura del Censo 2017, no fue posible incorporar directamente algunas subdimensiones del COI original, como:\n\nRedes de amistad con movilidad ascendente, ya que no existen datos de interacciones personales o redes sociales a nivel censal en Chile.\nDensidad de organizaciones sin fines de lucro, por falta de una base de datos georreferenciada actualizada de ONGs, juntas vecinales, fundaciones u otras formas de capital social organizado.\n\nSin embargo, se mantiene la validez analítica de esta dimensión al conservar indicadores claves de desigualdad estructural, pobreza, empleo, educación y condiciones habitacionales, todos con fuerte impacto en la infancia y adolescencia.",
     "crumbs": [
       "Social y Económico"
     ]
@@ -480,7 +530,7 @@
     "href": "reuniones.html",
     "title": "20  Reuniones",
     "section": "",
-    "text": "Registro de Reuniones\n\n\nCategoría\nFecha\nTema\n\n\n\n\nInvestigación\n21-04-2025\nrevisión de Documentación Técnica de COI 3.0\n\n\nEstudios\n24-04-2025\nReunión Inicial\n\n\nInvestigación\n29-04-2025\nAnálisis de Factibilidad\n\n\nEstudios\n30-04-2025\nGantt y Factibilidad\n\n\nInvestigación\n15-05-2025\nContrastar indicador propuesto con COI 3.0\n\n\nInvestigación\n20-05-2025\nConsolidar insumos\n\n\nEstudios\n29-05-2025\nEstado administrativo y avances\n\n\nInvestigación\n04-06-2025\nAvances y deathline 12-06-2025",
+    "text": "Registro de Reuniones\n\n\nCategoría\nFecha\nTema\n\n\n\n\nInvestigación\n21-04-2025\nrevisión de Documentación Técnica de COI 3.0\n\n\nEstudios\n24-04-2025\nReunión Inicial\n\n\nInvestigación\n29-04-2025\nAnálisis de Factibilidad\n\n\nEstudios\n30-04-2025\nGantt y Factibilidad\n\n\nInvestigación\n15-05-2025\nContrastar indicador propuesto con COI 3.0\n\n\nInvestigación\n20-05-2025\nConsolidar insumos\n\n\nEstudios\n29-05-2025\nEstado administrativo y avances\n\n\nInvestigación\n04-06-2025\nAvances y deathline 12-06-2025\n\n\nInvestigación\n12-06-2025\nAvances definciones metodológicas EDU\n\n\nInvestigación\n18-06-2025\nAvances y documentación\n\n\nEstudios\n18-06-2025\nRevisión de Observatorios de la niñez\n\n\nInvestigación\n25-06-2025\nAvances, definciones EDU, planificación review",
     "crumbs": [
       "<span class='chapter-number'>20</span>  <span class='chapter-title'>Reuniones</span>"
     ]
@@ -523,116 +573,6 @@
     "text": "Agostini, Claudio A, Daniel Hojman, Alonso Román, and Luis Valenzuela.\n2016. “Segregación Residencial de Ingresos En El Gran\nSantiago, 1992-2002: Una Estimación Robusta.”\nEure (Santiago) 42 (127): 159–84.\n\n\nAmato, Paul R, and Sarah E Patterson. 2017. “Single-Parent\nHouseholds and Mortality Among Children and Youth.” Social\nScience Research 63: 253–62.\n\n\nNoelke, C, N McArdle, B DeVoe, M Leonardos, Y Lu, RW Ressler, and D\nAcevedo-Garcia. 2024. “Child Opportunity Index 3.0 Technical\nDocumentation. Diversitydatakids. Org, Brandeis University.”\nRetrieved from Diversitydatakids.\nOrg/Research-Library/Coi-30-Technical-Documentation.",
     "crumbs": [
       "Referencias"
-    ]
-  },
-  {
-    "objectID": "social_y_eco.html#definición",
-    "href": "social_y_eco.html#definición",
-    "title": "Social y Económico",
-    "section": "Definición",
-    "text": "Definición\nEsta dimensión mide la disponibilidad de recursos económicos y sociales en el entorno vecinal que afectan directamente el bienestar y desarrollo de los niños. Incluye indicadores de empleo, ingresos, calidad de vivienda, estructura familiar, redes sociales, y formas de capital económico acumulado, como la propiedad de la vivienda o los ingresos por inversiones.",
-    "crumbs": [
-      "Social y Económico"
-    ]
-  },
-  {
-    "objectID": "social_y_eco.html#dominio-y-sus-indicadores",
-    "href": "social_y_eco.html#dominio-y-sus-indicadores",
-    "title": "Social y Económico",
-    "section": "Dominio y sus indicadores",
-    "text": "Dominio y sus indicadores\n\n\n\n\nTable 1: Dimensión de Condiciones Sociales y Económicas\n\n\n\n\n\n\n\n\n\nDominio\nIndicador\n\n\n\n\nEmpleo\nTasa de Empleo \n\n\nInequidad Socioeconómica Concentrada\nEscolaridad de Jefe de Hogar Jefe de Hogar con Educación Superior  Jefe de Hogar con Educación Secundaria  Jefe de Hogar con Educación Primaria\n\n\nRecursos Habitacionales\nViviendas con Hacinamiento\n\n\nRecursos Sociales\nHogares Uniparentales",
-    "crumbs": [
-      "Social y Económico"
-    ]
-  },
-  {
-    "objectID": "educacion.html#dominios-y-sus-indicadores",
-    "href": "educacion.html#dominios-y-sus-indicadores",
-    "title": "Educación",
-    "section": "Dominios y sus indicadores",
-    "text": "Dominios y sus indicadores\n\n\n\n\nTable 1: Dimensión de Educación\n\n\n\n\n\n\n\n\n\nDominio\nIndicador\n\n\n\n\nEducación Primaria\nInscripción Pública a Pre-Kinder  Inscripción Privada a Pre-Kinder\n\n\nEducación Básica\nPuntajes en pruebas de Lectura y Matemática  Crecimiento en pruebas de Lectura y Matemáticas",
-    "crumbs": [
-      "Educación"
-    ]
-  },
-  {
-    "objectID": "social_y_eco.html#consideraciones-metodológicas",
-    "href": "social_y_eco.html#consideraciones-metodológicas",
-    "title": "Social y Económico",
-    "section": "Consideraciones metodológicas",
-    "text": "Consideraciones metodológicas\nEsta dimensión incluye 7 indicadores agrupados en 4 dominios. Todos los indicadores se estandarizan por (z-score o minmax) cuando se integren y se ajustan para que altos valores siempre indiquen mayor oportunidad. Todos los indicadores se encuentran a nivel de manzana censal, lo que permite evaluaciones territoriales finas.",
-    "crumbs": [
-      "Social y Económico"
-    ]
-  },
-  {
-    "objectID": "social_y_eco.html#consideraciones-conceptuales",
-    "href": "social_y_eco.html#consideraciones-conceptuales",
-    "title": "Social y Económico",
-    "section": "Consideraciones conceptuales",
-    "text": "Consideraciones conceptuales\n\nInterdependencia: Las condiciones económicas y sociales actúan conjuntamente para generar entornos seguros, estimulantes y estables para la infancia.\nMultiescalaridad: Las dinámicas del empleo, la riqueza y el tejido social se manifiestan tanto en lo local (barrio) como en lo estructural (políticas públicas y modelos de desarrollo).\nCapital acumulado vs. fluido: Se distinguen las formas de ingreso inmediato (empleo, transferencias) de aquellas que representan acumulación estructural (propiedad, capital financiero).",
-    "crumbs": [
-      "Social y Económico"
-    ]
-  },
-  {
-    "objectID": "social_y_eco.html#adaptación-al-contexto-nacional-chile",
-    "href": "social_y_eco.html#adaptación-al-contexto-nacional-chile",
-    "title": "Social y Económico",
-    "section": "Adaptación al contexto nacional (Chile)",
-    "text": "Adaptación al contexto nacional (Chile)\nPara la aplicación de la dimensión “Condiciones Sociales y Económicas” del COI en el contexto chileno, se ha optado por una estrategia de adaptación metodológica basada en el uso de fuentes censales nacionales (Censo 2017) y la dimensión Socioeconómica de la Matriz de Bienestar Humano Territorial (MBHT) del Centro de Inteligencia Territorial (CIT-UAI)\nDebido a la estructura del Censo 2017, no fue posible incorporar directamente algunas subdimensiones del COI original, como:\n\nRedes de amistad con movilidad ascendente, ya que no existen datos de interacciones personales o redes sociales a nivel censal en Chile.\nDensidad de organizaciones sin fines de lucro, por falta de una base de datos georreferenciada actualizada de ONGs, juntas vecinales, fundaciones u otras formas de capital social organizado.\n\nSin embargo, se mantiene la validez analítica de esta dimensión al conservar indicadores claves de desigualdad estructural, pobreza, empleo, educación y condiciones habitacionales, todos con fuerte impacto en la infancia y adolescencia.",
-    "crumbs": [
-      "Social y Económico"
-    ]
-  },
-  {
-    "objectID": "s_y_ma.html#definición",
-    "href": "s_y_ma.html#definición",
-    "title": "Salud y M. Ambiente",
-    "section": "Definición",
-    "text": "Definición\nEsta dimensión caracteriza la calidad del ambiente físico y sanitario del vecindario, evaluando tanto riesgos (contaminación, calor, residuos peligrosos) como oportunidades (acceso a áreas verdes, servicios de salud y entornos caminables). Afecta la salud desde etapas tempranas de la vida, incluyendo efectos prenatales, y puede amplificar desigualdades sociales preexistentes.",
-    "crumbs": [
-      "Salud y M. Ambiente"
-    ]
-  },
-  {
-    "objectID": "s_y_ma.html#dominio-y-sus-indicadores",
-    "href": "s_y_ma.html#dominio-y-sus-indicadores",
-    "title": "Salud y M. Ambiente",
-    "section": "Dominio y sus indicadores",
-    "text": "Dominio y sus indicadores\n\n\n\n\nTable 1: Dimensión de Salud y Medio Ambiente\n\n\n\n\n\n\n\n\n\nDominio\nIndicador\n\n\n\n\nEntorno Saludable\nExpocisión Extrema al Calor \n\n\nContaminación\nMicroparticulas del Aire Concentración de Ozono  Contaminantes Industriales en Aire, Agua y Suelo  Índice de Proximidad a Sitios Superfunds",
-    "crumbs": [
-      "Salud y M. Ambiente"
-    ]
-  },
-  {
-    "objectID": "s_y_ma.html#consideraciones-metodológicas",
-    "href": "s_y_ma.html#consideraciones-metodológicas",
-    "title": "Salud y M. Ambiente",
-    "section": "Consideraciones metodológicas",
-    "text": "Consideraciones metodológicas\nLa mayoría de los indicadores provienen de fuentes georreferenciadas de variada resolución espacial, incluyendo sensores remotos (PM2.5, temperatura), modelos ambientales (ozono, riesgo tóxico), y bases de datos públicas y censales. Los indicadores se estandarizan y normalizan para representar oportunidades (valores más altos) o riesgos (valores invertidos).",
-    "crumbs": [
-      "Salud y M. Ambiente"
-    ]
-  },
-  {
-    "objectID": "s_y_ma.html#consideraciones-conceptuales",
-    "href": "s_y_ma.html#consideraciones-conceptuales",
-    "title": "Salud y M. Ambiente",
-    "section": "Consideraciones conceptuales",
-    "text": "Consideraciones conceptuales\n\nCausalidad acumulativa: Las exposiciones ambientales adversas tienden a acumularse en comunidades vulnerables, amplificando impactos en salud infantil.\nEquidad ambiental: La distribución desigual de entornos saludables refleja patrones históricos de planificación urbana, marginación territorial y desinversión.\nInterdependencia: La salud infantil se ve influida por la combinación de factores ecológicos, sanitarios y comunitarios.",
-    "crumbs": [
-      "Salud y M. Ambiente"
-    ]
-  },
-  {
-    "objectID": "s_y_ma.html#adaptación-al-contexto-nacional-chile",
-    "href": "s_y_ma.html#adaptación-al-contexto-nacional-chile",
-    "title": "Salud y M. Ambiente",
-    "section": "Adaptación al contexto nacional (Chile)",
-    "text": "Adaptación al contexto nacional (Chile)\nEn el caso chileno, los indicadores de esta dimensión fueron construidos utilizando una combinación de:\nProductos satelitales de libre acceso\n\nMaterial particulado fino (PM2.5) mediante modelos de regresión geoestadística y validación cruzada.\nTemperaturas extremas y olas de calor. \n\nDatos abiertos del Ministerio del Medio Ambiente (MMA) y sus instituciones\n\nNiveles de ozono troposférico y estaciones de monitoreo de calidad del aire.\nLocalización de sitios contaminados (Sistema RETC).",
-    "crumbs": [
-      "Salud y M. Ambiente"
     ]
   }
 ]
