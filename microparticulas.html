@@ -71,11 +71,54 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -293,6 +336,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#información-general" id="toc-información-general" class="nav-link active" data-scroll-target="#información-general">1. Información General</a></li>
   <li><a href="#conceptualización" id="toc-conceptualización" class="nav-link" data-scroll-target="#conceptualización">2. Conceptualización</a></li>
   <li><a href="#adaptación-metodológica-cit" id="toc-adaptación-metodológica-cit" class="nav-link" data-scroll-target="#adaptación-metodológica-cit">3. Adaptación metodológica CIT</a></li>
+  <li><a href="#formulas-utilizadas" id="toc-formulas-utilizadas" class="nav-link" data-scroll-target="#formulas-utilizadas">3.4 Formulas utilizadas</a></li>
   <li><a href="#resultados-preliminares" id="toc-resultados-preliminares" class="nav-link" data-scroll-target="#resultados-preliminares">4. Resultados preliminares</a></li>
   <li><a href="#interpretación-y-usos-esperados" id="toc-interpretación-y-usos-esperados" class="nav-link" data-scroll-target="#interpretación-y-usos-esperados">5. Interpretación y usos esperados</a></li>
   <li><a href="#consideraciones-supuestos-y-limitaciones" id="toc-consideraciones-supuestos-y-limitaciones" class="nav-link" data-scroll-target="#consideraciones-supuestos-y-limitaciones">6. Consideraciones, supuestos y limitaciones</a></li>
@@ -301,12 +345,12 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./s_y_ma.html">Salud y M. Ambiente</a></li><li class="breadcrumb-item"><a href="./microparticulas.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Micropartículas del Aire</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Micropartículas del Aire</span></h1>
-<p class="subtitle lead">Contaminación: Microparticulas del Aire (MPA)</p>
+<p class="subtitle lead">Contaminación: Exposición a Material Particulado Fino (MP2.5) (MPA)</p>
 </div>
 
 
@@ -334,17 +378,17 @@ ul.task-list li input[type="checkbox"] {
 <section id="ficha-técnica" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="ficha-técnica">Ficha técnica</h4>
 <ul>
-<li><strong>Nombre completo:</strong> Microparticulas del Aire</li>
+<li><strong>Nombre completo:</strong> Exposición a Material Particulado Fino (MP2.5)</li>
 <li><strong>Sigla:</strong> MPA<br>
 </li>
 <li><strong>Dimensión:</strong> Salud y Medio Ambiente</li>
 <li><strong>Dominio:</strong> Contaminación</li>
-<li><strong>Fuente principal de datos:</strong></li>
+<li><strong>Fuente principal de datos:</strong> <a href="https://sinca.mma.gob.cl/">Sistema Nacional de Información de Calidad del Aire</a> (<a href="https://sinca.mma.gob.cl/">SINCA</a>)</li>
 <li><strong>Unidad espacial de análisis:</strong> Manzana censal<br>
 </li>
-<li><strong>Frecuencia temporal:</strong> Anual</li>
-<li><strong>Cobertura temporal del análisis:</strong></li>
-<li><strong>Resolución espacial del insumo:</strong> Puntos</li>
+<li><strong>Frecuencia temporal:</strong> Promedio móvil de 5 años</li>
+<li><strong>Cobertura temporal del análisis:</strong> 2019-2023 (sujeto a disponibilidad)</li>
+<li><strong>Resolución espacial del insumo:</strong> Puntos (Estaciones de Monitoreo)</li>
 <li><strong>Versión actual:</strong> 1.0</li>
 </ul>
 </section>
@@ -382,11 +426,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Entrega de Resultados</td>
-<td style="text-align: center;"><p>🟡</p></td>
+<td style="text-align: center;"><p>✅</p></td>
 </tr>
 <tr class="even">
 <td>Documentación</td>
-<td style="text-align: center;"><p>🟡</p></td>
+<td style="text-align: center;"><p>✅</p></td>
 </tr>
 </tbody>
 </table>
@@ -397,15 +441,19 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="unnumbered anchored" data-anchor-id="conceptualización">2. Conceptualización</h3>
 <section id="definición-del-indicador" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="definición-del-indicador">2.1 Definición del indicador</h4>
-<p>Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).</p>
+<p>El índice MPA representa la exposición promedio de la población infantil a concentraciones de material particulado fino (PM2.5), un contaminante atmosférico asociado a efectos adversos en la salud respiratoria, cardiovascular y neurológica infantil.</p>
 </section>
 <section id="conceptos-relacionados" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="conceptos-relacionados">2.2 Conceptos relacionados</h4>
-<p>Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).</p>
+<ul>
+<li><p><strong>PM2.5</strong>: Partículas con diámetro aerodinámico menor a 2.5 micrones.</p></li>
+<li><p><strong>Interpolación espacial</strong>: Estimación de valores en áreas sin monitoreo directo.</p></li>
+<li><p><strong>Normalización</strong>: Transformación de los datos para comparabilidad territorial.</p></li>
+</ul>
 </section>
 <section id="referente-internacional-coi-3.0" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="referente-internacional-coi-3.0">2.3 Referente internacional (COI 3.0)</h4>
-<p>Breve descripción del indicador original y cómo es usado en el índice de referencia.</p>
+<p>El <a href="https://www.diversitydatakids.org/child-opportunity-index">COI 3.0</a> incluye PM2.5 como uno de los indicadores del subdominio de contaminación. Se utiliza la base de datos de FAQSD<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> de la EPA<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, con promedios anuales interpolados a nivel de tracto censal.</p>
 <hr>
 </section>
 </section>
@@ -413,46 +461,133 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="unnumbered anchored" data-anchor-id="adaptación-metodológica-cit">3. Adaptación metodológica CIT</h3>
 <section id="definición-operacional-adaptada" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="definición-operacional-adaptada">3.1 Definición operacional adaptada</h4>
-<p>Definición clara del indicador tal como será construido para el caso chileno.</p>
+<p>El MPA es un índice continuo entre 0 y 100 que representa la oportunidad ambiental relativa de cada unidad espacial, donde 100 indica mínima exposición a PM2.5.</p>
 </section>
 <section id="insumos-y-fuentes" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="insumos-y-fuentes">3.2 Insumos y fuentes</h4>
-<p>Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.</p>
+<ul>
+<li><a href="https://sinca.mma.gob.cl/">SINCA</a><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>: Datos horarios o diarios de PM2.5 por estación.</li>
+<li><a href="https://www.ine.gob.cl/">INE</a>: Shapefiles de manzanas urbanas.</li>
+</ul>
 </section>
 <section id="pasos-de-cálculo" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="pasos-de-cálculo">3.3 Pasos de cálculo</h4>
-<p>Listar paso a paso el procedimiento con lógica replicable.</p>
+<ol type="1">
+<li>Descargar datos diarios de PM2.5 para los últimos 5 años.</li>
+<li>Calcular promedio anual por estación y luego promedio móvil 5 años.</li>
+<li>Interpolar espacialmente (kriging) a manzanas censales.</li>
+<li>Asignar valores a cada unidad espacial.</li>
+<li>Aplicar winsorización (percentiles 5 y 95).</li>
+<li>Normalizar a escala 0–100.</li>
+<li>Invertir el índice para representar oportunidad ambiental.</li>
+</ol>
+</section>
+</section>
+<section id="formulas-utilizadas" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="formulas-utilizadas">3.4 Formulas utilizadas</h3>
+<p><strong>1. Cálculo del promedio anual por estación.</strong></p>
+<p>A partir de los datos diarios de PM2.5:</p>
+<p><span class="math display">MPA_a(e, y) = \frac{1}{N_{e y}} \sum_{d=1}^{N_{e y}} MPA_d(e, y)</span> Donde:</p>
+<ul>
+<li><span class="math inline">MPA_a(e, y)</span>: Promedio anual para la estación <span class="math inline">e</span> en el año <span class="math inline">y</span><br>
+</li>
+<li><span class="math inline">MPA_d(e, y)</span>: Concentración diaria en el día <span class="math inline">e</span></li>
+<li><span class="math inline">N_{e y}</span>: Número de días válidos en el año <span class="math inline">y</span> para la estación <span class="math inline">e</span></li>
+</ul>
+<p><strong>2. Promedio móvil de 5 años:</strong></p>
+<p><span class="math display">MPA _{5a}(e) = \frac{1}{5}\sum_{d=1}^{y_0+4}MPA_a(e, y)</span> Donde:</p>
+<ul>
+<li>$MPA _{5a}(e) $: Promedio móvil de 5 años para la estación <span class="math inline">e</span>.</li>
+<li><span class="math inline">y_0</span>: Año inicial del período (2019).</li>
+</ul>
+<p><strong>3. Interpolación (IDW):</strong></p>
+<p><span class="math display">\hat{Z}(s_0) = \frac{\sum_{i=1}^n \omega_i Z(s_i)}{\sum_{i=1}^n \omega_i},
+\quad \text{donde} \quad \omega_i = \frac{1}{d(s_0, s_i)^p}</span></p>
+<p>Donde:</p>
+<ul>
+<li><span class="math inline">\hat{Z}(s_0)</span>: Valor estimado en la ubicación <span class="math inline">s_0</span>.</li>
+<li><span class="math inline">Z(s_i)</span>: Valor observado en la estación <span class="math inline">i</span>.</li>
+<li><span class="math inline">d(s_0, s_i)^p</span>: Distancia entre <span class="math inline">s_0</span> y <span class="math inline">s_i</span>.</li>
+<li><span class="math inline">p</span>: Parámetro de potencia (en nuestro caso igual a 2).</li>
+</ul>
+<p><strong>4. Winsorización:</strong> <span class="math display">
+MPA_i^{(winsor)} = \min\left(\max(MPA_i, P_5), P_{95}\right)
+</span> Donde:</p>
+<ul>
+<li><span class="math inline">MPA_{i}</span>: Valor interpolado de PM2.5 para la unidad espacial (i) (manzana censal).<br>
+</li>
+<li><span class="math inline">P_5</span>·: Percentil 5 de la distribución de valores de PM2.5. Representa el valor por debajo del cual se encuentra el 5% más bajo de los datos.<br>
+</li>
+<li><span class="math inline">P_{95}</span>: Percentil 95 de la distribución. Representa el valor por encima del cual se encuentra el 5% más alto de los datos.</li>
+</ul>
+<p><strong>5. Normalización Min-Max:</strong></p>
+<p><span class="math display">
+MPA_i^{(norm)} = 100 \times \frac{MPA_i^{(winsor)} - \min}{\max - \min}
+</span></p>
+<p><strong>6. Inversión:</strong></p>
+<p><span class="math display">
+\text{Oportunidad} = 100 - MPA_i^{(norm)}
+</span></p>
 <hr>
 </section>
-</section>
-<section id="resultados-preliminares" class="level3 unnumbered">
+<section id="resultados-preliminares" class="level3 unnumbered page-columns page-full">
 <h3 class="unnumbered anchored" data-anchor-id="resultados-preliminares">4. Resultados preliminares</h3>
-<ul>
-<li>Imagen o mapa ilustrativo del indicador.</li>
-<li>Tabla resumen si aplica.</li>
-</ul>
+<p>Se generó un mapa (<a href="#fig-mpa" class="quarto-xref"><span>8.1</span></a>) de oportunidad ambiental por manzana censal, donde los valores más altos indican menor exposición a PM2.5.</p>
+<div id="fig-mpa" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-mpa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/mpa_pm2.5.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-mpa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8.1: Resultados de Indicador <strong>Exposición a Material Particulado Fino (MP2.5) (MPA)</strong> convertido en oportunidad ya que se invirtió
+</figcaption>
+</figure>
+</div>
 <hr>
 </section>
 <section id="interpretación-y-usos-esperados" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="interpretación-y-usos-esperados">5. Interpretación y usos esperados</h3>
+<section id="interpretación-de-resultados" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretación-de-resultados">5.1 Interpretación de Resultados</h4>
 <ul>
-<li>¿Qué significa un valor alto o bajo?</li>
-<li>¿Cómo puede ser usado este indicador por tomadores de decisiones?</li>
+<li>Valores altos (cercanos a 100): Baja exposición a PM2.5.</li>
+<li>Valores bajos (cercanos a 0): Alta exposición a PM2.5.</li>
+</ul>
+</section>
+<section id="aplicaciones" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="aplicaciones">5.2 Aplicaciones</h4>
+<ul>
+<li>Priorización territorial de políticas de calidad del aire.</li>
+<li>Integración en índices compuestos de bienestar infantil.</li>
+<li>Evaluación de inequidades ambientales.</li>
 </ul>
 <hr>
+</section>
 </section>
 <section id="consideraciones-supuestos-y-limitaciones" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="consideraciones-supuestos-y-limitaciones">6. Consideraciones, supuestos y limitaciones</h3>
 <ul>
-<li>Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.</li>
+<li>Se asume que la interpolación representa adecuadamente la exposición.</li>
+<li>No se consideran condiciones meteorológicas específicas.</li>
+<li>La calidad del índice depende de la cobertura y continuidad de las estaciones.</li>
 </ul>
 <hr>
 </section>
 <section id="referencias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="referencias">7. Referencias</h3>
-<p>Bibliografía científica, manuales técnicos, artículos base.</p>
+<ul>
+<li>Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., &amp; Acevedo-Garcia, D. (2024). <a href="https://www.diversitydatakids.org/child-opportunity-index"><em>Child Opportunity Index 3.0 Technical Documentation</em></a>.</li>
+</ul>
 
 
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p><a href="https://www.epa.gov/hesc/rsig-related-downloadable-data-files">FAQSD</a>: <a href="https://www.epa.gov/hesc/rsig-related-downloadable-data-files">Fused Air Quality Surface Using Downscaling</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><a href="https://www.epa.gov/">EPA</a>: <a href="https://www.epa.gov/">Environmental Protection Agency (US)</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><a href="https://sinca.mma.gob.cl/">SINCA</a>: <a href="https://sinca.mma.gob.cl/">Sistema Nacional de Información de Calidad del Aire</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
