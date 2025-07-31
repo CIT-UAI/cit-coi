@@ -12,11 +12,11 @@ author: ["{{< var jtreimun.name >}}"]
 -   **Sigla:** {{< var particulas.sigla >}}\
 -   **Dimensión:** {{< var particulas.dimension >}}
 -   **Dominio:** {{< var particulas.dominio >}}
--   **Fuente principal de datos:** 
+-   **Fuente principal de datos:** {{< var sinca.name >}} ({{< var sinca.sigla >}}) 
 -   **Unidad espacial de análisis:** Manzana censal\
--   **Frecuencia temporal:** Anual
--   **Cobertura temporal del análisis:**
--   **Resolución espacial del insumo:** Puntos
+-   **Frecuencia temporal:** Promedio móvil de 5 años
+-   **Cobertura temporal del análisis:** 2019-2023 (sujeto a disponibilidad)
+-   **Resolución espacial del insumo:** Puntos (Estaciones de Monitoreo)
 -   **Versión actual:** 1.0
 
 
@@ -39,46 +39,146 @@ author: ["{{< var jtreimun.name >}}"]
 ### 2. Conceptualización {.unnumbered}
 
 #### 2.1 Definición del indicador {.unnumbered}
-Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).
+
+
+El índice {{< var particulas.sigla >}} representa la exposición promedio de la población infantil a concentraciones de material particulado fino (PM2.5), un contaminante atmosférico asociado a efectos adversos en la salud respiratoria, cardiovascular y neurológica infantil. 
+
+
+
 
 #### 2.2 Conceptos relacionados {.unnumbered}
-Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).
+
+- **PM2.5**: Partículas con diámetro aerodinámico menor a 2.5 micrones. 
+
+- **Interpolación espacial**: Estimación de valores en áreas sin monitoreo directo. 
+
+- **Normalización**: Transformación de los datos para comparabilidad territorial. 
 
 #### 2.3 Referente internacional (COI 3.0) {.unnumbered}
-Breve descripción del indicador original y cómo es usado en el índice de referencia.
+
+El {{< var coi.sname >}} incluye PM2.5 como uno de los indicadores del subdominio de contaminación. Se utiliza la base de datos de FAQSD^[{{< var faqsd.sigla >}}: {{< var faqsd.name >}}] de la EPA^[{{< var epa.sigla >}}: {{< var epa.name >}}], con promedios anuales interpolados a nivel de tracto censal. 
+
 
 ---
 
 ### 3. Adaptación metodológica CIT {.unnumbered}
 
 #### 3.1 Definición operacional adaptada {.unnumbered}
-Definición clara del indicador tal como será construido para el caso chileno.
+
+El {{< var particulas.sigla >}} es un índice continuo entre 0 y 100 que representa la oportunidad ambiental relativa de cada unidad espacial, donde 100 indica mínima exposición a PM2.5. 
 
 #### 3.2 Insumos y fuentes {.unnumbered}
-Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.
+- {{< var sinca.sigla >}}^[{{< var sinca.sigla >}}: {{< var sinca.name >}}]: Datos horarios o diarios de PM2.5 por estación. 
+- {{< var ine.sigla >}}: Shapefiles de manzanas urbanas. 
 
 #### 3.3 Pasos de cálculo {.unnumbered}
-Listar paso a paso el procedimiento con lógica replicable.
+
+1. Descargar datos diarios de PM2.5 para los últimos 5 años. 
+2. Calcular promedio anual por estación y luego promedio móvil 5 años. 
+3. Interpolar espacialmente (kriging) a manzanas censales. 
+4. Asignar valores a cada unidad espacial. 
+5. Aplicar winsorización (percentiles 5 y 95). 
+6. Normalizar a escala 0–100. 
+7. Invertir el índice para representar oportunidad ambiental. 
+
+### 3.4 Formulas utilizadas {.unnumbered}
+
+**1. Cálculo del promedio anual por estación.**
+
+A partir de los datos diarios de PM2.5: 
+
+$$MPA_a(e, y) = \frac{1}{N_{e y}} \sum_{d=1}^{N_{e y}} MPA_d(e, y)$$
+Donde:
+
+- $MPA_a(e, y)$: Promedio anual para la estación $e$ en el año $y$\
+- $MPA_d(e, y)$: Concentración diaria en el día $e$
+- $N_{e y}$: Número de días válidos en el año $y$ para la estación $e$
+
+
+**2. Promedio móvil de 5 años:**
+
+$$MPA _{5a}(e) = \frac{1}{5}\sum_{d=1}^{y_0+4}MPA_a(e, y)$$
+Donde: 
+
+- $MPA _{5a}(e) $: Promedio móvil de 5 años para la estación $e$.
+- $y_0$: Año inicial del período (2019).
+
+
+**3. Interpolación (IDW):**
+
+$$\hat{Z}(s_0) = \frac{\sum_{i=1}^n \omega_i Z(s_i)}{\sum_{i=1}^n \omega_i}, 
+\quad \text{donde} \quad \omega_i = \frac{1}{d(s_0, s_i)^p}$$
+
+Donde:
+
+- $\hat{Z}(s_0)$: Valor estimado en la ubicación $s_0$.
+- $Z(s_i)$: Valor observado en la estación $i$.
+- $d(s_0, s_i)^p$: Distancia entre $s_0$ y $s_i$.
+- $p$: Parámetro de potencia (en nuestro caso igual a 2).
+
+
+**4.	Winsorización:**
+$$
+MPA_i^{(winsor)} = \min\left(\max(MPA_i, P_5), P_{95}\right)
+$$
+Donde:
+
+- $MPA_{i}$: Valor interpolado de PM2.5 para la unidad espacial \(i\) (manzana censal).  
+- $P_5$·: Percentil 5 de la distribución de valores de PM2.5. Representa el valor por debajo del cual se encuentra el 5% más bajo de los datos.  
+- $P_{95}$: Percentil 95 de la distribución. Representa el valor por encima del cual se encuentra el 5% más alto de los datos.
+
+
+
+**5. Normalización Min-Max:**
+
+$$
+MPA_i^{(norm)} = 100 \times \frac{MPA_i^{(winsor)} - \min}{\max - \min}
+$$
+
+
+
+**6. Inversión:**
+
+$$
+\text{Oportunidad} = 100 - MPA_i^{(norm)}
+$$
+
 
 ---
 
 ### 4. Resultados preliminares {.unnumbered}
-- Imagen o mapa ilustrativo del indicador.
-- Tabla resumen si aplica.
+
+Se generó un mapa (-@fig-mpa) de oportunidad ambiental por manzana censal, donde los valores más altos indican menor exposición a PM2.5.
+
+![Resultados de Indicador **{{< var particulas.name >}} ({{< var particulas.sigla >}})** convertido en oportunidad ya que se invirtió](images/mpa_pm2.5.jpg){#fig-mpa}
 
 ---
 
 ### 5. Interpretación y usos esperados {.unnumbered}
-- ¿Qué significa un valor alto o bajo?
-- ¿Cómo puede ser usado este indicador por tomadores de decisiones?
+
+#### 5.1 Interpretación de Resultados {.unnumbered}
+
+-	Valores altos (cercanos a 100): Baja exposición a PM2.5.
+-	Valores bajos (cercanos a 0): Alta exposición a PM2.5.
+
+#### 5.2 Aplicaciones {.unnumbered}
+
+-	Priorización territorial de políticas de calidad del aire.
+-	Integración en índices compuestos de bienestar infantil.
+-	Evaluación de inequidades ambientales.
+
 
 ---
 
 ### 6. Consideraciones, supuestos y limitaciones {.unnumbered}
-- Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.
+
+-	Se asume que la interpolación representa adecuadamente la exposición.
+-	No se consideran condiciones meteorológicas específicas.
+-	La calidad del índice depende de la cobertura y continuidad de las estaciones.
 
 ---
 
 ### 7. Referencias {.unnumbered}
-Bibliografía científica, manuales técnicos, artículos base.
+
+- Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). [*Child Opportunity Index 3.0 Technical Documentation*](https://www.diversitydatakids.org/child-opportunity-index).
 

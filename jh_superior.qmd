@@ -101,10 +101,14 @@ En la figura [-@fig-jhpr] se observa que el indicador {{< var jh_superior.name >
 
 ### 5. Interpretación y usos esperados {.unnumbered}
 
-* **Valor alto de {{< var jh_superior.sigla >}}**: Mayor proporción de hogares con capital humano avanzado → entornos potencialmente más protectores, con mayor acceso a información, vínculos institucionales y aspiraciones educativas elevadas.
-* **Valor bajo de {{< var jh_superior.sigla >}}**: Escasa presencia de adultos con educación superior → posible concentración de barreras estructurales y pobreza educativa intergeneracional.
+#### 5.1 Interpretación de Resultados {.unnumbered}
 
-**Aplicaciones:**
+**Valor alto de {{< var jh_superior.sigla >}}**: Mayor proporción de hogares con capital humano avanzado → entornos potencialmente más protectores, con mayor acceso a información, vínculos institucionales y aspiraciones educativas elevadas.
+
+**Valor bajo de {{< var jh_superior.sigla >}}**: Escasa presencia de adultos con educación superior → posible concentración de barreras estructurales y pobreza educativa intergeneracional.
+
+
+#### 5.2 Aplicaciones {.unnumbered}
 
 * Priorización territorial de políticas de apoyo escolar e inserción universitaria.
 * Segmentación territorial en programas de becas, mentorías o liderazgo comunitario.

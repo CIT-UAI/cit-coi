@@ -90,12 +90,13 @@ En la figura [-@fig-ejh] se observa que el indicador {{< var escolaridad_jh.sigl
 
 ### 5. Interpretación y usos esperados {.unnumbered}
 
-Interpretación:
+#### 5.1 Interpretación de Resultados {.unnumbered}
+
 
 * **Valor alto de {{< var escolaridad_jh.sigla >}}**: Mayor capital educativo del hogar → mayor probabilidad de condiciones favorables para la niñez (estímulo cognitivo, redes de apoyo, aspiraciones educativas).
 * **Valor bajo de {{< var escolaridad_jh.sigla >}}**: Presencia de brechas estructurales en capital cultural → mayor necesidad de políticas de apoyo educativo, tutorías y vinculación comunitaria.
 
-Aplicaciones:
+#### 5.2 Aplicaciones {.unnumbered}
 
 * Priorización de territorios en programas de acompañamiento escolar.
 * Segmentación territorial en políticas de inclusión social.

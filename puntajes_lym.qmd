@@ -39,48 +39,98 @@ author: ["{{< var szuniga.name >}}"]
 ### 2. Conceptualización {.unnumbered}
 
 #### 2.1 Definición del indicador {.unnumbered}
-Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).
 
-#### 2.2 Conceptos relacionados {.unnumbered}
-Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).
+Mide las puntuaciones estandarizadas de las pruebas de matemáticas y lenguaje para el año 2024. 
 
-#### 2.3 Referente internacional (COI 3.0) {.unnumbered}
-Breve descripción del indicador original y cómo es usado en el índice de referencia.
+
+#### 2.2 Referente internacional (COI 3.0) {.unnumbered}
+
+El indicador original, {{< var coi.sname >}}, considera las puntuaciones estandarizadas de las pruebas de matemáticas y lectura/artes del lenguaje, promediadas entre estudiantes, grados, asignaturas y años escolares. Estas estimaciones a nivel escolar están estandarizadas por cohorte y son comparables en todo Estados Unidos. 
+
+Este indicador se utiliza para medir la calidad de las escuelas primarias y está basado en pruebas estandarizadas administradas en escuelas públicas de tercero a octavo grado. 
+
+Además, estas puntuaciones están ajustadas por nivel de pobreza y promediadas entre estudiantes, grados, asignaturas y años escolares. Este ajuste busca eliminar la correlación con la composición socioeconómica del alumnado, abordando la preocupación de que las puntuaciones sin ajustar podrían reflejar principalmente las condiciones familiares en lugar de la calidad escolar. 
+
+El indicador cobra relevancia y aporta a una visión multidimensional de las oportunidades de la niñez debido a que: 
+
+
+> **Evalúa la Competencia Estudiantil y las Oportunidades Educativas**: Las pruebas estandarizadas de matemáticas y lectura/artes del lenguaje miden la competencia de los estudiantes en estas áreas clave. Estas puntuaciones reflejan tanto su capacidad cognitiva y habilidades socioemocionales vinculadas al aprendizaje, como las oportunidades educativas brindadas por las familias, las escuelas y los vecindarios. 
 
 ---
 
 ### 3. Adaptación metodológica CIT {.unnumbered}
 
 #### 3.1 Definición operacional adaptada {.unnumbered}
-Definición clara del indicador tal como será construido para el caso chileno.
+Para el caso chileno, se utilizó los resultados de la prueba, SIMCE, año 2024. Se descargó la base de datos, publicada por la agencia de la calidad de la educación. En específico se utilizaron los datos vinculados a la Región Metropolitana y a los campos:  
 
-#### 3.2 Insumos y fuentes {.unnumbered}
-Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.
+|Nombre del Campo|Descripción|
+|-|-|
+|`prom_lect4b_rbd` |Puntaje promedio del establecimiento en Lectura|
+|`prom_mate4b_rbd` |Puntaje promedio del establecimiento en Matemática|
 
-#### 3.3 Pasos de cálculo {.unnumbered}
-Listar paso a paso el procedimiento con lógica replicable.
+Dichos campos otorgan puntuaciones de las pruebas de matemáticas y lectura/artes del lenguaje para ser promediadas. 
+
+#### 3.2 Pasos de cálculo {.unnumbered}
+
+1. **Georeferenciación**
+
+Como primer paso fue necesario georreferenciar la base de datos, ya que no contaban con la dirección o coordenadas de cada establecimiento. Para poder traspasar los datos a los establecimientos especializados, se realizó una “unión” teniendo como campo común el RBD, con la base de daos del CIT.  
+
+Una vez realizada esta unión fue posible georeferenciar 115 establecimientos, con su respectiva información de los resultados SIMCE. 
+
+2. **Promedio entre las pruebas de lenguaje y matemática**
+
+Luego de especializados los resultados, se calculó el promedio entre las pruebas de matemática y lenguaje. Para hacer dio calculo se tomaron los siguientes campos `prom_lect4b_rbd` y `prom_mate4b_rbd`
+
+3. **Creación de buffer de influencia**
+
+Para cada establecimiento se creó un radio de influencia de 1,5 km, esta distancia se definió, considerando que se trata de una distancia caminable adecuada en contextos urbanos. Esta elección se fundamenta en estándares internacionales que reconocen rangos típicos de 1 km a 2 km como trayectos caminables seguros hacia la escuela. En particular, la UNESCO (2016) señala que _“safe walking distances to school typically range from 1 km to 2 km in urban areas”_ (p. 40), respaldando así el uso de 1,5 km como un valor intermedio representativo para este estudio. 
+
+
+4. **Traspaso de información a manzanas INE**
+
+Una vez realizados las áreas de influencia de cada colegio, se realiza una intersección de la información contenida en los buffers con las mazanas definidas por el INE y se traspasa la información del buffer a las manzanas con las que intersecta. En caso de intersectar con más de un buffer se promedia el resultado de SIMCE de todas las áreas superpuestas. 
+
 
 ---
 
 ### 4. Resultados preliminares {.unnumbered}
-- Imagen o mapa ilustrativo del indicador.
-- Tabla resumen si aplica.
+
+
+El siguiente mapa ([-@fig-pplm]) muestra la distribución del resultado del promedio en las pruebas SIMCE de lenguaje y matemáticas en la Región Metropolitana (RM). Se observa que la mayoría de las comunas en los que se pudieron localizar sus establecimientos, tienen un puntaje promedio en un nivel de aprendizaje “adecuado”, es decir sobre 284 puntos. Por otra parte, cabe señalar que los promedios más altos se concentran en las comunas del sector oriente, frente a que los más bajos se encuentran en comunas más periféricas de la RM. 
+
+![Resultados de Indicador {{< var puntaje_plm.name >}} ({{< var puntaje_plm.sigla >}})**](images/promed_simce.jpg){#fig-pplm}
+
 
 ---
 
 ### 5. Interpretación y usos esperados {.unnumbered}
-- ¿Qué significa un valor alto o bajo?
-- ¿Cómo puede ser usado este indicador por tomadores de decisiones?
+
+#### 5.1 Interpretación de Resultados {.unnumbered}
+
+**Valores altos de {{< var puntaje_plm.sigla >}}:**  Indican que las escuelas cercanas (en un radio de 1,5 km) presentan puntajes SIMCE promedio más altos. Esto sugiere mejores niveles de desempeño académico en Lenguaje y Matemática y, por ende, una mayor calidad educativa potencialmente disponible para los estudiantes residentes en la manzana. 
+
+ 
+
+**Valores bajos {{< var puntaje_plm.sigla >}}:**  indican que, en el entorno cercano (dentro de 1,5 km), los establecimientos educativos presentan puntajes SIMCE promedio más bajos en Lenguaje y Matemática. Esto sugiere menores niveles de desempeño académico esperado en esas áreas fundamentales. 
+
+
+#### 5.2 Aplicaciones {.unnumbered}
+
+Identificar desigualdades territoriales en la calidad educativa accesible, priorizar recursos e intervenciones en áreas con menor desempeño, planificar la expansión de la oferta escolar y coordinar políticas intersectoriales orientadas a reducir brechas. Además, ofrece una herramienta para monitorear de manera continua los avances en equidad educativa y evaluar el impacto de las políticas implementadas en el territorio. 
+
 
 ---
 
 ### 6. Consideraciones, supuestos y limitaciones {.unnumbered}
-- Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.
+
+No se encuentra completa la base de datos georreferenciada, sólo se pudo georreferenciar 115 establecimientos. 
 
 ---
 
 ### 7. Referencias {.unnumbered}
-Bibliografía científica, manuales técnicos, artículos base.
+
+- Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). [*Child Opportunity Index 3.0 Technical Documentation*](https://www.diversitydatakids.org/child-opportunity-index).
 
 
 

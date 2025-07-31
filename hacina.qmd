@@ -98,10 +98,15 @@ En @fig-vch se observan los resultados de **{{< var hacina.name >}} ({{< var hac
 
 ### 5. Interpretación y usos esperados {.unnumbered}
 
+
+#### 5.1 Interpretación de Resultados {.unnumbered}
+
+
 * Valor alto de {{< var hacina.sigla >}} (cercano a 1): Alta suficiencia habitacional → mejores condiciones de desarrollo infantil.
 * Valor bajo de {{< var hacina.sigla >}} (cercano a 0): Alto nivel de hacinamiento → necesidad urgente de intervención.
 
-Aplicaciones:
+
+#### 5.2 Aplicaciones {.unnumbered}
 
   * Diagnóstico territorial en políticas de vivienda.
   * Focalización de programas habitacionales.

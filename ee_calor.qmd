@@ -119,7 +119,13 @@ El mapa presenta la distribución promedio de días de calor extremo a nivel de 
 
 ### 7. Interpretación y usos esperados {.unnumbered}
 
+
+#### 7.1 Interpretación de Resultados {.unnumbered}
+
 Un mayor número de días con calor extremo implica una mayor exposición a riesgos sanitarios como golpes de calor, enfermedades respiratorias y estrés térmico, especialmente para niños, personas mayores y personas con condiciones preexistentes. Este indicador es útil para: 
+
+
+#### 7.2 Aplicaciones {.unnumbered}
 
 * Priorizar zonas que requieren estrategias de adaptación al cambio climático.
 * Informar planes territoriales en salud pública, infraestructura verde y diseño urbano. 

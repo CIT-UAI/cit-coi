@@ -128,12 +128,14 @@ El siguiente mapa ([-@fig-pubPrekinder]) muestra la distribución de la accesibi
 
 ### 5. Interpretación y usos esperados {.unnumbered}
 
+#### 5.1 Interpretación de Resultados {.unnumbered}
 
-* **Valores alto de {{< var pub_prekinder.sigla >}}**: :  Representan una alta oportunidad de acceso a establecimientos de educación que cuenten con nivel medio mayor. 
+* **Valores alto de {{< var pub_prekinder.sigla >}}**: Representan una alta oportunidad de acceso a establecimientos de educación que cuenten con nivel medio mayor. 
 
-* **Valores alto de {{< var pub_prekinder.sigla >}}**:  Indican una baja oportunidad de acceso a los mismos. 
+* **Valores alto de {{< var pub_prekinder.sigla >}}**: Indican una baja oportunidad de acceso a los mismos. 
 
-**Aplicaciones:**
+
+#### 5.2 Aplicaciones {.unnumbered}
 
 Los tomadores de decisiones pueden utilizar este indicador para identificar sectores con baja cobertura de educación preescolar, lo que permite focalizar esfuerzos en aquellos territorios donde el acceso es limitado. A partir de esta información, es posible evaluar la necesidad de ampliar la oferta educativa en educación infantil temprana, ya sea mediante la creación de nuevos establecimientos, el fortalecimiento de la infraestructura existente o la implementación de políticas que promuevan la matrícula en estos niveles. De este modo, el indicador se convierte en una herramienta clave para reducir brechas territoriales y avanzar hacia una mayor equidad educativa. 
 

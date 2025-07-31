@@ -88,9 +88,14 @@ En @fig-hmp se observan los resultados de {{< var monopar.name >}} ({{< var mono
 
 ### 5. Interpretación y usos esperados {.unnumbered}
 
+#### 5.1 Interpretación de Resultados {.unnumbered}
+
 * **Valor alto del {{< var monopar.sigla >}}**: Mayor proporción de hogares no uniparentales → mayor resiliencia estructural esperada.
 * **Valor bajo del {{< var monopar.sigla >}}**: Alta concentración de hogares uniparentales → mayor vulnerabilidad social.
-* **Aplicaciones**: Identificación de zonas prioritarias para intervención social, apoyo a la infancia, planificación de programas de apoyo familiar y diagnóstico territorial.
+
+#### 5.2 Aplicaciones {.unnumbered}
+
+* Identificación de zonas prioritarias para intervención social, apoyo a la infancia, planificación de programas de apoyo familiar y diagnóstico territorial.
 
 ------------------------------------------------------------------------
 

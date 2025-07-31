@@ -11,11 +11,11 @@ author: ["{{< var jtreimun.name >}}"]
 -   **Sigla:** {{< var ozono.sigla >}}\
 -   **Dimensión:** {{< var ozono.dimension >}}
 -   **Dominio:** {{< var ozono.dominio >}}
--   **Fuente principal de datos:** 
+-   **Fuente principal de datos:** {{< var sinca.name >}} ({{< var sinca.sigla >}}) 
 -   **Unidad espacial de análisis:** Manzana censal\
--   **Frecuencia temporal:** Anual
--   **Cobertura temporal del análisis:**
--   **Resolución espacial del insumo:** Puntos
+-   **Frecuencia temporal:** Anual (Promedio móvil de 5 años)
+-   **Cobertura temporal del análisis:** 2019-2023 (sujeto a disponibilidad por estación)
+-   **Resolución espacial del insumo:** Puntos (Estaciones de Monitoreo)
 -   **Versión actual:** 1.0
 
 
@@ -38,46 +38,159 @@ author: ["{{< var jtreimun.name >}}"]
 ### 2. Conceptualización {.unnumbered}
 
 #### 2.1 Definición del indicador {.unnumbered}
-Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).
+
+El índice  {{< var ozono.sigla >}} representa la exposición promedio de la población infantil a concentraciones de ozono troposférico, un contaminante secundario que se forma por reacciones fotoquímicas y que afecta la salud respiratoria, especialmente en niños, niñas y adolescentes. 
+
+
+
 
 #### 2.2 Conceptos relacionados {.unnumbered}
-Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).
+
+- **Ozono troposférico ($O_3$):** Gas contaminante formado por reacciones entre $NO_x$ y compuestos orgánicos volátiles en presencia de radiación solar.  
+- **Promedio móvil de 8 horas:** Estándar internacional para evaluar exposición a $O_3$.  
+- **Interpolación espacial:** Estimación de valores en áreas sin monitoreo directo.
 
 #### 2.3 Referente internacional (COI 3.0) {.unnumbered}
-Breve descripción del indicador original y cómo es usado en el índice de referencia.
+
+El Child Opportunity Index ({{< var coi.sname >}})  incluye el ozono como indicador del subdominio de contaminación, utilizando datos de la FAQSD^[{{< var faqsd.sigla >}}: {{< var faqsd.name >}}] de la EPA^[{{< var epa.sigla >}}: {{< var epa.name >}}] con promedios anuales del máximo diario de 8 horas, interpolados a nivel de tracto censal.
+
+
 
 ---
 
 ### 3. Adaptación metodológica CIT {.unnumbered}
 
 #### 3.1 Definición operacional adaptada {.unnumbered}
-Definición clara del indicador tal como será construido para el caso chileno.
+
+Índice continuo entre 0 y 100 que representa la oportunidad ambiental relativa. Un valor de 100 indica mínima exposición a ozono.
+
 
 #### 3.2 Insumos y fuentes {.unnumbered}
-Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.
+
+- {{< var sinca.sigla >}}^[{{< var sinca.sigla >}}: {{< var sinca.name >}}]: Datos horarios o diarios de PM2.5 por estación. 
+- {{< var ine.sigla >}}: Shapefiles  de Zonas censales o manzanas urbanas. 
 
 #### 3.3 Pasos de cálculo {.unnumbered}
-Listar paso a paso el procedimiento con lógica replicable.
+
+1. Descargar datos horarios de O₃ (últimos 5 años).  
+2. Calcular el promedio diario del máximo móvil de 8 horas por estación.  
+3. Calcular el promedio anual y luego el promedio móvil de 5 años.  
+4. Interpolar espacialmente a manzanas censales (kriging).  
+5. Asignar valores a cada unidad espacial.  
+6. Aplicar winsorización (percentiles 5 y 95).  
+7. Normalizar a escala 0–100.  
+8. Invertir el índice (100 - valor normalizado).
+
+#### 3.4 Fómulas {.unnumbered}
+
+**Promedio móvil 8 horas:**
+
+  $$
+  COZ_{8h}(d) = \max_{t \in [0,16]} \left( \frac{1}{8} \sum_{k=0}^{7} COZ(d, t + k) \right)
+$$
+
+- $COZ_{8h}(d)$: Valor del promedio móvil de 8 horas para el día $d$  
+- $COZ(d, t + k)$: Concentración horaria de ozono en la hora $t+k$ del día $d$  
+- $t \in [0,16]$: Se evalúan todas las ventanas de 8 horas posibles dentro del día (de 00:00 a 23:00).
+- Se calcula el promedio de cada ventana de 8 horas y se selecciona el máximo de esos promedios.
+
+
+**Promedio anual:**
+
+  $$
+  COZ_{anual} = \frac{1}{N} \sum_{d=1}^{N} COZ_{8h}(d)
+$$
+
+
+- $N$: Número de días válidos del año  
+- $COZ_{8h}(d)$: Máximo promedio móvil de 8 horas en el día $d$
+
+
+**Promedio móvil 5 años:**
+
+  $$
+  COZ_{movil5} = \frac{1}{5} \sum_{y=1}^{5} COZ_{anual}(y)
+$$
+
+- $COZ_{anual}(y)$: Promedio anual para el año $y$
+
+
+**Interpolación Inversa Ponderada (IDW):**
+
+  $$
+  \hat{Z}(s_0) = \frac{\sum_{i=1}^{n} w_i Z(s_i)}{\sum_{i=1}^{n} w_i}, \quad w_i = \frac{1}{d(s_0, s_i)^2}
+$$
+
+- $\hat{Z}(s_0)$: Valor estimado en la ubicación $s_0$  
+- $Z(s_i)$: Valor observado en la estación $i$  
+- $d(s_0, s_i)$: Distancia entre la ubicación $s_0$ y la estación $s_i$  
+- $p$: Potencia del inverso de la distancia (en este caso $p = 2$)
+
+
+**Winsorización:**
+
+  $$
+  COZ_{winsos}(i) = \min(\max(COZ_{5a}(i), P_5), P_{95})
+$$
+
+
+- $COZ_{5a}(i)$: Valor del promedio móvil de 5 años para la unidad espacial $i$.
+- $P_5$, $P_{95}$: Percentiles 5 y 95 de la distribución de valores
+
+**Normalización Min-Max:**
+
+  $$
+  COZ_{norm}(i) = 100 \times \frac{COZ_{winsor}(i) - \min}{\max - \min}
+$$
+
+- $\min$, $\max$: Valores mínimo y máximo del conjunto ya winsorizado
+
+
+**Inversión:**
+
+  $$
+  Oportunidad(i) = 100 - COZ_{norm}(i)
+$$
+
+- $Oportunidad(i)$: Índice de oportunidad ambiental para la unidad espacial $i$
 
 ---
 
 ### 4. Resultados preliminares {.unnumbered}
-- Imagen o mapa ilustrativo del indicador.
-- Tabla resumen si aplica.
+
+
+Se generó un mapa (-@fig-ozo) de oportunidad ambiental por manzana censal. Valores más altos indican menor exposición a ozono.
+
+
+![Resultados de Indicador **{{< var ozono.name >}} ({{< var ozono.sigla >}})** convertido en oportunidad ya que se invirtió](images/ozono.png){#fig-ozo}
+
 
 ---
 
 ### 5. Interpretación y usos esperados {.unnumbered}
-- ¿Qué significa un valor alto o bajo?
-- ¿Cómo puede ser usado este indicador por tomadores de decisiones?
+
+#### 5.1 Interpretación de Resultados {.unnumbered}
+
+- **Valores altos (cercanos a 100):** Baja exposición a O₃  
+- **Valores bajos (cercanos a 0):** Alta exposición a O₃  
+
+
+#### 5.2 Aplicaciones {.unnumbered}
+
+- Priorización territorial en políticas de calidad del aire  
+- Integración en índices compuestos de bienestar infantil  
+- Evaluación de inequidades ambientales
 
 ---
 
 ### 6. Consideraciones, supuestos y limitaciones {.unnumbered}
-- Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.
-
+- Se asume que el promedio de 8 horas representa adecuadamente la exposición.  
+- No se consideran condiciones meteorológicas ni topografía.  
+- Calidad del índice depende de la cobertura y continuidad de las estaciones.  
+- No se modelan fuentes precursoras ni reacciones químicas.
 ---
 
 ### 7. Referencias {.unnumbered}
-Bibliografía científica, manuales técnicos, artículos base.
+
+- Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). [*Child Opportunity Index 3.0 Technical Documentation*](https://www.diversitydatakids.org/child-opportunity-index).
 

@@ -53,6 +53,18 @@ mma:
   name: "[Ministerio del Medio Ambiente](https://mma.gob.cl/)"
   sigla: "[MMA](https://mma.gob.cl/)"
   
+sinca:
+  name: "[Sistema Nacional de Información de Calidad del Aire](https://sinca.mma.gob.cl/)"
+  sigla: "[SINCA](https://sinca.mma.gob.cl/)"
+
+epa:
+  name: "[Environmental Protection Agency (US)](https://www.epa.gov/)"
+  sigla: "[EPA](https://www.epa.gov/)"
+
+faqsd: 
+  name: "[Fused Air Quality Surface Using Downscaling](https://www.epa.gov/hesc/rsig-related-downloadable-data-files)"
+  sigla: "[FAQSD](https://www.epa.gov/hesc/rsig-related-downloadable-data-files)"
+
 sernageomin:
   name: "[Servicio Nacional de Geología y Minería](https://www.sernageomin.cl/)"
   sigla: "[SERNAGEOMIN](https://www.sernageomin.cl/)"
@@ -115,10 +127,10 @@ puntaje_plm:
   dominio: "Educación Básica"
   diseno: "✅"
   insumos: "✅"
-  calculo: "🟡"
-  validacion: "🟡"
-  resultados: "🟡"
-  documentacion: "🟡"
+  calculo: "✅"
+  validacion: "✅"
+  resultados: "✅"
+  documentacion: "✅"
   error: "❌"
   iniciado: "🟡"
   
@@ -129,10 +141,10 @@ crecimiento_plm:
   dominio: "Educación Básica"
   diseno: "✅"
   insumos: "✅"
-  calculo: "🟡"
-  validacion: "🟡"
-  resultados: "🟡"
-  documentacion: "🟡"
+  calculo: "✅"
+  validacion: "✅"
+  resultados: "✅"
+  documentacion: "✅"
   error: "❌"
   iniciado: "🟡"
 
@@ -152,7 +164,7 @@ icalor:
   iniciado: "🟡"
   
 particulas:
-  name: "Microparticulas del Aire"
+  name: "Exposición a Material Particulado Fino (MP2.5)"
   sigla: "MPA"
   dimension: "Salud y Medio Ambiente"
   dominio: "Contaminación"
@@ -160,8 +172,8 @@ particulas:
   insumos: "✅"
   calculo: "✅"
   validacion: "✅"
-  resultados: "🟡"
-  documentacion: "🟡"
+  resultados: "✅"
+  documentacion: "✅"
   error: "❌"
   iniciado: "🟡"
 
@@ -174,8 +186,8 @@ ozono:
   insumos: "✅"
   calculo: "✅"
   validacion: "✅"
-  resultados: "🟡"
-  documentacion: "🟡"
+  resultados: "✅"
+  documentacion: "✅"
   error: "❌"
   iniciado: "🟡"
 
@@ -188,8 +200,8 @@ industriales:
   insumos: "✅"
   calculo: "✅"
   validacion: "✅"
-  resultados: "🟡"
-  documentacion: "🟡"
+  resultados: "✅"
+  documentacion: "✅"
   error: "❌"
   iniciado: "🟡"
 

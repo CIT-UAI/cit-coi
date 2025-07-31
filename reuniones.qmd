@@ -16,10 +16,10 @@ author: ["{{< var dberroeta.name >}}"]
 | Investigación| 20-05-2025  | Consolidar insumos                 |
 | Estudios     | 29-05-2025  | Estado administrativo y avances    |
 | Investigación| 04-06-2025  | Avances y deathline 12-06-2025     |
-| Investigación| 12-06-2025  | Avances definciones metodológicas EDU  |
-| Investigación| 18-06-2025  | Avances y documentación            |
-| Estudios     | 18-06-2025  | Revisión de Observatorios de la niñez    |
-| Investigación| 25-06-2025  | Avances, definciones EDU,  planificación review     |
+| Investigación| 12-06-2025  | Avances definiciones metodológicas EDU  |
+| Investigación| 18-06-2025  | Revisión de Avances y documentación |
+| Estudios     | 18-06-2025  | Revisión de [Observatorios de la niñez](https://www.observatorioninez.org/temasejes)    |
+| Investigación| 25-06-2025  | Avances, definiciones EDU,  planificación review     |
 
 : Registro de Reuniones
 :::

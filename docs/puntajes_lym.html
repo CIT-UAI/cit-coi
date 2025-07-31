@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -301,7 +301,7 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./educacion.html">Educación</a></li><li class="breadcrumb-item"><a href="./puntajes_lym.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Puntaje Lec. y Mat.</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -374,19 +374,19 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td>Cálculo de Indicador</td>
-<td style="text-align: center;"><p>🟡</p></td>
+<td style="text-align: center;"><p>✅</p></td>
 </tr>
 <tr class="even">
 <td>Validación de Resultados</td>
-<td style="text-align: center;"><p>🟡</p></td>
+<td style="text-align: center;"><p>✅</p></td>
 </tr>
 <tr class="odd">
 <td>Entrega de Resultados</td>
-<td style="text-align: center;"><p>🟡</p></td>
+<td style="text-align: center;"><p>✅</p></td>
 </tr>
 <tr class="even">
 <td>Documentación</td>
-<td style="text-align: center;"><p>🟡</p></td>
+<td style="text-align: center;"><p>✅</p></td>
 </tr>
 </tbody>
 </table>
@@ -397,15 +397,17 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="unnumbered anchored" data-anchor-id="conceptualización">2. Conceptualización</h3>
 <section id="definición-del-indicador" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="definición-del-indicador">2.1 Definición del indicador</h4>
-<p>Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).</p>
-</section>
-<section id="conceptos-relacionados" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="conceptos-relacionados">2.2 Conceptos relacionados</h4>
-<p>Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).</p>
+<p>Mide las puntuaciones estandarizadas de las pruebas de matemáticas y lenguaje para el año 2024.</p>
 </section>
 <section id="referente-internacional-coi-3.0" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="referente-internacional-coi-3.0">2.3 Referente internacional (COI 3.0)</h4>
-<p>Breve descripción del indicador original y cómo es usado en el índice de referencia.</p>
+<h4 class="unnumbered anchored" data-anchor-id="referente-internacional-coi-3.0">2.2 Referente internacional (COI 3.0)</h4>
+<p>El indicador original, <a href="https://www.diversitydatakids.org/child-opportunity-index">COI 3.0</a>, considera las puntuaciones estandarizadas de las pruebas de matemáticas y lectura/artes del lenguaje, promediadas entre estudiantes, grados, asignaturas y años escolares. Estas estimaciones a nivel escolar están estandarizadas por cohorte y son comparables en todo Estados Unidos.</p>
+<p>Este indicador se utiliza para medir la calidad de las escuelas primarias y está basado en pruebas estandarizadas administradas en escuelas públicas de tercero a octavo grado.</p>
+<p>Además, estas puntuaciones están ajustadas por nivel de pobreza y promediadas entre estudiantes, grados, asignaturas y años escolares. Este ajuste busca eliminar la correlación con la composición socioeconómica del alumnado, abordando la preocupación de que las puntuaciones sin ajustar podrían reflejar principalmente las condiciones familiares en lugar de la calidad escolar.</p>
+<p>El indicador cobra relevancia y aporta a una visión multidimensional de las oportunidades de la niñez debido a que:</p>
+<blockquote class="blockquote">
+<p><strong>Evalúa la Competencia Estudiantil y las Oportunidades Educativas</strong>: Las pruebas estandarizadas de matemáticas y lectura/artes del lenguaje miden la competencia de los estudiantes en estas áreas clave. Estas puntuaciones reflejan tanto su capacidad cognitiva y habilidades socioemocionales vinculadas al aprendizaje, como las oportunidades educativas brindadas por las familias, las escuelas y los vecindarios.</p>
+</blockquote>
 <hr>
 </section>
 </section>
@@ -413,44 +415,87 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="unnumbered anchored" data-anchor-id="adaptación-metodológica-cit">3. Adaptación metodológica CIT</h3>
 <section id="definición-operacional-adaptada" class="level4 unnumbered">
 <h4 class="unnumbered anchored" data-anchor-id="definición-operacional-adaptada">3.1 Definición operacional adaptada</h4>
-<p>Definición clara del indicador tal como será construido para el caso chileno.</p>
-</section>
-<section id="insumos-y-fuentes" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="insumos-y-fuentes">3.2 Insumos y fuentes</h4>
-<p>Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.</p>
+<p>Para el caso chileno, se utilizó los resultados de la prueba, SIMCE, año 2024. Se descargó la base de datos, publicada por la agencia de la calidad de la educación. En específico se utilizaron los datos vinculados a la Región Metropolitana y a los campos:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Nombre del Campo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>prom_lect4b_rbd</code></td>
+<td>Puntaje promedio del establecimiento en Lectura</td>
+</tr>
+<tr class="even">
+<td><code>prom_mate4b_rbd</code></td>
+<td>Puntaje promedio del establecimiento en Matemática</td>
+</tr>
+</tbody>
+</table>
+<p>Dichos campos otorgan puntuaciones de las pruebas de matemáticas y lectura/artes del lenguaje para ser promediadas.</p>
 </section>
 <section id="pasos-de-cálculo" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="pasos-de-cálculo">3.3 Pasos de cálculo</h4>
-<p>Listar paso a paso el procedimiento con lógica replicable.</p>
+<h4 class="unnumbered anchored" data-anchor-id="pasos-de-cálculo">3.2 Pasos de cálculo</h4>
+<ol type="1">
+<li><strong>Georeferenciación</strong></li>
+</ol>
+<p>Como primer paso fue necesario georreferenciar la base de datos, ya que no contaban con la dirección o coordenadas de cada establecimiento. Para poder traspasar los datos a los establecimientos especializados, se realizó una “unión” teniendo como campo común el RBD, con la base de daos del CIT.</p>
+<p>Una vez realizada esta unión fue posible georeferenciar 115 establecimientos, con su respectiva información de los resultados SIMCE.</p>
+<ol start="2" type="1">
+<li><strong>Promedio entre las pruebas de lenguaje y matemática</strong></li>
+</ol>
+<p>Luego de especializados los resultados, se calculó el promedio entre las pruebas de matemática y lenguaje. Para hacer dio calculo se tomaron los siguientes campos <code>prom_lect4b_rbd</code> y <code>prom_mate4b_rbd</code></p>
+<ol start="3" type="1">
+<li><strong>Creación de buffer de influencia</strong></li>
+</ol>
+<p>Para cada establecimiento se creó un radio de influencia de 1,5 km, esta distancia se definió, considerando que se trata de una distancia caminable adecuada en contextos urbanos. Esta elección se fundamenta en estándares internacionales que reconocen rangos típicos de 1 km a 2 km como trayectos caminables seguros hacia la escuela. En particular, la UNESCO (2016) señala que <em>“safe walking distances to school typically range from 1 km to 2 km in urban areas”</em> (p. 40), respaldando así el uso de 1,5 km como un valor intermedio representativo para este estudio.</p>
+<ol start="4" type="1">
+<li><strong>Traspaso de información a manzanas INE</strong></li>
+</ol>
+<p>Una vez realizados las áreas de influencia de cada colegio, se realiza una intersección de la información contenida en los buffers con las mazanas definidas por el INE y se traspasa la información del buffer a las manzanas con las que intersecta. En caso de intersectar con más de un buffer se promedia el resultado de SIMCE de todas las áreas superpuestas.</p>
 <hr>
 </section>
 </section>
-<section id="resultados-preliminares" class="level3 unnumbered">
+<section id="resultados-preliminares" class="level3 unnumbered page-columns page-full">
 <h3 class="unnumbered anchored" data-anchor-id="resultados-preliminares">4. Resultados preliminares</h3>
-<ul>
-<li>Imagen o mapa ilustrativo del indicador.</li>
-<li>Tabla resumen si aplica.</li>
-</ul>
+<p>El siguiente mapa (<a href="#fig-pplm" class="quarto-xref"><span>6.1</span></a>) muestra la distribución del resultado del promedio en las pruebas SIMCE de lenguaje y matemáticas en la Región Metropolitana (RM). Se observa que la mayoría de las comunas en los que se pudieron localizar sus establecimientos, tienen un puntaje promedio en un nivel de aprendizaje “adecuado”, es decir sobre 284 puntos. Por otra parte, cabe señalar que los promedios más altos se concentran en las comunas del sector oriente, frente a que los más bajos se encuentran en comunas más periféricas de la RM.</p>
+<div id="fig-pplm" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-pplm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/promed_simce.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-pplm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.1: Resultados de Indicador Puntajes en pruebas de Lectura y Matemática (PPLM)**
+</figcaption>
+</figure>
+</div>
 <hr>
 </section>
 <section id="interpretación-y-usos-esperados" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="interpretación-y-usos-esperados">5. Interpretación y usos esperados</h3>
-<ul>
-<li>¿Qué significa un valor alto o bajo?</li>
-<li>¿Cómo puede ser usado este indicador por tomadores de decisiones?</li>
-</ul>
+<section id="interpretación-de-resultados" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="interpretación-de-resultados">5.1 Interpretación de Resultados</h4>
+<p><strong>Valores altos de PPLM:</strong> Indican que las escuelas cercanas (en un radio de 1,5 km) presentan puntajes SIMCE promedio más altos. Esto sugiere mejores niveles de desempeño académico en Lenguaje y Matemática y, por ende, una mayor calidad educativa potencialmente disponible para los estudiantes residentes en la manzana.</p>
+<p><strong>Valores bajos PPLM:</strong> indican que, en el entorno cercano (dentro de 1,5 km), los establecimientos educativos presentan puntajes SIMCE promedio más bajos en Lenguaje y Matemática. Esto sugiere menores niveles de desempeño académico esperado en esas áreas fundamentales.</p>
+</section>
+<section id="aplicaciones" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="aplicaciones">5.2 Aplicaciones</h4>
+<p>Identificar desigualdades territoriales en la calidad educativa accesible, priorizar recursos e intervenciones en áreas con menor desempeño, planificar la expansión de la oferta escolar y coordinar políticas intersectoriales orientadas a reducir brechas. Además, ofrece una herramienta para monitorear de manera continua los avances en equidad educativa y evaluar el impacto de las políticas implementadas en el territorio.</p>
 <hr>
+</section>
 </section>
 <section id="consideraciones-supuestos-y-limitaciones" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="consideraciones-supuestos-y-limitaciones">6. Consideraciones, supuestos y limitaciones</h3>
-<ul>
-<li>Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.</li>
-</ul>
+<p>No se encuentra completa la base de datos georreferenciada, sólo se pudo georreferenciar 115 establecimientos.</p>
 <hr>
 </section>
 <section id="referencias" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="referencias">7. Referencias</h3>
-<p>Bibliografía científica, manuales técnicos, artículos base.</p>
+<ul>
+<li>Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., &amp; Acevedo-Garcia, D. (2024). <a href="https://www.diversitydatakids.org/child-opportunity-index"><em>Child Opportunity Index 3.0 Technical Documentation</em></a>.</li>
+</ul>
 
 
 </section>

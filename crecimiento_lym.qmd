@@ -11,8 +11,8 @@ author: ["{{< var szuniga.name >}}"]
 -   **Nombre completo:** {{< var crecimiento_plm.name >}}
 -   **Sigla:** {{< var crecimiento_plm.sigla >}}\
 -   **Dimensión:** {{< var crecimiento_plm.dimension >}}
--   **Dominio:** {{< var crecimiento_plm.dominio >}}
--   **Fuente principal de datos:** 
+-   **Dominio:** {{< var crecimiento_plm.dominio >}}\
+-   **Fuente principal de datos:** \
 -   **Unidad espacial de análisis:** Manzana censal\
 -   **Frecuencia temporal:** Anual
 -   **Cobertura temporal del análisis:**
@@ -38,49 +38,99 @@ author: ["{{< var szuniga.name >}}"]
 
 ### 2. Conceptualización {.unnumbered}
 
+
 #### 2.1 Definición del indicador {.unnumbered}
-Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).
 
-#### 2.2 Conceptos relacionados {.unnumbered}
-Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).
+Mide el crecimiento puntuaciones estandarizadas de las pruebas de matemáticas y lenguaje para el año 2024. 
 
-#### 2.3 Referente internacional (COI 3.0) {.unnumbered}
-Breve descripción del indicador original y cómo es usado en el índice de referencia.
+
+#### 2.2 Referente internacional (COI 3.0) {.unnumbered}
+
+Este indicador hace referencia al crecimiento de las puntuaciones estandarizadas de las pruebas de matemáticas y lectura/artes del lenguaje, promediado entre estudiantes, grados, asignaturas y años escolares. Estas estimaciones están estandarizadas por cohorte y son comparables en todo el país. Este indicador se incluye porque es una mejor medida de la calidad escolar y está muy débilmente correlacionado con la composición socioeconómica de los estudiantes. 
+
+Este indicador junto con los otros dos indicadores de educación, se utilizan para medir la calidad de las escuelas primarias y están basados en pruebas estandarizadas administradas en escuelas públicas de tercero a octavo grado. Se agrupan en el subdominio de Educación Elemental, el cual, junto con otros subdominios, contribuye a la puntuación general del {{< var coi.sname >}}
+
+El indicador cobra relevancia y aporta a una visión multidimensional de las oportunidades de la niñez debido a que: 
+
+> **Mide la Calidad Escolar**: Las escuelas son un factor clave para el aprendizaje. Las puntuaciones de estas pruebas son una métrica importante para capturar la calidad escolar, ya que la variación en la calidad entre escuelas probablemente contribuye a la diferencia en el desempeño estudiantil entre establecimientos y distritos. 
 
 ---
 
 ### 3. Adaptación metodológica CIT {.unnumbered}
 
 #### 3.1 Definición operacional adaptada {.unnumbered}
-Definición clara del indicador tal como será construido para el caso chileno.
 
-#### 3.2 Insumos y fuentes {.unnumbered}
-Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.
+Para el caso chileno, se utilizó los resultados de la prueba, SIMCE, año 2024.  
 
-#### 3.3 Pasos de cálculo {.unnumbered}
-Listar paso a paso el procedimiento con lógica replicable.
+Se descargó la base de datos, publicada por la agencia de la calidad de la educación. En específico se utilizaron los datos vinculados a la Región Metropolitana y a los campos:  
+
+|Nombre del Campo|Descripción|
+|-|-|
+|`dif_lect4b_rbd` |Diferencia respecto al año anterior en Lectura |
+|`dif_mate4b_rbd` |Diferencia con respecto al mismo GSE en Matemática|
+
+Dichos campos otorgan la diferencia de las pruebas de matemáticas y lectura/artes del lenguaje las que serán utilizadas para ser promediadas.
+
+#### 3.2 Pasos de cálculo {.unnumbered}
+
+1. **Georeferenciación **
+
+Como primer paso fue necesario georreferenciar la base de datos, ya que no contaban con la dirección o coordenadas de cada establecimiento. Para poder traspasar los datos a los establecimientos especializados, se realizó una “unión” teniendo como campo común el RBD, con la base de daos del CIT.  
+
+Una vez realizada esta unión fue posible georeferenciar 115 establecimientos, con su respectiva información de los resultados de las diferencias SIMCE. 
+
+
+2. **Promedio entre las pruebas de lenguaje y matemática**
+
+Luego de especializados los resultados, se calculó el promedio entre las diferencias de las pruebas de matemática y lenguaje. 
+
+3. **Creación de buffer de influencia**
+
+Para cada establecimiento se creó un radio de influencia de 1,5 km, esta distancia se definió, considerando que se trata de una distancia caminable adecuada en contextos urbanos. Esta elección se fundamenta en estándares internacionales que reconocen rangos típicos de 1 km a 2 km como trayectos caminables seguros hacia la escuela. En particular, la UNESCO (2016) señala que “_safe walking distances to school typically range from 1 km to 2 km in urban areas_” (p. 40), respaldando así el uso de 1,5 km como un valor intermedio representativo para este estudio. 
+
+4. **Traspaso de información a manzanas INE **
+
+Una vez realizados las áreas de influencia de cada colegio, se realiza una intersección de la información contenida en los buffers con las mazanas definidas por el INE y se traspasa la información del buffer a las manzanas con las que intersecta. En caso de intersectar con más de un buffer se promedia la diferencia de los de SIMCE con la del año anterior de todas las áreas superpuestas. 
+
 
 ---
 
 ### 4. Resultados preliminares {.unnumbered}
-- Imagen o mapa ilustrativo del indicador.
-- Tabla resumen si aplica.
+
+El siguiente mapa [-@fig-creci] muestra la distribución del resultado del promedio en el crecimiento de las pruebas SIMCE de lenguaje y matemáticas en la Región Metropolitana en comparación al año anterior. Se observa que la mayoría de las comunas en los que se pudieron localizar sus establecimientos, tienen un crecimiento positivo, es decir mejoraron en su desempeño al compararlo con el año anterior. 
+
+![Resultados de Indicador **{{< var crecimiento_plm.name >}} ({{< var crecimiento_plm.sigla >}})**](images/difmedi_simce.jpg){#fig-creci}
+
+
 
 ---
 
 ### 5. Interpretación y usos esperados {.unnumbered}
-- ¿Qué significa un valor alto o bajo?
-- ¿Cómo puede ser usado este indicador por tomadores de decisiones?
+
+#### 5.1 Interpretación de Resultados {.unnumbered}
+
+
+**Valores altos de {{< var crecimiento_plm.sigla >}}**:  Señalan que los establecimientos cercanos exhiben mayores mejoras en sus puntajes SIMCE respecto al año anterior. Esto sugiere avances en el aprendizaje y mejor desempeño escolar 
+
+**Valores bajos {{< var crecimiento_plm.sigla >}}**: los establecimientos educativos presentan menores mejoras o incluso retrocesos en los puntajes SIMCE de Matemática y Lenguaje en comparación con el año anterior 
+
+
+
+#### 5.2 Aplicaciones {.unnumbered}
+
+Este indicador permite identificar áreas donde los establecimientos muestran menores mejoras en resultados educativos, priorizando así recursos y estrategias de apoyo pedagógico en territorios con mayores desafíos. Además, facilita planificar intervenciones focalizadas para fortalecer la calidad educativa, monitorear la efectividad de políticas implementadas y promover una distribución más equitativa de oportunidades de aprendizaje en la región. 
 
 ---
 
 ### 6. Validación, supuestos y limitaciones {.unnumbered}
-- Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.
+
+No se encuentra completa la base de datos georreferenciada, sólo se pudo georreferenciar 115 establecimientos. 
 
 ---
 
 ### 7. Referencias {.unnumbered}
-Bibliografía científica, manuales técnicos, artículos base.
+
+- Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). [*Child Opportunity Index 3.0 Technical Documentation*](https://www.diversitydatakids.org/child-opportunity-index).
 
 
 

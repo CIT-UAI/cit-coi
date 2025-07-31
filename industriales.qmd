@@ -12,11 +12,11 @@ author: ["{{< var jtreimun.name >}}"]
 -   **Sigla:** {{< var industriales.sigla >}}
 -   **Dimensión:** {{< var industriales.dimension >}}
 -   **Dominio:** {{< var industriales.dominio >}}
--   **Fuente principal de datos:** 
+-   **Fuente principal de datos:** {{< var retc.name >}} ({{< var retc.sigla >}}) 
 -   **Unidad espacial de análisis:** Manzana censal\
 -   **Frecuencia temporal:** Anual
--   **Cobertura temporal del análisis:**
--   **Resolución espacial del insumo:** Puntos
+-   **Cobertura temporal del análisis:** Año base 2024  
+-   **Resolución espacial del insumo:** Puntos (Establecimientos)
 -   **Versión actual:** 1.0
 
 
@@ -39,46 +39,114 @@ author: ["{{< var jtreimun.name >}}"]
 ### 2. Conceptualización {.unnumbered}
 
 #### 2.1 Definición del indicador {.unnumbered}
-Explicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).
+El indicador {{< var industriales.name >}} ({{< var industriales.sigla >}}) busca representar la exposición relativa de la población infantil a contaminantes atmosféricos emitidos por establecimientos industriales. Este indicador es relevante porque la exposición temprana a contaminantes se asocia con efectos negativos en el desarrollo cognitivo, respiratorio y emocional de los niños. 
+
 
 #### 2.2 Conceptos relacionados {.unnumbered}
-Definiciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).
+
+- **Contaminación industrial:** Emisión de sustancias tóxicas al aire desde fuentes fijas.  
+- **Índice sintético de toxicidad:** Producto entre toneladas emitidas y un factor de toxicidad por establecimiento.  
+- **Decaimiento espacial:** Reducción del impacto con la distancia al cuadrado desde la fuente emisora. 
+
 
 #### 2.3 Referente internacional (COI 3.0) {.unnumbered}
-Breve descripción del indicador original y cómo es usado en el índice de referencia.
+ 
+El {{< var coi.name >}} desarrollado por <diversitydatakids.org> incluye un subíndice ambiental basado en el RSEI (_Risk-Screening Environmental Indicators_) de la EPA^[{{< var epa.sigla >}}: {{< var epa.name >}}]. Este índice mide la exposición a contaminantes ponderada por toxicidad y distancia, y se normaliza para integrarse con otros dominios del COI. 
 
 ---
 
 ### 3. Adaptación metodológica CIT {.unnumbered}
 
 #### 3.1 Definición operacional adaptada {.unnumbered}
-Definición clara del indicador tal como será construido para el caso chileno.
+
+El **{{< var industriales.sigla >}}** se define como un índice continuo entre 0 y 100 que representa la oportunidad ambiental relativa de cada manzana, donde 100 indica máxima oportunidad (mínima exposición a contaminantes). 
+
 
 #### 3.2 Insumos y fuentes {.unnumbered}
-Descripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.
+
+- **{{< var retc.sigla >}}^[{{< var retc.sigla >}}: {{< var retc.name >}}]:** Emisiones industriales georreferenciadas por establecimiento del año 2024
+- **{{< var ine.sigla >}}:** Manzanas urbanas censales del año 2017u
+
+
+
 
 #### 3.3 Pasos de cálculo {.unnumbered}
-Listar paso a paso el procedimiento con lógica replicable.
+1. Agrupar emisiones por establecimiento y calcular índice sintético.  
+2. Calcular centroides de manzanas urbanas.  
+3. Para cada manzana, sumar el impacto de los establecimientos industriales dentro de un radio de 10 km, ponderado por la distancia cuadrática.  
+4. Aplicar **winsorización** sobre los valores extremos (percentiles 5 y 95).  
+5. Normalizar a escala 0–100.  
+6. Invertir el índice para representar oportunidad ambiental.
+
+
+### 3.4 Formulas utilizadas {.unnumbered}
+
+**Cálculo del riesgo ambiental por manzana ($i$): **
+
+$$
+Riesgo_i = \sum_1^j \frac{I_j}{d_{i,j}^2 + 1}
+$$
+
+- $I_j$: Índice sintético del establecimiento $j$  
+- $d_{i,j}$: Distancia entre el centroide de la manzana $i$ y el establecimiento $j$
+
+**Winsorización:**
+
+$$
+Riesgo_{winsor} = \min(\max(Riesgo_i, P_5), P_{95})
+$$
+
+- $P_5$, $P_{95}$: Percentiles 5 y 95 de la distribución
+
+
+**Normalización Min-Max:**
+
+$$
+Riesgo_{norm} = 100 \times \frac{Riesgo_{winsor} - \min}{\max - \min}
+$$
+
+**Inversión del índice para representar oportunidad:**
+
+$$
+Oportunidad_i = 100 - Riesgo_{norm}
+$$
+
 
 ---
 
 ### 4. Resultados preliminares {.unnumbered}
-- Imagen o mapa ilustrativo del indicador.
-- Tabla resumen si aplica.
+
+Se generó un mapa de oportunidad ambiental por manzana censal (-@fig-ciass). Valores cercanos a 100 indican baja exposición a contaminantes industriales.
+
+![Resultados de Indicador **{{< var industriales.name >}} ({{< var industriales.sigla >}})** convertido en oportunidad ya que se invirtió](images/CIAAS.jpg){#fig-ciass}
 
 ---
 
 ### 5. Interpretación y usos esperados {.unnumbered}
-- ¿Qué significa un valor alto o bajo?
-- ¿Cómo puede ser usado este indicador por tomadores de decisiones?
+
+#### 5.1 Interpretación de Resultados {.unnumbered}
+
+- **Valores altos (≈ 100):** Alta oportunidad ambiental (baja exposición)  
+- **Valores bajos (≈ 0):** Alta exposición a fuentes industriales cercanas
+
+#### 5.2 Aplicaciones {.unnumbered}
+
+- Priorización territorial de políticas de salud y medio ambiente  
+- Integración en índices de bienestar territorial infantil  
+- Detección de zonas de sacrificio ambiental
 
 ---
 
 ### 6. Consideraciones, supuestos y limitaciones {.unnumbered}
-- Restricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.
+
+- Se asume decaimiento cuadrático de la exposición con la distancia  
+- No se incorporan variables meteorológicas ni topográficas  
+- El índice depende de la calidad y cobertura del inventario RETC  
+- No se incluyen fuentes móviles ni emisiones difusas
 
 ---
 
 ### 7. Referencias {.unnumbered}
-Bibliografía científica, manuales técnicos, artículos base.
+
+- Noelke, C., McArdle, N., Baek, M., Scovronick, N., Huntington, N., & Acevedo-Garcia, D. (2024). [*Child Opportunity Index 3.0 Technical Documentation*](https://www.diversitydatakids.org/child-opportunity-index).
 

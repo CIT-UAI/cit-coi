@@ -99,12 +99,13 @@ En la figura [-@fig-tde] se observa que en general el indicador {{< var empleo.s
 
 ### 5. Interpretación y usos esperados {.unnumbered}
 
-Interpretación:
+#### 5.1 Interpretación de Resultados {.unnumbered}
+
 
 * **Valor alto de {{< var empleo.sigla >}}** (cercano a 1): Mayor nivel de empleo → más estabilidad económica potencial.
 * **Valor bajo de {{< var empleo.sigla >}}** (cercano a 0): Mayor tasa de desempleo → mayor fragilidad social y económica.
 
-Aplicaciones:
+#### 5.2 Aplicaciones {.unnumbered}
 
 * Focalización territorial de políticas de empleo.
 * Planificación de programas de reconversión laboral o capacitación.

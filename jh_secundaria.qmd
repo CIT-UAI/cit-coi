@@ -98,12 +98,16 @@ En la figura [-@fig-jhsec] se observa que el indicador {{< var jh_secundaria.nam
 
 ### 5. Interpretación y usos esperados {.unnumbered}
 
-**Valor alto**: Alta proporción de hogares con capital educativo intermedio. Puede representar territorios en transición o con base educativa suficiente para ciertos niveles de empleabilidad.
 
-**Valor bajo**: Poca presencia de escolaridad media en jefes/as de hogar, asociado a rezago educativo estructural o concentración de extremos (primaria o superior).
+#### 5.1 Interpretación de Resultados {.unnumbered}
+
+**Valor alto de {{< var jh_primaria.sigla >}}**: Alta proporción de hogares con capital educativo intermedio. Puede representar territorios en transición o con base educativa suficiente para ciertos niveles de empleabilidad.
+
+**Valor bajo de {{< var jh_primaria.sigla >}}**: Poca presencia de escolaridad media en jefes/as de hogar, asociado a rezago educativo estructural o concentración de extremos (primaria o superior).
 
 
-**Aplicaciones:**
+#### 5.2 Aplicaciones {.unnumbered}
+
 
 * Identificación de zonas con riesgo de estancamiento educativo intergeneracional.
 * Priorización de políticas educativas de refuerzo y capacitación laboral.
