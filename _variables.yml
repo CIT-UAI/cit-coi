@@ -86,6 +86,16 @@ acalidad:
 simce:
   name: "[Sistema de Medición de la Calidad de la Educación](https://www.agenciaeducacion.cl/simce/)"
   sigla: "[SIMCE](https://www.agenciaeducacion.cl/simce/)"
+  
+junji:
+  name: "[Junta Nacional de Jardines Infantiles](https://junji.cl/)"
+  sigla: "[JUNJI](https://junji.cl/)"
+  
+integra:
+  name: "[Integra](https://www.integra.cl/nuestros-jardines-infantiles/)"
+  name_m: "[Fundación Integra](https://www.integra.cl/nuestros-jardines-infantiles/)"
+  name_l: "[Fundación Integra: Red de Salas Cuna y Jardines Infantiles](https://www.integra.cl/nuestros-jardines-infantiles/)"
+  
 
 # Documentos --------------------------------------------------------------
 

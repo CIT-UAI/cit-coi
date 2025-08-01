@@ -60,7 +60,7 @@ Medir el acceso a este nivel educativo es fundamental, ya que la educación infa
 
 Definición clara del indicador {{< var coi.name >}}, Mtal como será construido para el caso chileno. 
 
-El indicador original, COI, Matrícula en pre-K público: Este indicador se define como el porcentaje de niños de 3 y 4 años matriculados en escuelas públicas de párvulos, preescolar o kindergarten. 
+El indicador original, {{< var coi.ssname >}}, Matrícula en pre-K público: Este indicador se define como el porcentaje de niños de 3 y 4 años matriculados en escuelas públicas de párvulos, preescolar o kindergarten. 
 
 Para el caso chileno, se filtró la base de datos, eligiendo en el campo: “dependencia” los valores 1, 4 y 5, que corresponden a aquellos establecimientos que requieren de un pago, que son: particular subvencionado o particular pagado, tal como se indica en la [@tbl-preKinderEstPub]
 
@@ -89,7 +89,7 @@ Utilizando esta información como Insumo se calculó el indicador de accesibilid
 
 #### 3.2 Insumos y fuentes {.unnumbered}
 
-La base de datos, obtenida desde el {{< var cestudios.name >}}^[{{< var cestudios.name >}}], del año 2024, traía información de todos los establecimientos de Chile. Como primer filtro se seleccionó sólo los pertenecientes a la Región Metropolitana, luego sólo los públicos: JUNJI, Integra y Municipal y luego que pertenecieran al nivel 2, medio mayor. 
+La base de datos, obtenida desde el {{< var cestudios.name >}}^[{{< var cestudios.name >}}], del año 2024, traía información de todos los establecimientos de Chile. Como primer filtro se seleccionó sólo los pertenecientes a la Región Metropolitana, luego sólo los públicos: JUNJI^[{{< var junji.sigla >}}: {{< var junji.name >}}], Integra^[{{< var integra.name_l >}}] y Municipal y luego que pertenecieran al nivel 2, medio mayor. 
 
 Una vez seleccionados los datos a utilizar, se procedió a la consolidación de insumos. Los cuales se pueden sintetizar en los siguientes pasos 
 
