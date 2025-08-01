@@ -77,6 +77,12 @@ mineduc:
   name: "[Ministerio de Ecucación](https://www.mineduc.cl/)"
   sigla: "[MINEDUC](https://www.mineduc.cl/)"
   
+cestudios:
+  name: "[Centro de Estudios del Mineduc](https://centroestudios.mineduc.cl/)"
+
+acalidad:
+  name: "[Agencia de Calidad de la Educación](https://www.agenciaeducacion.cl/)"
+
 simce:
   name: "[Sistema de Medición de la Calidad de la Educación](https://www.agenciaeducacion.cl/simce/)"
   sigla: "[SIMCE](https://www.agenciaeducacion.cl/simce/)"

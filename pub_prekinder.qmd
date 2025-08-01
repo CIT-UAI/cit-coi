@@ -12,11 +12,11 @@ author: ["{{< var szuniga.name >}}"]
 -   **Sigla:** {{< var pub_prekinder.sigla >}}\
 -   **Dimensión:** {{< var pub_prekinder.dimension >}}
 -   **Dominio:** {{< var pub_prekinder.dominio >}}
--   **Fuente principal de datos:** 
+-   **Fuente principal de datos:** {{< var cestudios.name >}}
 -   **Unidad espacial de análisis:** Manzana censal\
 -   **Frecuencia temporal:** Anual
--   **Cobertura temporal del análisis:**
--   **Resolución espacial del insumo:** Puntos
+-   **Cobertura temporal del análisis:** 2024
+-   **Resolución espacial del insumo:** Puntos (establecimientos educacionales)
 -   **Versión actual:** 1.0
 
 
@@ -89,7 +89,7 @@ Utilizando esta información como Insumo se calculó el indicador de accesibilid
 
 #### 3.2 Insumos y fuentes {.unnumbered}
 
-La base de datos, obtenida desde el centro de estudios del MINEDUC, 2024, traía información de todos los establecimientos de Chile. Como primer filtro se seleccionó sólo los pertenecientes a la Región Metropolitana, luego sólo los públicos: JUNJI, Integra y Municipal y luego que pertenecieran al nivel 2, medio mayor. 
+La base de datos, obtenida desde el {{< var cestudios.name >}}^[{{< var cestudios.name >}}], del año 2024, traía información de todos los establecimientos de Chile. Como primer filtro se seleccionó sólo los pertenecientes a la Región Metropolitana, luego sólo los públicos: JUNJI, Integra y Municipal y luego que pertenecieran al nivel 2, medio mayor. 
 
 Una vez seleccionados los datos a utilizar, se procedió a la consolidación de insumos. Los cuales se pueden sintetizar en los siguientes pasos 
 

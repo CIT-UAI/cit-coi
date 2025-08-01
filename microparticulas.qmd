@@ -19,7 +19,6 @@ author: ["{{< var jtreimun.name >}}"]
 -   **Resolución espacial del insumo:** Puntos (Estaciones de Monitoreo)
 -   **Versión actual:** 1.0
 
-
 #### Avances {.unnumbered}
 
 ::: {.tabla-indicador}

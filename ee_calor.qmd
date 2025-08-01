@@ -17,7 +17,7 @@ author: ["{{< var dberroeta.name >}}"]
 -   **Unidad espacial de análisis:** Manzana censal\
 -   **Frecuencia temporal:** Diaria (agregado anual y multianual)\
 -   **Cobertura temporal del análisis:** 2014–2024\
--   **Resolución espacial del insumo:** 1 km x 1 km\
+-   **Resolución espacial del insumo:** 1 km x 1 km\ (raster)
 -   **Versión actual:** 1.0
 
 #### Avances {.unnumbered}

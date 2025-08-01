@@ -16,7 +16,7 @@ author: ["{{< var dberroeta.name >}}"]
 -   **Unidad espacial de análisis:** Manzana censal\
 -   **Frecuencia temporal:** Única
 -   **Cobertura temporal del análisis:** 2017
--   **Tipo de insumo:** Polígonos
+-   **Tipo de insumo:** Polígonos (manzanas censales)
 -   **Versión actual:** 1.0
 
 #### Avances {.unnumbered}

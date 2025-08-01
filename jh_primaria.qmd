@@ -12,12 +12,13 @@ author: ["{{< var dberroeta.name >}}"]
 -   **Sigla:** {{< var jh_primaria.sigla >}}\
 -   **Dimensión:** {{< var jh_primaria.dimension >}}
 -   **Dominio:** {{< var jh_primaria.dominio >}}
--   **Fuente principal de datos:**
+-   **Fuente principal de datos:** {{< var ine.censo_2017 >}}
 -   **Unidad espacial de análisis:** Manzana censal\
--   **Frecuencia temporal:** Anual
--   **Cobertura temporal del análisis:**
--   **Resolución espacial del insumo:** Puntos
+-   **Frecuencia temporal:** Única
+-   **Cobertura temporal del análisis:** 2017
+-   **Tipo de insumo:** Polígonos (manzanas censales)
 -   **Versión actual:** 1.0
+
 
 #### Avances {.unnumbered}
 

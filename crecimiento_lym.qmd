@@ -12,11 +12,11 @@ author: ["{{< var szuniga.name >}}"]
 -   **Sigla:** {{< var crecimiento_plm.sigla >}}\
 -   **Dimensión:** {{< var crecimiento_plm.dimension >}}
 -   **Dominio:** {{< var crecimiento_plm.dominio >}}\
--   **Fuente principal de datos:** \
+-   **Fuente principal de datos:** {{< var acalidad.name >}}
 -   **Unidad espacial de análisis:** Manzana censal\
 -   **Frecuencia temporal:** Anual
--   **Cobertura temporal del análisis:**
--   **Resolución espacial del insumo:** Puntos
+-   **Cobertura temporal del análisis:** 2024
+-   **Tipo espacial del insumo:** Puntos (establecimientos educacionales)
 -   **Versión actual:** 1.0
 
 
@@ -62,7 +62,7 @@ El indicador cobra relevancia y aporta a una visión multidimensional de las opo
 
 Para el caso chileno, se utilizó los resultados de la prueba, SIMCE, año 2024.  
 
-Se descargó la base de datos, publicada por la agencia de la calidad de la educación. En específico se utilizaron los datos vinculados a la Región Metropolitana y a los campos:  
+Se descargó la base de datos, publicada por la {{< var acalidad.name >}}^[{{< var acalidad.name >}}]. En específico se utilizaron los datos vinculados a la Región Metropolitana y a los campos:  
 
 |Nombre del Campo|Descripción|
 |-|-|
@@ -77,7 +77,7 @@ Dichos campos otorgan la diferencia de las pruebas de matemáticas y lectura/art
 
 Como primer paso fue necesario georreferenciar la base de datos, ya que no contaban con la dirección o coordenadas de cada establecimiento. Para poder traspasar los datos a los establecimientos especializados, se realizó una “unión” teniendo como campo común el RBD, con la base de daos del CIT.  
 
-Una vez realizada esta unión fue posible georeferenciar 115 establecimientos, con su respectiva información de los resultados de las diferencias SIMCE. 
+Una vez realizada esta unión fue posible georeferenciar 115 establecimientos, con su respectiva información de los resultados de las diferencias {{< var simce.sigla >}}^[{{< var simce.sigla >}}: {{< var simce.name >}}]. 
 
 
 2. **Promedio entre las pruebas de lenguaje y matemática**
