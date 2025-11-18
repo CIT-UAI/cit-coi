@@ -99,8 +99,7 @@ Una vez realizados las áreas de influencia de cada colegio, se realiza una inte
 
 El siguiente mapa [-@fig-creci] muestra la distribución del resultado del promedio en el crecimiento de las pruebas SIMCE de lenguaje y matemáticas en la Región Metropolitana en comparación al año anterior. Se observa que la mayoría de las comunas en los que se pudieron localizar sus establecimientos, tienen un crecimiento positivo, es decir mejoraron en su desempeño al compararlo con el año anterior. 
 
-![Resultados de Indicador **{{< var crecimiento_plm.name >}} ({{< var crecimiento_plm.sigla >}})**](images/difmedi_simce.jpg){#fig-creci}
-
+![Resultados de Indicador **{{< var crecimiento_plm.name >}} ({{< var crecimiento_plm.sigla >}})**](images/educacion_diferencias.jpg){#fig-creci}
 
 
 ---

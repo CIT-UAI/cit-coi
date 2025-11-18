@@ -84,7 +84,7 @@ Luego de especializados los resultados, se calculó el promedio entre las prueba
 
 3. **Creación de buffer de influencia**
 
-Para cada establecimiento se creó un radio de influencia de 1,5 km, esta distancia se definió, considerando que se trata de una distancia caminable adecuada en contextos urbanos. Esta elección se fundamenta en estándares internacionales que reconocen rangos típicos de 1 km a 2 km como trayectos caminables seguros hacia la escuela. En particular, la UNESCO (2016) señala que _“safe walking distances to school typically range from 1 km to 2 km in urban areas”_ (p. 40), respaldando así el uso de 1,5 km como un valor intermedio representativo para este estudio. 
+Para cada establecimiento se creó un radio de influencia de 1,5 km, esta distancia se definió, considerando que se trata de una distancia caminable adecuada en contextos urbanos. Esta elección se fundamenta en estándares internacionales que reconocen rangos típicos de 1 km a 2km como trayectos caminables seguros hacia la escuela. En particular, la UNESCO (2016) señala que _“safe walking distances to school typically range from 1km to 2km in urban areas”_ (p. 40), respaldando así el uso de 1,5 km como un valor intermedio representativo para este estudio. 
 
 
 4. **Traspaso de información a manzanas INE**
@@ -99,7 +99,7 @@ Una vez realizados las áreas de influencia de cada colegio, se realiza una inte
 
 El siguiente mapa ([-@fig-pplm]) muestra la distribución del resultado del promedio en las pruebas SIMCE de lenguaje y matemáticas en la Región Metropolitana (RM). Se observa que la mayoría de las comunas en los que se pudieron localizar sus establecimientos, tienen un puntaje promedio en un nivel de aprendizaje “adecuado”, es decir sobre 284 puntos. Por otra parte, cabe señalar que los promedios más altos se concentran en las comunas del sector oriente, frente a que los más bajos se encuentran en comunas más periféricas de la RM. 
 
-![Resultados de Indicador {{< var puntaje_plm.name >}} ({{< var puntaje_plm.sigla >}})**](images/promed_simce.jpg){#fig-pplm}
+![Resultados de Indicador {{< var puntaje_plm.name >}} ({{< var puntaje_plm.sigla >}})**](images/educacion_promedio.jpg){#fig-pplm}
 
 
 ---
@@ -108,11 +108,11 @@ El siguiente mapa ([-@fig-pplm]) muestra la distribución del resultado del prom
 
 #### 5.1 Interpretación de Resultados {.unnumbered}
 
-**Valores altos de {{< var puntaje_plm.sigla >}}:**  Indican que las escuelas cercanas (en un radio de 1,5 km) presentan puntajes SIMCE promedio más altos. Esto sugiere mejores niveles de desempeño académico en Lenguaje y Matemática y, por ende, una mayor calidad educativa potencialmente disponible para los estudiantes residentes en la manzana. 
+**Valores altos de {{< var puntaje_plm.sigla >}}:**  Indican que las escuelas cercanas (en un radio de 1,5 km) presentan puntajes SIMCE promedio más altos. Esto sugiere mejores niveles de desempeño académico en Lenguaje y Matemática y, por ende, una mayor calidad educativa potencialmente disponible para los estudiantes residentes en la manzana. 
 
  
 
-**Valores bajos {{< var puntaje_plm.sigla >}}:**  indican que, en el entorno cercano (dentro de 1,5 km), los establecimientos educativos presentan puntajes SIMCE promedio más bajos en Lenguaje y Matemática. Esto sugiere menores niveles de desempeño académico esperado en esas áreas fundamentales. 
+**Valores bajos {{< var puntaje_plm.sigla >}}:**  indican que, en el entorno cercano (dentro de 1,5 km), los establecimientos educativos presentan puntajes SIMCE promedio más bajos en Lenguaje y Matemática. Esto sugiere menores niveles de desempeño académico esperado en esas áreas fundamentales. 
 
 
 #### 5.2 Aplicaciones {.unnumbered}
