@@ -1,0 +1,13 @@
+---
+title: "F. de Riesgos y Protección"
+subtitle: "Factores de Riesgos y Protección de la Niñez y Adolecencia"
+---
+
+
+| Sigla del Indicador | Nombre del Indicador |
+| --- | --- |
+| IJV | Indicador de Junta de Vecinos |
+| ICAM | Indicador de Club de Adulto Mayor |
+| ICD | Indicador de Club Deportivo |
+| IAC | Indicador de Accesibilidad a Colegios |
+| IAER | Indicador de Accesibilidad a Establecimientos Religiosos |

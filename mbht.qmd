@@ -1,0 +1,177 @@
+---
+title: "Dominio MBHT"
+---
+
+
+## Introducción
+
+La Matriz de Bienestar Humano Territorial es una nueva forma de ver las ciudades, comunas y barrios, al alcance de todos. Permite acercar la información al territorio para impactarlo positivamente. También visibiliza oportunidades para mejorar la calidad de vida en relación al territorio, y hace manifiestas las brechas y desequilibrios que se deben superar. 
+
+La información territorial para medir en cada región consiste en el cálculo de la Matriz de Bienestar Humano Territorial (MBHT), el cual es un sistema de información compuesto por indicadores base e información confiable conectada al territorio que constituye una aproximación multidimensional a la configuración del hábitat urbano y rural. Con ello se busca comprender las condiciones de los entornos urbanos y rurales, para construir soluciones que impacten positivamente en el bienestar de las personas y su hábitat. El sistema MBHT consiste en 18 indicadores territoriales agrupados en 4 dimensiones las que componen la Matriz de Bienestar Humano Territorial.
+
+## Estructura del Dominio
+
+| Nombre Dimensión | Sigla del Indicador | Nombre del Indicador |
+| --- | --- | --- |
+| Dimensión de Accesibilidad | IAV | Indicador de Accesibilidad a Áreas Verdes |
+| Dimensión de Accesibilidad | ICUL | Indicador de Accesibilidad a Equipamentos Culturales |
+| Dimensión de Accesibilidad | IDEP | Indicador de Accesibilidad a Equipamentos Deportivos |
+| Dimensión de Accesibilidad | ISAL | Indicador de Accesibilidad a Equipamentos de Salud |
+| Dimensión de Accesibilidad | ISE | Indicador de Accesibilidad a Servicios de Educación |
+| Dimensión de Accesibilidad | ISER | Indicador de Accesibilidad a Servicios Públicos |
+| Dimensión Ambiental | IATA | Indicador de Amplitud Térmica |
+| Dimensión Ambiental | ICV | Indicador de Cobertura Vegetal |
+| Dimensión de Seguridad | IGPE | Indicador ante Delitos Graves contra las Personas |
+| Dimensión de Seguridad | IGPR | Indicador ante Delitos Graves contra la Propiedad |
+| Dimensión de Seguridad | ILPE | Indicador ante Delitos Leves contra las Personas |
+| Dimensión de Seguridad | ILPR | Indicador ante Delitos Leves contra la Propiedad |
+| Dimensión de Socioeconómica | IEJ | Indicador de Escolaridad de Jefe de Hogar |
+| Dimensión de Socioeconómica | IEM | Indicador de Empleo |
+| Dimensión de Socioeconómica | IPJ | Indicador de Participación Juvenil en Empleo y Estudio |
+| Dimensión de Socioeconómica | IRH | Indicador de Resiliencia de Hogares |
+| Dimensión de Socioeconómica | IVI | Indicador de Calidad de la Vivienda |
+
+
+## Procedimiento Metodológico
+
+### Insumos
+
+A partir de información de múltiples fuentes, como el Instituto Nacional de Estadísticas, Censo de Población y Vivienda 2017, Ministerio de Educación, Ministerio de Agricultura, Subsecretaría de Prevención del Delito del Ministerio del Interior y Seguridad Pública, Subsecretaría de Desarrollo Regional y Administrativo del Ministerio del Interior y Seguridad Pública, Departamento de Estadísticas e Información de Salud del Ministerio de Salud fotointerpretación de imágenes satelitales, OpenStreetMap, e información provista por municipios y gobiernos regionales de Chile, el Centro de Inteligencia Territorial de la Universidad Adolfo Ibáñez (CIT-UAI) construye y calcula 18 indicadores territoriales, integrados en cuatro dimensiones, y que a su vez componen la Matriz de Bienestar Humano Territorial.
+
+
+
+## Procedimiento Metodológico
+
+En esta sección se describe el procedimiento seguido para construir el indicador compuesto del dominio MBHT, desde los indicadores simples hasta el indicador agregado por dimensión y dominio.
+
+### Preparación de los datos de los indicadores {.unnumbered}
+
+
+Los indicadores simples del dominio MBHT, previamente calculados a partir de sus respectivas fuentes, se integran en una base única a nivel de manzana censal (filas = manzanas, columnas = indicadores), lo que asegura una estructura de datos común y comparable para su posterior agregación en dimensiones y en el dominio MBHT.
+
+
+### Tratamiento de datos faltantes  {.unnumbered}
+
+En algunos casos, ciertas manzanas censales no cuentan con información completa para uno o más indicadores (por ausencia de registros o de población objetivo). Para evitar la pérdida de unidades territoriales y mantener la coherencia espacial del análisis, se aplica una estrategia de imputación basada en vecinos.
+
+En particular, los valores faltantes se estiman mediante una interpolación espacial a partir de los 4 vecinos más cercanos, asignando a la manzana sin dato el promedio simple de dichos vecinos. Esta estrategia permite completar información en áreas con vacíos de datos y preservar la continuidad espacial del indicador sin introducir supuestos más complejos de los necesarios.
+
+### Ajuste de los indicadores  {.unnumbered}
+
+
+**Reescalamiento al intervalo $[0,1]$**
+
+Para utilizar de forma efectiva el rango $[0,1]$, los valores de lo indicadores $p_{uj}$ se reescalan dentro de cada indicador $j$ mediante una normalización min–max, de modo que:
+
+$$
+s_{uj} = \dfrac{p_{uj} - \min_{u'} p_{u'j}}{\max_{u'} p_{u'j} - \min_{u'} p_{u'j}}
+$$
+
+En las secciones siguientes, estos valores $s_{uj}$ corresponden al indicador normalizado en la escala común $[0,1]$ para la manzana $u$ y el indicador $j$.
+
+---
+
+### Cálculo de dimensiones {.unnumbered}
+
+Una vez ajustados y estandarizados, los indicadores simples se agregan para construir un **indicador compuesto por dimensión** (Educación, Salud y Medio Ambiente, Social y Económica, Factores de Riesgos).
+
+**Regla de agregación**  
+Para cada dimensión $k$, el valor de la dimensión en una unidad territorial $u$ se calcula como el **promedio simple** de los indicadores ajustados que la componen:
+
+$$
+Dim_{k}(u) = \frac{1}{n_k} \sum_{j=1}^{n_k} I^{*}_{kj}(u)
+$$
+
+donde:
+
+- $D_{k}(u)$ es el valor de la dimensión $k$ en la manzana censal $u$,  
+- $I^{*}_{kj}(u)$ es el valor ajustado del indicador $j$ asociado a la dimensión $k$ en la manzana $u$,  
+- $n_k$ es el número de indicadores que integran la dimensión $k$.
+
+**Justificación del uso de promedio simple**  
+Se opta por pesos iguales para todos los indicadores dentro de cada dimensión debido a que:
+
+- No existe evidencia empírica robusta que justifique asignar mayor peso a un indicador específico.
+- El promedio simple favorece la **transparencia metodológica** y la **facilidad de interpretación** por parte de usuarios expertos y no expertos.
+- Permite mantener la comparabilidad con otros índices de oportunidad y bienestar territorial que utilizan reglas de agregación similares.
+
+![Ejemplo de dimensión de Accesibilidad](images/dim_acc.jpg){#fig-dimacc}
+
+Este procedimiento da como resultado un conjunto de indicadores de dimensión que sintetizan, de forma equilibrada, la información contenida en los indicadores simples del dominio MBHT.
+
+
+
+### Cálculo de Dominio {.unnumbered}
+
+A partir de las dimensiones, se construye el indicador compuesto del dominio.
+
+- **Regla de agregación a nivel de dominio:**  
+  Explicar que el indicador del dominio se calcula como **promedio simple** de los indicadores de las dimensiones.
+
+*Espacio para ecuación general:*  
+
+$$ BHT(u) = \frac{1}{K} \sum_{k=1}^{K} D_{k}(u) $$
+Donde:
+- $DOM(u) $es el valor del dominio en la unidad territorial $u$,
+- $D_{k}(u) $es el valor de la dimensión $k$,
+- $K $es el número de dimensiones del dominio.
+
+**Propiedades del indicador de dominio:**  
+
+![Resultados del Dominio MBHT](images/MBHT.jpg){#fig-MBHT}
+
+- Rango de valores (por ejemplo, 0–1),
+- Significado de valores altos y bajos en términos de oportunidades,
+- Ventajas de la agregación (resumen sintético) y riesgos (pérdida de detalle).
+
+### Territorios de Oportunidad TOB
+
+Una vez obtenido el valor continuo del dominio MBHT para cada manzana censal, se construye un indicador categórico de **“Territorios de Oportunidad Bienestar” (TOB)** que permite identificar áreas con baja, media y alta oportunidad, incorporando explícitamente la estructura espacial del territorio.
+
+**(a) Matriz de vecindad espacial**
+
+En primer lugar, se define una **matriz de vecindad espacial** $W = (w_{uv})$ entre manzanas censales, que representa qué unidades se consideran “vecinas”. En este estudio se utiliza un criterio de 8 vecinos mas cercanos, donde dos manzanas son vecinas.
+
+La matriz $W$ se normaliza por población para que la suma de pesos de los vecinos de cada manzana sea igual a 1, lo cual facilita la interpretación del análisis espacial posterior.
+
+**(b) Análisis de Moran Local sobre el índice MBHT**
+
+Con la matriz de vecindad $W$ y el valor del dominio MBHT en cada manzana $\text{BHT}(u)$, se aplica el **Índice de Moran Local** para identificar patrones de concentración espacial de alta y baja oportunidad.
+
+donde $\overline{\text{BHT}}$ es el promedio del índice MBHT en todas las manzanas, y $w_{uv}$ son los pesos de vecindad.
+
+A partir de este análisis se identifican, para cada manzana:
+
+- su **tipo de entorno** (alto-alto, bajo-bajo, alto-bajo, bajo-alto), según el valor propio y el de sus vecinas, y  
+- la **significancia estadística** de ese patrón (por ejemplo, mediante pruebas de permutación).
+
+**(c) Definición de categorías de territorios de oportunidad MBHT**
+
+El indicador categórico de **“Territorios de Oportunidad Bienestar” (TOB)** se construye combinando el valor del dominio MBHT y la información del Moran Local, definiendo tres categorías:
+
+- **Alto**: manzanas clasificadas como *alto–alto* en el análisis de Moran Local, con significancia estadística (por ejemplo, $p < 0{,}05$); es decir, manzanas con alto índice MBHT rodeadas de manzanas también altas.  
+- **Bajo**: manzanas clasificadas como *bajo–bajo* y significativas; es decir, manzanas con bajo índice MBHT rodeadas de manzanas igualmente bajas.  
+- **Medio**: manzanas que no presentan un patrón de alta o baja oportunidad espacialmente concentrado (incluye casos no significativos y patrones mixtos como alto–bajo o bajo–alto).
+
+**(d) Interpretación territorial**
+
+![Resultados de Territorios de Oportundad de la Matriz de la Niñez y Adolescencia](images/tob.jpg){#fig-toMBHT}
+
+Estas categorías de territorios de oportunidad MBHT permiten:
+
+- **Identificar zonas prioritarias de intervención** (categoría Baja), donde se concentran desventajas estructurales para niños, niñas y adolescentes.
+- **Reconocer áreas de oportunidad consolidada** (categoría Alta), que pueden servir como referencia para buenas prácticas o para el diseño de políticas de convergencia territorial.
+- Analizar **brechas intraurbanas e intercomunales**, al comparar la distribución espacial de las tres categorías dentro de ciudades o regiones.
+
+De este modo, el paso desde valores continuos de MBHT a categorías TOB facilita la comunicación de resultados y el uso del índice en procesos de planificación y toma de decisiones en políticas de infancia.
+
+
+
+## Consideraciones metodológicas, supuestos y limitaciones
+
+El dominio MBHT se construye bajo el supuesto de **igual ponderación** tanto entre los indicadores dentro de cada dimensión como entre las dimensiones al momento de agregarlas al dominio. Además, se asume que las fuentes de datos utilizadas presentan un nivel adecuado de **calidad y cobertura**, y que los patrones territoriales observados son relativamente **estables** en el período analizado, de modo que los resultados sean representativos de las condiciones estructurales del territorio.
+
+No obstante, el dominio presenta algunas **limitaciones** que deben ser consideradas al interpretar los resultados. Pueden existir sesgos de medición asociados a la calidad de los registros originales, así como **dimensiones o indicadores relevantes que no han sido incluidos** por falta de información disponible. Asimismo, la comparabilidad entre territorios muy heterogéneos (por ejemplo, áreas urbanas y rurales) puede verse restringida, dado que la misma métrica puede adquirir significados prácticos distintos según el contexto.
+
+Por lo anterior, el indicador compuesto del dominio MBHT debe entenderse como una **síntesis de múltiples fenómenos**, que no reemplaza el análisis detallado de los indicadores simples ni de las dimensiones que lo componen. Se recomienda que las decisiones de política y planificación se apoyen tanto en el valor agregado del dominio como en la lectura desagregada por dimensiones e indicadores, especialmente al diseñar intervenciones focalizadas en territorios específicos.
+

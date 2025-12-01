@@ -42,6 +42,17 @@ book:
         - empleo.qmd
         - hacina.qmd
         - monopar.qmd
+    - part: factores_riesgos.qmd
+      chapters:
+        - j_vecinos.qmd
+        - a_mayor.qmd
+        - c_deportivo.qmd
+        - a_colegios.qmd
+        - a_religiosos.qmd
+    - part: ind_compuestos.qmd
+      chapters:
+        - mna.qmd
+        - mbht.qmd
     # - template_ind.qmd
     - reuniones.qmd
     - recursos.qmd

@@ -1,5 +1,5 @@
 ---
-title: "Educación"
+title: "Dimensión de Educación"
 author: ["{{< var dberroeta.name >}}"]
 ---
 
