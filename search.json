@@ -172,61 +172,61 @@
   {
     "objectID": "educacion.html",
     "href": "educacion.html",
-    "title": "Educación",
+    "title": "Dimensión de Educación",
     "section": "",
     "text": "Resumen\nLa dimensión de educación del COI busca capturar las oportunidades educativas disponibles para niños y adolescentes en sus territorios de residencia, desde la primera infancia hasta la adultez temprana. Reconociendo que la trayectoria educativa se ve fuertemente influenciada por factores familiares, escolares y comunitarios, esta dimensión agrupa múltiples indicadores organizados en subdimensiones específicas. Cada subdimensión permite una evaluación precisa y comparativa de la calidad y acceso educativo territorial.",
     "crumbs": [
-      "Educación"
+      "Dimensión de Educación"
     ]
   },
   {
     "objectID": "educacion.html#objetivos",
     "href": "educacion.html#objetivos",
-    "title": "Educación",
+    "title": "Dimensión de Educación",
     "section": "Objetivos",
     "text": "Objetivos\n\nEvaluar territorialmente el acceso a oportunidades educativas en la primera infancia.\nMedir la calidad del entorno escolar mediante resultados académicos ajustados por nivel socioeconómico.\nIdentificar brechas territoriales tempranas en el acceso y calidad de la educación escolar básica.",
     "crumbs": [
-      "Educación"
+      "Dimensión de Educación"
     ]
   },
   {
     "objectID": "educacion.html#dominios-y-sus-indicadores",
     "href": "educacion.html#dominios-y-sus-indicadores",
-    "title": "Educación",
+    "title": "Dimensión de Educación",
     "section": "Dominios y sus indicadores",
     "text": "Dominios y sus indicadores\n\n\n\n\nTable 1: Dimensión de Educación\n\n\n\n\n\n\n\n\n\nDominio\nIndicador\n\n\n\n\nEducación Primaria\nInscripción Pública a Pre-Kinder  Inscripción Privada a Pre-Kinder\n\n\nEducación Básica\nPuntajes en pruebas de Lectura y Matemática  Crecimiento en pruebas de Lectura y Matemáticas",
     "crumbs": [
-      "Educación"
+      "Dimensión de Educación"
     ]
   },
   {
     "objectID": "educacion.html#enfoque-metodológico",
     "href": "educacion.html#enfoque-metodológico",
-    "title": "Educación",
+    "title": "Dimensión de Educación",
     "section": "Enfoque metodológico",
     "text": "Enfoque metodológico\nCada indicador es estandarizado y territorializado a escalas pequeñas (por ejemplo, manzana o sector censal), permitiendo comparaciones espaciales entre territorios. Se utilizan fuentes como registros escolares, censos y encuestas de hogares para estimar las condiciones en cada subdimensión. El enfoque multiescalar y multinivel permite capturar tanto los recursos disponibles como los resultados efectivos de los sistemas educativos locales (Noelke et al. 2024).",
     "crumbs": [
-      "Educación"
+      "Dimensión de Educación"
     ]
   },
   {
     "objectID": "educacion.html#consideraciones-conceptuales",
     "href": "educacion.html#consideraciones-conceptuales",
-    "title": "Educación",
+    "title": "Dimensión de Educación",
     "section": "Consideraciones conceptuales",
     "text": "Consideraciones conceptuales\n\nMulticausalidad: Las oportunidades educativas se configuran a partir de factores familiares, escolares, económicos y comunitarios.\nTerritorialización: El análisis se realiza en función del lugar de residencia, no del lugar de estudio.",
     "crumbs": [
-      "Educación"
+      "Dimensión de Educación"
     ]
   },
   {
     "objectID": "educacion.html#adaptación-al-contexto-nacional-chile",
     "href": "educacion.html#adaptación-al-contexto-nacional-chile",
-    "title": "Educación",
+    "title": "Dimensión de Educación",
     "section": "Adaptación al contexto nacional (Chile)",
     "text": "Adaptación al contexto nacional (Chile)\nPara la implementación del índice en el contexto chileno, se mantiene la estructura conceptual de la dimensión de educación del COI, pero se restringe el análisis a dos aspectos clave:\n\nAcceso a educación en la primera infancia, y\nCalidad del entorno educativo escolar básico, evaluada mediante resultados académicos ajustados por composición socioeconómica del alumnado.\n\nEsta restricción responde a la disponibilidad y calidad de datos en el país. En particular:\n\nNo fue posible construir indicadores consistentes y comparables a nivel territorial para caracterizar la trayectoria educativa en la educación secundaria y postsecundaria (por ejemplo, matrícula en educación superior, tasa de titulación o rendición de pruebas avanzadas), por lo cual esta subdimensión fue excluida.\nAsimismo, no se disponen de fuentes sistemáticas, anuales y georreferenciadas sobre la presencia territorial de organizaciones de enriquecimiento educativo infantil (como centros culturales, programas comunitarios o mentorías), por lo que tampoco se incorpora la subdimensión de recursos educativos del entorno vecinal.\n\nPor el contrario, para las subdimensiones que sí se incluyen:\n\nLos indicadores de matrícula en educación preescolar (pública y privada) fueron construidos a partir de los registros administrativos del Ministerio de Educación (MINEDUC).\nLa calidad del aprendizaje escolar fue evaluada mediante los resultados del SIMCE en Lectura y Matemática.\n\n\n\n\n\n\n\nNoelke, C, N McArdle, B DeVoe, M Leonardos, Y Lu, RW Ressler, and D Acevedo-Garcia. 2024. “Child Opportunity Index 3.0 Technical Documentation. Diversitydatakids. Org, Brandeis University.” Retrieved from Diversitydatakids. Org/Research-Library/Coi-30-Technical-Documentation.",
     "crumbs": [
-      "Educación"
+      "Dimensión de Educación"
     ]
   },
   {
@@ -236,7 +236,7 @@
     "section": "",
     "text": "1. Información General",
     "crumbs": [
-      "Educación",
+      "Dimensión de Educación",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Pública a Pre-Kinder</span>"
     ]
   },
@@ -247,7 +247,7 @@
     "section": "",
     "text": "Centro de Estudios del Mineduc↩︎\nJUNJI: Junta Nacional de Jardines Infantiles↩︎\nFundación Integra: Red de Salas Cuna y Jardines Infantiles↩︎",
     "crumbs": [
-      "Educación",
+      "Dimensión de Educación",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Pública a Pre-Kinder</span>"
     ]
   },
@@ -258,7 +258,7 @@
     "section": "",
     "text": "1. Información General",
     "crumbs": [
-      "Educación",
+      "Dimensión de Educación",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Privada a Pre-Kinder</span>"
     ]
   },
@@ -269,7 +269,7 @@
     "section": "",
     "text": "Centro de Estudios del Mineduc↩︎",
     "crumbs": [
-      "Educación",
+      "Dimensión de Educación",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Privada a Pre-Kinder</span>"
     ]
   },
@@ -280,7 +280,7 @@
     "section": "",
     "text": "1. Información General",
     "crumbs": [
-      "Educación",
+      "Dimensión de Educación",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Puntaje Lec. y Mat.</span>"
     ]
   },
@@ -291,7 +291,7 @@
     "section": "",
     "text": "Agencia de Calidad de la Educación↩︎\nSIMCE: Sistema de Medición de la Calidad de la Educación↩︎",
     "crumbs": [
-      "Educación",
+      "Dimensión de Educación",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Puntaje Lec. y Mat.</span>"
     ]
   },
@@ -302,7 +302,7 @@
     "section": "",
     "text": "1. Información General",
     "crumbs": [
-      "Educación",
+      "Dimensión de Educación",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Crecimiento en Lec. y Mat.</span>"
     ]
   },
@@ -313,7 +313,7 @@
     "section": "",
     "text": "Agencia de Calidad de la Educación↩︎\nSIMCE: Sistema de Medición de la Calidad de la Educación↩︎",
     "crumbs": [
-      "Educación",
+      "Dimensión de Educación",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Crecimiento en Lec. y Mat.</span>"
     ]
   },
@@ -603,43 +603,218 @@
     ]
   },
   {
+    "objectID": "factores_riesgos.html",
+    "href": "factores_riesgos.html",
+    "title": "F. de Riesgos y Protección",
+    "section": "",
+    "text": "Sigla del Indicador\nNombre del Indicador\n\n\n\n\nIJV\nIndicador de Junta de Vecinos\n\n\nICAM\nIndicador de Club de Adulto Mayor\n\n\nICD\nIndicador de Club Deportivo\n\n\nIAC\nIndicador de Accesibilidad a Colegios\n\n\nIAER\nIndicador de Accesibilidad a Establecimientos Religiosos",
+    "crumbs": [
+      "F. de Riesgos y Protección"
+    ]
+  },
+  {
+    "objectID": "j_vecinos.html",
+    "href": "j_vecinos.html",
+    "title": "20  Junta de Vecinos",
+    "section": "",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo:\nSigla:\nDimensión:\nDominio:\nFuente principal de datos:\nUnidad espacial de análisis:\nFrecuencia temporal:\nCobertura temporal del análisis:\nResolución espacial del insumo:\nVersión actual:\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n✅\n\n\nValidación de Resultados\n✅\n\n\nEntrega de Resultados\n✅\n\n\nDocumentación\n✅\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Consideraciones, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "crumbs": [
+      "F. de Riesgos y Protección",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Junta de Vecinos</span>"
+    ]
+  },
+  {
+    "objectID": "a_mayor.html",
+    "href": "a_mayor.html",
+    "title": "21  Club Adulto Mayor",
+    "section": "",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo:\nSigla:\nDimensión:\nDominio:\nFuente principal de datos:\nUnidad espacial de análisis:\nFrecuencia temporal:\nCobertura temporal del análisis:\nResolución espacial del insumo:\nVersión actual:\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n✅\n\n\nValidación de Resultados\n✅\n\n\nEntrega de Resultados\n✅\n\n\nDocumentación\n✅\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Consideraciones, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "crumbs": [
+      "F. de Riesgos y Protección",
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Club Adulto Mayor</span>"
+    ]
+  },
+  {
+    "objectID": "c_deportivo.html",
+    "href": "c_deportivo.html",
+    "title": "22  Club Deportivo",
+    "section": "",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo:\nSigla:\nDimensión:\nDominio:\nFuente principal de datos:\nUnidad espacial de análisis:\nFrecuencia temporal:\nCobertura temporal del análisis:\nResolución espacial del insumo:\nVersión actual:\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n✅\n\n\nValidación de Resultados\n✅\n\n\nEntrega de Resultados\n✅\n\n\nDocumentación\n✅\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Consideraciones, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "crumbs": [
+      "F. de Riesgos y Protección",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Club Deportivo</span>"
+    ]
+  },
+  {
+    "objectID": "a_colegios.html",
+    "href": "a_colegios.html",
+    "title": "23  Accesibilidad a Colegios",
+    "section": "",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo:\nSigla:\nDimensión:\nDominio:\nFuente principal de datos:\nUnidad espacial de análisis:\nFrecuencia temporal:\nCobertura temporal del análisis:\nResolución espacial del insumo:\nVersión actual:\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n✅\n\n\nValidación de Resultados\n✅\n\n\nEntrega de Resultados\n✅\n\n\nDocumentación\n✅\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Consideraciones, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "crumbs": [
+      "F. de Riesgos y Protección",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Accesibilidad a Colegios</span>"
+    ]
+  },
+  {
+    "objectID": "a_religiosos.html",
+    "href": "a_religiosos.html",
+    "title": "24  Acc. E. Religiosos",
+    "section": "",
+    "text": "1. Información General\n\nFicha técnica\n\nNombre completo:\nSigla:\nDimensión:\nDominio:\nFuente principal de datos:\nUnidad espacial de análisis:\nFrecuencia temporal:\nCobertura temporal del análisis:\nResolución espacial del insumo:\nVersión actual:\n\n\n\nAvances\n\n\nEstado de Avances\n\n\n\n\n\n\nEtapa\nEstado\n\n\n\n\nDiseño del Indicador\n✅\n\n\nConsolidación de Insumos\n✅\n\n\nCálculo de Indicador\n✅\n\n\nValidación de Resultados\n✅\n\n\nEntrega de Resultados\n✅\n\n\nDocumentación\n✅\n\n\n\n\n\n\n\n2. Conceptualización\n\n2.1 Definición del indicador\nExplicación del fenómeno que se quiere representar (por qué es importante, relación con el desarrollo infantil, etc.).\n\n\n2.2 Conceptos relacionados\nDefiniciones claras de términos clave (ej. ola de calor, contaminación industrial, hacinamiento, etc.).\n\n\n2.3 Referente internacional (COI 3.0)\nBreve descripción del indicador original y cómo es usado en el índice de referencia.\n\n\n\n\n3. Adaptación metodológica CIT\n\n3.1 Definición operacional adaptada\nDefinición clara del indicador tal como será construido para el caso chileno.\n\n\n3.2 Insumos y fuentes\nDescripción de los productos de datos utilizados, resoluciones, sensores satelitales u otras bases.\n\n\n3.3 Pasos de cálculo\nListar paso a paso el procedimiento con lógica replicable.\n\n\n\n\n4. Resultados preliminares\n\nImagen o mapa ilustrativo del indicador.\nTabla resumen si aplica.\n\n\n\n\n5. Interpretación y usos esperados\n\n¿Qué significa un valor alto o bajo?\n¿Cómo puede ser usado este indicador por tomadores de decisiones?\n\n\n\n\n6. Consideraciones, supuestos y limitaciones\n\nRestricciones de los datos, supuestos asumidos, calidad de satélite, vacíos de información, etc.\n\n\n\n\n7. Referencias\nBibliografía científica, manuales técnicos, artículos base.",
+    "crumbs": [
+      "F. de Riesgos y Protección",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>Acc. E. Religiosos</span>"
+    ]
+  },
+  {
+    "objectID": "mna.html",
+    "href": "mna.html",
+    "title": "25  Dominio MNA",
+    "section": "",
+    "text": "25.1 Introducción\nLa Matriz de Niñez y Adolescencia (MNA) tiene por objetivo caracterizar las oportunidades territoriales que ofrecen los barrios para el desarrollo de niños, niñas y adolescentes. Aquí la oportunidad se entiende como la acumulación territorial de ventajas y desventajas: no basta con un solo recurso (por ejemplo, una escuela cercana), sino con la combinación de condiciones educativas, ambientales, sociales y económicas que, en conjunto, habilitan u obstaculizan trayectorias de vida más favorables. El dominio MNA busca medir estas condiciones de forma sistemática y comparable, construyendo un índice de oportunidad infantil basado en dicha acumulación.\nEl dominio MNA se inserta en un sistema más amplio de indicadores territoriales, en diálogo con otros dominios como la Matriz de Bienestar Humano Territorial (MBHT). Mientras la MBHT describe el bienestar territorial de la población en general, la MNA focaliza específicamente en la infancia y la adolescencia, traduciendo el enfoque de equidad en infancia en un conjunto de indicadores observables y comparables entre territorios. Sus resultados permiten priorizar intervenciones, identificar desigualdades territoriales y orientar políticas públicas con foco en justicia territorial para niños, niñas y adolescentes.\nInspirado en enfoques internacionales como el Child Opportunity Index (COI 3.0), el dominio adopta una visión multidimensional de las oportunidades, organizada en cuatro dimensiones:\nEl dominio MNA representa las oportunidades territoriales de niños, niñas y adolescentes residentes en el territorio nacional, considerados como población prioritaria desde una perspectiva de derechos y equidad. La unidad territorial de análisis es la manzana censal, lo que permite capturar la heterogeneidad intraurbana, identificar microterritorios de alta y baja oportunidad y mantener compatibilidad con las principales fuentes de información estadística y censal para facilitar la actualización y uso del índice.\nEn síntesis, el dominio MNA ofrece una medida territorial explícita de las oportunidades que los barrios brindan a la infancia y adolescencia, integrando múltiples dimensiones del entorno y articulándose con estándares internacionales, pero adaptado a la realidad territorial y de políticas públicas del país.",
+    "crumbs": [
+      "Indicadores Compuestos",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Dominio MNA</span>"
+    ]
+  },
+  {
+    "objectID": "mna.html#introducción",
+    "href": "mna.html#introducción",
+    "title": "25  Dominio MNA",
+    "section": "",
+    "text": "Educación: acceso y calidad educativa desde la primera infancia hasta niveles secundarios y superiores.\n\nSalud y medio ambiente: características físicas y ambientales que inciden en la salud física y mental.\n\nCondiciones sociales y económicas: empleo, ingresos, capital social y condiciones de vivienda, entre otros.\n\nFactores de riesgo y protección: presencia de organizaciones comunitarias, equipamientos y recursos que pueden mitigar riesgos o reforzar vulnerabilidades.",
+    "crumbs": [
+      "Indicadores Compuestos",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Dominio MNA</span>"
+    ]
+  },
+  {
+    "objectID": "mna.html#estructura-del-dominio",
+    "href": "mna.html#estructura-del-dominio",
+    "title": "25  Dominio MNA",
+    "section": "25.2 Estructura del Dominio",
+    "text": "25.2 Estructura del Dominio\n\nDimensiones del dominio MNA\nDimensión de Educación\nLa dimensión de educación captura las oportunidades educativas disponibles para niños, niñas y adolescentes en sus territorios de residencia, desde la primera infancia hasta la educación formal obligatoria. Agrupa indicadores que permiten evaluar de manera comparativa el acceso y desempeño educativo, así como la incorporación temprana al sistema escolar.\nDimensión de Salud y Medio Ambiente\nLa dimensión de salud y medio ambiente mide cómo las condiciones físicas, ecológicas y del entorno urbano inciden en la salud y el bienestar infantil. Considera tanto factores de exposición (por ejemplo, contaminación atmosférica o calor extremo) como condiciones del entorno que pueden actuar como factores protectores o de riesgo para el desarrollo físico y mental.\nDimensión Social y Económica\nLa dimensión social y económica refleja las oportunidades y desventajas estructurales que enfrentan las familias en términos de empleo, escolaridad del hogar, estructura familiar y condiciones de vivienda. Entrega una visión integrada de la capacidad del entorno socioeconómico para sostener trayectorias de vida favorables desde la infancia.\nDimensión de Factores de Riesgos\nLa dimensión de factores de riesgos reúne indicadores vinculados al tejido comunitario y a la disponibilidad de equipamientos locales (organizaciones vecinales, clubes, espacios educativos y religiosos). Estos recursos pueden funcionar como factores protectores que fortalecen el capital social y la cohesión comunitaria, o evidenciar su ausencia, incrementando la vulnerabilidad de niños, niñas y adolescentes frente a riesgos sociales y ambientales.\n\n\nIndicadores por Dimensión\nA continuación se resumen los indicadores considerados en cada dimensión del dominio MNA:\n\n\n\n\n\n\n\n\nDimensión\nSigla\nNombre del indicador\n\n\n\n\nDimensión de Educación\nCPLM\nCrecimiento en pruebas de Lectura y Matemáticas\n\n\nDimensión de Educación\nPPLM\nPuntajes en pruebas de Lectura y Matemática\n\n\nDimensión de Educación\nIPUPK\nInscripción Pública a Pre-Kinder\n\n\nDimensión de Educación\nIPRIVPK\nInscripción Privada a Pre-Kinder\n\n\nDimensión de Salud y Medio Ambiente\nEEC\nExposición Extrema al Calor\n\n\nDimensión de Salud y Medio Ambiente\nMPA\nExposición a Material Particulado Fino (MP2.5)\n\n\nDimensión de Salud y Medio Ambiente\nCOZ\nConcentración de Ozono\n\n\nDimensión de Salud y Medio Ambiente\nCIAAS\nContaminantes Industriales en Aire, Agua y Suelo\n\n\nDimensión de Salud y Medio Ambiente\nIPSS\nÍndice de Proximidad a Sitios Superfunds\n\n\nDimensión Social y Económica\nTDE\nTasa de Empleo\n\n\nDimensión Social y Económica\nEJH\nEscolaridad de Jefe de Hogar\n\n\nDimensión Social y Económica\nJHESU\nJefe de Hogar con Educación Superior\n\n\nDimensión Social y Económica\nJHESE\nJefe de Hogar con Educación Secundaria\n\n\nDimensión Social y Económica\nJHEPR\nJefe de Hogar con Educación Primaria\n\n\nDimensión Social y Económica\nVCH\nViviendas con Hacinamiento\n\n\nDimensión Social y Económica\nHUP\nHogares Uniparentales\n\n\nDimensión de Factores de Riesgos\nIJV\nIndicador de Junta de Vecinos\n\n\nDimensión de Factores de Riesgos\nICAM\nIndicador de Club de Adulto Mayor\n\n\nDimensión de Factores de Riesgos\nICD\nIndicador de Club Deportivo\n\n\nDimensión de Factores de Riesgos\nIAC\nIndicador de Accesibilidad a Colegios\n\n\nDimensión de Factores de Riesgos\nIAER\nIndicador de Accesibilidad a Establecimientos Religiosos\n\n\n\nDe manera conjunta, estos indicadores permiten aproximar las distintas dimensiones de la oportunidad infantil desde una perspectiva multidimensional, combinando aspectos educativos, ambientales, socioeconómicos y comunitarios en una estructura coherente y comparable entre territorios.",
+    "crumbs": [
+      "Indicadores Compuestos",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Dominio MNA</span>"
+    ]
+  },
+  {
+    "objectID": "mna.html#procedimiento-metodológico",
+    "href": "mna.html#procedimiento-metodológico",
+    "title": "25  Dominio MNA",
+    "section": "25.3 Procedimiento Metodológico",
+    "text": "25.3 Procedimiento Metodológico\nEn esta sección se describe el procedimiento seguido para construir el indicador compuesto del dominio MNA, desde los indicadores simples hasta el indicador agregado por dimensión y dominio.\n\nPreparación de los datos de los indicadores\nLos indicadores simples del dominio MNA, previamente calculados a partir de sus respectivas fuentes, se integran en una base única a nivel de manzana censal (filas = manzanas, columnas = indicadores), lo que asegura una estructura de datos común y comparable para su posterior agregación en dimensiones y en el dominio MNA.\n\n\nTratamiento de datos faltantes\nEn algunos casos, ciertas manzanas censales no cuentan con información completa para uno o más indicadores (por ausencia de registros o de población objetivo). Para evitar la pérdida de unidades territoriales y mantener la coherencia espacial del análisis, se aplica una estrategia de imputación basada en vecinos.\nEn particular, los valores faltantes se estiman mediante una interpolación espacial a partir de los 4 vecinos más cercanos, asignando a la manzana sin dato el promedio simple de dichos vecinos. Esta estrategia permite completar información en áreas con vacíos de datos y preservar la continuidad espacial del indicador sin introducir supuestos más complejos de los necesarios.\n\n\nAjuste de los indicadores\nAntes de la agregación, los indicadores originales se transforman para que:\n\nTengan una misma dirección interpretativa (valores altos = mejores oportunidades).\nSe expresen en una escala común, facilitando su combinación en promedios simples.\n\n\nHomogeneización de la dirección de los indicadores\nCada indicador se clasifica según su sentido:\n\nIndicadores en los que “más es mejor” (por ejemplo, mayor empleo, mayor inscripción en preescolar).\nIndicadores en los que “más es peor” (por ejemplo, días sometidos a exposición a calor extremo).\n\nPara los indicadores cuyo aumento representa una condición desfavorable para niños, niñas y adolescentes, se aplica una inversión de escala, de modo que, tras el ajuste, todos los indicadores cumplan la regla general:\n\nvalores más altos del indicador ajustado ⇒ mejores oportunidades territoriales.\n\nPara ello, se procede de la siguiente manera (asumiendo que el indicador ya fue llevado a una escala entre 0 y 1):\n\nIndicadores en los que “más es mejor” (positivos):\nSe mantiene la dirección original: \nI^{*}(u) = I_{\\text{norm}}(u)\n\nIndicadores en los que “más es peor” (negativos):\nSe invierte la escala para que valores altos pasen a representar mejores condiciones: \nI^{*}(u) = 1 - I_{\\text{norm}}(u)\n\n\nDonde:\n\nI_{\\text{norm}}(u) es el valor del indicador normalizado en la manzana censal u (en el rango [0,1]), y\n\nI^{*}(u) es el indicador ajustado, ya expresado en la dirección “más valor ⇒ mejor oportunidad”.\n\n\n\n\nAjuste por distribución empírica\nEl objetivo de este paso es expresar cada indicador en una escala comparable, basada en la posición relativa de cada manzana dentro de la distribución observada del indicador (similar a un percentil).\n(a) Función de distribución empírica\nPara cada indicador j, se consideran los valores observados \\{X_{uj}\\}_{u=1,\\dots,n_j} y se define la función de distribución empírica:\n\n\\hat{F}_j(x)\n= \\frac{1}{n_j} \\sum_{u=1}^{n_j} \\mathbf{1}\\big(X_{uj} \\le x\\big),\n\nDonde:\n\n\\mathbf{1}(\\cdot) es una función que toma el valor 1 cuando la manzana tiene un valor del indicador j menor o igual que x, y 0 en caso contrario;\n\nn_j es el número de manzanas con información para el indicador j.\n\nIntuitivamente, para cualquier valor x, \\hat{F}_j(x) entrega la proporción de manzanas cuyo valor del indicador j es menor o igual que x.\n(b) Puntaje de posición relativa\nLuego, para cada manzana censal u, se evalúa la distribución empírica en su propio valor X_{uj}:\n\np_{uj} = \\hat{F}_j\\big(X_{uj}\\big),\n\nde modo que p_{uj} representa la posición relativa de la manzana u dentro de la distribución del indicador j (similar a un percentil).\nEste valor p_{uj} \\in (0,1] indica la ubicación de la manzana dentro de la distribución del indicador:\n\nvalores cercanos a 0 ⇒ la manzana está en la parte baja de la distribución,\n\nvalores cercanos a 1 ⇒ la manzana está en la parte alta de la distribución.\n\nLa transformación es monótona (preserva el orden entre manzanas) y no depende de la unidad de medida original, solo del orden relativo de los valores.\n(c) Reescalamiento al intervalo [0,1]\nFinalmente, para utilizar de forma efectiva el rango [0,1], los puntajes p_{uj} se reescalan dentro de cada indicador j mediante una normalización min–max, de modo que:\n\ns_{uj} = \\dfrac{p_{uj} - \\min_{u'} p_{u'j}}{\\max_{u'} p_{u'j} - \\min_{u'} p_{u'j}}\n\nEn las secciones siguientes, estos valores s_{uj} corresponden al indicador normalizado en la escala común [0,1] para la manzana u y el indicador j.\n\n\n\n\nCálculo de dimensiones\nUna vez ajustados y estandarizados, los indicadores simples se agregan para construir un indicador compuesto por dimensión (Educación, Salud y Medio Ambiente, Social y Económica, Factores de Riesgos).\nRegla de agregación\nPara cada dimensión k, el valor de la dimensión en una unidad territorial u se calcula como el promedio simple de los indicadores ajustados que la componen:\n\nDim_{k}(u) = \\frac{1}{n_k} \\sum_{j=1}^{n_k} I^{*}_{kj}(u)\n\ndonde:\n\nD_{k}(u) es el valor de la dimensión k en la manzana censal u,\n\nI^{*}_{kj}(u) es el valor ajustado del indicador j asociado a la dimensión k en la manzana u,\n\nn_k es el número de indicadores que integran la dimensión k.\n\nJustificación del uso de promedio simple\nSe opta por pesos iguales para todos los indicadores dentro de cada dimensión debido a que:\n\nNo existe evidencia empírica robusta que justifique asignar mayor peso a un indicador específico.\nEl promedio simple favorece la transparencia metodológica y la facilidad de interpretación por parte de usuarios expertos y no expertos.\nPermite mantener la comparabilidad con otros índices de oportunidad y bienestar territorial que utilizan reglas de agregación similares.\n\n\n\n\n\n\n\nFigure 25.1: Ejemplo de dimensión Social y Económica\n\n\n\nEste procedimiento da como resultado un conjunto de indicadores de dimensión que sintetizan, de forma equilibrada, la información contenida en los indicadores simples del dominio MNA.\n\n\nCálculo de Dominio\nA partir de las dimensiones, se construye el indicador compuesto del dominio.\n\nRegla de agregación a nivel de dominio:\nExplicar que el indicador del dominio se calcula como promedio simple de los indicadores de las dimensiones.\n\nEspacio para ecuación general:\n MNA(u) = \\frac{1}{K} \\sum_{k=1}^{K} D_{k}(u)  Donde: - $DOM(u) $es el valor del dominio en la unidad territorial u, - $D_{k}(u) $es el valor de la dimensión k, - $K $es el número de dimensiones del dominio.\nPropiedades del indicador de dominio:\n\n\n\n\n\n\nFigure 25.2: Resultados del Dominio Matriz de Niñez y Adolescencia\n\n\n\n\nRango de valores (por ejemplo, 0–1),\nSignificado de valores altos y bajos en términos de oportunidades,\nVentajas de la agregación (resumen sintético) y riesgos (pérdida de detalle).\n\n\n\n25.3.1 territorios de oportunidad MNA\nUna vez obtenido el valor continuo del dominio MNA para cada manzana censal, se construye un indicador categórico de “Territorios de Oportunidad MNA” (TOMNA) que permite identificar áreas con baja, media y alta oportunidad, incorporando explícitamente la estructura espacial del territorio.\n(a) Matriz de vecindad espacial\nEn primer lugar, se define una matriz de vecindad espacial W = (w_{uv}) entre manzanas censales, que representa qué unidades se consideran “vecinas”. En este estudio se utiliza un criterio de 8 vecinos mas cercanos, donde dos manzanas son vecinas.\nLa matriz W se normaliza por población para que la suma de pesos de los vecinos de cada manzana sea igual a 1, lo cual facilita la interpretación del análisis espacial posterior.\n(b) Análisis de Moran Local sobre el índice MNA\nCon la matriz de vecindad W y el valor del dominio MNA en cada manzana \\text{MNA}(u), se aplica el Índice de Moran Local para identificar patrones de concentración espacial de alta y baja oportunidad.\ndonde \\overline{\\text{MNA}} es el promedio del índice MNA en todas las manzanas, y w_{uv} son los pesos de vecindad.\nA partir de este análisis se identifican, para cada manzana:\n\nsu tipo de entorno (alto-alto, bajo-bajo, alto-bajo, bajo-alto), según el valor propio y el de sus vecinas, y\n\nla significancia estadística de ese patrón (por ejemplo, mediante pruebas de permutación).\n\n(c) Definición de categorías de territorios de oportunidad MNA\nEl indicador categórico de territorios de oportunidad MNA (TOMNA) se construye combinando el valor del dominio MNA y la información del Moran Local, definiendo tres categorías:\n\nAlto: manzanas clasificadas como alto–alto en el análisis de Moran Local, con significancia estadística (por ejemplo, p &lt; 0{,}05); es decir, manzanas con alto índice MNA rodeadas de manzanas también altas.\n\nBajo: manzanas clasificadas como bajo–bajo y significativas; es decir, manzanas con bajo índice MNA rodeadas de manzanas igualmente bajas.\n\nMedio: manzanas que no presentan un patrón de alta o baja oportunidad espacialmente concentrado (incluye casos no significativos y patrones mixtos como alto–bajo o bajo–alto).\n\n(d) Interpretación territorial\n\n\n\n\n\n\nFigure 25.3: Resultados de Territorios de Oportundad de la Matriz de la Niñez y Adolescencia\n\n\n\nEstas categorías de territorios de oportunidad MNA permiten:\n\nIdentificar zonas prioritarias de intervención (categoría Baja), donde se concentran desventajas estructurales para niños, niñas y adolescentes.\nReconocer áreas de oportunidad consolidada (categoría Alta), que pueden servir como referencia para buenas prácticas o para el diseño de políticas de convergencia territorial.\nAnalizar brechas intraurbanas e intercomunales, al comparar la distribución espacial de las tres categorías dentro de ciudades o regiones.\n\nDe este modo, el paso desde valores continuos de MNA a categorías TOMNA facilita la comunicación de resultados y el uso del índice en procesos de planificación y toma de decisiones en políticas de infancia.",
+    "crumbs": [
+      "Indicadores Compuestos",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Dominio MNA</span>"
+    ]
+  },
+  {
+    "objectID": "mna.html#consideraciones-metodológicas-supuestos-y-limitaciones",
+    "href": "mna.html#consideraciones-metodológicas-supuestos-y-limitaciones",
+    "title": "25  Dominio MNA",
+    "section": "25.4 Consideraciones metodológicas, supuestos y limitaciones",
+    "text": "25.4 Consideraciones metodológicas, supuestos y limitaciones\nEl dominio MNA se construye bajo el supuesto de igual ponderación tanto entre los indicadores dentro de cada dimensión como entre las dimensiones al momento de agregarlas al dominio. Además, se asume que las fuentes de datos utilizadas presentan un nivel adecuado de calidad y cobertura, y que los patrones territoriales observados son relativamente estables en el período analizado, de modo que los resultados sean representativos de las condiciones estructurales del territorio.\nNo obstante, el dominio presenta algunas limitaciones que deben ser consideradas al interpretar los resultados. Pueden existir sesgos de medición asociados a la calidad de los registros originales, así como dimensiones o indicadores relevantes que no han sido incluidos por falta de información disponible. Asimismo, la comparabilidad entre territorios muy heterogéneos (por ejemplo, áreas urbanas y rurales) puede verse restringida, dado que la misma métrica puede adquirir significados prácticos distintos según el contexto.\nPor lo anterior, el indicador compuesto del dominio MNA debe entenderse como una síntesis de múltiples fenómenos, que no reemplaza el análisis detallado de los indicadores simples ni de las dimensiones que lo componen. Se recomienda que las decisiones de política y planificación se apoyen tanto en el valor agregado del dominio como en la lectura desagregada por dimensiones e indicadores, especialmente al diseñar intervenciones focalizadas en territorios específicos.",
+    "crumbs": [
+      "Indicadores Compuestos",
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Dominio MNA</span>"
+    ]
+  },
+  {
+    "objectID": "mbht.html",
+    "href": "mbht.html",
+    "title": "26  Dominio MBHT",
+    "section": "",
+    "text": "26.1 Introducción\nLa Matriz de Bienestar Humano Territorial es una nueva forma de ver las ciudades, comunas y barrios, al alcance de todos. Permite acercar la información al territorio para impactarlo positivamente. También visibiliza oportunidades para mejorar la calidad de vida en relación al territorio, y hace manifiestas las brechas y desequilibrios que se deben superar.\nLa información territorial para medir en cada región consiste en el cálculo de la Matriz de Bienestar Humano Territorial (MBHT), el cual es un sistema de información compuesto por indicadores base e información confiable conectada al territorio que constituye una aproximación multidimensional a la configuración del hábitat urbano y rural. Con ello se busca comprender las condiciones de los entornos urbanos y rurales, para construir soluciones que impacten positivamente en el bienestar de las personas y su hábitat. El sistema MBHT consiste en 18 indicadores territoriales agrupados en 4 dimensiones las que componen la Matriz de Bienestar Humano Territorial.",
+    "crumbs": [
+      "Indicadores Compuestos",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Dominio MBHT</span>"
+    ]
+  },
+  {
+    "objectID": "mbht.html#estructura-del-dominio",
+    "href": "mbht.html#estructura-del-dominio",
+    "title": "26  Dominio MBHT",
+    "section": "26.2 Estructura del Dominio",
+    "text": "26.2 Estructura del Dominio\n\n\n\n\n\n\n\n\nNombre Dimensión\nSigla del Indicador\nNombre del Indicador\n\n\n\n\nDimensión de Accesibilidad\nIAV\nIndicador de Accesibilidad a Áreas Verdes\n\n\nDimensión de Accesibilidad\nICUL\nIndicador de Accesibilidad a Equipamentos Culturales\n\n\nDimensión de Accesibilidad\nIDEP\nIndicador de Accesibilidad a Equipamentos Deportivos\n\n\nDimensión de Accesibilidad\nISAL\nIndicador de Accesibilidad a Equipamentos de Salud\n\n\nDimensión de Accesibilidad\nISE\nIndicador de Accesibilidad a Servicios de Educación\n\n\nDimensión de Accesibilidad\nISER\nIndicador de Accesibilidad a Servicios Públicos\n\n\nDimensión Ambiental\nIATA\nIndicador de Amplitud Térmica\n\n\nDimensión Ambiental\nICV\nIndicador de Cobertura Vegetal\n\n\nDimensión de Seguridad\nIGPE\nIndicador ante Delitos Graves contra las Personas\n\n\nDimensión de Seguridad\nIGPR\nIndicador ante Delitos Graves contra la Propiedad\n\n\nDimensión de Seguridad\nILPE\nIndicador ante Delitos Leves contra las Personas\n\n\nDimensión de Seguridad\nILPR\nIndicador ante Delitos Leves contra la Propiedad\n\n\nDimensión de Socioeconómica\nIEJ\nIndicador de Escolaridad de Jefe de Hogar\n\n\nDimensión de Socioeconómica\nIEM\nIndicador de Empleo\n\n\nDimensión de Socioeconómica\nIPJ\nIndicador de Participación Juvenil en Empleo y Estudio\n\n\nDimensión de Socioeconómica\nIRH\nIndicador de Resiliencia de Hogares\n\n\nDimensión de Socioeconómica\nIVI\nIndicador de Calidad de la Vivienda",
+    "crumbs": [
+      "Indicadores Compuestos",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Dominio MBHT</span>"
+    ]
+  },
+  {
+    "objectID": "mbht.html#procedimiento-metodológico",
+    "href": "mbht.html#procedimiento-metodológico",
+    "title": "26  Dominio MBHT",
+    "section": "26.3 Procedimiento Metodológico",
+    "text": "26.3 Procedimiento Metodológico\n\n26.3.1 Insumos\nA partir de información de múltiples fuentes, como el Instituto Nacional de Estadísticas, Censo de Población y Vivienda 2017, Ministerio de Educación, Ministerio de Agricultura, Subsecretaría de Prevención del Delito del Ministerio del Interior y Seguridad Pública, Subsecretaría de Desarrollo Regional y Administrativo del Ministerio del Interior y Seguridad Pública, Departamento de Estadísticas e Información de Salud del Ministerio de Salud fotointerpretación de imágenes satelitales, OpenStreetMap, e información provista por municipios y gobiernos regionales de Chile, el Centro de Inteligencia Territorial de la Universidad Adolfo Ibáñez (CIT-UAI) construye y calcula 18 indicadores territoriales, integrados en cuatro dimensiones, y que a su vez componen la Matriz de Bienestar Humano Territorial.",
+    "crumbs": [
+      "Indicadores Compuestos",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Dominio MBHT</span>"
+    ]
+  },
+  {
+    "objectID": "mbht.html#procedimiento-metodológico-1",
+    "href": "mbht.html#procedimiento-metodológico-1",
+    "title": "26  Dominio MBHT",
+    "section": "26.4 Procedimiento Metodológico",
+    "text": "26.4 Procedimiento Metodológico\nEn esta sección se describe el procedimiento seguido para construir el indicador compuesto del dominio MBHT, desde los indicadores simples hasta el indicador agregado por dimensión y dominio.\n\nPreparación de los datos de los indicadores\nLos indicadores simples del dominio MBHT, previamente calculados a partir de sus respectivas fuentes, se integran en una base única a nivel de manzana censal (filas = manzanas, columnas = indicadores), lo que asegura una estructura de datos común y comparable para su posterior agregación en dimensiones y en el dominio MBHT.\n\n\nTratamiento de datos faltantes\nEn algunos casos, ciertas manzanas censales no cuentan con información completa para uno o más indicadores (por ausencia de registros o de población objetivo). Para evitar la pérdida de unidades territoriales y mantener la coherencia espacial del análisis, se aplica una estrategia de imputación basada en vecinos.\nEn particular, los valores faltantes se estiman mediante una interpolación espacial a partir de los 4 vecinos más cercanos, asignando a la manzana sin dato el promedio simple de dichos vecinos. Esta estrategia permite completar información en áreas con vacíos de datos y preservar la continuidad espacial del indicador sin introducir supuestos más complejos de los necesarios.\n\n\nAjuste de los indicadores\nReescalamiento al intervalo [0,1]\nPara utilizar de forma efectiva el rango [0,1], los valores de lo indicadores p_{uj} se reescalan dentro de cada indicador j mediante una normalización min–max, de modo que:\n\ns_{uj} = \\dfrac{p_{uj} - \\min_{u'} p_{u'j}}{\\max_{u'} p_{u'j} - \\min_{u'} p_{u'j}}\n\nEn las secciones siguientes, estos valores s_{uj} corresponden al indicador normalizado en la escala común [0,1] para la manzana u y el indicador j.\n\n\n\nCálculo de dimensiones\nUna vez ajustados y estandarizados, los indicadores simples se agregan para construir un indicador compuesto por dimensión (Educación, Salud y Medio Ambiente, Social y Económica, Factores de Riesgos).\nRegla de agregación\nPara cada dimensión k, el valor de la dimensión en una unidad territorial u se calcula como el promedio simple de los indicadores ajustados que la componen:\n\nDim_{k}(u) = \\frac{1}{n_k} \\sum_{j=1}^{n_k} I^{*}_{kj}(u)\n\ndonde:\n\nD_{k}(u) es el valor de la dimensión k en la manzana censal u,\n\nI^{*}_{kj}(u) es el valor ajustado del indicador j asociado a la dimensión k en la manzana u,\n\nn_k es el número de indicadores que integran la dimensión k.\n\nJustificación del uso de promedio simple\nSe opta por pesos iguales para todos los indicadores dentro de cada dimensión debido a que:\n\nNo existe evidencia empírica robusta que justifique asignar mayor peso a un indicador específico.\nEl promedio simple favorece la transparencia metodológica y la facilidad de interpretación por parte de usuarios expertos y no expertos.\nPermite mantener la comparabilidad con otros índices de oportunidad y bienestar territorial que utilizan reglas de agregación similares.\n\n\n\n\n\n\n\nFigure 26.1: Ejemplo de dimensión de Accesibilidad\n\n\n\nEste procedimiento da como resultado un conjunto de indicadores de dimensión que sintetizan, de forma equilibrada, la información contenida en los indicadores simples del dominio MBHT.\n\n\nCálculo de Dominio\nA partir de las dimensiones, se construye el indicador compuesto del dominio.\n\nRegla de agregación a nivel de dominio:\nExplicar que el indicador del dominio se calcula como promedio simple de los indicadores de las dimensiones.\n\nEspacio para ecuación general:\n BHT(u) = \\frac{1}{K} \\sum_{k=1}^{K} D_{k}(u)  Donde: - $DOM(u) $es el valor del dominio en la unidad territorial u, - $D_{k}(u) $es el valor de la dimensión k, - $K $es el número de dimensiones del dominio.\nPropiedades del indicador de dominio:\n\n\n\n\n\n\nFigure 26.2: Resultados del Dominio MBHT\n\n\n\n\nRango de valores (por ejemplo, 0–1),\nSignificado de valores altos y bajos en términos de oportunidades,\nVentajas de la agregación (resumen sintético) y riesgos (pérdida de detalle).\n\n\n\n26.4.1 Territorios de Oportunidad TOB\nUna vez obtenido el valor continuo del dominio MBHT para cada manzana censal, se construye un indicador categórico de “Territorios de Oportunidad Bienestar” (TOB) que permite identificar áreas con baja, media y alta oportunidad, incorporando explícitamente la estructura espacial del territorio.\n(a) Matriz de vecindad espacial\nEn primer lugar, se define una matriz de vecindad espacial W = (w_{uv}) entre manzanas censales, que representa qué unidades se consideran “vecinas”. En este estudio se utiliza un criterio de 8 vecinos mas cercanos, donde dos manzanas son vecinas.\nLa matriz W se normaliza por población para que la suma de pesos de los vecinos de cada manzana sea igual a 1, lo cual facilita la interpretación del análisis espacial posterior.\n(b) Análisis de Moran Local sobre el índice MBHT\nCon la matriz de vecindad W y el valor del dominio MBHT en cada manzana \\text{BHT}(u), se aplica el Índice de Moran Local para identificar patrones de concentración espacial de alta y baja oportunidad.\ndonde \\overline{\\text{BHT}} es el promedio del índice MBHT en todas las manzanas, y w_{uv} son los pesos de vecindad.\nA partir de este análisis se identifican, para cada manzana:\n\nsu tipo de entorno (alto-alto, bajo-bajo, alto-bajo, bajo-alto), según el valor propio y el de sus vecinas, y\n\nla significancia estadística de ese patrón (por ejemplo, mediante pruebas de permutación).\n\n(c) Definición de categorías de territorios de oportunidad MBHT\nEl indicador categórico de “Territorios de Oportunidad Bienestar” (TOB) se construye combinando el valor del dominio MBHT y la información del Moran Local, definiendo tres categorías:\n\nAlto: manzanas clasificadas como alto–alto en el análisis de Moran Local, con significancia estadística (por ejemplo, p &lt; 0{,}05); es decir, manzanas con alto índice MBHT rodeadas de manzanas también altas.\n\nBajo: manzanas clasificadas como bajo–bajo y significativas; es decir, manzanas con bajo índice MBHT rodeadas de manzanas igualmente bajas.\n\nMedio: manzanas que no presentan un patrón de alta o baja oportunidad espacialmente concentrado (incluye casos no significativos y patrones mixtos como alto–bajo o bajo–alto).\n\n(d) Interpretación territorial\n\n\n\n\n\n\nFigure 26.3: Resultados de Territorios de Oportundad de la Matriz de la Niñez y Adolescencia\n\n\n\nEstas categorías de territorios de oportunidad MBHT permiten:\n\nIdentificar zonas prioritarias de intervención (categoría Baja), donde se concentran desventajas estructurales para niños, niñas y adolescentes.\nReconocer áreas de oportunidad consolidada (categoría Alta), que pueden servir como referencia para buenas prácticas o para el diseño de políticas de convergencia territorial.\nAnalizar brechas intraurbanas e intercomunales, al comparar la distribución espacial de las tres categorías dentro de ciudades o regiones.\n\nDe este modo, el paso desde valores continuos de MBHT a categorías TOB facilita la comunicación de resultados y el uso del índice en procesos de planificación y toma de decisiones en políticas de infancia.",
+    "crumbs": [
+      "Indicadores Compuestos",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Dominio MBHT</span>"
+    ]
+  },
+  {
+    "objectID": "mbht.html#consideraciones-metodológicas-supuestos-y-limitaciones",
+    "href": "mbht.html#consideraciones-metodológicas-supuestos-y-limitaciones",
+    "title": "26  Dominio MBHT",
+    "section": "26.5 Consideraciones metodológicas, supuestos y limitaciones",
+    "text": "26.5 Consideraciones metodológicas, supuestos y limitaciones\nEl dominio MBHT se construye bajo el supuesto de igual ponderación tanto entre los indicadores dentro de cada dimensión como entre las dimensiones al momento de agregarlas al dominio. Además, se asume que las fuentes de datos utilizadas presentan un nivel adecuado de calidad y cobertura, y que los patrones territoriales observados son relativamente estables en el período analizado, de modo que los resultados sean representativos de las condiciones estructurales del territorio.\nNo obstante, el dominio presenta algunas limitaciones que deben ser consideradas al interpretar los resultados. Pueden existir sesgos de medición asociados a la calidad de los registros originales, así como dimensiones o indicadores relevantes que no han sido incluidos por falta de información disponible. Asimismo, la comparabilidad entre territorios muy heterogéneos (por ejemplo, áreas urbanas y rurales) puede verse restringida, dado que la misma métrica puede adquirir significados prácticos distintos según el contexto.\nPor lo anterior, el indicador compuesto del dominio MBHT debe entenderse como una síntesis de múltiples fenómenos, que no reemplaza el análisis detallado de los indicadores simples ni de las dimensiones que lo componen. Se recomienda que las decisiones de política y planificación se apoyen tanto en el valor agregado del dominio como en la lectura desagregada por dimensiones e indicadores, especialmente al diseñar intervenciones focalizadas en territorios específicos.",
+    "crumbs": [
+      "Indicadores Compuestos",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Dominio MBHT</span>"
+    ]
+  },
+  {
     "objectID": "reuniones.html",
     "href": "reuniones.html",
-    "title": "20  Reuniones",
+    "title": "27  Reuniones",
     "section": "",
     "text": "Registro de Reuniones\n\n\nCategoría\nFecha\nTema\n\n\n\n\nInvestigación\n21-04-2025\nrevisión de Documentación Técnica de COI 3.0\n\n\nEstudios\n24-04-2025\nReunión Inicial\n\n\nInvestigación\n29-04-2025\nAnálisis de Factibilidad\n\n\nEstudios\n30-04-2025\nGantt y Factibilidad\n\n\nInvestigación\n15-05-2025\nContrastar indicador propuesto con COI 3.0\n\n\nInvestigación\n20-05-2025\nConsolidar insumos\n\n\nEstudios\n29-05-2025\nEstado administrativo y avances\n\n\nInvestigación\n04-06-2025\nAvances y deathline 12-06-2025\n\n\nInvestigación\n12-06-2025\nAvances definiciones metodológicas EDU\n\n\nInvestigación\n18-06-2025\nRevisión de Avances y documentación\n\n\nEstudios\n18-06-2025\nRevisión de Observatorios de la niñez\n\n\nInvestigación\n25-06-2025\nAvances, definiciones EDU, planificación review",
     "crumbs": [
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Reuniones</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Reuniones</span>"
     ]
   },
   {
     "objectID": "recursos.html",
     "href": "recursos.html",
-    "title": "21  Otros Recursos",
+    "title": "28  Otros Recursos",
     "section": "",
     "text": "Indicadores Complementarios",
     "crumbs": [
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Otros Recursos</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Otros Recursos</span>"
     ]
   },
   {
     "objectID": "recursos.html#indicadores-complementarios",
     "href": "recursos.html#indicadores-complementarios",
-    "title": "21  Otros Recursos",
+    "title": "28  Otros Recursos",
     "section": "",
     "text": "Observartorio de la Niñez\n\nPágina Web: https://www.observatorioninez.org/temasejes\nMapa Indicadores: https://mapa.observatorioninez.org/",
     "crumbs": [
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Otros Recursos</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Otros Recursos</span>"
     ]
   },
   {
     "objectID": "recursos.html#encuestas",
     "href": "recursos.html#encuestas",
-    "title": "21  Otros Recursos",
+    "title": "28  Otros Recursos",
     "section": "Encuestas",
     "text": "Encuestas\n\nPolivictimización\n\nResultados Encuesta Nacional de Polivictimización - PDF\nFuente: Centro de Documentación CEAD",
     "crumbs": [
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Otros Recursos</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>Otros Recursos</span>"
     ]
   },
   {
