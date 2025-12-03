@@ -112,9 +112,9 @@ A partir de las dimensiones, se construye el indicador compuesto del dominio.
 
 $$ BHT(u) = \frac{1}{K} \sum_{k=1}^{K} D_{k}(u) $$
 Donde:
-- $DOM(u) $es el valor del dominio en la unidad territorial $u$,
-- $D_{k}(u) $es el valor de la dimensión $k$,
-- $K $es el número de dimensiones del dominio.
+- $DOM(u)$ es el valor del dominio en la unidad territorial $u$,
+- $D_{k}(u)$ es el valor de la dimensión $k$,
+- $K$ es el número de dimensiones del dominio.
 
 **Propiedades del indicador de dominio:**  
 
